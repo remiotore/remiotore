@@ -62,7 +62,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 <h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/users/25872">HackTheBox Progress</a> </h2>
 <details>
-  <summary>Intro to Red Team</summary>
+  <summary><b>Intro to Red Team</b></summary>
   <ul>
     <li><s>Cap</s></li>
     <li><s>Jerry</s></li>
@@ -89,7 +89,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 </details>
 
 <details>
-  <summary>Active Directory Exploitation</summary>
+  <summary><b>Active Directory Exploitation</b></summary>
   <ul>
     <li><s>Cicada</s></li>
     <li><s>EscapeTwo</s></li>
@@ -115,7 +115,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>GateCrash</s></li>
     <li><s>ProxyAsAService</s></li>
     <li><s>ApacheBlaze</s></li>
-    <li>Passman</li>
+    <li><s>Passman</s></li>
     <li>The Magic Informer</li>
     <li>BlinkerFluids</li>
     <li>Breaking Bank</li>
