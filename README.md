@@ -116,7 +116,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>ProxyAsAService</s></li>
     <li><s>ApacheBlaze</s></li>
     <li><s>Passman</s></li>
-    <li>The Magic Informer</li>
+    <li><s>The Magic Informer</s></li>
     <li>BlinkerFluids</li>
     <li>Breaking Bank</li>
   </ul>
@@ -130,7 +130,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li>Gobox</li>
     <li>Bucket</li>
     <li><s>Worker</s></li>
-    <li>Monteverde</li>
+    <li><s>Monteverde</s></li>
     <li>Vessel</li>
     <li>Unobtainium</li>
   </ul>
