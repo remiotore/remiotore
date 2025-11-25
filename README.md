@@ -106,7 +106,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 </details>
 
 <details>
-  <summary>OWASP Top 10 2021</summary>
+  <summary><b>OWASP Top 10 2021</b></summary>
   <ul>
     <li><s>OnlyHacks</s></li>
     <li><s>Cursed</s> Stale Policy</li>
@@ -117,8 +117,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>ApacheBlaze</s></li>
     <li><s>Passman</s></li>
     <li><s>The Magic Informer</s></li>
-    <li>BlinkerFluids</li>
-    <li>Breaking Bank</li>
+    <li><s>BlinkerFluids</s></li>
+    <li><s>Breaking Bank</s></li>
   </ul>
 </details>
 
@@ -128,7 +128,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>SteamCloud</s></li>
     <li>Epsilon</li>
     <li>Gobox</li>
-    <li>Bucket</li>
+    <li><s>Bucket</s></li>
     <li><s>Worker</s></li>
     <li><s>Monteverde</s></li>
     <li>Vessel</li>
