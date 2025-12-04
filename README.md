@@ -127,7 +127,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   <ul>
     <li><s>SteamCloud</s></li>
     <li>Epsilon</li>
-    <li>Gobox</li>
+    <li><s>Gobox</s></li>
     <li><s>Bucket</s></li>
     <li><s>Worker</s></li>
     <li><s>Monteverde</s></li>
@@ -224,10 +224,10 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary>CPTS Preparation</summary>
   <ul>
-    <li>Fluffy</li>
-    <li>Jeeves</li>
-    <li>Trick</li>
-    <li>Postman</li>
+    <li><s>Fluffy</s></li>
+    <li><s>Jeeves</s></li>
+    <li><s>Trick</s></li>
+    <li><s>Postman</s></li>
     <li>Pov</li>
     <li>TombWatcher</li>
     <li>Media</li>
