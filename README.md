@@ -131,7 +131,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>Bucket</s></li>
     <li><s>Worker</s></li>
     <li><s>Monteverde</s></li>
-    <li>Vessel</li>
+    <li><s>Vessel</s></li>
     <li>Unobtainium</li>
   </ul>
 </details>
