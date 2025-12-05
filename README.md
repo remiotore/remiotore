@@ -126,7 +126,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   <summary>Cloud Track</summary>
   <ul>
     <li><s>SteamCloud</s></li>
-    <li>Epsilon</li>
+    <li><s>Epsilon</s></li>
     <li><s>Gobox</s></li>
     <li><s>Bucket</s></li>
     <li><s>Worker</s></li>
