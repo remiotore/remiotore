@@ -123,7 +123,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 </details>
 
 <details>
-  <summary>Cloud Track</summary>
+  <summary><b>Cloud Track</b></summary>
   <ul>
     <li><s>SteamCloud</s></li>
     <li><s>Epsilon</s></li>
@@ -132,7 +132,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>Worker</s></li>
     <li><s>Monteverde</s></li>
     <li><s>Vessel</s></li>
-    <li>Unobtainium</li>
+    <li><s>Unobtainium</s></li>
   </ul>
 </details>
 
