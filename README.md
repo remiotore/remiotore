@@ -61,6 +61,51 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 ---
 
 <h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/users/25872">HackTheBox Progress</a> </h2>
+
+<details>
+  <summary><b>Tier 0 - Foundations</b></summary>
+  <ul>
+    <li><s>Meow</s></li>
+    <li><s>Fawn</s></li>
+    <li><s>Dancing</s></li>
+    <li><s>Redeemer</s></li>
+    <li><s>Explosion</s></li>
+    <li><s>Preignition</s></li>
+    <li><s>Mongod</s></li>
+    <li><s>Synced</s></li>
+  </ul>
+</details>
+
+<details>
+  <summary><b>Tier 1 - Fundamental Exploitation</b></summary>
+  <ul>
+    <li><s>Appointment</s></li>
+    <li><s>Sequel</s></li>
+    <li><s>Crocodile</s></li>
+    <li><s>Responder</s></li>
+    <li><s>Three</s></li>
+    <li><s>Funnel</s></li>
+    <li><s>Bike</s></li>
+    <li><s>Ignition</s></li>
+    <li><s>Pennyworth</s></li>
+    <li><s>Tactics</s></li>
+  </ul>
+</details>
+
+<details>
+  <summary><b>Tier 2 - Multiple-Step Attack and Privilege Scalation</b></summary>
+  <ul>
+    <li><s>Archetype</s></li>
+    <li><s>Oopsie</s></li>
+    <li><s>Vaccine</s></li>
+    <li><s>Unified</s></li>
+    <li><s>Included</s></li>
+    <li><s>Markup</s></li>
+    <li><s>Base</s></li>
+  </ul>
+</details>
+
+
 <details>
   <summary><b>Intro to Red Team</b></summary>
   <ul>
