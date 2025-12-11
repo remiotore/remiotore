@@ -274,7 +274,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>Trick</s></li>
     <li><s>Postman</s></li>
     <li>Pov</li>
-    <li>TombWatcher</li>
+    <li><s>TombWatcher</s></li>
     <li>Media</li>
     <li>VulnCicada</li>
     <li><s>StreamIO</s></li>
