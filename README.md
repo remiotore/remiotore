@@ -60,7 +60,40 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 ---
 
-<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/users/25872">HackTheBox Progress</a> </h2>
+<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">HackTheBox Certs</a> </h2>
+
+<details>
+  <summary>CJCA - Certified Junior Cybersecurity Associate</summary>
+  <ul><li><s>Introduction to Information Security</s></li>
+    <li><s>Network Foundations</s></li>
+    <li><s>Introduction to Networking</s></li>
+    <li><s>Linux Fundamentals</s></li>
+    <li><s>Introduction to Bash Scripting</s></li>
+    <li><s>Windows Fundamentals</s></li>
+    <li><s>Introduction to Windows Command Line</s></li>
+    <li>Web Requests</li>
+    <li>Introduction to Web Applications</li>
+    <li>Introduction to Penetration Testing</li>
+    <li>Pentest in a Nutshell</li>
+    <li>Network Enumeration with Nmap</li>
+    <li>Footprinting</li>
+    <li>Hacking WordPress</li>
+    <li>Using the Metasploit Framework</li>
+    <li>Intro to Network Traffic Analysis</li>
+    <li>Incident Handling Process</li>
+    <li>Windows Event Logs & Finding Evil</li>
+    <li>Security Monitoring & SIEM Fundamentals</li>
+    <li>Introduction to Threat Hunting & Hunting With Elastic</li>
+  </ul>
+</details>
+
+<details>
+  <summary>CPTS - Certified Penetration Testing Specialist</summary>
+  <ul>
+  </ul>
+</details>
+
+<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">HackTheBox Tracks/Machines</a> </h2>
 
 <details>
   <summary><b>Tier 0 - Foundations</b></summary>
