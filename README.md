@@ -71,10 +71,10 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>Introduction to Bash Scripting</s></li>
     <li><s>Windows Fundamentals</s></li>
     <li><s>Introduction to Windows Command Line</s></li>
-    <li>Web Requests</li>
-    <li>Introduction to Web Applications</li>
-    <li>Introduction to Penetration Testing</li>
-    <li>Pentest in a Nutshell</li>
+    <li><s>Web Requests</s></li>
+    <li><s>Introduction to Web Applications</s></li>
+    <li><s>Introduction to Penetration Testing</s></li>
+    <li><s>Pentest in a Nutshell</s></li>
     <li>Network Enumeration with Nmap</li>
     <li>Footprinting</li>
     <li>Hacking WordPress</li>
