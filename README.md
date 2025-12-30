@@ -75,9 +75,9 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>Introduction to Web Applications</s></li>
     <li><s>Introduction to Penetration Testing</s></li>
     <li><s>Pentest in a Nutshell</s></li>
-    <li>Network Enumeration with Nmap</li>
-    <li>Footprinting</li>
-    <li>Hacking WordPress</li>
+    <li><s>Network Enumeration with Nmap</s></li>
+    <li><s>Footprinting</s></li>
+    <li><s>Hacking WordPress</s></li>
     <li>Using the Metasploit Framework</li>
     <li>Intro to Network Traffic Analysis</li>
     <li>Incident Handling Process</li>
