@@ -78,8 +78,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><s>Network Enumeration with Nmap</s></li>
     <li><s>Footprinting</s></li>
     <li><s>Hacking WordPress</s></li>
-    <li>Using the Metasploit Framework</li>
-    <li>Intro to Network Traffic Analysis</li>
+    <li><s>Using the Metasploit Framework</s></li>
+    <li><s>Intro to Network Traffic Analysis</s></li>
     <li>Incident Handling Process</li>
     <li>Windows Event Logs & Finding Evil</li>
     <li>Security Monitoring & SIEM Fundamentals</li>
