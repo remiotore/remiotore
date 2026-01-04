@@ -60,26 +60,28 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 ---
 
-<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">HackTheBox Certs</a> </h2>
+<h1>Hack The Box</h1>
+
+<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">Certs</a> </h2>
 
 <details>
   <summary>CJCA - Certified Junior Cybersecurity Associate</summary>
   <ul><li><s>Introduction to Information Security</s></li>
     <li><s>Network Foundations</s></li>
-    <li><s>Introduction to Networking</s></li>
-    <li><s>Linux Fundamentals</s></li>
-    <li><s>Introduction to Bash Scripting</s></li>
-    <li><s>Windows Fundamentals</s></li>
-    <li><s>Introduction to Windows Command Line</s></li>
-    <li><s>Web Requests</s></li>
-    <li><s>Introduction to Web Applications</s></li>
-    <li><s>Introduction to Penetration Testing</s></li>
-    <li><s>Pentest in a Nutshell</s></li>
-    <li><s>Network Enumeration with Nmap</s></li>
-    <li><s>Footprinting</s></li>
+    <li><s><a href="docs/htb/Networking/">Introduction to Networking</a></s></li>
+    <li><s><a href="docs/htb/Linux/">Linux Fundamentals</a></s></li>
+    <li><s><a href="docs/htb/Linux/">Introduction to Bash Scripting</a></s></li>
+    <li><s><a href="docs/htb/Windows/">Windows Fundamentals</a></s></li>
+    <li><s><a href="docs/htb/Windows/">Introduction to Windows Command Line</a></s></li>
+    <li><s><a href="docs/htb/Web Requests/">Web Requests</a></s></li>
+    <li><s><a href="docs/htb/Web Applications/">Introduction to Web Applications</a></s></li>
+    <li><s><a href="docs/htb/Penetration Testing/">Introduction to Penetration Testing</a></s></li>
+    <li><s><a href="docs/htb/PentestIn A Nutshell/">Pentest in a Nutshell</a></s></li>
+    <li><s><a href="docs/htb/Networking/">Network Enumeration with Nmap</a></s></li>
+    <li><s><a href="docs/htb/Footprinting/">Footprinting</a></s></li>
     <li><s>Hacking WordPress</s></li>
-    <li><s>Using the Metasploit Framework</s></li>
-    <li><s>Intro to Network Traffic Analysis</s></li>
+    <li><s><a href="docs/htb/Using the Metasploit Framework/">Using the Metasploit Framework</a></s></li>
+    <li><s><a href="docs/htb/Intro to Network Traffic Analysis/">Intro to Network Traffic Analysis</a></s></li>
     <li>Incident Handling Process</li>
     <li>Windows Event Logs & Finding Evil</li>
     <li>Security Monitoring & SIEM Fundamentals</li>
@@ -93,7 +95,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   </ul>
 </details>
 
-<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">HackTheBox Tracks/Machines</a> </h2>
+<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">Tracks/Machines</a> </h2>
 
 <details>
   <summary><b>Tier 0 - Foundations</b></summary>
