@@ -66,26 +66,26 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 <details>
   <summary>CJCA - Certified Junior Cybersecurity Associate</summary>
-  <ul><li><s>Introduction to Information Security</s></li>
-    <li><s>Network Foundations</s></li>
-    <li><s><a href="docs/htb/Networking/">Introduction to Networking</a></s></li>
-    <li><s><a href="docs/htb/Linux/">Linux Fundamentals</a></s></li>
-    <li><s><a href="docs/htb/Linux/">Introduction to Bash Scripting</a></s></li>
-    <li><s><a href="docs/htb/Windows/">Windows Fundamentals</a></s></li>
-    <li><s><a href="docs/htb/Windows/">Introduction to Windows Command Line</a></s></li>
-    <li><s><a href="docs/htb/Web Requests/">Web Requests</a></s></li>
-    <li><s><a href="docs/htb/Web Applications/">Introduction to Web Applications</a></s></li>
-    <li><s><a href="docs/htb/Penetration Testing/">Introduction to Penetration Testing</a></s></li>
-    <li><s><a href="docs/htb/PentestIn A Nutshell/">Pentest in a Nutshell</a></s></li>
-    <li><s><a href="docs/htb/Networking/">Network Enumeration with Nmap</a></s></li>
-    <li><s><a href="docs/htb/Footprinting/">Footprinting</a></s></li>
-    <li><s>Hacking WordPress</s></li>
-    <li><s><a href="docs/htb/Using the Metasploit Framework/">Using the Metasploit Framework</a></s></li>
-    <li><s><a href="docs/htb/Intro to Network Traffic Analysis/">Intro to Network Traffic Analysis</a></s></li>
-    <li><s><a href="docs/htb/Incident Handling Process/">Incident Handling Process</a></s></li>
-    <li>Windows Event Logs & Finding Evil</li>
-    <li>Security Monitoring & SIEM Fundamentals</li>
-    <li>Introduction to Threat Hunting & Hunting With Elastic</li>
+  <ul><li><b>Introduction to Information Security</b></li>
+    <li><b>Network Foundations</b></li>
+    <li><b><a href="docs/htb/Networking/">Introduction to Networking</a></b></li>
+    <li><b><a href="docs/htb/Linux/">Linux Fundamentals</a></b></li>
+    <li><b><a href="docs/htb/Linux/">Introduction to Bash Scripting</a></b></li>
+    <li><b><a href="docs/htb/Windows/">Windows Fundamentals</a></b></li>
+    <li><b><a href="docs/htb/Windows/">Introduction to Windows Command Line</a></b></li>
+    <li><b><a href="docs/htb/Web_Requests/">Web Requests</a></b></li>
+    <li><b><a href="docs/htb/Web_Applications/">Introduction to Web Applications</a></b></li>
+    <li><b><a href="docs/htb/Penetration_Testing/">Introduction to Penetration Testing</a></b></li>
+    <li><b><a href="docs/htb/Pentest_In_A_Nutshell/">Pentest in a Nutshell</a></b></li>
+    <li><b><a href="docs/htb/Networking/">Network Enumeration with Nmap</a></b></li>
+    <li><b><a href="docs/htb/Footprinting/">Footprinting</a></b></li>
+    <li><b><a href="docs/htb/Hacking_Wordpress/">Hacking WordPress</a></b></li>
+    <li><b><a href="docs/htb/Using_the_Metasploit_Framework/">Using the Metasploit Framework</a></b></li>
+    <li><b><a href="docs/htb/Intro_to_Network_Traffic_Analysis/">Intro to Network Traffic Analysis</a></b></li>
+    <li><b><a href="docs/htb/Incident_Handling_Process/">Incident Handling Process</a></b></li>
+    <li><b><a href="docs/htb/Windows_Event_Logs/">Windows Event Logs & Finding Evil</a></b></li>
+    <li><b><a href="docs/htb/Security_Monitoring_&_SIEM_Fundamentals/">Security Monitoring & SIEM Fundamentals</a></b></li>
+    <li><b><a href="docs/htb/Introduction_to_Threat_Hunting_&_Hunting_With_Elastic/">Introduction to Threat Hunting & Hunting With Elastic</a></b></li>
   </ul>
 </details>
 
@@ -100,43 +100,43 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary><b>Tier 0 - Foundations</b></summary>
   <ul>
-    <li><s>Meow</s></li>
-    <li><s>Fawn</s></li>
-    <li><s>Dancing</s></li>
-    <li><s>Redeemer</s></li>
-    <li><s>Explosion</s></li>
-    <li><s>Preignition</s></li>
-    <li><s>Mongod</s></li>
-    <li><s>Synced</s></li>
+    <li><b>Meow</b></li>
+    <li><b>Fawn</b></li>
+    <li><b>Dancing</b></li>
+    <li><b>Redeemer</b></li>
+    <li><b>Explosion</b></li>
+    <li><b>Preignition</b></li>
+    <li><b>Mongod</b></li>
+    <li><b>Synced</b></li>
   </ul>
 </details>
 
 <details>
   <summary><b>Tier 1 - Fundamental Exploitation</b></summary>
   <ul>
-    <li><s>Appointment</s></li>
-    <li><s>Sequel</s></li>
-    <li><s>Crocodile</s></li>
-    <li><s>Responder</s></li>
-    <li><s>Three</s></li>
-    <li><s>Funnel</s></li>
-    <li><s>Bike</s></li>
-    <li><s>Ignition</s></li>
-    <li><s>Pennyworth</s></li>
-    <li><s>Tactics</s></li>
+    <li><b>Appointment</b></li>
+    <li><b>Sequel</b></li>
+    <li><b>Crocodile</b></li>
+    <li><b>Responder</b></li>
+    <li><b>Three</b></li>
+    <li><b>Funnel</b></li>
+    <li><b>Bike</b></li>
+    <li><b>Ignition</b></li>
+    <li><b>Pennyworth</b></li>
+    <li><b>Tactics</b></li>
   </ul>
 </details>
 
 <details>
   <summary><b>Tier 2 - Multiple-Step Attack and Privilege Scalation</b></summary>
   <ul>
-    <li><s>Archetype</s></li>
-    <li><s>Oopsie</s></li>
-    <li><s>Vaccine</s></li>
-    <li><s>Unified</s></li>
-    <li><s>Included</s></li>
-    <li><s>Markup</s></li>
-    <li><s>Base</s></li>
+    <li><b>Archetype</b></li>
+    <li><b>Oopsie</b></li>
+    <li><b>Vaccine</b></li>
+    <li><b>Unified</b></li>
+    <li><b>Included</b></li>
+    <li><b>Markup</b></li>
+    <li><b>Base</b></li>
   </ul>
 </details>
 
@@ -144,21 +144,21 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary><b>Intro to Red Team</b></summary>
   <ul>
-    <li><s>Cap</s></li>
-    <li><s>Jerry</s></li>
-    <li><s>Sau</s></li>
-    <li><s>GoodGames</s></li>
-    <li><s>Devvortex</s></li>
-    <li><s>Paper</s></li>
-    <li><s>Writeup</s></li>
-    <li><s>Precious</s></li>
-    <li><s>Driver</s></li>
-    <li><s>BoardLight</s></li>
-    <li><s>Cicada</s></li>
-    <li><s>TwoMillion</s></li>
-    <li><s>SteamCloud</s></li>
-    <li><s>Certified</s></li>
-    <li><s>Administrator</s></li>
+    <li><b>Cap</b></li>
+    <li><b>Jerry</b></li>
+    <li><b>Sau</b></li>
+    <li><b>GoodGames</b></li>
+    <li><b>Devvortex</b></li>
+    <li><b>Paper</b></li>
+    <li><b>Writeup</b></li>
+    <li><b>Precious</b></li>
+    <li><b>Driver</b></li>
+    <li><b>BoardLight</b></li>
+    <li><b>Cicada</b></li>
+    <li><b>TwoMillion</b></li>
+    <li><b>SteamCloud</b></li>
+    <li><b>Certified</b></li>
+    <li><b>Administrator</b></li>
   </ul>
 
 </details>
@@ -171,48 +171,48 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary><b>Active Directory Exploitation</b></summary>
   <ul>
-    <li><s>Cicada</s></li>
-    <li><s>EscapeTwo</s></li>
-    <li><s>Support</s></li>
-    <li><s>Timelapse</s></li>
-    <li><s>Return</s></li>
-    <li><s>Sauna</s></li>
-    <li><s>Administrator</s></li>
-    <li><s>Authority</s></li>
-    <li><s>Escape</s></li>
-    <li><s>Scrambled</s></li>
-    <li><s>StreamIO</s></li>
+    <li><b>Cicada</b></li>
+    <li><b>EscapeTwo</b></li>
+    <li><b>Support</b></li>
+    <li><b>Timelapse</b></li>
+    <li><b>Return</b></li>
+    <li><b>Sauna</b></li>
+    <li><b>Administrator</b></li>
+    <li><b>Authority</b></li>
+    <li><b>Escape</b></li>
+    <li><b>Scrambled</b></li>
+    <li><b>StreamIO</b></li>
   </ul>
 </details>
 
 <details>
   <summary><b>OWASP Top 10 2021</b></summary>
   <ul>
-    <li><s>OnlyHacks</s></li>
-    <li><s>Cursed</s> Stale Policy</li>
-    <li><s>Testimonial</s></li>
-    <li><s>HauntMart</s></li>
-    <li><s>GateCrash</s></li>
-    <li><s>ProxyAsAService</s></li>
-    <li><s>ApacheBlaze</s></li>
-    <li><s>Passman</s></li>
-    <li><s>The Magic Informer</s></li>
-    <li><s>BlinkerFluids</s></li>
-    <li><s>Breaking Bank</s></li>
+    <li><b>OnlyHacks</b></li>
+    <li><b>Cursed</b> Stale Policy</li>
+    <li><b>Testimonial</b></li>
+    <li><b>HauntMart</b></li>
+    <li><b>GateCrash</b></li>
+    <li><b>ProxyAsAService</b></li>
+    <li><b>ApacheBlaze</b></li>
+    <li><b>Passman</b></li>
+    <li><b>The Magic Informer</b></li>
+    <li><b>BlinkerFluids</b></li>
+    <li><b>Breaking Bank</b></li>
   </ul>
 </details>
 
 <details>
   <summary><b>Cloud Track</b></summary>
   <ul>
-    <li><s>SteamCloud</s></li>
-    <li><s>Epsilon</s></li>
-    <li><s>Gobox</s></li>
-    <li><s>Bucket</s></li>
-    <li><s>Worker</s></li>
-    <li><s>Monteverde</s></li>
-    <li><s>Vessel</s></li>
-    <li><s>Unobtainium</s></li>
+    <li><b>SteamCloud</b></li>
+    <li><b>Epsilon</b></li>
+    <li><b>Gobox</b></li>
+    <li><b>Bucket</b></li>
+    <li><b>Worker</b></li>
+    <li><b>Monteverde</b></li>
+    <li><b>Vessel</b></li>
+    <li><b>Unobtainium</b></li>
   </ul>
 </details>
 
@@ -224,7 +224,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li>EvilCUPS</li>
     <li>Analytics</li>
     <li>Builder</li>
-    <li><s>Devvortex</s></li>
+    <li><b>Devvortex</b></li>
     <li>Hospital</li>
     <li>Broker</li>
     <li>Aero</li>
@@ -234,8 +234,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary>Mobile Exploitation</summary>
   <ul>
-    <li><s>Cat</s></li>
-    <li><s>Manager</s></li>
+    <li><b>Cat</b></li>
+    <li><b>Manager</b></li>
     <li>Pinned</li>
     <li>Investigator</li>
     <li>Cryptohorrific</li>
@@ -258,9 +258,9 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary>Reverse Engineering</summary>
   <ul>
-    <li><s>Simple Encryptor</s></li>
-    <li><s>Snakecode</s></li>
-    <li><s>RAuth</s></li>
+    <li><b>Simple Encryptor</b></li>
+    <li><b>Snakecode</b></li>
+    <li><b>RAuth</b></li>
     <li>Partial Encryption</li>
     <li>Cyberpsychosis</li>
     <li>ARMs Race</li>
@@ -278,8 +278,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary>Binary Exploitation</summary>
   <ul>
-    <li><s>Questionnaire</s></li>
-    <li><s>Mathematricks</s></li>
+    <li><b>Questionnaire</b></li>
+    <li><b>Mathematricks</b></li>
     <li>racecar</li>
     <li>El Pipo</li>
     <li>El Teteo</li>
@@ -304,18 +304,18 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary>CPTS Preparation</summary>
   <ul>
-    <li><s>Fluffy</s></li>
-    <li><s>Jeeves</s></li>
-    <li><s>Trick</s></li>
-    <li><s>Postman</s></li>
+    <li><b>Fluffy</b></li>
+    <li><b>Jeeves</b></li>
+    <li><b>Trick</b></li>
+    <li><b>Postman</b></li>
     <li>Pov</li>
-    <li><s>TombWatcher</s></li>
+    <li><b>TombWatcher</b></li>
     <li>Media</li>
     <li>VulnCicada</li>
-    <li><s>StreamIO</s></li>
+    <li><b>StreamIO</b></li>
     <li>Voleur</li>
-    <li><s>Administrator</s></li>
-    <li><s>Authority</s></li>
+    <li><b>Administrator</b></li>
+    <li><b>Authority</b></li>
     <li>Craft</li>
     <li>Redelegate</li>
     <li>Snoopy</li>
