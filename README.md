@@ -66,22 +66,23 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 <details>
   <summary>CJCA - Certified Junior Cybersecurity Associate</summary>
-  <ul><li><b>Introduction to Information Security</b></li>
+  <ul>
+    <li><b>Introduction to Information Security <a href="docs/htb/Intro_To_Academy_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
     <li><b>Network Foundations</b></li>
     <li><b><a href="docs/htb/Networking/">Introduction to Networking</a></b></li>
-    <li><b><a href="docs/htb/Linux/">Linux Fundamentals</a></b></li>
+    <li><b><a href="docs/htb/Linux/">Linux Fundamentals</a><a href="docs/htb/Linux_Fundamentals_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
     <li><b><a href="docs/htb/Linux/">Introduction to Bash Scripting</a></b></li>
-    <li><b><a href="docs/htb/Windows/">Windows Fundamentals</a></b></li>
-    <li><b><a href="docs/htb/Windows/">Introduction to Windows Command Line</a></b></li>
-    <li><b><a href="docs/htb/Web_Requests/">Web Requests</a></b></li>
+    <li><b><a href="docs/htb/Windows/">Windows Fundamentals</a><a href="docs/htb/Windows_Fundamentals_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
+    <li><b><a href="docs/htb/Windows/">Introduction to Windows Command Line</a><a href="docs/htb/Introduction_To_Windows_Command_Line_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
+    <li><b><a href="docs/htb/Web_Requests/">Web Requests</a><a href="docs/htb/Web_Requests_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
     <li><b><a href="docs/htb/Web_Applications/">Introduction to Web Applications</a></b></li>
     <li><b><a href="docs/htb/Penetration_Testing/">Introduction to Penetration Testing</a></b></li>
-    <li><b><a href="docs/htb/Pentest_In_A_Nutshell/">Pentest in a Nutshell</a></b></li>
-    <li><b><a href="docs/htb/Networking/">Network Enumeration with Nmap</a></b></li>
-    <li><b><a href="docs/htb/Footprinting/">Footprinting</a></b></li>
-    <li><b><a href="docs/htb/Hacking_Wordpress/">Hacking WordPress</a></b></li>
-    <li><b><a href="docs/htb/Using_the_Metasploit_Framework/">Using the Metasploit Framework</a></b></li>
-    <li><b><a href="docs/htb/Intro_to_Network_Traffic_Analysis/">Intro to Network Traffic Analysis</a></b></li>
+    <li><b><a href="docs/htb/Pentest_In_A_Nutshell/">Pentest in a Nutshell</a><a href="docs/htb/Pentest_In_A_Nutshell_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
+    <li><b><a href="docs/htb/Networking/">Network Enumeration with Nmap</a><a href="docs/htb/Network_Enumeration_With_Nmap_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
+    <li><b><a href="docs/htb/Footprinting/">Footprinting</a><a href="docs/htb/Footprinting_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
+    <li><b><a href="docs/htb/Hacking_Wordpress/">Hacking WordPress</a><a href="docs/htb/Hacking_Wordpress_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
+    <li><b><a href="docs/htb/Using_the_Metasploit_Framework/">Using the Metasploit Framework</a><a href="docs/htb/Using_The_Metasploit_Framework_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
+    <li><b><a href="docs/htb/Intro_to_Network_Traffic_Analysis/">Intro to Network Traffic Analysis</a><a href="docs/htb/Intro_To_Network_Traffic_Analysis_Module_Cheat_Sheet.pdf">(Cheatsheet)</a></b></li>
     <li><b><a href="docs/htb/Incident_Handling_Process/">Incident Handling Process</a></b></li>
     <li><b><a href="docs/htb/Windows_Event_Logs/">Windows Event Logs & Finding Evil</a></b></li>
     <li><b><a href="docs/htb/Security_Monitoring_&_SIEM_Fundamentals/">Security Monitoring & SIEM Fundamentals</a></b></li>
