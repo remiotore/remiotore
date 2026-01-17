@@ -124,7 +124,78 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   </ul>
 </details>
 
-<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">Tracks/Machines</a> </h2>
+
+<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">Completed Machines</a> </h2>
+
+<details>
+  <summary>Sorted by name</summary>
+  <ul>
+    <li><b>Active</b></li>
+    <li><b>Administrator</b></li>
+    <li><b>Artificial</b></li>
+    <li><b>Authority</b></li>
+    <li><b>Baby</b></li>
+    <li><b>BoardLight</b></li>
+    <li><b>BountyHunter</b></li>
+    <li><b>Bucket</b></li>
+    <li><b>Cap</b></li>
+    <li><b>Certified</b></li>
+    <li><b>Cicada</b></li>
+    <li><b>CodePartTwo</b></li>
+    <li><b>Conversor</b></li>
+    <li><b>Devvortex</b></li>
+    <li><b>Driver</b></li>
+    <li><b>Editor</b></li>
+    <li><b>Epsilon</b></li>
+    <li><b>Era</b></li>
+    <li><b>Escape</b></li>
+    <li><b>EscapeTwo</b></li>
+    <li><b>Expressway</b></li>
+    <li><b>Fluffy</b></li>
+    <li><b>Gobox</b></li>
+    <li><b>GoodGames</b></li>
+    <li><b>HackNet</b></li>
+    <li><b>Imagery</b></li>
+    <li><b>Jeeves</b></li>
+    <li><b>Jerry</b></li>
+    <li><b>Job</b></li>
+    <li><b>Lock</b></li>
+    <li><b>Magic</b></li>
+    <li><b>MonitorsFour</b></li>
+    <li><b>Monteverde</b></li>
+    <li><b>Nunchucks</b></li>
+    <li><b>Outbound</b></li>
+    <li><b>Paper</b></li>
+    <li><b>Popcorn</b></li>
+    <li><b>Postman</b></li>
+    <li><b>Precious</b></li>
+    <li><b>Previous</b></li>
+    <li><b>Race</b></li>
+    <li><b>Return</b></li>
+    <li><b>Sau</b></li>
+    <li><b>Sauna</b></li>
+    <li><b>Scrambled</b></li>
+    <li><b>Signed</b></li>
+    <li><b>SolarLab</b></li>
+    <li><b>Soulmate</b></li>
+    <li><b>SteamCloud</b></li>
+    <li><b>StreamIO</b></li>
+    <li><b>Support</b></li>
+    <li><b>Timelapse</b></li>
+    <li><b>TombWatcher</b></li>
+    <li><b>Trick</b></li>
+    <li><b>TwoMillion</b></li>
+    <li><b>UnderPass</b></li>
+    <li><b>Undetected</b></li>
+    <li><b>Unobtainium</b></li>
+    <li><b>Vessel</b></li>
+    <li><b>VulnEscape</b></li>
+    <li><b>Worker</b></li>
+    <li><b>Writeup</b></li>
+  </ul>
+</details>
+
+<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">Completed Machines by Track</a> </h2>
 
 <details>
   <summary><b>Tier 0 - Foundations</b></summary>
