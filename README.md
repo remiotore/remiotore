@@ -93,15 +93,15 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary>CPTS - Certified Penetration Testing Specialist</summary>
   <ul>
-    <li><s><a href="">Penetration Testing Process</a></s></li>
-    <li><s><a href="">Getting Started</a></s></li>
-    <li><s><a href="">Network Enumeration with Nmap</a></s></li>
-    <li><s><a href="">Footprinting</a></s></li>
-    <li><s><a href="">Information Gathering - Web Edition</a></s></li>
-    <li><s><a href="">Vulnerability Assessment</a></s></li>
+    <li><b><a href="">Penetration Testing Process</a></b></li>
+    <li><b><a href="">Getting Started</a></b></li>
+    <li><b><a href="">Network Enumeration with Nmap</a></b></li>
+    <li><b><a href="">Footprinting</a></b></li>
+    <li><b><a href="">Information Gathering - Web Edition</a></b></li>
+    <li><b><a href="">Vulnerability Assessment</a></b></li>
     <li><a href="">File Transfers</a></li>
     <li><a href="">Shells & Payloads</a></li>
-    <li><s><a href="">Using the Metasploit Framework</a></s></li>
+    <li><b><a href="">Using the Metasploit Framework</a></b></li>
     <li><a href="">Password Attacks</a></li>
     <li><a href="">Attacking Common Services</a></li>
     <li><a href="">Pivoting, Tunneling, and Port Forwarding</a></li>
