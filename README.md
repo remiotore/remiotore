@@ -93,6 +93,34 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary>CPTS - Certified Penetration Testing Specialist</summary>
   <ul>
+    <li><s><a href="">Penetration Testing Process</a></s></li>
+    <li><s><a href="">Getting Started</a></s></li>
+    <li><s><a href="">Network Enumeration with Nmap</a></s></li>
+    <li><s><a href="">Footprinting</a></s></li>
+    <li><s><a href="">Information Gathering - Web Edition</a></s></li>
+    <li><s><a href="">Vulnerability Assessment</a></s></li>
+    <li><a href="">File Transfers</a></li>
+    <li><a href="">Shells & Payloads</a></li>
+    <li><s><a href="">Using the Metasploit Framework</a></s></li>
+    <li><a href="">Password Attacks</a></li>
+    <li><a href="">Attacking Common Services</a></li>
+    <li><a href="">Pivoting, Tunneling, and Port Forwarding</a></li>
+    <li><a href="">Active Directory Enumeration & Attacks</a></li>
+    <li><a href="">Using Web Proxies</a></li>
+    <li><a href="">Attacking Web Applications with Ffuf</a></li>
+    <li><a href="">Login Brute Forcing</a></li>
+    <li><a href="">SQL Injection Fundamentals</a></li>
+    <li><a href="">SQLMap Essentials</a></li>
+    <li><a href="">Cross-Site Scripting (XSS)</a></li>
+    <li><a href="">File Inclusion</a></li>
+    <li><a href="">File Upload Attacks</a></li>
+    <li><a href="">Command Injections</a></li>
+    <li><a href="">Web Attacks</a></li>
+    <li><a href="">Attacking Common Applications</a></li>
+    <li><a href="">Linux Privilege Escalation</a></li>
+    <li><a href="">Windows Privilege Escalation</a></li>
+    <li><a href="">Documentation & Reporting</a></li>
+    <li><a href="">Attacking Enterprise Networks</a></li>
   </ul>
 </details>
 
