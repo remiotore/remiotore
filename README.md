@@ -438,72 +438,72 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <details>
   <summary><b>Freqtrade Strategies</b></summary>
   <ul>
-    <li><a href="https://strat.ninja/overview.php?strategy=el_extrema">el_extrema</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=el_extrema_RL">el_extrema_RL</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=el_extrema_rolling">el_extrema_rolling</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=el_extrema_rsiqui">el_extrema_rsiqui</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=el_rsiqui">el_rsiqui</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=RsiquiV2">RsiquiV2</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=RsiquiV3">RsiquiV3</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=RsiquiV4">RsiquiV4</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=EWOistV1">EWOistV1</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=RsiquiV5">RsiquiV5</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV1">SlopeV1</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV2">SlopeV2</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV3">SlopeV3</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV4">SlopeV4</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV5">SlopeV5</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV6">SlopeV6</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV7">SlopeV7</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV8">SlopeV8</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV9">SlopeV9</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=PlusMinusV1">PlusMinusV1</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=PlusMinusV2">PlusMinusV2</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=TrendentiousV1">TrendentiousV1</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=EMA_Fibbonaci">EMA_Fibbonaci</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=EMA_Fibonacci_V2">EMA_Fibonacci_V2</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=EMA_Fibonacci_V3">EMA_Fibonacci_V3</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=EMA_Fibonacci_V4">EMA_Fibonacci_V4</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=BollingerMACD_V1">BollingerMACD_V1</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=BollingerMACD_V2">BollingerMACD_V2</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=BollingerMACD_V3">BollingerMACD_V3</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=YESTank">YESTank</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=Zaratustra">Zaratustra</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV2">ZaratustraV2</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV3">ZaratustraV3</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV4">ZaratustraV4</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV6">ZaratustraV6</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV5">ZaratustraV5</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV8">ZaratustraV8</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV9">ZaratustraV9</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV10">ZaratustraV10</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV11"><b>ZaratustraV11</b></a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV12">ZaratustraV12</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV13"><b>ZaratustraV13</b></a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV14">ZaratustraV14</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV15">ZaratustraV15</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV16">ZaratustraV16</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV17"><b>ZaratustraV17</b></a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV18">ZaratustraV18</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV19">ZaratustraV19</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV20">ZaratustraV20</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV21">ZaratustraV21</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV22">ZaratustraV22</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV23">ZaratustraV23</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV24">ZaratustraV24</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV25">ZaratustraV25</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV26">ZaratustraV26</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV27">ZaratustraV27</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV28">ZaratustraV28</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV29">ZaratustraV29</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV30">ZaratustraV30</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV31">ZaratustraV31</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V1">RSIBB_V1</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V2">RSIBB_V2</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V4">RSIBB_V4</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V3">RSIBB_V3</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=GnF"><b>GnF</b></a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=GnF_V2"><b>GnF_V2</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=el_extrema">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/el_extrema.py">el_extrema</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=el_extrema_RL">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/el_extrema_RL.py">el_extrema_RL</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=el_extrema_rolling">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/el_extrema_rolling.py">el_extrema_rolling</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=el_extrema_rsiqui">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/el_extrema_rsiqui.py">el_extrema_rsiqui</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=el_rsiqui">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/el_rsiqui.py">el_rsiqui</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=RsiquiV2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RsiquiV2.py">RsiquiV2</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=RsiquiV3">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RsiquiV3.py">RsiquiV3</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=RsiquiV4">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RsiquiV4.py">RsiquiV4</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=EWOistV1">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/EWOistV1.py">EWOistV1</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=RsiquiV5">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RsiquiV5.py">RsiquiV5</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV1">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV1.py">SlopeV1</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV2.py">SlopeV2</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV3">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV3.py">SlopeV3</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV4">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV4.py">SlopeV4</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV5">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV5.py">SlopeV5</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV6">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV6.py">SlopeV6</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV7">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV7.py">SlopeV7</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV8">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV8.py">SlopeV8</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=SlopeV9">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/SlopeV9.py">SlopeV9</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=PlusMinusV1">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/PlusMinusV1.py">PlusMinusV1</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=PlusMinusV2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/PlusMinusV2.py">PlusMinusV2</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=TrendentiousV1">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/TrendentiousV1.py">TrendentiousV1</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=EMA_Fibbonaci">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/EMA_Fibbonaci.py">EMA_Fibbonaci</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=EMA_Fibonacci_V2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/EMA_Fibonacci_V2.py">EMA_Fibonacci_V2</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=EMA_Fibonacci_V3">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/EMA_Fibonacci_V3.py">EMA_Fibonacci_V3</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=EMA_Fibonacci_V4">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/EMA_Fibonacci_V4.py">EMA_Fibonacci_V4</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=BollingerMACD_V1">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/BollingerMACD_V1.py">BollingerMACD_V1</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=BollingerMACD_V2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/BollingerMACD_V2.py">BollingerMACD_V2</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=BollingerMACD_V3">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/BollingerMACD_V3.py">BollingerMACD_V3</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=YESTank">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/YESTank.py">YESTank</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=Zaratustra">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/Zaratustra.py">Zaratustra</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV2.py">ZaratustraV2</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV3">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV3.py">ZaratustraV3</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV4">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV4.py">ZaratustraV4</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV6">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV6.py">ZaratustraV6</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV5">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV5.py">ZaratustraV5</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV8">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV8.py">ZaratustraV8</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV9">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV9.py">ZaratustraV9</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV10">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV10.py">ZaratustraV10</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV11"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV11.py">ZaratustraV11</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV12">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV12.py">ZaratustraV12</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV13"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV13.py">ZaratustraV13</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV14">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV14.py">ZaratustraV14</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV15">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV15.py">ZaratustraV15</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV16">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV16.py">ZaratustraV16</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV17"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV17.py">ZaratustraV17</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV18">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV18.py">ZaratustraV18</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV19">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV19.py">ZaratustraV19</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV20">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV20.py">ZaratustraV20</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV21">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV21.py">ZaratustraV21</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV22">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV22.py">ZaratustraV22</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV23">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV23.py">ZaratustraV23</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV24">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV24.py">ZaratustraV24</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV25">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV25.py">ZaratustraV25</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV26">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV26.py">ZaratustraV26</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV27">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV27.py">ZaratustraV27</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV28">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV28.py">ZaratustraV28</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV29">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV29.py">ZaratustraV29</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV30">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV30.py">ZaratustraV30</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV31">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV31.py">ZaratustraV31</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V1">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RSIBB_V1.py">RSIBB_V1</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RSIBB_V2.py">RSIBB_V2</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V4">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RSIBB_V4.py">RSIBB_V4</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V3">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RSIBB_V3.py">RSIBB_V3</a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=GnF"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/GnF.py">GnF</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=GnF_V2"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/GnF_V2.py">GnF_V2</b></a></li>
 </ul>
 
 </details>
