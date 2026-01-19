@@ -69,39 +69,39 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   <ul>
     <li><b>Introduction to Information Security</b></li>
     <li><b>Network Foundations</b></li>
-    <li><b><a href="docs/htb/Networking/">Introduction to Networking</a></b></li>
-    <li><b><a href="docs/htb/Linux_Fundamentals_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Linux/">Linux Fundamentals</a></b></li>
-    <li><b><a href="docs/htb/Linux/">Introduction to Bash Scripting</a></b></li>
-    <li><b><a href="docs/htb/Windows_Fundamentals_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Windows/">Windows Fundamentals</a></b></li>
-    <li><b><a href="docs/htb/Introduction_To_Windows_Command_Line_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Windows/">Introduction to Windows Command Line</a></b></li>
-    <li><b><a href="docs/htb/Web_Requests_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Web_Requests/">Web Requests</a></b></li>
-    <li><b><a href="docs/htb/Web_Applications/">Introduction to Web Applications</a></b></li>
-    <li><b><a href="docs/htb/Penetration_Testing/">Introduction to Penetration Testing</a></b></li>
-    <li><b><a href="docs/htb/Pentest_In_A_Nutshell_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Pentest_In_A_Nutshell/">Pentest in a Nutshell</a></b></li>
-    <li><b><a href="docs/htb/Network_Enumeration_With_Nmap_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Networking/">Network Enumeration with Nmap</a></b></li>
-    <li><b><a href="docs/htb/Footprinting_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Footprinting/">Footprinting</a></b></li>
-    <li><b><a href="docs/htb/Hacking_Wordpress_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Hacking_Wordpress/">Hacking WordPress</a></b></li>
-    <li><b><a href="docs/htb/Using_The_Metasploit_Framework_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Using_the_Metasploit_Framework/">Using the Metasploit Framework</a></b></li>
-    <li><b><a href="docs/htb/Intro_To_Network_Traffic_Analysis_Module_Cheat_Sheet.pdf">(Cheat)</a> <a href="docs/htb/Intro_to_Network_Traffic_Analysis/">Intro to Network Traffic Analysis</a></b></li>
-    <li><b><a href="docs/htb/Incident_Handling_Process/">Incident Handling Process</a></b></li>
-    <li><b><a href="docs/htb/Windows_Event_Logs/">Windows Event Logs & Finding Evil</a></b></li>
-    <li><b><a href="docs/htb/Security_Monitoring_&_SIEM_Fundamentals/">Security Monitoring & SIEM Fundamentals</a></b></li>
-    <li><b><a href="docs/htb/Introduction_to_Threat_Hunting_&_Hunting_With_Elastic/">Introduction to Threat Hunting & Hunting With Elastic</a></b></li>
+    <li><b><a href="docs/Networking/">Introduction to Networking</a></b></li>
+    <li><b><a href="docs/Linux_Fundamentals_Module_Cheat_Sheet.pdf">Linux Fundamentals</a></b></li>
+    <li><b><a href="docs/Linux/">Introduction to Bash Scripting</a></b></li>
+    <li><b><a href="docs/Windows_Fundamentals_Module_Cheat_Sheet.pdf">Windows Fundamentals</a></b></li>
+    <li><b><a href="docs/Introduction_To_Windows_Command_Line_Module_Cheat_Sheet.pdf">Introduction to Windows Command Line</a></b></li>
+    <li><b><a href="docs/Web_Requests_Module_Cheat_Sheet.pdf">Web Requests</a></b></li>
+    <li><b><a href="docs/Web_Applications/">Introduction to Web Applications</a></b></li>
+    <li><b><a href="docs/Penetration_Testing/">Introduction to Penetration Testing</a></b></li>
+    <li><b><a href="docs/Pentest_In_A_Nutshell_Module_Cheat_Sheet.pdf">Pentest in a Nutshell</a></b></li>
+    <li><b><a href="docs/Network_Enumeration_With_Nmap_Module_Cheat_Sheet.pdf">Network Enumeration with Nmap</a></b></li>
+    <li><b><a href="docs/Footprinting_Module_Cheat_Sheet.pdf">Footprinting</a></b></li>
+    <li><b><a href="docs/Hacking_Wordpress_Module_Cheat_Sheet.pdf">Hacking WordPress</a></b></li>
+    <li><b><a href="docs/Using_The_Metasploit_Framework_Module_Cheat_Sheet.pdf">Using the Metasploit Framework</a></b></li>
+    <li><b><a href="docs/Intro_To_Network_Traffic_Analysis_Module_Cheat_Sheet.pdf">Intro to Network Traffic Analysis</a></b></li>
+    <li><b><a href="docs/Incident_Handling_Process/">Incident Handling Process</a></b></li>
+    <li><b><a href="docs/Windows_Event_Logs/">Windows Event Logs & Finding Evil</a></b></li>
+    <li><b><a href="docs/Security_Monitoring_&_SIEM_Fundamentals/">Security Monitoring & SIEM Fundamentals</a></b></li>
+    <li><b><a href="docs/Introduction_to_Threat_Hunting_&_Hunting_With_Elastic/">Introduction to Threat Hunting & Hunting With Elastic</a></b></li>
   </ul>
 </details>
 
 <details>
   <summary>CPTS - Certified Penetration Testing Specialist</summary>
   <ul>
-    <li><b><a href="">Penetration Testing Process</a></b></li>
-    <li><b><a href="">Getting Started</a></b></li>
-    <li><b><a href="">Network Enumeration with Nmap</a></b></li>
-    <li><b><a href="">Footprinting</a></b></li>
-    <li><b><a href="">Information Gathering - Web Edition</a></b></li>
-    <li><b><a href="">Vulnerability Assessment</a></b></li>
-    <li><a href="">File Transfers</a></li>
-    <li><a href="">Shells & Payloads</a></li>
-    <li><b><a href="">Using the Metasploit Framework</a></b></li>
+    <li><b>Penetration Testing Process</b></li>
+    <li><b><a href="docs/Getting_Started_Module_Cheat_Sheet.pdf">Getting Started</a></b></li>
+    <li><b><a href="docs/Network_Enumeration_With_Nmap_Module_Cheat_Sheet.pdf">Network Enumeration with Nmap</a></b></li>
+    <li><b><a href="docs/Footprinting_Module_Cheat_Sheet.pdf">Footprinting</a></b></li>
+    <li><b><a href="docs/Information_Gathering_Web_Edition_Module_Cheat_Sheet.pdf">Information Gathering - Web Edition</a></b></li>
+    <li><b>Vulnerability Assessment</b></li>
+    <li><b><a href="docs/File_Transfers_Module_Cheat_Sheet.pdf">File Transfers</a></b></li>
+    <li><b><a href="docs/Shells_Payloads_Module_Cheat_Sheet.pdf">Shells & Payloads</a></b></li>
+    <li><b><a href="docs/Using_The_Metasploit_Framework_Module_Cheat_Sheet.pdf">Using the Metasploit Framework</a></b></li>
     <li><a href="">Password Attacks</a></li>
     <li><a href="">Attacking Common Services</a></li>
     <li><a href="">Pivoting, Tunneling, and Port Forwarding</a></li>
@@ -435,10 +435,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 - Market behavior and volatility patterns
 - Backtesting and optimization results
 
-<p>⚠️ Disclaimer: These strategies are provided for educational and demonstration purposes only and are not financial advice.</p>
-
 <details>
-  <summary>Freqtrade Strategies</summary>
+  <summary><b>Freqtrade Strategies</b></summary>
   <ul>
     <li><a href="https://strat.ninja/overview.php?strategy=el_extrema">el_extrema</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=el_extrema_RL">el_extrema_RL</a></li>
@@ -509,6 +507,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 </ul>
 
 </details>
+
+<p>⚠️ Disclaimer: These strategies are provided for educational and demonstration purposes only and are not financial advice.</p>
 
 <hr>
 
