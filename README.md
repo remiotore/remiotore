@@ -477,13 +477,13 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV8">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV8.py">ZaratustraV8</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV9">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV9.py">ZaratustraV9</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV10">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV10.py">ZaratustraV10</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV11"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV11.py">ZaratustraV11</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV11">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV11.py"><b>ZaratustraV11</b></a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV12">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV12.py">ZaratustraV12</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV13"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV13.py">ZaratustraV13</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV13">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV13.py"><b>ZaratustraV13</b></a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV14">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV14.py">ZaratustraV14</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV15">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV15.py">ZaratustraV15</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV16">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV16.py">ZaratustraV16</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV17"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV17.py">ZaratustraV17</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV17">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV17.py"><b>ZaratustraV17</b></a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV18">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV18.py">ZaratustraV18</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV19">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV19.py">ZaratustraV19</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=ZaratustraV20">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV20.py">ZaratustraV20</a></li>
@@ -502,8 +502,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RSIBB_V2.py">RSIBB_V2</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V4">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RSIBB_V4.py">RSIBB_V4</a></li>
     <li><a href="https://strat.ninja/overview.php?strategy=RSIBB_V3">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/RSIBB_V3.py">RSIBB_V3</a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=GnF"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/GnF.py">GnF</b></a></li>
-    <li><a href="https://strat.ninja/overview.php?strategy=GnF_V2"><b>[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/GnF_V2.py">GnF_V2</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=GnF">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/GnF.py"><b>GnF</b></a></li>
+    <li><a href="https://strat.ninja/overview.php?strategy=GnF_V2">[Performance]</a> <a href="https://github.com/remiotore/freqtrade/blob/main/my-strategies/GnF_V2.py"><b>GnF_V2</b></a></li>
 </ul>
 
 </details>
