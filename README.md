@@ -102,11 +102,11 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b><a href="docs/File_Transfers_Module_Cheat_Sheet.pdf">File Transfers</a></b></li>
     <li><b><a href="docs/Shells_Payloads_Module_Cheat_Sheet.pdf">Shells & Payloads</a></b></li>
     <li><b><a href="docs/Using_The_Metasploit_Framework_Module_Cheat_Sheet.pdf">Using the Metasploit Framework</a></b></li>
-    <li><a href="">Password Attacks</a></li>
+    <li><b><a href="docs/Password_Attacks_Module_Cheat_Sheet.pdf">Password Attacks</a></b></li>
     <li><a href="">Attacking Common Services</a></li>
     <li><a href="">Pivoting, Tunneling, and Port Forwarding</a></li>
     <li><a href="">Active Directory Enumeration & Attacks</a></li>
-    <li><a href="">Using Web Proxies</a></li>
+    <li><b><a href="docs/Using_Web_Proxies_Module_Cheat_Sheet.pdf">Using Web Proxies</a></b></li>
     <li><a href="">Attacking Web Applications with Ffuf</a></li>
     <li><a href="">Login Brute Forcing</a></li>
     <li><a href="">SQL Injection Fundamentals</a></li>
