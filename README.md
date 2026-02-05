@@ -69,24 +69,24 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   <ul>
     <li><b>Introduction to Information Security</b></li>
     <li><b>Network Foundations</b></li>
-    <li><b><a href="docs/Networking/">Introduction to Networking</a></b></li>
+    <li><b>Introduction to Networking</b></li>
     <li><b><a href="docs/Linux_Fundamentals_Module_Cheat_Sheet.pdf">Linux Fundamentals</a></b></li>
-    <li><b><a href="docs/Linux/">Introduction to Bash Scripting</a></b></li>
+    <li><b>Introduction to Bash Scripting</b></li>
     <li><b><a href="docs/Windows_Fundamentals_Module_Cheat_Sheet.pdf">Windows Fundamentals</a></b></li>
     <li><b><a href="docs/Introduction_To_Windows_Command_Line_Module_Cheat_Sheet.pdf">Introduction to Windows Command Line</a></b></li>
     <li><b><a href="docs/Web_Requests_Module_Cheat_Sheet.pdf">Web Requests</a></b></li>
-    <li><b><a href="docs/Web_Applications/">Introduction to Web Applications</a></b></li>
-    <li><b><a href="docs/Penetration_Testing/">Introduction to Penetration Testing</a></b></li>
+    <li><b>Introduction to Web Applications</b></li>
+    <li><b>Introduction to Penetration Testing</b></li>
     <li><b><a href="docs/Pentest_In_A_Nutshell_Module_Cheat_Sheet.pdf">Pentest in a Nutshell</a></b></li>
     <li><b><a href="docs/Network_Enumeration_With_Nmap_Module_Cheat_Sheet.pdf">Network Enumeration with Nmap</a></b></li>
     <li><b><a href="docs/Footprinting_Module_Cheat_Sheet.pdf">Footprinting</a></b></li>
     <li><b><a href="docs/Hacking_Wordpress_Module_Cheat_Sheet.pdf">Hacking WordPress</a></b></li>
     <li><b><a href="docs/Using_The_Metasploit_Framework_Module_Cheat_Sheet.pdf">Using the Metasploit Framework</a></b></li>
     <li><b><a href="docs/Intro_To_Network_Traffic_Analysis_Module_Cheat_Sheet.pdf">Intro to Network Traffic Analysis</a></b></li>
-    <li><b><a href="docs/Incident_Handling_Process/">Incident Handling Process</a></b></li>
-    <li><b><a href="docs/Windows_Event_Logs/">Windows Event Logs & Finding Evil</a></b></li>
-    <li><b><a href="docs/Security_Monitoring_&_SIEM_Fundamentals/">Security Monitoring & SIEM Fundamentals</a></b></li>
-    <li><b><a href="docs/Introduction_to_Threat_Hunting_&_Hunting_With_Elastic/">Introduction to Threat Hunting & Hunting With Elastic</a></b></li>
+    <li><b>Incident Handling Process</b></li>
+    <li><b>>Windows Event Logs & Finding Evil</b></li>
+    <li><b>Security Monitoring & SIEM Fundamentals</b></li>
+    <li><b>Introduction to Threat Hunting & Hunting With Elastic</b></li>
   </ul>
 </details>
 
