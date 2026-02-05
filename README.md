@@ -94,7 +94,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   <summary>CPTS - Certified Penetration Testing Specialist</summary>
   <ul>
     <li><b>Penetration Testing Process</b></li>
-    <li><b><a href="docs/Getting_Started_Module_Cheat_Sheet.pdf">Getting Started</a></b></li>
+    <li><b>Getting Started</b></li>
     <li><b><a href="docs/Network_Enumeration_With_Nmap_Module_Cheat_Sheet.pdf">Network Enumeration with Nmap</a></b></li>
     <li><b><a href="docs/Footprinting_Module_Cheat_Sheet.pdf">Footprinting</a></b></li>
     <li><b><a href="docs/Information_Gathering_Web_Edition_Module_Cheat_Sheet.pdf">Information Gathering - Web Edition</a></b></li>
