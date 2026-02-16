@@ -107,8 +107,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b><a href="docs/Pivoting_Tunneling_And_Port_Forwarding_Module_Cheat_Sheet.pdf">Pivoting, Tunneling, and Port Forwarding</a></b></li>
     <li><b><a href="docs/Active_Directory_Enumeration_Attacks_Module_Cheat_Sheet.pdf">Active Directory Enumeration & Attacks</a></b></li>
     <li><b><a href="docs/Using_Web_Proxies_Module_Cheat_Sheet.pdf">Using Web Proxies</a></b></li>
-    <li><a href="">Attacking Web Applications with Ffuf</a></li>
-    <li><a href="">Login Brute Forcing</a></li>
+    <li><b><a href="docs/Attacking_Web_Applications_With_Ffuf_Module_Cheat_Sheet.pdf">Attacking Web Applications with Ffuf</a></b></li>
+    <li><b><a href="docs/Login_Brute_Forcing_Module_Cheat_Sheet.pdf">Login Brute Forcing</a></b></li>
     <li><a href="">SQL Injection Fundamentals</a></li>
     <li><a href="">SQLMap Essentials</a></li>
     <li><a href="">Cross-Site Scripting (XSS)</a></li>
