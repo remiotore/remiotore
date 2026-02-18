@@ -109,8 +109,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b><a href="docs/Using_Web_Proxies_Module_Cheat_Sheet.pdf">Using Web Proxies</a></b></li>
     <li><b><a href="docs/Attacking_Web_Applications_With_Ffuf_Module_Cheat_Sheet.pdf">Attacking Web Applications with Ffuf</a></b></li>
     <li><b><a href="docs/Login_Brute_Forcing_Module_Cheat_Sheet.pdf">Login Brute Forcing</a></b></li>
-    <li><a href="">SQL Injection Fundamentals</a></li>
-    <li><a href="">SQLMap Essentials</a></li>
+    <li><b><a href="docs/Sql_Injection_Fundamentals_Module_Cheat_Sheet.pdf">SQL Injection Fundamentals</a></b></li>
+    <li><b><a href="docs/Sqlmap_Essentials_Module_Cheat_Sheet.pdf">SQLMap Essentials</a></b></li>
     <li><a href="">Cross-Site Scripting (XSS)</a></li>
     <li><a href="">File Inclusion</a></li>
     <li><a href="">File Upload Attacks</a></li>
