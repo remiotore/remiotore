@@ -113,7 +113,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b><a href="docs/Sqlmap_Essentials_Module_Cheat_Sheet.pdf">SQLMap Essentials</a></b></li>
     <li><b><a href="docs/Cross_Site_Scripting_Xss_Module_Cheat_Sheet.pdf">Cross-Site Scripting (XSS)</a></b></li>
     <li><b><a href="docs/File_Inclusion_Module_Cheat_Sheet.pdf">File Inclusion</a></b></li>
-    <li><a href="">File Upload Attacks</a></li>
+    <li><b><a href="docs/File_Upload_Attacks_Module_Cheat_Sheet.pdf">File Upload Attacks</a></b></li>
     <li><a href="">Command Injections</a></li>
     <li><a href="">Web Attacks</a></li>
     <li><a href="">Attacking Common Applications</a></li>
