@@ -116,7 +116,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b><a href="docs/File_Upload_Attacks_Module_Cheat_Sheet.pdf">File Upload Attacks</a></b></li>
     <li><b><a href="docs/Command_Injections_Module_Cheat_Sheet.pdf">Command Injections</a></b></li>
     <li><b><a href="docs/Web_Attacks_Module_Cheat_Sheet.pdf">Web Attacks</a></b></li>
-    <li><a href="">Attacking Common Applications</a></li>
+    <li><b><a href="docs/Attacking Common Applications - cheatsheet.pdf">Attacking Common Applications</a></b></li>
     <li><a href="">Linux Privilege Escalation</a></li>
     <li><a href="">Windows Privilege Escalation</a></li>
     <li><a href="">Documentation & Reporting</a></li>
