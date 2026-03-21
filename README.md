@@ -119,8 +119,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b><a href="docs/Attacking Common Applications - cheatsheet.pdf">Attacking Common Applications</a></b></li>
     <li><b><a href="docs/Linux Privilege Escalation - cheatsheet.pdf">Linux Privilege Escalation</a></b></li>
     <li><b><a href="docs/Windows Privilege Escalation - cheatsheet.pdf">Windows Privilege Escalation</a></b></li>
-    <li><a href="">Documentation & Reporting</a></li>
-    <li><a href="">Attacking Enterprise Networks</a></li>
+    <li><b>Documentation & Reporting</b></li>
+    <li><b>Attacking Enterprise Networks</b></li>
   </ul>
 </details>
 
