@@ -62,7 +62,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 <h1>Hack The Box</h1>
 
-<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">Certs</a> </h2>
+<h2 id="Certs" align=''> <a href="https://app.hackthebox.com/public/users/25872">Certs</a> </h2>
 
 <details>
   <summary>CJCA - Certified Junior Cybersecurity Associate</summary>
@@ -124,8 +124,11 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   </ul>
 </details>
 
+<h2 id="workflow" align=''> <a href="https://app.hackthebox.com/public/users/25872">Pentesting Workflow</a> </h2>
 
-<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">Completed Machines</a> </h2>
+![CPTS Pentesting Workflow](docs/pentesting_workflow.svg)
+
+<h2 id="completed_machines" align=''> <a href="https://app.hackthebox.com/public/users/25872">Completed Machines</a> </h2>
 
 <details>
   <summary>Sorted by name</summary>
@@ -195,7 +198,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   </ul>
 </details>
 
-<h2 id="my_progress" align=''> <a href="https://app.hackthebox.com/public/users/25872">Completed Machines by Track</a> </h2>
+<h2 id="completed_machines_by_track" align=''> <a href="https://app.hackthebox.com/public/users/25872">Completed Machines by Track</a> </h2>
 
 <details>
   <summary><b>Tier 0 - Foundations</b></summary>
@@ -427,7 +430,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 <h1>AlgoTrading Projects</h1>
 
 
-<h2>Project 0: Freqtrade Strategies</h2>
+<h2 id="freqtrade_strategies" align=''>Project 0: Freqtrade Strategies</h2>
 
 <p>This repository contains a collection of custom trading strategies developed by me using Freqtrade, focused on algorithmic cryptocurrency trading. These strategies are part of my personal portfolio and reflect my approach to quantitative trading, risk management, and market analysis. Each strategy is designed, tested, and iterated based on:</p>
 
