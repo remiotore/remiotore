@@ -142,18 +142,22 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b>BountyHunter</b></li>
     <li><b>Bucket</b></li>
     <li><b>Cap</b></li>
+    <li><b>CCTV</b></li>
     <li><b>Certified</b></li>
     <li><b>Cicada</b></li>
     <li><b>CodePartTwo</b></li>
     <li><b>Conversor</b></li>
+    <li><b>Craft</b></li>
     <li><b>Devvortex</b></li>
     <li><b>Driver</b></li>
     <li><b>Editor</b></li>
+    <li><b>Eighteen</b></li>
     <li><b>Epsilon</b></li>
     <li><b>Era</b></li>
     <li><b>Escape</b></li>
     <li><b>EscapeTwo</b></li>
     <li><b>Expressway</b></li>
+    <li><b>Facts</b></li>
     <li><b>Fluffy</b></li>
     <li><b>Gobox</b></li>
     <li><b>GoodGames</b></li>
@@ -162,6 +166,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b>Jeeves</b></li>
     <li><b>Jerry</b></li>
     <li><b>Job</b></li>
+    <li><b>Kobold</b></li>
     <li><b>Lock</b></li>
     <li><b>Magic</b></li>
     <li><b>MonitorsFour</b></li>
@@ -173,6 +178,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b>Postman</b></li>
     <li><b>Precious</b></li>
     <li><b>Previous</b></li>
+    <li><b>Pterodactyl</b></li>
+    <li><b>Puppy</b></li>
     <li><b>Race</b></li>
     <li><b>Return</b></li>
     <li><b>Sau</b></li>
@@ -191,6 +198,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li><b>UnderPass</b></li>
     <li><b>Undetected</b></li>
     <li><b>Unobtainium</b></li>
+    <li><b>VariaType</b></li>
     <li><b>Vessel</b></li>
     <li><b>VulnEscape</b></li>
     <li><b>Worker</b></li>
@@ -419,7 +427,7 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li>Voleur</li>
     <li><b>Administrator</b></li>
     <li><b>Authority</b></li>
-    <li>Craft</li>
+    <li><b>Craft</b></li>
     <li>Redelegate</li>
     <li>Snoopy</li>
     <li>Ghost</li>
