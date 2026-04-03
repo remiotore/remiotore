@@ -54,3 +54,31 @@ code {
 ::-webkit-scrollbar-thumb {
   background: #00ff41;
 }
+
+/* Tables with black background */
+table {
+  background-color: #0a0a0a !important;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-color: #00ff41;
+}
+
+table th,
+table td {
+  background-color: #0a0a0a !important;
+  border-color: #00ff41 !important;
+  color: #00ff41;
+  padding: 8px 12px;
+}
+
+table th {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #00ff41 !important;
+}
+
+table tr:hover {
+  background-color: #1a1a1a !important;
+}

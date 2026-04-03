@@ -26,8 +26,7 @@ Dedicated to sharpening skills daily through HackTheBox and mastering vulnerabil
 
 ### 📊 GitHub Analytics
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=remiotore&show_icons=true&theme=tokyonight&bg_color=0a0a0a&title_color=00ff41&text_color=ffffff&icon_color=00ff41&border_color=00ff41" alt="Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=remiotore&layout=compact&theme=tokyonight&bg_color=0a0a0a&title_color=00ff41&text_color=ffffff&icon_color=00ff41&border_color=00ff41" alt="Top Langs" />
+  [![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/remiotore?cardType=level&fontFamily=&preferLogin=false)](https://git.io/awesome-stats-card)
 </div>
 
 ---
