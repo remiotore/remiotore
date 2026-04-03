@@ -126,7 +126,9 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 <h2 id="workflow" align=''> <a href="https://app.hackthebox.com/public/users/25872">Pentesting Workflow</a> </h2>
 
-![CPTS Pentesting Workflow](docs/pentesting_workflow.svg)
+[Pentesting Cheatsheet](docs/pentesting_cheatsheet.md)
+
+![Pentesting Workflow](docs/pentesting_workflow.svg)
 
 <h2 id="completed_machines" align=''> <a href="https://app.hackthebox.com/public/users/25872">Completed Machines</a> </h2>
 
