@@ -124,12 +124,6 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
   </ul>
 </details>
 
-<h2 id="workflow" align=''> <a href="https://app.hackthebox.com/public/users/25872">Pentesting Workflow</a> </h2>
-
-[Pentesting Cheatsheet](docs/pentesting_cheatsheet.md)
-
-![Pentesting Workflow](docs/pentesting_workflow.svg)
-
 <h2 id="completed_machines" align=''> <a href="https://app.hackthebox.com/public/users/25872">Completed Machines</a> </h2>
 
 <details>
@@ -435,6 +429,12 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
     <li>Ghost</li>
   </ul>
 </details>
+
+<h2 id="workflow" align=''> <a href="https://app.hackthebox.com/public/users/25872">Pentesting Workflow</a> </h2>
+
+[Pentesting Cheatsheet](docs/pentesting_cheatsheet.md)
+
+![Pentesting Workflow](docs/pentesting_workflow.svg)
 
 ---
 <h1>AlgoTrading Projects</h1>
