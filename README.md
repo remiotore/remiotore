@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00FF41&height=200&section=header&text=Remiotore&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Offensive%20Security%20%7C%20Algorithmic%20Trader&descSize=20&descAlignY=60" />
+  <img style="background:transparent" src="https://capsule-render.vercel.app/api?type=waving&color=00FF41&height=200&section=header&text=Remiotore&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Offensive%20Security%20%7C%20Algorithmic%20Trader&descSize=20&descAlignY=60" />
 </div>
 
 ---
