@@ -83,15 +83,15 @@ Dedicated to sharpening skills daily through HackTheBox and mastering vulnerabil
     Detailed knowledge in network foundations, Linux/Windows fundamentals, and introductory penetration testing.
   </blockquote>
   <ul>
-    <li><b><a href="docs/Linux_Fundamentals_Module_Cheat_Sheet.pdf">Linux Fundamentals</a></b></li>
-    <li><b><a href="docs/Windows_Fundamentals_Module_Cheat_Sheet.pdf">Windows Fundamentals</a></b></li>
-    <li><b><a href="docs/Web_Requests_Module_Cheat_Sheet.pdf">Web Requests</a></b></li>
-    <li><b><a href="docs/Pentest_In_A_Nutshell_Module_Cheat_Sheet.pdf">Pentest in a Nutshell</a></b></li>
-    <li><b><a href="docs/Network_Enumeration_With_Nmap_Module_Cheat_Sheet.pdf">Network Enumeration with Nmap</a></b></li>
-    <li><b><a href="docs/Footprinting_Module_Cheat_Sheet.pdf">Footprinting</a></b></li>
-    <li><b><a href="docs/Hacking_Wordpress_Module_Cheat_Sheet.pdf">Hacking WordPress</a></b></li>
-    <li><b><a href="docs/Using_The_Metasploit_Framework_Module_Cheat_Sheet.pdf">Using the Metasploit Framework</a></b></li>
-    <li><b><a href="docs/Intro_To_Network_Traffic_Analysis_Module_Cheat_Sheet.pdf">Intro to Network Traffic Analysis</a></b></li>
+    <li><b>Linux Fundamentals</b></li>
+    <li><b>Windows Fundamentals</b></li>
+    <li><b>Web Requests</b></li>
+    <li><b>Pentest in a Nutshell</b></li>
+    <li><b>Network Enumeration with Nmap</b></li>
+    <li><b>Footprinting</b></li>
+    <li><b>Hacking WordPress</b></li>
+    <li><b>Using the Metasploit Framework</b></li>
+    <li><b>Intro to Network Traffic Analysis</b></li>
   </ul>
 </details>
 
@@ -101,16 +101,16 @@ Dedicated to sharpening skills daily through HackTheBox and mastering vulnerabil
     Advanced skills in Active Directory, web attacks, pivoting, and reporting.
   </blockquote>
   <ul>
-    <li><b><a href="docs/Information_Gathering_Web_Edition_Module_Cheat_Sheet.pdf">Information Gathering</a></b></li>
-    <li><b><a href="docs/File_Transfers_Module_Cheat_Sheet.pdf">File Transfers</a></b></li>
-    <li><b><a href="docs/Shells_Payloads_Module_Cheat_Sheet.pdf">Shells & Payloads</a></b></li>
-    <li><b><a href="docs/Password_Attacks_Module_Cheat_Sheet.pdf">Password Attacks</a></b></li>
-    <li><b><a href="docs/Attacking_Common_Services_Module_Cheat_Sheet.pdf">Attacking Common Services</a></b></li>
-    <li><b><a href="docs/Pivoting_Tunneling_And_Port_Forwarding_Module_Cheat_Sheet.pdf">Pivoting & Tunneling</a></b></li>
-    <li><b><a href="docs/Active_Directory_Enumeration_Attacks_Module_Cheat_Sheet.pdf">Active Directory Attacks</a></b></li>
-    <li><b><a href="docs/Sql_Injection_Fundamentals_Module_Cheat_Sheet.pdf">SQL Injection</a></b></li>
-    <li><b><a href="docs/Linux Privilege Escalation - cheatsheet.pdf">Linux PrivEsc</a></b></li>
-    <li><b><a href="docs/Windows Privilege Escalation - cheatsheet.pdf">Windows PrivEsc</a></b></li>
+    <li><b>Information Gathering</b></li>
+    <li><b>File Transfers</b></li>
+    <li><b>Shells & Payloads</b></li>
+    <li><b>Password Attacks</b></li>
+    <li><b>Attacking Common Services</b></li>
+    <li><b>Pivoting & Tunneling</b></li>
+    <li><b>Active Directory Attacks</b></li>
+    <li><b>SQL Injection</b></li>
+    <li><b>Linux PrivEsc</b></li>
+    <li><b>Windows PrivEsc</b></li>
   </ul>
 </details>
 
