@@ -22,14 +22,12 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
-  border-bottom: 1px solid #00ff41;
 }
 
 /* Links that pop */
 a {
   color: #ffffff;
   text-decoration: none;
-  border: 1px solid #00ff41;
   padding: 2px 5px;
   transition: all 0.3s ease;
 }
@@ -44,7 +42,6 @@ a:hover {
 code {
   background-color: #1a1a1a !important;
   color: #ffb86c !important; /* Cyberpunk orange for contrast */
-  border-left: 3px solid #00ff41;
 }
 
 /* Scrollbar styling */
