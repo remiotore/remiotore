@@ -1,5 +1,5 @@
 <div align="center">
-  <img style="background:transparent" src="https://capsule-render.vercel.app/api?type=waving&color=00FF41&height=200&section=header&text=Remiotore&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Offensive%20Security%20%7C%20Algorithmic%20Trader&descSize=20&descAlignY=60" />
+  <img style="background: transparent;" src="https://capsule-render.vercel.app/api?type=waving&color=00FF41&height=200&section=header&text=Remiotore&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Offensive%20Security%20%7C%20Algorithmic%20Trader&descSize=20&descAlignY=60" />
 </div>
 
 ---
@@ -36,7 +36,7 @@ Dedicated to sharpening skills daily through HackTheBox and mastering vulnerabil
 ### 🛠️ Knowledge & Skills
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=linux,bash,ubuntu,debian,docker,vscode,git,py,flask,html,css,js,nodejs,mongodb,mysql,sqlite&theme=dark" />
+  <img style="background-color:transparent;" src="https://skillicons.dev/icons?i=linux,bash,ubuntu,debian,docker,vscode,git,py,flask,html,css,js,nodejs,mongodb,mysql,sqlite&theme=dark" />
 </div>
 <br>
 <div align="center">
