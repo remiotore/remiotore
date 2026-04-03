@@ -262,11 +262,13 @@ Interactive Jupyter-based dashboard for multi-asset technical analysis.
       <td align="center"><b>BTC</b></td>
       <td align="center"><b>ETH</b></td>
       <td align="center"><b>SOL</b></td>
+      <td align="center"><b>XRP</b></td>
     </tr>
     <tr>
       <td align="center"><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code></td>
       <td align="center"><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code></td>
       <td align="center"><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code></td>
+      <td align="center"><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code></td>
     </tr>
   </table>
 </div>
