@@ -26,7 +26,9 @@ Dedicated to sharpening skills daily through HackTheBox and mastering vulnerabil
 
 ### 📊 GitHub Analytics
 <div align="center">
-  [![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/remiotore?cardType=level&fontFamily=&preferLogin=false)](https://git.io/awesome-stats-card)
+    <a href="https://awesome-github-stats.azurewebsites.net/index.html??cardType=level&fontFamily=&preferLogin=false">
+    <img  alt="remiotore's GitHub Stats" src="https://awesome-github-stats.azurewebsites.net/user-stats/remiotore?cardType=level&fontFamily=&preferLogin=false" />
+  </a>
 </div>
 
 ---
