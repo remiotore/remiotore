@@ -669,7 +669,7 @@ technical indicators across multiple cryptocurrencies.
 
 <h2 id="donate" align=''> Support⚡️</h2>
 
-```
+```markdown
 ╔════════════════════════════════════════════════════════╗
 ║ If you enjoy my work, please consider donating ❤️      ║
 ║ Every small amount helps me to keep going, thanks!     ║
