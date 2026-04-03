@@ -29,8 +29,8 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 <br>
 
-<div style="border: 2px solid #22F700; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
-  <div align="left" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+<div>
+  <div align="left">
     <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&color=000000" />
     <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&color=000000" />
     <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&color=000000" />
@@ -432,9 +432,9 @@ Follow me on **[`X`](https://x.com/MaeKidd54320)** and **[`HackTheBox`](https://
 
 <h2 id="workflow" align=''> <a href="https://app.hackthebox.com/public/users/25872">Pentesting Workflow</a> </h2>
 
-[Pentesting Cheatsheet](docs/pentesting_cheatsheet.md)
+[Cheatsheet](docs/pentesting_cheatsheet.md)
 
-![Pentesting Workflow](docs/pentesting_workflow.svg)
+[Workflow](docs/pentesting_workflow.svg)
 
 ---
 <h1>AlgoTrading Projects</h1>
