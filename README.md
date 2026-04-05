@@ -206,7 +206,7 @@ Dedicated to sharpening skills daily through HackTheBox and mastering vulnerabil
 ### 🛠️ Pentesting Workflow
 Check out my detailed pentesting resources:
 - **[📜 Pentesting Cheatsheet](docs/pentesting_cheatsheet.md)**
-- **[🗺️ Pentesting Workflow Diagram](docs/pentesting_workflow.svg)**
+- **[🗺️ Pentesting Workflow Diagram](docs/pentesting_workflow.mmd)**
 
 ---
 
