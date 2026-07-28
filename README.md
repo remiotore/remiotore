@@ -6,7 +6,7 @@
 
 <div align="center">
   <p align="center">
-    <b><i>"And if there’s no wind, we’ll make our own way and row."</i></b>
+    <b><i>"And if there's no wind, we'll have to row."</i></b>
   </p>
   <a href="https://x.com/MaeKidd54320">
     <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" />
@@ -18,13 +18,6 @@
 
 ---
 
-### 🛡️ Offensive Security Practitioner
-**Focused on penetration testing, red teaming, and bug bounty hunting.**
-Dedicated to sharpening skills daily through HackTheBox and mastering vulnerability research, binary analysis, and exploit development.
-
----
-
-### 📊 GitHub Analytics
 <div align="center">
     <a href="https://awesome-github-stats.azurewebsites.net/index.html??cardType=level&fontFamily=&preferLogin=false">
     <img  alt="remiotore's GitHub Stats" src="https://awesome-github-stats.azurewebsites.net/user-stats/remiotore?cardType=level&fontFamily=&preferLogin=false" />
@@ -33,189 +26,142 @@ Dedicated to sharpening skills daily through HackTheBox and mastering vulnerabil
 
 ---
 
-### 🛠️ Knowledge & Skills
+## Offensive Security
 
-<div align="center">
-  <img style="background-color:transparent;" src="https://skillicons.dev/icons?i=linux,bash,ubuntu,debian,docker,vscode,git,py,flask,html,css,js,nodejs,mongodb,mysql,sqlite&theme=dark" />
-</div>
-<br>
-<div align="center">
-  <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Parrot_OS-2E8E8F?style=for-the-badge&logo=parrot&logoColor=white" />
-  <img src="https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burp-suite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Metasploit-008C8C?style=for-the-badge&logo=metasploit&logoColor=white" />
-  <img src="https://img.shields.io/badge/Wireshark-009639?style=for-the-badge&logo=wireshark&logoColor=white" />
-</div>
+<a href="https://app.hackthebox.com/public/users/25872">
+  <img src="https://img.shields.io/badge/CPTS-Certified_Penetration_Testing_Specialist-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black" />
+</a>
 
 
----
-
-## 📑 Table of Contents
-- [🛡️ Offensive Security](#️-offensive-security-practitioner)
-- [📊 GitHub Analytics](#-github-analytics)
-- [🛠️ Knowledge & Skills](#️-knowledge-skills)
-- [🎯 Hack The Box](#-hack-the-box)
-    - [📜 Certifications](#-certifications)
-    - [🖥️ Completed Machines](#️-completed-machines)
-- [📈 AlgoTrading Projects](#-algotrading-projects)
-- [⚡ Support](#️-support)
-
----
-
-## 🎯 Hack The Box
-
-### 📜 Certifications
-<div align="center">
-  <a href="https://app.hackthebox.com/public/users/25872">
-    <img src="https://img.shields.io/badge/CPTS-Certified_Penetration_Testing_Specialist-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black" />
-  </a>
-  <a href="https://app.hackthebox.com/public/users/25872">
-    <img src="https://img.shields.io/badge/CJCA-Certified_Junior_Cybersecurity_Associate-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black" />
-  </a>
-</div>
-
-<br>
-
-
-<details>
-  <summary><b>CJCA - Certified Junior Cybersecurity Associate</b></summary>
-  <blockquote>
-    Detailed knowledge in network foundations, Linux/Windows fundamentals, and introductory penetration testing.
-  </blockquote>
-  <ul>
-    <li><b>Linux Fundamentals</b></li>
-    <li><b>Windows Fundamentals</b></li>
-    <li><b>Web Requests</b></li>
-    <li><b>Pentest in a Nutshell</b></li>
-    <li><b>Network Enumeration with Nmap</b></li>
-    <li><b>Footprinting</b></li>
-    <li><b>Hacking WordPress</b></li>
-    <li><b>Using the Metasploit Framework</b></li>
-    <li><b>Intro to Network Traffic Analysis</b></li>
-  </ul>
-</details>
-
-<details>
-  <summary><b>CPTS - Certified Penetration Testing Specialist</b></summary>
-  <blockquote>
-    Advanced skills in Active Directory, web attacks, pivoting, and reporting.
-  </blockquote>
-  <ul>
-    <li><b>Information Gathering</b></li>
-    <li><b>File Transfers</b></li>
-    <li><b>Shells & Payloads</b></li>
-    <li><b>Password Attacks</b></li>
-    <li><b>Attacking Common Services</b></li>
-    <li><b>Pivoting & Tunneling</b></li>
-    <li><b>Active Directory Attacks</b></li>
-    <li><b>SQL Injection</b></li>
-    <li><b>Linux PrivEsc</b></li>
-    <li><b>Windows PrivEsc</b></li>
-  </ul>
-</details>
-
-### 🖥️ Completed Machines
-<details>
-  <summary>Explore the full list of rooted machines (80+)</summary>
-  <br>
-  <table width="100%">
-    <tr>
-      <td>Active</td> <td>Administrator</td> <td>Artificial</td> <td>Authority</td>
-    </tr>
-    <tr>
-      <td>Baby</td> <td>BoardLight</td> <td>BountyHunter</td> <td>Bucket</td>
-    </tr>
-    <tr>
-      <td>Cap</td> <td>CCTV</td> <td>Certified</td> <td>Cicada</td>
-    </tr>
-    <tr>
-      <td>CodePartTwo</td> <td>Conversor</td> <td>Craft</td> <td>Devvortex</td>
-    </tr>
-    <tr>
-      <td>Driver</td> <td>Editor</td> <td>Eighteen</td> <td>Epsilon</td>
-    </tr>
-    <tr>
-      <td>Era</td> <td>Escape</td> <td>EscapeTwo</td> <td>Expressway</td>
-    </tr>
-    <tr>
-      <td>Facts</td> <td>Fluffy</td> <td>Gobox</td> <td>GoodGames</td>
-    </tr>
-    <tr>
-      <td>HackNet</td> <td>Imagery</td> <td>Jeeves</td> <td>Jerry</td>
-    </tr>
-    <tr>
-      <td>Job</td> <td>Kobold</td> <td>Lock</td> <td>Magic</td>
-    </tr>
-    <tr>
-      <td>MonitorsFour</td> <td>Monteverde</td> <td>Nunchucks</td> <td>Outbound</td>
-    </tr>
-    <tr>
-      <td>Paper</td> <td>Popcorn</td> <td>Postman</td> <td>Precious</td>
-    </tr>
-    <tr>
-      <td>Previous</td> <td>Pterodactyl</td> <td>Puppy</td> <td>Race</td>
-    </tr>
-    <tr>
-      <td>Return</td> <td>Sau</td> <td>Sauna</td> <td>Scrambled</td>
-    </tr>
-    <tr>
-      <td>Signed</td> <td>SolarLab</td> <td>Soulmate</td> <td>SteamCloud</td>
-    </tr>
-    <tr>
-      <td>StreamIO</td> <td>Support</td> <td>Timelapse</td> <td>TombWatcher</td>
-    </tr>
-    <tr>
-      <td>Trick</td> <td>TwoMillion</td> <td>UnderPass</td> <td>Undetected</td>
-    </tr>
-    <tr>
-      <td>Unobtainium</td> <td>VariaType</td> <td>Vessel</td> <td>VulnEscape</td>
-    </tr>
-    <tr>
-      <td>Worker</td> <td>Writeup</td> <td></td> <td></td>
-    </tr>
-  </table>
-</details>
-
-
-<details>
-  <summary><b>HTB Tracks Progress (Cybersecurity & Specializations)</b></summary>
-  <br>
-  <table width="100%">
-    <tr>
-      <td><b>Foundations</b></td> <td>Meow, Fawn, Dancing, Redeemer, Explosion, Preignition, Mongod, Synced</td>
-    </tr>
-    <tr>
-      <td><b>Fundamental Exploit</b></td> <td>Appointment, Sequel, Crocodile, Responder, Three, Funnel, Bike, Ignition, Pennyworth, Tactics</td>
-    </tr>
-    <tr>
-      <td><b>Red Team Intro</b></td> <td>Cap, Jerry, Sau, GoodGames, Devvortex, Paper, Writeup, Precious, Driver, BoardLight, Cicada, TwoMillion, SteamCloud, Certified, Administrator</td>
-    </tr>
-    <tr>
-      <td><b>Active Directory</b></td> <td>Cicada, EscapeTwo, Support, Timelapse, Return, Sauna, Administrator, Authority, Escape, Scrambled, StreamIO</td>
-    </tr>
-    <tr>
-      <td><b>Cloud Track</b></td> <td>SteamCloud, Epsilon, Gobox, Bucket, Worker, Monteverde, Vessel, Unobtainium</td>
-    </tr>
-    <tr>
-      <td><b>CVEs / Mobile / RE</b></td> <td>EvilCUPS, Analytics, Devvortex, Cat, Manager, Simple Encryptor, Snakecode, RAuth</td>
-    </tr>
-  </table>
-</details>
-
-
-### 🛠️ Pentesting Workflow
-Check out my detailed pentesting resources:
+### Pentesting Resources
 - **[📜 Pentesting Cheatsheet](docs/pentesting_cheatsheet.md)**
 - **[🗺️ Pentesting Workflow Diagram](docs/pentesting_workflow.mmd)**
 
+### Skills
+
+<ul>
+  <li><b>Information Gathering</b></li>
+  <li><b>File Transfers</b></li>
+  <li><b>Shells & Payloads</b></li>
+  <li><b>Password Attacks</b></li>
+  <li><b>Attacking Common Services</b></li>
+  <li><b>Pivoting & Tunneling</b></li>
+  <li><b>Active Directory Attacks</b></li>
+  <li><b>SQL Injection</b></li>
+  <li><b>Linux PrivEsc</b></li>
+  <li><b>Windows PrivEsc</b></li>
+</ul>
+
+### Solved Machines
+
+|Name|OS|Difficulty|
+|---|---|---|
+|Cap|Linux|Easy|
+|Fireflow|Linux|Medium|
+|Logging|Windows|Medium|
+|TwoMillion|Linux|Easy|
+|Support|Windows|Easy|
+|VariaType|Linux|Medium|
+|CCTV|Linux|Easy|
+|Pterodactyl|Linux|Medium|
+|Facts|Linux|Easy|
+|AirTouch|Linux|Medium|
+|MonitorsFour|Windows|Easy|
+|Eighteen|Windows|Easy|
+|Conversor|Linux|Easy|
+|Signed|Windows|Medium|
+|Breach|Windows|Medium|
+|Job|Windows|Medium|
+|Imagery|Linux|Medium|
+|Baby|Windows|Easy|
+|Expressway|Linux|Easy|
+|HackNet|Linux|Medium|
+|Delegate|Windows|Medium|
+|Soulmate|Linux|Easy|
+|Media|Windows|Medium|
+|Race|Linux|Hard|
+|Previous|Linux|Medium|
+|Lock|Windows|Easy|
+|CodePartTwo|Linux|Easy|
+|Editor|Linux|Easy|
+|Era|Linux|Medium|
+|Redelegate|Windows|Hard|
+|VulnEscape|Windows|Easy|
+|VulnCicada|Windows|Medium|
+|Outbound|Linux|Easy|
+|Voleur|Windows|Medium|
+|Artificial|Linux|Easy|
+|TombWatcher|Windows|Medium|
+|Fluffy|Windows|Easy|
+|Puppy|Windows|Medium|
+|EscapeTwo|Windows|Easy|
+|UnderPass|Linux|Easy|
+|Administrator|Windows|Medium|
+|Certified|Windows|Medium|
+|Cicada|Windows|Easy|
+|BoardLight|Linux|Easy|
+|SolarLab|Windows|Medium|
+|Pov|Windows|Medium|
+|Devvortex|Linux|Easy|
+|Hospital|Windows|Medium|
+|Authority|Windows|Medium|
+|Sau|Linux|Easy|
+|Snoopy|Linux|Hard|
+|Escape|Windows|Medium|
+|Precious|Linux|Easy|
+|Vessel|Linux|Hard|
+|Trick|Linux|Easy|
+|Scrambled|Windows|Medium|
+|StreamIO|Windows|Medium|
+|Timelapse|Windows|Easy|
+|GoodGames|Linux|Easy|
+|SteamCloud|Linux|Easy|
+|Epsilon|Linux|Medium|
+|Undetected|Linux|Medium|
+|Paper|Linux|Easy|
+|Nunchucks|Linux|Easy|
+|Return|Windows|Easy|
+|Driver|Windows|Easy|
+|Gobox|Linux|Medium|
+|BountyHunter|Linux|Easy|
+|Unobtainium|Linux|Hard|
+|Bucket|Linux|Medium|
+|Worker|Windows|Medium|
+|Magic|Linux|Medium|
+|Remote|Windows|Easy|
+|Sauna|Windows|Easy|
+|Monteverde|Windows|Medium|
+|Postman|Linux|Easy|
+|Forest|Windows|Easy|
+|Craft|Linux|Medium|
+|Writeup|Linux|Easy|
+|Active|Windows|Easy|
+|Jerry|Windows|Easy|
+|Jeeves|Windows|Medium|
+|Popcorn|Linux|Medium|
+|Silentium|Linux|Easy|
+|DarkZeroReturns|Windows|Hard|
+|Bedside|Linux|Medium|
+|Paperwork|Linux|Easy|
+|MakeSense|Linux|Medium|
+|Enigma|Linux|Easy|
+|Nimbus|Linux|Hard|
+|Checkpoint|Windows|Medium|
+|Connected|Linux|Easy|
+|DevHub|Linux|Medium|
+|Reactor|Linux|Easy|
+|SmartHire|Linux|Medium|
+|Helix|Linux|Medium|
+|PingPong|Windows|Insane|
+|Garfield|Windows|Hard|
+
 ---
 
-## 📈 AlgoTrading Projects
+## Algorithmic Trading
 
-### 🤖 Project 0: Freqtrade Strategies
-Dedicated repository for custom algorithmic trading strategies.
-- **Tech Stack:** Python, Freqtrade, Pandas, TA-Lib
-- **Focus:** Technical analysis, volatility patterns, and risk management.
+Hobbyist algo trader building and backtesting custom strategies with **Freqtrade**. Technical analysis, volatility modeling, and risk management -- because code shouldn't sleep.
+
+### Freqtrade Strategies
 
 | Strategy | Performance | Source |
 | :--- | :---: | :---: |
@@ -230,26 +176,6 @@ Dedicated repository for custom algorithmic trading strategies.
   </ul>
 </details>
 
----
-
-### 📊 Project 1: Market Analysis Suite
-Quantitative analysis tool for OHLCV data and strategy evaluation.
-- **Features:** Price action analysis, indicator-driven insights, and strategy benchmarking.
-- **Output:** `strategies_metadata.ndjson` for feature importance studies.
-
----
-
-### 📥 Project 2: ccxt-opensearch
-Scalable market data ingestion and analytics pipeline.
-- **Tech Stack:** Python, CCXT, OpenSearch, Docker
-- **Usage:** Real-time data warehousing, indicator backtesting, and alerting.
-
----
-
-### 📉 Project 3: CCXT Dashboard
-Interactive Jupyter-based dashboard for multi-asset technical analysis.
-- **Features:** Multi-symbol selection, interactive sliders, and TA-Lib indicator overlays.
-- **Tech Stack:** Jupyter, Plotly, Pandas, TA-Lib
 
 ---
 
