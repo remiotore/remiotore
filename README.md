@@ -26,6 +26,18 @@
 
 ---
 
+## 📑 Table of Contents
+
+- [Offensive Security](#offensive-security)
+  - [Pentesting Resources](#pentesting-resources)
+  - [Skills](#skills)
+  - [Solved Machines](#solved-machines)
+- [Algorithmic Trading](#algorithmic-trading)
+  - [Freqtrade Strategies](#freqtrade-strategies)
+- [Support](#support)
+
+---
+
 ## Offensive Security
 
 <a href="https://app.hackthebox.com/public/users/25872">
@@ -163,18 +175,69 @@ Hobbyist algo trader building and backtesting custom strategies with **Freqtrade
 
 ### Freqtrade Strategies
 
-| Strategy | Performance | Source |
-| :--- | :---: | :---: |
-| **Zaratustra V31** | [📈 View](https://strat.ninja/overview.php?strategy=ZaratustraV31) | [📂 Code](https://github.com/remiotore/freqtrade/blob/main/my-strategies/ZaratustraV31.py) |
-| **GnF V2** | [📈 View](https://strat.ninja/overview.php?strategy=GnF_V2) | [📂 Code](https://github.com/remiotore/freqtrade/blob/main/my-strategies/GnF_V2.py) |
-| **el_extrema_RL** | [📈 View](https://strat.ninja/overview.php?strategy=el_extrema_RL) | [📂 Code](https://github.com/remiotore/freqtrade/blob/main/my-strategies/el_extrema_RL.py) |
+|Strategy|Family|Version|
+|---|---|---|
+|BollingerMACD V1|Bollinger MACD|V1|
+|BollingerMACD V2|Bollinger MACD|V2|
+|BollingerMACD V3|Bollinger MACD|V3|
+|EMA Fibonacci|EMA + Fibonacci|Base|
+|EMA Fibonacci V2|EMA + Fibonacci|V2|
+|EMA Fibonacci V3|EMA + Fibonacci|V3|
+|EMA Fibonacci V4|EMA + Fibonacci|V4|
+|EWOist V1|EWOist|V1|
+|GnF|GnF|Base|
+|GnF V2|GnF|V2|
+|PlusMinus V1|PlusMinus|V1|
+|RSIBB V1|RSIBB|V1|
+|RSIBB V2|RSIBB|V2|
+|RSIBB V3|RSIBB|V3|
+|RSIBB V4|RSIBB|V4|
+|Rsiqui V2|Rsiqui|V2|
+|Rsiqui V3|Rsiqui|V3|
+|Rsiqui V4|Rsiqui|V4|
+|Rsiqui V5|Rsiqui|V5|
+|Slope V1|Slope|V1|
+|Slope V2|Slope|V2|
+|Slope V3|Slope|V3|
+|Slope V4|Slope|V4|
+|Slope V5|Slope|V5|
+|Slope V6|Slope|V6|
+|Slope V8|Slope|V8|
+|Zaratustra|Zaratustra|Base|
+|Zaratustra V3|Zaratustra|V3|
+|Zaratustra V4|Zaratustra|V4|
+|Zaratustra V5|Zaratustra|V5|
+|Zaratustra V6|Zaratustra|V6|
+|Zaratustra V8|Zaratustra|V8|
+|Zaratustra V9|Zaratustra|V9|
+|Zaratustra V10|Zaratustra|V10|
+|Zaratustra V11|Zaratustra|V11|
+|Zaratustra V12|Zaratustra|V12|
+|Zaratustra V13|Zaratustra|V13|
+|Zaratustra V14|Zaratustra|V14|
+|Zaratustra V15|Zaratustra|V15|
+|Zaratustra V16|Zaratustra|V16|
+|Zaratustra V17|Zaratustra|V17|
+|Zaratustra V18|Zaratustra|V18|
+|Zaratustra V19|Zaratustra|V19|
+|Zaratustra V20|Zaratustra|V20|
+|Zaratustra V21|Zaratustra|V21|
+|Zaratustra V22|Zaratustra|V22|
+|Zaratustra V23|Zaratustra|V23|
+|Zaratustra V24|Zaratustra|V24|
+|Zaratustra V25|Zaratustra|V25|
+|Zaratustra V26|Zaratustra|V26|
+|Zaratustra V27|Zaratustra|V27|
+|Zaratustra V28|Zaratustra|V28|
+|Zaratustra V29|Zaratustra|V29|
+|Zaratustra V31|Zaratustra|V31|
+|el_extrema|el_extrema|Base|
+|el_extrema RL|el_extrema|RL|
+|el_extrema rolling|el_extrema|Rolling|
+|el_extrema rsiqui|el_extrema|Rsiqui|
+|el_rsiqui|el_rsiqui|Base|
 
-<details>
-  <summary><b>View All Strategies (50+)</b></summary>
-  <ul>
-    <li><a href="https://github.com/remiotore/freqtrade/tree/main/my-strategies">Complete Strategy Repository</a></li>
-  </ul>
-</details>
+**[📂 Complete Strategy Repository](https://github.com/remiotore/freqtrade/tree/main/my-strategies)**
 
 
 ---
@@ -185,15 +248,23 @@ Hobbyist algo trader building and backtesting custom strategies with **Freqtrade
   <p>If you enjoy my work, please consider supporting me! ❤️</p>
   <table width="100%">
     <tr>
-      <td align="center"><b>BTC</b></td>
-      <td align="center"><b>ETH</b></td>
-      <td align="center"><b>SOL</b></td>
-      <td align="center"><b>XRP</b></td>
+      <td align="center"><b>Wallet</b></td>
+      <td align="center"><b>Address</b></td>
     </tr>
     <tr>
+      <td align="center"><b>BTC</b></td>
       <td align="center"><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code></td>
+    </tr>
+    <tr>
+      <td align="center"><b>ETH</b></td>
       <td align="center"><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code></td>
+    </tr>
+    <tr>
+      <td align="center"><b>SOL</b></td>
       <td align="center"><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code></td>
+    </tr>
+    <tr>
+      <td align="center"><b>XRP</b></td>
       <td align="center"><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code></td>
     </tr>
   </table>
