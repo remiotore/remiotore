@@ -24,6 +24,22 @@
   </a>
 </div>
 
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=remiotore&theme=algolia&no-frame=true&column=7" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=remiotore&theme=algolia&hide_border=true&area=true" />
+</div>
+
+---
+
+### 📍 Currently
+
+- 🔭 Bug bounty hunting
+- 🌱 Expanding my pentesting knowledge
+- ⚡ Optimizing Freqtrade strategies
+
 ---
 
 ## 📑 Table of Contents
@@ -51,20 +67,34 @@
 
 ### Skills
 
-<ul>
-  <li><b>Information Gathering</b></li>
-  <li><b>File Transfers</b></li>
-  <li><b>Shells & Payloads</b></li>
-  <li><b>Password Attacks</b></li>
-  <li><b>Attacking Common Services</b></li>
-  <li><b>Pivoting & Tunneling</b></li>
-  <li><b>Active Directory Attacks</b></li>
-  <li><b>SQL Injection</b></li>
-  <li><b>Linux PrivEsc</b></li>
-  <li><b>Windows PrivEsc</b></li>
-</ul>
+<div align="center">
+
+![Recon](https://img.shields.io/badge/Recon-000000?style=for-the-badge&logo=owasp&logoColor=white)
+![OSINT](https://img.shields.io/badge/OSINT-000000?style=for-the-badge&logo=searchengineland&logoColor=white)
+![Web](https://img.shields.io/badge/Web_Attacks-000000?style=for-the-badge&logo=owasp&logoColor=white)
+![SQLi](https://img.shields.io/badge/SQL_Injection-000000?style=for-the-badge&logo=mysql&logoColor=white)
+![Shells](https://img.shields.io/badge/Shells_&_Payloads-000000?style=for-the-badge&logo=metasploit&logoColor=white)
+![Pivoting](https://img.shields.io/badge/Pivoting_&_Tunneling-000000?style=for-the-badge&logo=torbrowser&logoColor=white)
+![AD](https://img.shields.io/badge/Active_Directory-000000?style=for-the-badge&logo=microsoft&logoColor=white)
+![Privesc](https://img.shields.io/badge/PrivEsc-000000?style=for-the-badge&logo=linux&logoColor=white)
+![Password Attacks](https://img.shields.io/badge/Password_Attacks-000000?style=for-the-badge&logo=keepassxc&logoColor=white)
+![File Transfers](https://img.shields.io/badge/File_Transfers-000000?style=for-the-badge&logo=files&logoColor=white)
+
+</div>
 
 ### Solved Machines
+
+<div align="center">
+
+![Total](https://img.shields.io/badge/Total-98-00FF41?style=for-the-badge&logo=hackthebox&logoColor=white)
+![Easy](https://img.shields.io/badge/Easy-46-2ECC71?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-43-F39C12?style=for-the-badge)
+![Hard](https://img.shields.io/badge/Hard-8-E74C3C?style=for-the-badge)
+![Insane](https://img.shields.io/badge/Insane-1-9B59B6?style=for-the-badge)
+![Linux](https://img.shields.io/badge/Linux-54-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Windows](https://img.shields.io/badge/Windows-44-0078D4?style=for-the-badge&logo=windows&logoColor=white)
+
+</div>
 
 |Name|OS|Difficulty|
 |---|---|---|
@@ -175,69 +205,24 @@ Hobbyist algo trader building and backtesting custom strategies with **Freqtrade
 
 ### Freqtrade Strategies
 
-|Strategy|Family|Version|
-|---|---|---|
-|BollingerMACD V1|Bollinger MACD|V1|
-|BollingerMACD V2|Bollinger MACD|V2|
-|BollingerMACD V3|Bollinger MACD|V3|
-|EMA Fibonacci|EMA + Fibonacci|Base|
-|EMA Fibonacci V2|EMA + Fibonacci|V2|
-|EMA Fibonacci V3|EMA + Fibonacci|V3|
-|EMA Fibonacci V4|EMA + Fibonacci|V4|
-|EWOist V1|EWOist|V1|
-|GnF|GnF|Base|
-|GnF V2|GnF|V2|
-|PlusMinus V1|PlusMinus|V1|
-|RSIBB V1|RSIBB|V1|
-|RSIBB V2|RSIBB|V2|
-|RSIBB V3|RSIBB|V3|
-|RSIBB V4|RSIBB|V4|
-|Rsiqui V2|Rsiqui|V2|
-|Rsiqui V3|Rsiqui|V3|
-|Rsiqui V4|Rsiqui|V4|
-|Rsiqui V5|Rsiqui|V5|
-|Slope V1|Slope|V1|
-|Slope V2|Slope|V2|
-|Slope V3|Slope|V3|
-|Slope V4|Slope|V4|
-|Slope V5|Slope|V5|
-|Slope V6|Slope|V6|
-|Slope V8|Slope|V8|
-|Zaratustra|Zaratustra|Base|
-|Zaratustra V3|Zaratustra|V3|
-|Zaratustra V4|Zaratustra|V4|
-|Zaratustra V5|Zaratustra|V5|
-|Zaratustra V6|Zaratustra|V6|
-|Zaratustra V8|Zaratustra|V8|
-|Zaratustra V9|Zaratustra|V9|
-|Zaratustra V10|Zaratustra|V10|
-|Zaratustra V11|Zaratustra|V11|
-|Zaratustra V12|Zaratustra|V12|
-|Zaratustra V13|Zaratustra|V13|
-|Zaratustra V14|Zaratustra|V14|
-|Zaratustra V15|Zaratustra|V15|
-|Zaratustra V16|Zaratustra|V16|
-|Zaratustra V17|Zaratustra|V17|
-|Zaratustra V18|Zaratustra|V18|
-|Zaratustra V19|Zaratustra|V19|
-|Zaratustra V20|Zaratustra|V20|
-|Zaratustra V21|Zaratustra|V21|
-|Zaratustra V22|Zaratustra|V22|
-|Zaratustra V23|Zaratustra|V23|
-|Zaratustra V24|Zaratustra|V24|
-|Zaratustra V25|Zaratustra|V25|
-|Zaratustra V26|Zaratustra|V26|
-|Zaratustra V27|Zaratustra|V27|
-|Zaratustra V28|Zaratustra|V28|
-|Zaratustra V29|Zaratustra|V29|
-|Zaratustra V31|Zaratustra|V31|
-|el_extrema|el_extrema|Base|
-|el_extrema RL|el_extrema|RL|
-|el_extrema rolling|el_extrema|Rolling|
-|el_extrema rsiqui|el_extrema|Rsiqui|
-|el_rsiqui|el_rsiqui|Base|
+|Family|Versions|Latest|Idea|
+|---|---|---|---|
+|Zaratustra|28|V31|Fast vs. slow RSI momentum (RSI7 vs RSI14 cross); originally max/min-pivot confirmation with extreme RSI. Aggressive 10x, trailing stop.|
+|Slope|7|V8|Swing trading on 15m: buys local minima, shorts local maxima via `scipy` extrema detection on a 64-bar window. No stoploss (10x, pure reversal).|
+|RSIBB|4|V4|Volume-confirmed volatility breakout: close crossing an outer Bollinger band, volume crossing its own BB, plus NATR z-score > 1. Trailing stop on 5m.|
+|EMA + Fibonacci|4|V4|Perfect trend alignment across Fibonacci EMAs (34–233): all PlusDI stacked above all MinusDI for longs. Exits on any EMA233 cross. 10x on 5m.|
+|el_extrema|4|Rolling|Local extrema (order 5–10) + dip-buy below EMA×0.915 when EWO momentum is extreme and RSI low. Variants: RL adds FreqAI model gating on predicted return, rolling widens the extrema lookback, rsiqui swaps in RSI-gradient entry. Cooldown + stoploss-guard protections.|
+|Rsiqui|4|V5|Mean-reversion on RSI momentum: long when RSI<27 and RSI-gradient crosses up; exits on gradient turn. Mirror for shorts. 10x, 5m.|
+|BollingerMACD|3|V3|Dual momentum confirmation: price crossing outer BB while MACD and signal share the trend sign. Trailing stop, 10x on 5m.|
+|GnF|2|V2|Custom Greed & Fear index from momentum (SMA20), volatility (ATR) and up/down volume ratio — long when greedy (>0.7), short when fearful (<0.3). 1h.|
+|EWOist|1|V1|Single-indicator Elder-ray momentum: long when normalized SMA50-200 divergence is strong, exits on sign flip. Thresholds hyperopt-tuned. 10x, 5m.|
+|PlusMinus|1|V1|Directional-Indicator breakout: PlusDI crossing above MinusDI with RSI>60, or simultaneous window-maxima of RSI and PlusDI. 10x, 5m.|
+|el_rsiqui|1|Base|Lightweight RSI-gradient mean reversion (RSI<30/ >70, gradient cross) wrapped in el_'s cooldown + stoploss-guard protections. 10x, 5m.|
 
-**[📂 Complete Strategy Repository](https://github.com/remiotore/freqtrade/tree/main/my-strategies)**
+<div align="center">
+  <b>59 strategies across 11 families</b><br>
+  <sub>📂 <a href="https://github.com/remiotore/freqtrade/tree/main/my-strategies">Complete Strategy Repository</a></sub>
+</div>
 
 
 ---
