@@ -24,12 +24,9 @@
   </a>
 </div>
 
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=remiotore&theme=algolia&no-frame=true&column=7" />
-</div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=remiotore&theme=algolia&hide_border=true&area=true" />
+  <img alt="remiotore's GitHub contributions" src="https://ghchart.rshah.org/00FF41/remiotore" />
 </div>
 
 ---
