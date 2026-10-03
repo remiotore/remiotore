@@ -111,16 +111,21 @@ Object.entries(sectionHeadingTranslations).forEach(([language, headings]) => {
   Object.assign(translations[language], headings);
 });
 
-const learningStatementTranslations = {
-  en: 'I learn by hacking.',
-  es: 'Aprendo hackeando.',
-  fr: 'J’apprends en hackant.',
-  de: 'Ich lerne durch Hacken.',
-  ru: 'Я учусь, занимаясь хакингом.',
-  zh: '我通过黑客实践学习。'
+const contactValidationTranslations = {
+  en: { nameRequired:'Enter your full name.', companyRequired:'Enter your company name.' },
+  es: { nameRequired:'Introduce tu nombre completo.', companyRequired:'Introduce el nombre de tu empresa.' },
+  fr: { nameRequired:'Saisissez votre nom complet.', companyRequired:'Saisissez le nom de votre entreprise.' },
+  de: { nameRequired:'Geben Sie Ihren vollständigen Namen ein.', companyRequired:'Geben Sie Ihren Firmennamen ein.' },
+  ru: { nameRequired:'Укажите ваше полное имя.', companyRequired:'Укажите название вашей компании.' },
+  zh: { nameRequired:'请输入您的姓名。', companyRequired:'请输入公司名称。' }
 };
-Object.entries(learningStatementTranslations).forEach(([language, introProfile]) => {
-  translations[language].introProfile = introProfile;
+Object.entries(contactValidationTranslations).forEach(([language, messages]) => {
+  Object.assign(translations[language], messages);
+});
+
+Object.values(translations).forEach((locale) => {
+  delete locale.introProfile;
+  delete locale.introServices;
 });
 
 const prices={host:1000,wildcard:800,network:7000,web_basic:4000,web_mid:7000,web_pro:12000,mobile:6000,repo_single:2500,repo_org:6000,api_rest:4000,api_graphql:5500,api_grpc:5000,api_soap:4500,api_mixed:7000,leaked:500,doxxing:750,typosquat:600};
@@ -175,7 +180,11 @@ function updateEstimate(){const x=estimate(),discount=state.mode==='subscription
  document.getElementById('emailScope').disabled=!document.getElementById('acceptTerms').checked||!x.total;}
 function urlState(){try{const d={mode:state.mode,assets:state.assets,addons:[...document.querySelectorAll('[data-addon]:checked')].map(e=>e.dataset.addon)};const p=new URLSearchParams(location.search);p.set('d',btoa(unescape(encodeURIComponent(JSON.stringify(d)))));history.replaceState(null,'',`${location.pathname}?${p}${location.hash}`);}catch{}}
 function restore(){try{const v=new URLSearchParams(location.search).get('d');if(!v)return;const d=JSON.parse(decodeURIComponent(escape(atob(v))));if(['onetime','subscription'].includes(d.mode))state.mode=d.mode;groups.forEach(g=>{if(Array.isArray(d.assets?.[g]))state.assets[g]=d.assets[g].map(x=>({...x,id:String(x.id??++nextId)}));});(d.addons||[]).forEach(a=>{const e=document.querySelector(`[data-addon="${a}"]`);if(e)e.checked=true;});}catch{}}
-function submit(event){event.preventDefault();const msg=document.getElementById('formMessage'),email=form.elements.email.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.textContent=tr('emailError');form.elements.email.focus();return;}const x=estimate();if(!x.total||!document.getElementById('acceptTerms').checked){msg.textContent=tr('termsError');return;}
+function submit(event){event.preventDefault();const msg=document.getElementById('formMessage'),name=form.elements.name.value.trim(),emailInput=form.elements.email,email=emailInput.value.trim(),company=form.elements.company.value.trim();
+ if(!name){msg.textContent=tr('nameRequired');form.elements.name.focus();return;}
+ if(!emailInput.checkValidity()){msg.textContent=tr('emailError');emailInput.focus();return;}
+ if(!company){msg.textContent=tr('companyRequired');form.elements.company.focus();return;}
+ const x=estimate();if(!x.total||!document.getElementById('acceptTerms').checked){msg.textContent=tr('termsError');return;}
  const data={version:1,generated_at:new Date().toISOString(),language:state.lang,modality:state.mode,client:{name:form.elements.name.value.trim(),email,company:form.elements.company.value.trim(),project:form.elements.project.value.trim()},scope:{hosts:state.assets.host.map(h=>({domain:h.domain,ports:h.ports.split(',').map(p=>p.trim()).filter(Boolean),wildcard:h.wildcard})),networks:state.assets.network.map(n=>({cidr:n.cidr})),web_apps:state.assets.web.map(a=>({url:a.url,complexity:a.level})),apis:state.assets.api.map(a=>({url:a.url,type:a.level,auth:a.auth})),mobile_apps:state.assets.mobile.map(a=>({platform:a.platform,name:a.name})),repositories:state.assets.repo.map(a=>({platform:a.platform,type:a.level,quantity:+a.quantity||1,name:a.name})),addons:Object.fromEntries([...document.querySelectorAll('[data-addon]')].map(a=>[a.dataset.addon,a.checked]))},estimate:{currency:'EUR',base_total:x.total,discount:state.mode==='subscription'?.6:.25,final_total:Math.round(x.total*(state.mode==='subscription'?.4:.75)),billing:state.mode==='subscription'?'monthly':'one-time',estimated_days:x.effort}};
  const subject=`Security engagement scope — ${data.client.project||data.client.company||data.client.name||email}`;
  const body=`Hello,\n\nI'd like to discuss this authorized security engagement.\n\nContact email: ${email}\nName: ${data.client.name||'—'}\nCompany: ${data.client.company||'—'}\nProject: ${data.client.project||'—'}\n\nScope and estimate:\n${JSON.stringify(data,null,2)}\n\nI confirm that I own these assets or have written authorization to test them.\n`;

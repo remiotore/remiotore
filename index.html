@@ -188,7 +188,6 @@
         <div class="column-heading"><span class="index">01 / KNOW &amp; BUILT</span><h2 id="profile-title" data-i18n="knowTitle">What I know</h2><span data-i18n="knowMeta">Profile · practice</span></div>
         <article class="card">
           <h3 data-i18n="profileTitle">Profile</h3>
-          <p data-i18n="introProfile">Offensive security practitioner. I learn by building, testing, documenting, and refining repeatable workflows.</p>
           <p class="status" data-i18n="currentFocus">Currently bug bounty hunting and expanding my pentesting knowledge.</p>
           <div class="stats" aria-label="Hack The Box progress">
             <div class="stat"><strong>98</strong><span data-i18n="totalMachines">Machines*</span></div>
@@ -232,7 +231,6 @@
         <div class="column-heading"><span class="index">02 / SERVICES</span><h2 id="services-title" data-i18n="offerTitle">What I do</h2><span data-i18n="offerMeta">Security work</span></div>
         <article class="card">
           <h3 data-i18n="serviceTitle">Practical security assessments</h3>
-          <p data-i18n="introServices">Scoped, authorized testing to help identify and explain security weaknesses before they become incidents. Engagements are limited to explicitly approved assets and rules of engagement.</p>
           <div class="service-grid">
             <div class="service"><span class="service-icon">01 / EXTERNAL</span><h4 data-i18n="serviceNetwork">Network &amp; host testing</h4><p data-i18n="serviceNetworkDesc">Review of approved IPs, domains, hosts, and network ranges.</p></div>
             <div class="service"><span class="service-icon">02 / WEB + API</span><h4 data-i18n="serviceWebApi">Web applications &amp; API security review</h4><p data-i18n="serviceWebApiDesc">Focused testing of web applications and REST, GraphQL, gRPC, or SOAP APIs within an agreed scope.</p></div>
@@ -256,16 +254,6 @@
           </ul>
         </article>
 
-        <article class="card">
-          <h3 data-i18n="supportTitle">Support my work</h3>
-          <p data-i18n="supportText">If you enjoy the open-source work, you can support it with a contribution.</p>
-          <div class="wallets">
-            <strong data-i18n="btc">BTC</strong><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code>
-            <strong data-i18n="eth">ETH</strong><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code>
-            <strong data-i18n="sol">SOL</strong><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code>
-            <strong data-i18n="xrp">XRP</strong><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code>
-          </div>
-        </article>
       </section>
     </div>
     <section class="hire-section" id="hire" aria-labelledby="hire-title">
@@ -304,9 +292,9 @@
           <article class="card">
             <h3 data-i18n="contactTitle">Your details</h3>
             <div class="contact-fields">
-              <label class="field"><span data-i18n="fullName">Full name</span><input name="name" autocomplete="name"></label>
+              <label class="field"><span data-i18n="fullName">Full name</span><input name="name" autocomplete="name" required></label>
               <label class="field"><span data-i18n="email">Email</span><input name="email" type="email" autocomplete="email" required></label>
-              <label class="field"><span data-i18n="company">Company</span><input name="company" autocomplete="organization"></label>
+              <label class="field"><span data-i18n="company">Company</span><input name="company" autocomplete="organization" required></label>
               <label class="field"><span data-i18n="project">Project</span><input name="project"></label>
             </div>
           </article>
@@ -324,6 +312,16 @@
         </aside>
       </form>
     </section>
+    <article class="card">
+      <h3 data-i18n="supportTitle">Support my work</h3>
+      <p data-i18n="supportText">If you enjoy the open-source work, you can support it with a contribution.</p>
+      <div class="wallets">
+        <strong data-i18n="btc">BTC</strong><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code>
+        <strong data-i18n="eth">ETH</strong><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code>
+        <strong data-i18n="sol">SOL</strong><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code>
+        <strong data-i18n="xrp">XRP</strong><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code>
+      </div>
+    </article>
     <aside class="cookie-notice" id="cookieNotice" role="status" aria-live="polite" hidden>
       <p><strong data-i18n="cookieTitle">Privacy notice</strong><span data-i18n="cookieMessage">This site does not use tracking cookies. It only stores your language preference in your browser.</span></p>
       <button type="button" id="dismissCookieNotice" data-i18n="cookieClose">Got it</button>
