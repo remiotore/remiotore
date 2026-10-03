@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: dark;
@@ -156,14 +157,21 @@
     @media (max-width: 520px) { .asset-categories, .addon-grid { grid-template-columns: 1fr; } .mode-picker { grid-template-columns: 1fr; } }
     @media (max-width: 420px) { .service-grid, .contact-fields { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(2, 1fr); } footer { flex-direction: column; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+    html[dir="rtl"] body { font-family: "Noto Sans Arabic", var(--sans); }
+    html[dir="rtl"] table { text-align: right; }
+    html[dir="rtl"] .column-heading span:last-child { margin-left: 0; margin-right: auto; }
+    html[dir="rtl"] .check-list li { padding-left: 0; padding-right: 23px; }
+    html[dir="rtl"] .check-list li::before { left: auto; right: 0; }
+    html[dir="rtl"] .estimate-row { direction: rtl; }
+    html[dir="rtl"] .wallets { direction: rtl; }
   </style>
 </head>
 <body>
   <div class="shell">
     <nav class="topbar" aria-label="Main navigation">
-      <a class="brand" href="#top"><span class="brand-mark">R</span><span>Remiotore / field notes</span></a>
+      <a class="brand" href="#top"><span class="brand-mark">R</span><span>Remiotore / Pentesting Services</span></a>
       <div class="top-links"><a href="#profile" data-i18n="navProfile">Profile</a><a href="#services" data-i18n="navServices">Services</a><a href="#hire" data-i18n="navHire">Hire me</a><a href="https://x.com/MaeKidd54320" target="_blank" rel="noreferrer" data-i18n="navContact">Contact ↗</a>
-        <label class="language-bar" aria-label="Language"><span>🌐</span><select id="siteLanguage" aria-label="Language"><option value="en">🇬🇧 English</option><option value="es">🇪🇸 Español</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="ru">🇷🇺 Русский</option><option value="zh">🇨🇳 中文</option></select></label>
+        <label class="language-bar" aria-label="Language"><span>🌐</span><select id="siteLanguage" aria-label="Language"><option value="es">🇪🇸 Español</option><option value="pt">🇵🇹 Português</option><option value="en">🇬🇧 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="ru">🇷🇺 Русский</option><option value="ar">🇸🇦 العربية</option><option value="zh">🇨🇳 中文</option><option value="ko">🇰🇷 한국어</option><option value="ja">🇯🇵 日本語</option></select></label>
       </div>
     </nav>
 
@@ -172,7 +180,7 @@
       <h1 data-i18n-html="heroTitle">Security-minded.<br>Systems-driven.</h1>
       <p class="hero-quote" data-i18n="heroQuote">“And if there's no wind, we'll have to row.”</p>
       <div class="socials">
-        <a class="pill-link" href="https://x.com/MaeKidd54320" target="_blank" rel="noreferrer">𝕏 &nbsp; Follow</a>
+        <a class="pill-link" href="https://x.com/MaeKidd54320" target="_blank" rel="noreferrer">𝕏 &nbsp; <span data-i18n="follow">Follow</span></a>
         <a class="pill-link" href="https://app.hackthebox.com/users/25872" target="_blank" rel="noreferrer">Hack The Box ↗</a>
         <a class="pill-link" href="https://github.com/remiotore" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
@@ -294,10 +302,10 @@
           <article class="card">
             <h3 data-i18n="contactTitle">Your details</h3>
             <div class="contact-fields">
-              <label class="field"><span data-i18n="fullName">Full name</span><input name="name" autocomplete="name" required></label>
-              <label class="field"><span data-i18n="email">Email</span><input name="email" type="email" autocomplete="email" required></label>
-              <label class="field"><span data-i18n="company">Company</span><input name="company" autocomplete="organization" required></label>
-              <label class="field"><span data-i18n="project">Project</span><input name="project"></label>
+              <label class="field"><span data-i18n="fullName">Full name</span><input name="name" autocomplete="name" dir="auto" required></label>
+              <label class="field"><span data-i18n="email">Email</span><input name="email" type="email" autocomplete="email" dir="auto" required></label>
+              <label class="field"><span data-i18n="company">Company</span><input name="company" autocomplete="organization" dir="auto" required></label>
+              <label class="field"><span data-i18n="project">Project</span><input name="project" dir="auto"></label>
             </div>
           </article>
         </div>
@@ -318,10 +326,10 @@
       <h3 data-i18n="supportTitle">Support my work</h3>
       <p data-i18n="supportText">If you enjoy the open-source work, you can support it with a contribution.</p>
       <div class="wallets">
-        <strong data-i18n="btc">BTC</strong><div class="wallet-detail"><span class="wallet-network">Bitcoin network</span><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code></div>
-        <strong data-i18n="eth">ETH</strong><div class="wallet-detail"><span class="wallet-network">Ethereum network</span><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code></div>
-        <strong data-i18n="sol">SOL</strong><div class="wallet-detail"><span class="wallet-network">Solana network</span><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code></div>
-        <strong data-i18n="xrp">XRP</strong><div class="wallet-detail"><span class="wallet-network">XRP Ledger (Ripple)</span><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code></div>
+        <strong data-i18n="btc">BTC</strong><div class="wallet-detail"><span class="wallet-network" data-i18n="bitcoinNetwork">Bitcoin network</span><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code></div>
+        <strong data-i18n="eth">ETH</strong><div class="wallet-detail"><span class="wallet-network" data-i18n="ethereumNetwork">Ethereum network</span><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code></div>
+        <strong data-i18n="sol">SOL</strong><div class="wallet-detail"><span class="wallet-network" data-i18n="solanaNetwork">Solana network</span><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code></div>
+        <strong data-i18n="xrp">XRP</strong><div class="wallet-detail"><span class="wallet-network" data-i18n="xrpNetwork">XRP Ledger (Ripple)</span><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code></div>
       </div>
     </article>
     <aside class="cookie-notice" id="cookieNotice" role="status" aria-live="polite" hidden>
