@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d12">
+  <meta name="description" content="Remiotore — offensive security, penetration testing, skills and services.">
+  <title>Remiotore — Offensive Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080d12;
+      --panel: #101820;
+      --panel-raised: #141f28;
+      --line: #26343d;
+      --text: #e7eef2;
+      --muted: #91a1aa;
+      --green: #9fef00;
+      --blue: #72c7ff;
+      --violet: #c5a2ff;
+      --mono: "DM Mono", monospace;
+      --sans: "Manrope", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at 12% 0%, #12231d 0, transparent 33rem),
+                  radial-gradient(ellipse at 90% 5%, #111c2b 0, transparent 30rem), var(--bg);
+      color: var(--text);
+      font: 15px/1.65 var(--sans);
+    }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { color: #caff67; }
+    .shell { width: min(1440px, 100%); margin: auto; padding: 28px clamp(16px, 4vw, 56px) 64px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 30px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font: 500 13px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #527b22; border-radius: 10px; color: var(--green); background: #172410; font-weight: 700; }
+    .top-links { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 12px; font-size: 13px; }
+    .language-bar { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; }
+    .language-bar select { padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); color: var(--text); font: inherit; }
+    .hero { margin: 0 0 26px; padding: clamp(24px, 4vw, 42px); border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(110deg, rgba(159,239,0,.065), transparent 50%), rgba(16,24,32,.8); }
+    .eyebrow { margin: 0 0 10px; color: var(--green); font: 12px var(--mono); letter-spacing: .15em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(36px, 6vw, 68px); line-height: 1.02; letter-spacing: -.06em; }
+    .hero p:last-of-type { max-width: 700px; margin: 18px 0 0; color: var(--muted); font-size: 17px; }
+    .hero-quote { color: #c9d5db !important; font-size: 14px !important; font-style: italic; }
+    .socials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .pill-link, .tag { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: 6px 11px; color: var(--text); font-size: 12px; }
+    .pill-link:hover { border-color: var(--green); color: var(--green); }
+    .columns { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); gap: 22px; align-items: start; }
+    .column { min-width: 0; }
+    .column-heading { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; padding: 0 4px; }
+    .column-heading .index { color: var(--green); font: 12px var(--mono); }
+    .column-heading h2 { margin: 0; font-size: 21px; letter-spacing: -.03em; }
+    .column-heading span:last-child { margin-left: auto; color: var(--muted); font: 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+    .card { margin-bottom: 16px; padding: 22px; border: 1px solid var(--line); border-radius: 17px; background: linear-gradient(145deg, rgba(255,255,255,.018), transparent 42%), var(--panel); }
+    .card h3 { margin: 0 0 14px; font-size: 16px; letter-spacing: -.02em; }
+    .card p { margin: 0 0 12px; color: var(--muted); }
+    .card p:last-child { margin-bottom: 0; }
+    .status { display: inline-flex; align-items: center; gap: 8px; color: #c6d2d8; font-size: 13px; }
+    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px #9fef0080; }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; margin: 16px 0 0; }
+    .stat { padding: 13px 10px; border: 1px solid var(--line); border-radius: 12px; background: #0b1218; }
+    .stat strong { display: block; color: var(--green); font: 600 20px var(--mono); }
+    .stat span { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #0b1218; color: #ccd8de; border-radius: 8px; font: 11px var(--mono); }
+    .tag.cert { border-color: #608b1e; color: var(--green); }
+    .resource-list, .check-list { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+    .resource-list a { display: block; padding: 11px 13px; border: 1px solid var(--line); border-radius: 10px; background: #0b1218; }
+    .resource-list small { display: block; color: var(--muted); }
+    .table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 11px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid #202c34; white-space: nowrap; }
+    th { position: sticky; top: 0; color: var(--muted); background: #111a21; font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+    tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: #15211b; }
+    .machine-table { max-height: 420px; }
+    .diff-easy { color: #69d99a; } .diff-medium { color: #ffbd59; } .diff-hard { color: #ff7777; } .diff-insane { color: var(--violet); }
+    .service-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+    .service { min-height: 142px; padding: 15px; border: 1px solid var(--line); border-radius: 12px; background: #0b1218; }
+    .service .service-icon { color: var(--blue); font: 12px var(--mono); }
+    .service h4 { margin: 9px 0 5px; font-size: 14px; }
+    .service p { margin: 0; font-size: 12px; }
+    .check-list li { position: relative; padding-left: 23px; color: var(--muted); }
+    .check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--green); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px; border: 1px solid #446322; border-radius: 13px; background: linear-gradient(115deg, #172410, #0e171a); }
+    .cta p { margin: 0; color: #dce7dd; font-size: 13px; }
+    .button { display: inline-flex; justify-content: center; padding: 10px 15px; border-radius: 9px; background: var(--green); color: #10160a; font-weight: 800; font-size: 12px; }
+    .button:hover { background: #caff67; color: #10160a; }
+    .hire-section { margin-top: 18px; scroll-margin-top: 20px; }
+    .hire-intro { max-width: 760px; margin: 0 4px 14px; color: var(--muted); }
+    .asset-row input, .asset-row select, .contact-fields input { min-width: 0; width: 100%; padding: 10px 11px; border: 1px solid var(--line); border-radius: 9px; background: #0b1218; color: var(--text); font: 13px var(--sans); }
+    .hire-grid { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 16px; align-items: start; }
+    .hire-work { min-width: 0; }
+    .mode-picker { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-bottom: 14px; }
+    .mode-button, .add-asset, .remove-asset { border: 1px solid var(--line); border-radius: 10px; background: #0b1218; color: var(--text); font: inherit; cursor: pointer; }
+    .mode-button { padding: 14px; text-align: left; }
+    .mode-button strong, .mode-button span { display: block; }
+    .mode-button span { margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .mode-button[aria-pressed="true"] { border-color: var(--green); background: #172410; box-shadow: inset 0 0 0 1px #9fef0030; }
+    .benefit-strip { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+    .benefit-strip span { padding: 6px 9px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); font-size: 11px; }
+    .asset-categories { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+    .asset-card { min-width: 0; margin: 0; padding: 16px; border: 1px solid var(--line); border-radius: 13px; background: #0c141a; }
+    .asset-card-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+    .asset-card h4 { margin: 0; font-size: 14px; }
+    .add-asset { padding: 6px 9px; color: var(--green); font-size: 11px; white-space: nowrap; }
+    .add-asset:hover, .remove-asset:hover { border-color: var(--green); }
+    .asset-list { display: grid; gap: 9px; }
+    .asset-row { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: start; gap: 8px; padding: 11px; border: 1px solid #25343c; border-radius: 10px; background: #101a21; }
+    .asset-fields { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 9px; }
+    .field { min-width: 0; display: grid; gap: 5px; }
+    .field label { color: var(--muted); font-size: 10px; }
+    .field.full { grid-column: 1 / -1; }
+    .field input[type="checkbox"] { width: auto; accent-color: var(--green); }
+    .field.check-field { display: flex; align-items: center; gap: 7px; padding-top: 20px; }
+    .remove-asset { padding: 6px 9px; color: #ff8989; font-size: 12px; }
+    .addon-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; }
+    .addon-option { display: flex; gap: 8px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: #0b1218; color: var(--text); font-size: 11px; cursor: pointer; }
+    .addon-option input { accent-color: var(--green); }
+    .addon-option small { display: block; margin-top: 4px; color: var(--muted); }
+    .contact-fields { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+    .estimate-card { position: sticky; top: 18px; }
+    .estimate-rows { display: grid; gap: 8px; color: var(--muted); font-size: 12px; }
+    .estimate-row { display: flex; justify-content: space-between; gap: 10px; }
+    .estimate-row strong { color: var(--text); font-family: var(--mono); font-weight: 500; }
+    .estimate-total { margin: 16px 0 5px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .estimate-total s { display: block; color: var(--muted); font: 13px var(--mono); }
+    .estimate-total strong { display: block; margin-top: 4px; color: var(--green); font: 700 clamp(25px,3vw,35px) var(--mono); }
+    .estimate-note { min-height: 20px; color: var(--muted); font-size: 11px; }
+    .roe-box { max-height: 135px; overflow: auto; margin: 14px 0 9px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); font-size: 11px; }
+    .roe-accept { display: flex; gap: 8px; align-items: flex-start; color: var(--muted); font-size: 11px; }
+    .roe-accept input { accent-color: var(--green); }
+    .submit-scope { width: 100%; margin-top: 13px; padding: 12px; border: 0; border-radius: 10px; background: var(--green); color: #10160a; font: 800 13px var(--sans); cursor: pointer; }
+    .submit-scope:disabled { opacity: .45; cursor: not-allowed; }
+    .form-message { min-height: 18px; margin-top: 8px; color: var(--muted); font-size: 11px; }
+    .cookie-notice { position: fixed; z-index: 20; right: 18px; bottom: 18px; display: flex; align-items: center; gap: 14px; width: min(460px, calc(100vw - 36px)); padding: 13px 14px; border: 1px solid var(--line); border-radius: 13px; background: #111a21f5; box-shadow: 0 12px 36px #0009; backdrop-filter: blur(12px); }
+    .cookie-notice[hidden] { display: none; }
+    .cookie-notice p { flex: 1; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+    .cookie-notice strong { display: block; margin-bottom: 2px; color: var(--text); font-size: 12px; }
+    .cookie-notice button { flex: 0 0 auto; padding: 7px 10px; border: 1px solid #526d34; border-radius: 8px; background: #172410; color: var(--green); font: 600 11px var(--sans); cursor: pointer; }
+    .cookie-notice button:hover { border-color: var(--green); }
+    .fine-print { font-size: 11px !important; }
+    .wallets { display: grid; grid-template-columns: 55px minmax(0,1fr); gap: 8px 12px; font: 11px var(--mono); }
+    .wallets strong { color: var(--green); }
+    .wallets code { overflow-wrap: anywhere; color: var(--muted); }
+    footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 25px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font: 11px var(--mono); }
+    @media (max-width: 960px) { .columns { grid-template-columns: 1fr 1fr; gap: 14px; } .card { padding: 17px; } .stats { grid-template-columns: repeat(2, minmax(0,1fr)); } .hire-grid { grid-template-columns: minmax(0,1fr) 290px; } }
+    @media (max-width: 700px) { .shell { padding-top: 18px; } .topbar { align-items: flex-start; } .top-links { gap: 10px; font-size: 11px; } .columns, .hire-grid { grid-template-columns: 1fr; } .column-heading { margin-top: 8px; } .service-grid { grid-template-columns: 1fr 1fr; } .estimate-card { position: static; } }
+    @media (max-width: 520px) { .asset-categories, .addon-grid { grid-template-columns: 1fr; } .mode-picker { grid-template-columns: 1fr; } }
+    @media (max-width: 420px) { .service-grid, .contact-fields { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(2, 1fr); } footer { flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="brand" href="#top"><span class="brand-mark">R</span><span>Remiotore / field notes</span></a>
+      <div class="top-links"><a href="#profile" data-i18n="navProfile">Profile</a><a href="#services" data-i18n="navServices">Services</a><a href="#hire" data-i18n="navHire">Hire me</a><a href="https://x.com/MaeKidd54320" target="_blank" rel="noreferrer" data-i18n="navContact">Contact ↗</a>
+        <label class="language-bar" aria-label="Language"><span>🌐</span><select id="siteLanguage" aria-label="Language"><option value="en">🇬🇧 English</option><option value="es">🇪🇸 Español</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="ru">🇷🇺 Русский</option><option value="zh">🇨🇳 中文</option></select></label>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <p class="eyebrow" data-i18n="eyebrow">Offensive security</p>
+      <h1 data-i18n-html="heroTitle">Security-minded.<br>Systems-driven.</h1>
+      <p class="hero-quote" data-i18n="heroQuote">“And if there's no wind, we'll have to row.”</p>
+      <div class="socials">
+        <a class="pill-link" href="https://x.com/MaeKidd54320" target="_blank" rel="noreferrer">𝕏 &nbsp; Follow</a>
+        <a class="pill-link" href="https://app.hackthebox.com/users/25872" target="_blank" rel="noreferrer">Hack The Box ↗</a>
+        <a class="pill-link" href="https://github.com/remiotore" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </header>
+
+    <article class="card" id="configure-engagement">
+      <h3 data-i18n="configureTitle">Configure an engagement</h3>
+      <p data-i18n="configureDesc">Choose networks, hosts, web apps, APIs, mobile apps, and repositories; select one-time or monthly testing; then review your live estimate.</p>
+      <div class="cta"><p><strong data-i18n="configurePrompt">Ready to define a scope?</strong><br><span data-i18n="configurePromptSub">Review your assets and generate a scope summary.</span></p><a class="button" href="#hire" data-i18n="scopeButton">Jump to scope builder ↓</a></div>
+      <p class="fine-print" style="margin-top:12px" data-i18n="estimateDisclaimer">The estimate is indicative only. Testing requires written authorization and agreed rules of engagement. Downloading a scope does not submit a booking.</p>
+    </article>
+
+    <div class="columns">
+      <section class="column" id="profile" aria-labelledby="profile-title">
+        <div class="column-heading"><span class="index">01 / KNOW &amp; BUILT</span><h2 id="profile-title" data-i18n="knowTitle">What I know</h2><span data-i18n="knowMeta">Profile · practice</span></div>
+        <article class="card">
+          <h3 data-i18n="profileTitle">Profile</h3>
+          <p data-i18n="introProfile">Offensive security practitioner. I learn by building, testing, documenting, and refining repeatable workflows.</p>
+          <p class="status" data-i18n="currentFocus">Currently bug bounty hunting and expanding my pentesting knowledge.</p>
+          <div class="stats" aria-label="Hack The Box progress">
+            <div class="stat"><strong>98</strong><span data-i18n="totalMachines">Machines*</span></div>
+            <div class="stat"><strong>46</strong><span data-i18n="easy">Easy</span></div>
+            <div class="stat"><strong>43</strong><span data-i18n="medium">Medium</span></div>
+            <div class="stat"><strong>8 / 1</strong><span data-i18n="hardInsane">Hard / Insane</span></div>
+          </div>
+          <div class="tags" style="margin-top:10px"><span class="tag"><span>54 </span><span data-i18n="linux">Linux</span></span><span class="tag"><span>44 </span><span data-i18n="windows">Windows</span></span><span class="tag cert" data-i18n="cpts">CPTS · Certified Penetration Testing Specialist</span></div>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="skillsTitle">Skills &amp; focus areas</h3>
+          <div class="tags" data-skill-tags></div>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="machinesTitle">Servers</h3>
+          <div class="table-wrap machine-table">
+            <table>
+              <thead><tr><th data-i18n="machinesName">Name</th><th data-i18n="os">OS</th><th data-i18n="difficulty">Difficulty</th></tr></thead>
+              <tbody>
+                <tr><td>Cap</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Fireflow</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Logging</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>TwoMillion</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Support</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>VariaType</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>CCTV</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Pterodactyl</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Facts</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>AirTouch</td><td>Linux</td><td class="diff-medium">Medium</td></tr>
+                <tr><td>MonitorsFour</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Eighteen</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Conversor</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Signed</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Breach</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Job</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Imagery</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Baby</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Expressway</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>HackNet</td><td>Linux</td><td class="diff-medium">Medium</td></tr>
+                <tr><td>Delegate</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Soulmate</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Media</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Race</td><td>Linux</td><td class="diff-hard">Hard</td></tr><tr><td>Previous</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Lock</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>CodePartTwo</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Editor</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Era</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Redelegate</td><td>Windows</td><td class="diff-hard">Hard</td></tr>
+                <tr><td>VulnEscape</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>VulnCicada</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Outbound</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Voleur</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Artificial</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>TombWatcher</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Fluffy</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Puppy</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>EscapeTwo</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>UnderPass</td><td>Linux</td><td class="diff-easy">Easy</td></tr>
+                <tr><td>Administrator</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Certified</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Cicada</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>BoardLight</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>SolarLab</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Pov</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Devvortex</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Hospital</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Authority</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Sau</td><td>Linux</td><td class="diff-easy">Easy</td></tr>
+                <tr><td>Snoopy</td><td>Linux</td><td class="diff-hard">Hard</td></tr><tr><td>Escape</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Precious</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Vessel</td><td>Linux</td><td class="diff-hard">Hard</td></tr><tr><td>Trick</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Scrambled</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>StreamIO</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Timelapse</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>GoodGames</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>SteamCloud</td><td>Linux</td><td class="diff-easy">Easy</td></tr>
+                <tr><td>Epsilon</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Undetected</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Paper</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Nunchucks</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Return</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Driver</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Gobox</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>BountyHunter</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Unobtainium</td><td>Linux</td><td class="diff-hard">Hard</td></tr><tr><td>Bucket</td><td>Linux</td><td class="diff-medium">Medium</td></tr>
+                <tr><td>Worker</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Magic</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Remote</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Sauna</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Monteverde</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Postman</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Forest</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Craft</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Writeup</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Active</td><td>Windows</td><td class="diff-easy">Easy</td></tr>
+                <tr><td>Jerry</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Jeeves</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Popcorn</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Silentium</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>DarkZeroReturns</td><td>Windows</td><td class="diff-hard">Hard</td></tr><tr><td>Bedside</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Paperwork</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>MakeSense</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Enigma</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Nimbus</td><td>Linux</td><td class="diff-hard">Hard</td></tr>
+                <tr><td>Checkpoint</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Connected</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>DevHub</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Reactor</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>SmartHire</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Helix</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>PingPong</td><td>Windows</td><td class="diff-insane">Insane</td></tr><tr><td>Garfield</td><td>Windows</td><td class="diff-hard">Hard</td></tr><tr><td>DanglingTree</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Layover</td><td>Linux</td><td class="diff-easy">Easy</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card">
+      </section>
+
+      <section class="column" id="services" aria-labelledby="services-title">
+        <div class="column-heading"><span class="index">02 / SERVICES</span><h2 id="services-title" data-i18n="offerTitle">What I do</h2><span data-i18n="offerMeta">Security work</span></div>
+        <article class="card">
+          <h3 data-i18n="serviceTitle">Practical security assessments</h3>
+          <p data-i18n="introServices">Scoped, authorized testing to help identify and explain security weaknesses before they become incidents. Engagements are limited to explicitly approved assets and rules of engagement.</p>
+          <div class="service-grid">
+            <div class="service"><span class="service-icon">01 / EXTERNAL</span><h4 data-i18n="serviceNetwork">Network &amp; host testing</h4><p data-i18n="serviceNetworkDesc">Review of approved IPs, domains, hosts, and network ranges.</p></div>
+            <div class="service"><span class="service-icon">02 / WEB + API</span><h4 data-i18n="serviceWebApi">Web applications &amp; API security review</h4><p data-i18n="serviceWebApiDesc">Focused testing of web applications and REST, GraphQL, gRPC, or SOAP APIs within an agreed scope.</p></div>
+            <div class="service"><span class="service-icon">03 / CODE</span><h4 data-i18n="serviceCode">Repository review</h4><p data-i18n="serviceCodeDesc">Security review of individual repositories or agreed organization scope.</p></div>
+            <div class="service"><span class="service-icon">04 / DIRECTORY</span><h4 data-i18n="serviceActiveDirectory">Active Directory assessment</h4><p data-i18n="serviceActiveDirectoryDesc">Authorized review of Active Directory configuration, identity security, and common attack paths.</p></div>
+            <div class="service"><span class="service-icon">05 / MOBILE</span><h4 data-i18n="serviceMobile">Mobile application testing</h4><p data-i18n="serviceMobileDesc">iOS and Android assessment planning. Currently marked as work in progress.</p></div>
+            <div class="service"><span class="service-icon">06 / EXPOSURE</span><h4 data-i18n="serviceExposure">Exposure add-ons</h4><p data-i18n="serviceExposureDesc">Credential exposure checks, personal-data exposure checks, and typosquatting monitoring.</p></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="engagementTitle">Engagement options</h3>
+          <div class="service-grid">
+            <div class="service"><span class="service-icon">ONE-TIME</span><h4 data-i18n="oneTime">Focused penetration test</h4><p data-i18n="oneTimeDesc">Deep, individually scoped audit with an executive report, vulnerability retesting, and security certificate.</p></div>
+            <div class="service"><span class="service-icon">ONGOING</span><h4 data-i18n="subscription">Continuous security</h4><p data-i18n="subscriptionDesc">Monthly option with continuous monitoring, weekly automated scans, and real-time alerting.</p></div>
+          </div>
+          <ul class="check-list" style="margin-top:16px">
+            <li data-i18n="authScope">Agree the authorized scope and rules of engagement first.</li>
+            <li data-i18n="listedAssets">Test only the assets explicitly included in that scope.</li>
+            <li data-i18n="estimateBefore">Receive a clear estimate of effort and investment before proceeding.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="supportTitle">Support my work</h3>
+          <p data-i18n="supportText">If you enjoy the open-source work, you can support it with a contribution.</p>
+          <div class="wallets">
+            <strong data-i18n="btc">BTC</strong><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code>
+            <strong data-i18n="eth">ETH</strong><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code>
+            <strong data-i18n="sol">SOL</strong><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code>
+            <strong data-i18n="xrp">XRP</strong><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code>
+          </div>
+        </article>
+      </section>
+    </div>
+    <section class="hire-section" id="hire" aria-labelledby="hire-title">
+      <div class="column-heading"><span class="index">03 / ENGAGE</span><h2 id="hire-title" data-i18n="hireTitle">Hire my services</h2><span data-i18n="hireKicker">Scope · estimate · next steps</span></div>
+      <p class="hire-intro" data-i18n="hireIntro">Build an authorized testing scope below. Add the assets you want assessed, choose a one-time audit or continuous-security option, and review the estimate and rules of engagement.</p>
+      <form id="scopeForm" class="hire-grid" novalidate>
+        <div class="hire-work">
+          <div class="mode-picker" role="group" aria-label="Engagement type">
+            <button class="mode-button" type="button" data-mode="onetime" aria-pressed="true"><strong data-i18n="oneTime">One-time pentest</strong><span data-i18n="oneTimeSub">Deep individual audit · 25% off</span></button>
+            <button class="mode-button" type="button" data-mode="subscription" aria-pressed="false"><strong data-i18n="subscription">Subscription</strong><span data-i18n="subscriptionSub">Continuous security · monthly · 60% off</span></button>
+          </div>
+          <div class="benefit-strip" id="benefitList" aria-live="polite"></div>
+
+          <article class="card">
+            <h3 data-i18n="assetsTitle">Define your authorized scope</h3>
+            <p data-i18n="assetsHint">Add only assets you own or have written permission to test.</p>
+            <div class="asset-categories">
+              <section class="asset-card"><div class="asset-card-head"><h4 data-i18n="hosts">Hosts</h4><button class="add-asset" type="button" data-add="host" data-i18n="addHost">+ Add host</button></div><div class="asset-list" data-list="host"></div></section>
+              <section class="asset-card"><div class="asset-card-head"><h4 data-i18n="networks">Networks</h4><button class="add-asset" type="button" data-add="network" data-i18n="addNetwork">+ Add network</button></div><div class="asset-list" data-list="network"></div></section>
+              <section class="asset-card"><div class="asset-card-head"><h4 data-i18n="webApps">Web apps</h4><button class="add-asset" type="button" data-add="web" data-i18n="addApp">+ Add app</button></div><div class="asset-list" data-list="web"></div></section>
+              <section class="asset-card"><div class="asset-card-head"><h4 data-i18n="apis">API security</h4><button class="add-asset" type="button" data-add="api" data-i18n="addApi">+ Add API</button></div><div class="asset-list" data-list="api"></div></section>
+              <section class="asset-card"><div class="asset-card-head"><h4 data-i18n="mobileApps">Mobile apps · WIP</h4><button class="add-asset" type="button" data-add="mobile" data-i18n="addApp">+ Add app</button></div><div class="asset-list" data-list="mobile"></div></section>
+              <section class="asset-card"><div class="asset-card-head"><h4 data-i18n="repositories">Code repositories</h4><button class="add-asset" type="button" data-add="repo" data-i18n="addRepo">+ Add repository</button></div><div class="asset-list" data-list="repo"></div></section>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="addonsTitle">Optional exposure add-ons</h3>
+            <div class="addon-grid">
+              <label class="addon-option"><input type="checkbox" data-addon="leaked"><span><span data-i18n="leakedCredentials">Leaked credentials</span><small>+500€</small></span></label>
+              <label class="addon-option"><input type="checkbox" data-addon="doxxing"><span><span data-i18n="doxxingCheck">Personal-data exposure check</span><small>+750€</small></span></label>
+              <label class="addon-option"><input type="checkbox" data-addon="typosquat"><span><span data-i18n="typosquatMonitor">Typosquatting monitor</span><small>+600€</small></span></label>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="contactTitle">Your details</h3>
+            <div class="contact-fields">
+              <label class="field"><span data-i18n="fullName">Full name</span><input name="name" autocomplete="name"></label>
+              <label class="field"><span data-i18n="email">Email</span><input name="email" type="email" autocomplete="email" required></label>
+              <label class="field"><span data-i18n="company">Company</span><input name="company" autocomplete="organization"></label>
+              <label class="field"><span data-i18n="project">Project</span><input name="project"></label>
+            </div>
+          </article>
+        </div>
+
+        <aside class="card estimate-card" aria-live="polite">
+          <h3 data-i18n="estimateTitle">Live estimate</h3>
+          <div class="estimate-rows" id="estimateRows"></div>
+          <div class="estimate-total"><span data-i18n="investment">Estimated investment</span><s id="basePrice">0€</s><strong id="finalPrice">0€</strong></div>
+          <p class="estimate-note" id="estimateMeta" data-i18n="estimateEmpty">Add assets to see an estimate and delivery time.</p>
+          <div class="roe-box"><strong data-i18n="roeTitle">Rules of engagement</strong><p data-i18n="roeText">Testing is limited to the assets listed in the agreed scope. You confirm that you own the assets or have written authorization. No testing begins until scope and timing are agreed. Avoid production-disruptive activity unless explicitly approved.</p></div>
+          <label class="roe-accept"><input type="checkbox" id="acceptTerms"><span data-i18n="acceptTerms">I confirm authorization and accept the rules of engagement.</span></label>
+          <button class="submit-scope" id="downloadScope" type="submit" disabled data-i18n="downloadScope">Download scope summary</button>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </aside>
+      </form>
+    </section>
+    <aside class="cookie-notice" id="cookieNotice" role="status" aria-live="polite" hidden>
+      <p><strong data-i18n="cookieTitle">Privacy notice</strong><span data-i18n="cookieMessage">This site does not use tracking cookies. It only stores your language preference in your browser.</span></p>
+      <button type="button" id="dismissCookieNotice" data-i18n="cookieClose">Got it</button>
+    </aside>
+    <footer><span data-i18n="footerBrand">Remiotore · Offensive security</span><span data-i18n="footerSafety">Practice ethically. Test only with authorization.</span></footer>
+  </div>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
