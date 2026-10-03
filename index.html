@@ -147,6 +147,8 @@
     .fine-print { font-size: 11px !important; }
     .wallets { display: grid; grid-template-columns: 55px minmax(0,1fr); gap: 8px 12px; font: 11px var(--mono); }
     .wallets strong { color: var(--green); }
+    .wallet-detail { display: grid; gap: 3px; min-width: 0; }
+    .wallet-network { color: var(--text); font-size: 10px; }
     .wallets code { overflow-wrap: anywhere; color: var(--muted); }
     footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 25px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font: 11px var(--mono); }
     @media (max-width: 960px) { .columns { grid-template-columns: 1fr 1fr; gap: 14px; } .card { padding: 17px; } .stats { grid-template-columns: repeat(2, minmax(0,1fr)); } .hire-grid { grid-template-columns: minmax(0,1fr) 290px; } }
@@ -316,10 +318,10 @@
       <h3 data-i18n="supportTitle">Support my work</h3>
       <p data-i18n="supportText">If you enjoy the open-source work, you can support it with a contribution.</p>
       <div class="wallets">
-        <strong data-i18n="btc">BTC</strong><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code>
-        <strong data-i18n="eth">ETH</strong><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code>
-        <strong data-i18n="sol">SOL</strong><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code>
-        <strong data-i18n="xrp">XRP</strong><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code>
+        <strong data-i18n="btc">BTC</strong><div class="wallet-detail"><span class="wallet-network">Bitcoin network</span><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code></div>
+        <strong data-i18n="eth">ETH</strong><div class="wallet-detail"><span class="wallet-network">Ethereum network</span><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code></div>
+        <strong data-i18n="sol">SOL</strong><div class="wallet-detail"><span class="wallet-network">Solana network</span><code>gdsqfAEugaqzxpi5sq5wavA3TnJhok4tkFDeAnRovDa</code></div>
+        <strong data-i18n="xrp">XRP</strong><div class="wallet-detail"><span class="wallet-network">XRP Ledger (Ripple)</span><code>rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh</code></div>
       </div>
     </article>
     <aside class="cookie-notice" id="cookieNotice" role="status" aria-live="polite" hidden>
