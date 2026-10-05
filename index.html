@@ -63,10 +63,17 @@
     .card p:last-child { margin-bottom: 0; }
     .status { display: inline-flex; align-items: center; gap: 8px; color: #c6d2d8; font-size: 13px; }
     .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px #9fef0080; }
-    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; margin: 16px 0 0; }
+    .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin: 16px 0 0; }
     .stat { padding: 13px 10px; border: 1px solid var(--line); border-radius: 12px; background: #0b1218; }
     .stat strong { display: block; color: var(--green); font: 600 20px var(--mono); }
     .stat span { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+    .stat.cert { border-color: #608b1e; }
+    .stat.cert strong { color: var(--green); }
+    .stat.cert span { color: var(--green); text-transform: none; font-size: 11px; letter-spacing: normal; font-family: var(--sans); }
+    .stat-sub { display: flex; gap: 16px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+    .stat-sub-item { display: flex; flex-direction: column; }
+    .stat-sub-item strong { font-size: 16px; }
+    .stat-sub-item span { font-size: 9px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
     .tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .tag { background: #0b1218; color: #ccd8de; border-radius: 8px; font: 11px var(--mono); }
     .tag.cert { border-color: #608b1e; color: var(--green); }
@@ -200,12 +207,14 @@
           <h3 data-i18n="profileTitle">Profile</h3>
           <p class="status" data-i18n="currentFocus">Currently bug bounty hunting and expanding my pentesting knowledge.</p>
           <div class="stats" aria-label="Hack The Box progress">
-            <div class="stat"><strong>98</strong><span data-i18n="totalMachines">Machines*</span></div>
-            <div class="stat"><strong>46</strong><span data-i18n="easy">Easy</span></div>
-            <div class="stat"><strong>43</strong><span data-i18n="medium">Medium</span></div>
-            <div class="stat"><strong>8 / 1</strong><span data-i18n="hardInsane">Hard / Insane</span></div>
+            <div class="stat cert"><strong data-i18n="cpts">CPTS</strong><span>Certified Penetration Testing Specialist</span></div>
+            <div class="stat"><strong>98</strong><span data-i18n="totalMachines">Servers</span>
+              <div class="stat-sub">
+                <div class="stat-sub-item"><strong>54</strong><span data-i18n="linux">Linux</span></div>
+                <div class="stat-sub-item"><strong>44</strong><span data-i18n="windows">Windows</span></div>
+              </div>
+            </div>
           </div>
-          <div class="tags" style="margin-top:10px"><span class="tag"><span>54</span> <span data-i18n="linux">Linux</span></span><span class="tag"><span>44</span> <span data-i18n="windows">Windows</span></span><span class="tag cert" data-i18n="cpts">CPTS · Certified Penetration Testing Specialist</span></div>
         </article>
 
         <article class="card">
@@ -213,8 +222,20 @@
           <div class="tags" data-skill-tags></div>
         </article>
 
+        <!--<article class="card">
+          <h3 data-i18n="companiesTitle">Pwned companies</h3>
+          <div class="table-wrap machine-table">
+            <table>
+              <thead><tr><th data-i18n="machinesName">Name</th><th data-i18n="bugsFound">Bugs found</th></tr></thead>
+              <tbody>
+                <tr><td>—</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>-->
+
         <article class="card">
-          <h3 data-i18n="machinesTitle">Servers</h3>
+          <h3 data-i18n="machinesTitle">Pwned servers</h3>
           <div class="table-wrap machine-table">
             <table>
               <thead><tr><th data-i18n="machinesName">Name</th><th data-i18n="os">OS</th><th data-i18n="difficulty">Difficulty</th></tr></thead>
@@ -321,14 +342,12 @@
       </form>
     </section>
     <article class="card">
-      <h3 style="text-transform: uppercase; letter-spacing: .12em;" data-i18n="bugBountyTitle">BUG BOUNTY / THANK YOU</h3>
+      <h3 style="text-transform: uppercase; letter-spacing: .12em;" data-i18n="bugBountyTitle">BUG BOUNTY</h3>
       <p><strong data-i18n="bugBountyIntro">I do not charge for unsolicited vulnerability reports.</strong> <span data-i18n="bugBountyText1">If I find a simple issue and the company wants to thank me, I’m happy to receive a contribution based on the value of the finding.</span></p>
-      <p data-i18n="bugBountyText2">In practice, I usually consider a small thank-you amount in the range of $25–$250 for a straightforward bug, depending on the impact and the context. If the issue affects a shared platform, plugin, or widely used component, the amount can be higher and is assessed case by case.</p>
-      <p data-i18n="bugBountyText3">There is no fixed formula, and I’m comfortable with more, less, or no payment at all. For commissioned security testing and development work, the scope and price are agreed in advance.</p>
+      <p><a class="pill-link" href="https://www.openbugbounty.org/researchers/remiotore/" target="_blank" rel="noreferrer">OpenBugBounty profile ↗</a></p>
     </article>
     <article class="card">
       <h3 data-i18n="supportTitle">Support my work</h3>
-      <p data-i18n="supportText">If you enjoy the open-source work, you can support it with a contribution.</p>
       <div class="wallets">
         <strong data-i18n="btc">BTC</strong><div class="wallet-detail"><span class="wallet-network" data-i18n="bitcoinNetwork">Bitcoin network</span><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code></div>
         <strong data-i18n="eth">ETH</strong><div class="wallet-detail"><span class="wallet-network" data-i18n="ethereumNetwork">Ethereum network</span><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code></div>
