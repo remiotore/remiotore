@@ -126,7 +126,7 @@
     .field { min-width: 0; display: grid; gap: 5px; }
     .field label { color: var(--muted); font-size: 10px; }
     .field.full { grid-column: 1 / -1; }
-    .field input[type="checkbox"] { width: auto; accent-color: var(--green); }
+    .field input[type="checkbox"] { flex: 0 0 16px; width: 16px; min-width: 16px; height: 16px; margin: 0; accent-color: var(--green); }
     .field.check-field { display: flex; align-items: center; gap: 7px; padding-top: 20px; }
     .remove-asset { padding: 6px 9px; color: #ff8989; font-size: 12px; }
     .addon-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; }
@@ -180,7 +180,7 @@
     <nav class="topbar" aria-label="Main navigation">
       <a class="brand" href="#top"><span class="brand-mark">R</span><span>Remiotore / Pentesting Services</span></a>
       <div class="top-links"><a href="#profile" data-i18n="navProfile">Profile</a><a href="#services" data-i18n="navServices">Services</a><a href="#hire" data-i18n="navHire">Hire me</a><a href="https://x.com/MaeKidd54320" target="_blank" rel="noreferrer" data-i18n="navContact">Contact ↗</a>
-        <label class="language-bar" aria-label="Language"><span>🌐</span><select id="siteLanguage" aria-label="Language"><option value="es">🇪🇸 Español</option><option value="pt">🇵🇹 Português</option><option value="it">🇮🇹 Italiano</option><option value="en">🇬🇧 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="ru">🇷🇺 Русский</option><option value="ar">🇸🇦 العربية</option><option value="zh">🇨🇳 中文</option><option value="ko">🇰🇷 한국어</option><option value="ja">🇯🇵 日本語</option></select></label>
+        <label class="language-bar" aria-label="Language" data-i18n-aria-label="languageLabel"><span>🌐</span><select id="siteLanguage" aria-label="Language" data-i18n-aria-label="languageLabel"><option value="en">🇬🇧 English</option><option value="es">🇪🇸 Español</option><option value="fr">🇫🇷 Français</option><option value="ru">🇷🇺 Русский</option><option value="zh">🇨🇳 中文</option><option value="ar">🇸🇦 العربية</option></select></label>
       </div>
     </nav>
 

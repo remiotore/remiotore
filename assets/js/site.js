@@ -1,627 +1,1503 @@
 const en = {
-  navProfile: 'Profile', navServices: 'Services', navHire: 'Hire me', navContact: 'Contact ↗', eyebrow: 'Offensive security', heroTitle: 'Security-minded.<br>Systems-driven.', heroIntro: 'A snapshot of what I know and have built, alongside the security work I offer.',
-  configureTitle: 'Configure an engagement', configureDesc: 'Choose networks, hosts, web apps, APIs, mobile apps, and repositories; select one-time or monthly testing; then review your live estimate.', configurePrompt: 'Ready to define a scope?', configurePromptSub: 'Review your assets and generate a scope summary.', scopeButton: 'Jump to scope builder ↓', estimateDisclaimer: 'The estimate is indicative only. Testing requires written authorization and agreed rules of engagement. The email draft opens in your email app and is not sent automatically.',
-  knowTitle: 'What I know', knowMeta: 'Profile · practice', offerTitle: 'What I do', offerMeta: 'Security work', profileTitle: 'Profile', introProfile: 'Offensive security practitioner. I learn by building, testing, documenting, and refining repeatable workflows.', currentFocus: 'Currently bug bounty hunting and expanding my pentesting knowledge.', totalMachines: 'Machines*', easy: 'Easy', medium: 'Medium', hardInsane: 'Hard / Insane', machineFootnote: '*Machine totals reflect the listed profile stats.', skillsTitle: 'Skills & focus areas', resourcesTitle: 'Field notes & references', cheatsheet: 'Pentesting Cheatsheet', cheatsheetDesc: 'Commands and methodology notes', workflow: 'Pentesting Workflow Diagram', workflowDesc: 'Engagement workflow overview', machinesTitle: 'Solved Hack The Box machines', machinesName: 'Name', os: 'OS', difficulty: 'Difficulty', serviceTitle: 'Practical security assessments', introServices: 'Scoped, authorized testing to help identify and explain security weaknesses before they become incidents.',
-  serviceNetwork: 'Network & host testing', serviceNetworkDesc: 'Review of approved IPs, domains, hosts, and network ranges.', serviceWeb: 'Web application testing', serviceWebDesc: 'Focused assessment of web applications, from simple sites to complex dashboards.', serviceApi: 'API security review', serviceApiDesc: 'REST, GraphQL, gRPC, SOAP, or mixed API assessments with agreed authentication scope.', serviceCode: 'Repository review', serviceCodeDesc: 'Security review of individual repositories or agreed organization scope.', serviceMobile: 'Mobile application testing', serviceMobileDesc: 'iOS and Android assessment planning; currently a work in progress.', serviceExposure: 'Exposure add-ons', serviceExposureDesc: 'Credential exposure checks, personal-data checks, and typosquatting monitoring.', engagementTitle: 'Engagement options', oneTime: 'One-time pentest', oneTimeDesc: 'Deep, individually scoped audit with an executive report, vulnerability retesting, and security certificate.', subscription: 'Continuous security', subscriptionDesc: 'Monthly option with continuous monitoring, weekly automated scans, and real-time alerting.', authScope: 'Agree the authorized scope and rules of engagement first.', listedAssets: 'Test only assets explicitly included in that scope.', estimateBefore: 'Review effort and investment before proceeding.', supportTitle: 'Support my work', supportText: 'If you enjoy the open-source work, you can support it with a contribution.',
-  hireTitle: 'Hire my services', hireKicker: 'Scope · estimate · next steps', hireIntro: 'Build an authorized testing scope below. Add assets, choose a one-time audit or continuous-security option, and review the estimate and rules of engagement.', languageLabel: 'Language', oneTimeSub: 'Deep individual audit · 25% off', subscriptionSub: 'Continuous security · monthly · 60% off', benefitsOne: ['Executive report', 'Vulnerability retest', 'Security certificate'], benefitsSub: ['Continuous monitoring', 'Weekly automated scans', 'Real-time alerts'], assetsTitle: 'Define your authorized scope', assetsHint: 'Add only assets you own or have written permission to test.', hosts: 'Hosts', networks: 'Networks', webApps: 'Web apps', apis: 'API security', mobileApps: 'Mobile apps · WIP', repositories: 'Code repositories', addHost: '+ Add host', addNetwork: '+ Add network', addApp: '+ Add app', addApi: '+ Add API', addRepo: '+ Add repository', remove: 'Remove',
-  domainIp: 'Domain / IP', ports: 'Ports (comma-separated)', wildcard: 'Include wildcard subdomains', cidr: 'Network CIDR', url: 'URL', complexity: 'Application size', basic: 'Static · 4,000€', dashboard: 'Dashboard · 7,000€', pro: 'Pro · 12,000€', apiType: 'API type', auth: 'Authentication', platform: 'Platform', appName: 'App name / URL', repoType: 'Repository scope', singleRepo: 'Single repo · 2,500€', orgRepos: 'Organization · 6,000€ each', quantity: 'Repository count', repoName: 'Repository / organization',
-  addonsTitle: 'Optional exposure add-ons', leakedCredentials: 'Leaked credentials', doxxingCheck: 'Personal-data exposure check', typosquatMonitor: 'Typosquatting monitor', contactTitle: 'Your details', fullName: 'Full name', email: 'Email', company: 'Company', project: 'Project', estimateTitle: 'Live estimate', investment: 'Estimated investment', estimateEmpty: 'Add assets to see an estimate and delivery time.', delivery: 'Estimated delivery', perMonth: 'per month', annualSavings: 'Estimated annual savings', roeTitle: 'Rules of engagement', roeText: 'Testing is limited to assets listed in the agreed scope. You confirm ownership or written authorization. Testing begins only after scope and timing are agreed. Production-disruptive activity requires explicit approval.', acceptTerms: 'I confirm authorization and accept the rules of engagement.', emailScope: 'Email scope summary', emptyAssets: 'No assets added yet.', emailError: 'Enter a valid email address before creating the email draft.', termsError: 'Confirm authorization and add at least one asset to continue.', emailReady: 'Your email draft is ready in your email app. Review it and send it there.', hostUnit: 'host', networkUnit: 'network', webUnit: 'web app', apiUnit: 'API', mobileUnit: 'mobile app', repoUnit: 'repository', day: 'day', days: 'days', weeks: 'weeks',
-  apiRest: 'REST · 4,000€', apiGraphql: 'GraphQL · 5,500€', apiGrpc: 'gRPC · 5,000€', apiSoap: 'SOAP · 4,500€', apiMixed: 'Mixed · 7,000€', authNone: 'No auth', authBearer: 'Bearer token', authApiKey: 'API key', authOauth: 'OAuth2', authCustom: 'Custom', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket'
-};
-const languages = {
-  en,
-  es: { navProfile: 'Perfil', navServices: 'Servicios', navHire: 'Contrátame', navContact: 'Contacto ↗', eyebrow: 'Seguridad ofensiva', heroTitle: 'Seguridad con<br>método y propósito.', heroIntro: 'Un resumen de lo que sé y he construido, junto con los servicios de seguridad que ofrezco.', configureTitle: 'Configura un servicio', configureDesc: 'Añade redes, hosts, aplicaciones, APIs, apps móviles y repositorios; elige una modalidad y consulta el presupuesto.', configurePrompt: '¿Listo para definir el alcance?', configurePromptSub: 'Revisa tus activos y genera un resumen.', scopeButton: 'Ir al configurador ↓', estimateDisclaimer: 'Presupuesto orientativo. Las pruebas requieren autorización escrita y reglas acordadas. Descargar el alcance no implica una reserva.', knowTitle: 'Lo que sé', knowMeta: 'Perfil · práctica', offerTitle: 'Lo que hago', offerMeta: 'Seguridad', profileTitle: 'Profil', introProfile: 'Praticien en sécurité offensive. J’apprends en créant, testant et documentant des méthodes reproductibles.', currentFocus: 'Chasse aux bugs et approfondissement du pentest.', totalMachines: 'Machines*', easy: 'Facile', medium: 'Moyen', hardInsane: 'Difficile / Insane', machineFootnote: '*Totals selon les statistiques du profil.', skillsTitle: 'Compétences et domaines', resourcesTitle: 'Notes et ressources', cheatsheet: 'Aide-mémoire pentest', cheatsheetDesc: 'Commandes et méthodologie', workflow: 'Schéma du processus pentest', workflowDesc: 'Vue d’ensemble d’une mission', machinesTitle: 'Machines Hack The Box résolues', machinesName: 'Nom', os: 'SO', difficulty: 'Difficulté', serviceTitle: 'Évaluations pratiques de sécurité', introServices: 'Tests autorisés et cadrés pour identifier et expliquer les faiblesses avant qu’elles ne deviennent des incidents.', serviceNetwork: 'Réseaux et hôtes', serviceNetworkDesc: 'Évaluation des IP, domaines, hôtes et plages autorisés.', serviceWeb: 'Applications web', serviceWebDesc: 'Évaluation ciblée de sites et d’applications web.', serviceApi: 'Sécurité des API', serviceApiDesc: 'Évaluation REST, GraphQL, gRPC ou SOAP selon le périmètre convenu.', serviceCode: 'Audit de dépôts', serviceCodeDesc: 'Prévision de sécurité de dépôts individuels ou d’une organisation définie.', serviceMobile: 'Applications mobiles', serviceMobileDesc: 'Planification de evaluations iOS et Android; actuellement en cours.', serviceExposure: 'Complementos de exposición', serviceExposureDesc: 'Identifiants et données exposés, domaines similaires.', engagementTitle: 'Formules', oneTime: 'Pentest pontual', oneTimeDesc: 'Audit approfondi avec rapport exécutif, contre-vérification et certificat.', subscription: 'Sécurité continue', subscriptionDesc: 'Formule mensuelle avec surveillance, scans hebdomadaires et alertes.', authScope: 'Convenez du périmètre autorisé et des règles avant tout test.', listedAssets: 'Teste uniquement les actifs du périmètre convenu.', estimateBefore: 'Consulte l’effort et l’investissement avant de continuer.', supportTitle: 'Soutenir mon travail', supportText: 'Soutenez le travail open source si vous l’appréciez.', hireTitle: 'Contrata mis servicios', hireKicker: 'Périmètre · estimation · prochaines étapes', hireIntro: 'Définisez un périmètre autorisé, ajoutez les actifs, choisissez un audit pontual ou continu et consultez les règles.', languageLabel: 'Idioma', oneTimeSub: 'Audit approfondi · 25 % descuento', subscriptionSub: 'Sécurité continue · mensuel · 60 % descuento', benefitsOne: ['Rapport exécutif', 'Contre-vérification', 'Certificat de sécurité'], benefitsSub: ['Surveillance continue', 'Scans hebdomadaires', 'Alertes en temps réel'], assetsTitle: 'Définir le périmètre autorisé', assetsHint: 'Ajoutez uniquement des actifs autorisés par écrit.', hosts: 'Hôtes', networks: 'Réseaux', webApps: 'Aplicaciones web', apis: 'Sécurité API', mobileApps: 'Apps móviles · en desarrollo', repositories: 'Dépôts de code', addHost: '+ Ajouter un hôte', addNetwork: '+ Ajouter un réseau', addApp: '+ Ajouter une app', addApi: '+ Ajouter une API', addRepo: '+ Ajouter un dépôt', remove: 'Retirer', domainIp: 'Domaine / IP', ports: 'Ports (séparés par des virgules)', wildcard: 'Inclure les sous-domaines wildcard', cidr: 'CIDR réseau', url: 'URL', complexity: 'Taille de l’application', basic: 'Statique · 4 000€', dashboard: 'Tableau de bord · 7 000€', pro: 'Pro · 12 000€', apiType: 'Type d’API', auth: 'Authentification', platform: 'Platfomme', appName: 'Nom / URL de l’app', repoType: 'Périmètre du dépôt', singleRepo: 'Dépôt unique · 2 500€', orgRepos: 'Organisation · 6 000€ chacun', quantity: 'Nombre de dépôts', repoName: 'Dépôt / organisation', addonsTitle: 'Complementos de exposición', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Vos informations', fullName: 'Nom complet', email: 'E-mail', company: 'Société', project: 'Projet', estimateTitle: 'Estimation en direct', investment: 'Investissement estimé', estimateEmpty: 'Ajoutez des actifs pour obtenir une estimation.', delivery: 'Délai estimé', perMonth: 'par mois', annualSavings: 'Économies annuelles estimées', roeTitle: 'Règles d’engagement', roeText: 'Les tests sont limités aux actifs convenus. Vous confirmez en être propriétaire ou disposer d’une autorisation écrite. Aucun test avant accord sur le périmètre et le calendrier.', acceptTerms: 'Je confirme l’autorisation et accepte les règles.', downloadScope: 'Télécharger le périmètre', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', downloadReady: 'Zusammenfassung als scope.json heruntergeladen.', hostUnit: 'hôte', networkUnit: 'réseau', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'jour', days: 'jours', weeks: 'semaines', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Keine Auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket' },
-  fr: { navProfile: 'Profil', navServices: 'Services', navHire: 'Me contacter', navContact: 'Contact ↗', eyebrow: 'Sécurité offensive', heroTitle: 'Sécurité et systèmes.<br>Avec méthode.', heroIntro: 'Un aperçu de mes compétences et projets, ainsi que des services de sécurité proposés.', configureTitle: 'Configurer une mission', configureDesc: 'Ajoutez les actifs, choisissez un audit ponctuel ou mensuel et consultez l’estimation.', configurePrompt: 'Prêt à définir le périmètre ?', configurePromptSub: 'Examinez vos actifs et créez un résumé.', scopeButton: 'Accéder au configurateur ↓', estimateDisclaimer: 'Estimation indicative. Tout test nécessite une autorisation écrite et des règles convenues.', knowTitle: 'Mes compétences', knowMeta: 'Profil · pratique', offerTitle: 'Mes services', offerMeta: 'Sécurité', profileTitle: 'Profil', introProfile: 'Praticien en sécurité offensive. J’apprends en créant, testant et documentant des méthodes reproductibles.', currentFocus: 'Chasse aux bugs et approfondissement du pentest.', totalMachines: 'Machines*', easy: 'Facile', medium: 'Moyen', hardInsane: 'Difficile / Insane', machineFootnote: '*Totals selon les statistiques du profil.', skillsTitle: 'Compétences et domaines', resourcesTitle: 'Notes et ressources', cheatsheet: 'Aide-mémoire pentest', cheatsheetDesc: 'Commandes et méthodologie', workflow: 'Schéma du processus pentest', workflowDesc: 'Vue d’ensemble d’une mission', machinesTitle: 'Machines Hack The Box résolues', machinesName: 'Nom', os: 'OS', difficulty: 'Difficulté', serviceTitle: 'Évaluations pratiques de sécurité', introServices: 'Tests autorisés et cadrés pour identifier et expliquer les faiblesses avant qu’elles ne deviennent des incidents.', serviceNetwork: 'Réseaux et hôtes', serviceNetworkDesc: 'Évaluation des IP, domaines, hôtes et plages autorisés.', serviceWeb: 'Applications web', serviceWebDesc: 'Évaluation ciblée de sites et d’applications web.', serviceApi: 'Sécurité des API', serviceApiDesc: 'Évaluation REST, GraphQL, gRPC ou SOAP selon le périmètre convenu.', serviceCode: 'Audit de dépôts', serviceCodeDesc: 'Prévision de sécurité de dépôts individuels ou d’une organisation définie.', serviceMobile: 'Applications mobiles', serviceMobileDesc: 'Planification de evaluations iOS et Android; actuellement en cours.', serviceExposure: 'Complementos de exposición', serviceExposureDesc: 'Identifiants et données exposés, domaines similaires.', engagementTitle: 'Formules', oneTime: 'Pentest pontual', oneTimeDesc: 'Audit approfondi avec rapport exécutif, contre-vérification et certificat.', subscription: 'Sécurité continue', subscriptionDesc: 'Formule mensuelle avec surveillance, scans hebdomadaires et alertes.', authScope: 'Convenez du périmètre autorisé et des règles avant tout test.', listedAssets: 'Teste uniquement les actifs du périmètre convenu.', estimateBefore: 'Consulte l’effort et l’investissement avant de continuer.', supportTitle: 'Soutenir mon travail', supportText: 'Soutenez le travail open source si vous l’appréciez.', hireTitle: 'Contrata mis servicios', hireKicker: 'Périmètre · estimation · prochaines étapes', hireIntro: 'Définisez un périmètre autorisé, ajoutez les actifs, choisissez un audit pontual ou continu et consultez les règles.', languageLabel: 'Langue', oneTimeSub: 'Audit approfondi · 25 % descuento', subscriptionSub: 'Sécurité continue · mensuel · 60 % descuento', benefitsOne: ['Rapport exécutif', 'Contre-vérification', 'Certificat de sécurité'], benefitsSub: ['Surveillance continue', 'Scans hebdomadaires', 'Alertes en temps réel'], assetsTitle: 'Définir le périmètre autorisé', assetsHint: 'Ajoutez uniquement des actifs autorisés par écrit.', hosts: 'Hôtes', networks: 'Réseaux', webApps: 'Aplicaciones web', apis: 'Sécurité API', mobileApps: 'Apps móviles · en desarrollo', repositories: 'Dépôts de code', addHost: '+ Ajouter un hôte', addNetwork: '+ Ajouter un réseau', addApp: '+ Ajouter une app', addApi: '+ Ajouter une API', addRepo: '+ Ajouter un dépôt', remove: 'Retirer', domainIp: 'Domaine / IP', ports: 'Ports (séparés par des virgules)', wildcard: 'Inclure les sous-domaines wildcard', cidr: 'CIDR réseau', url: 'URL', complexity: 'Taille de l’application', basic: 'Statique · 4 000€', dashboard: 'Tableau de bord · 7 000€', pro: 'Pro · 12 000€', apiType: 'Type d’API', auth: 'Authentification', platform: 'Platfomme', appName: 'Nom / URL de l’app', repoType: 'Périmètre du dépôt', singleRepo: 'Dépôt unique · 2 500€', orgRepos: 'Organisation · 6 000€ chacun', quantity: 'Nombre de dépôts', repoName: 'Dépôt / organisation', addonsTitle: 'Complementos de exposición', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Vos informations', fullName: 'Nom complet', email: 'E-mail', company: 'Société', project: 'Projet', estimateTitle: 'Estimation en direct', investment: 'Investissement estimé', estimateEmpty: 'Ajoutez des actifs pour obtenir une estimation.', delivery: 'Délai estimé', perMonth: 'par mois', annualSavings: 'Économies annuelles estimées', roeTitle: 'Règles d’engagement', roeText: 'Les tests sont limités aux actifs convenus. Vous confirmez en être propriétaire ou disposer d’une autorisation écrite. Aucun test avant accord sur le périmètre et le calendrier.', acceptTerms: 'Je confirme l’autorisation et accepte les règles.', downloadScope: 'Télécharger le périmètre', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', downloadReady: 'Zusammenfassung als scope.json heruntergeladen.', hostUnit: 'hôte', networkUnit: 'réseau', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'jour', days: 'jours', weeks: 'semaines', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Keine Auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket' },
-  de: { navProfile: 'Profil', navServices: 'Leistungen', navHire: 'Anfrage', navContact: 'Kontakt ↗', eyebrow: 'Offensive Sicherheit', heroTitle: 'Sicherheit und Systeme.<br>Mit Methode.', heroIntro: 'Ein Überblick über meine Kenntnisse und Projekte sowie die angebotenen Sicherheitsleistungen.', configureTitle: 'Auftrag konfigurieren', configureDesc: 'Assets hinzufügen, einmalige oder monatliche Prüfung wählen und Kostenschätzung ansehen.', configurePrompt: 'Bereit, den Umfang festzulegen?', configurePromptSub: 'Assets prüfen und Zusammenfassung erstellen.', scopeButton: 'Zum Scope-Builder ↓', estimateDisclaimer: 'Unverbindliche Schätzung. Tests erfordern schriftliche Genehmigung und abgestimmte Regeln.', knowTitle: 'Was ich kann', knowMeta: 'Profil · Praxis', offerTitle: 'Was ich anbiete', offerMeta: 'Sicherheit', profileTitle: 'Profil', introProfile: 'Praktiker für offensive Sicherheit. Ich lerne durch Entwicklung, Tests und Dokumentation wiederholbarer Abläufe.', currentFocus: 'Bug-Bounty-Jagd und Ausbau meiner Pentest-Kenntnisse.', totalMachines: 'Maschinen*', easy: 'Einfach', medium: 'Mittel', hardInsane: 'Schwer / Insane', machineFootnote: '*Gesamtzahl laut Profilstatistik.', skillsTitle: 'Fähigkeiten und Schwerpunkte', resourcesTitle: 'Notizen und Ressourcen', cheatsheet: 'Pentest-Spickzettel', cheatsheetDesc: 'Befehle und Methodik', workflow: 'Pentest-Ablaufdiagramm', workflowDesc: 'Überblick über den Ablauf', machinesTitle: 'Gelöste Hack The Box-Maschinen', machinesName: 'Name', os: 'Betriebssystem', difficulty: 'Schwierigkeit', serviceTitle: 'Praktische Sicherheitsprüfungen', introServices: 'Autorisierte, klar abgegrenzte Tests, um Sicherheitslücken frühzeitig zu erkennen und verständlich zu erklären.', serviceNetwork: 'Netzwerk- und Hosttests', serviceNetworkDesc: 'Prüfung freigegebener IPs, Domains, Hosts und Netzbereiche.', serviceWeb: 'Webanwendungstests', serviceWebDesc: 'Gezielte Prüfung von Websites und komplexen Webanwendungen.', serviceApi: 'API-Sicherheitsprüfung', serviceApiDesc: 'REST, GraphQL, gRPC oder SOAP im vereinbarten Umfang.', serviceCode: 'Repository-Prüfung', serviceCodeDesc: 'Prüfung einzelner Repositories oder freigegebener Organisationen.', serviceMobile: 'Mobile Anwendungen', serviceMobileDesc: 'Planung von iOS- und Android-Prüfungen; derzeit in Arbeit.', serviceExposure: 'Exposure-Zusätze', serviceExposureDesc: 'Identifiants et données exposés, domaines similaires.', engagementTitle: 'Leistungsmodelle', oneTime: 'Einmaliger Pentest', oneTimeDesc: 'Einzelprüfung mit Managementbericht, Nachtest und Sicherheitszertifikat.', subscription: 'Laufende Sicherheit', subscriptionDesc: 'Formule mensuelle avec surveillance, scans hebdomadaires et alertes.', authScope: 'Umfang und Regeln müssen vorab abgestimmt werden.', listedAssets: 'Teste uniquement les actifs du périmètre convenu.', estimateBefore: 'Do vor dem Beginn prüfen.', supportTitle: 'Meine Arbeit unterstützen', supportText: 'Unterstützen Sie meine Open-Source-Arbeit, wenn sie Ihnen gefällt.', hireTitle: 'Sicherheitsleistung anfragen', hireKicker: 'Périmètre · estimation · prochaines étapes', hireIntro: 'Définisez un périmètre autorisé, ajoutez les actifs, choisissez un audit pontual ou continu et consultez les règles.', languageLabel: 'Sprache', oneTimeSub: 'Tiefgehende Prüfung · 25 % Rabatt', subscriptionSub: 'Laufende Sicherheit · monatlich · 60 % Rabatt', benefitsOne: ['Managementbericht', 'Nachtest', 'Sicherheitszertifikat'], benefitsSub: ['Kontinuierliche Überwachung', 'Wöchentliche Scans', 'Echtzeitwarnungen'], assetsTitle: 'Autorisierten Umfang festlegen', assetsHint: 'Nur eigene oder schriftlich freigegebene Assets hinzufügen.', hosts: 'Hosts', networks: 'Netzwerke', webApps: 'Webanwendungen', apis: 'Sicherheit API', mobileApps: 'Mobile Apps · in Arbeit', repositories: 'Dépôts de code', addHost: '+ Ajouter un hôte', addNetwork: '+ Ajouter un réseau', addApp: '+ Ajouter une app', addApi: '+ Ajouter une API', addRepo: '+ Ajouter un dépôt', remove: 'Retirer', domainIp: 'Domaine / IP', ports: 'Ports (séparés par des virgules)', wildcard: 'Inclure les sous-domaines wildcard', cidr: 'CIDR réseau', url: 'URL', complexity: 'Taille de l’application', basic: 'Statik · 4 000€', dashboard: 'Tableau de bord · 7 000€', pro: 'Pro · 12 000€', apiType: 'Type d’API', auth: 'Authentifizierung', platform: 'Platfomme', appName: 'Nom / URL de l’app', repoType: 'Périmètre du dépôt', singleRepo: 'Singolo repo · 2 500€', orgRepos: 'Organisation · 6 000€ chacun', quantity: 'Anzahl Repositories', repoName: 'Repository / organisation', addonsTitle: 'Dopplementos de exposición', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Vos informations', fullName: 'Nom complet', email: 'E-mail', company: 'Société', project: 'Projet', estimateTitle: 'Estimation en direct', investment: 'Investissement estimé', estimateEmpty: 'Ajoutez des actifs pour obtenir une estimation.', delivery: 'Délai estimé', perMonth: 'par mois', annualSavings: 'Économies annuelles estimées', roeTitle: 'Regeln für die Prüfung', roeText: 'Tests sind auf vereinbarte Assets beschränkt. Sie bestätigen Eigentum oder schriftliche Genehmigung. Tests beginnen erst nach Abstimmung von Umfang und Zeitplan. Aktivitäten, die den Betrieb stören könnten, bedürfen einer ausdrücklichen Freigabe.', acceptTerms: 'Ich bestätige die Berechtigung und akzeptiere die Prüfungsregeln.', downloadScope: 'Umfang herunterladen', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', downloadReady: 'Zusammenfassung als scope.json heruntergeladen.', hostUnit: 'host', networkUnit: 'net', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'day', days: 'days', weeks: 'weeks', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Keine Auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket' },
-  ru: { navProfile: 'Профиль', navServices: 'Услуги', navHire: 'Заказать', navContact: 'Контакт ↗', eyebrow: 'Наступательная безопасность', heroTitle: 'Безопасность и системы.<br>По делу.', heroIntro: 'Мои знания и проекты, а также предлагаемые услуги в области безопасности.', configureTitle: 'Настроить проверку', configureDesc: 'Добавьте активы, выберите разовый аудит или подписку и посмотрите оценку.', configurePrompt: 'Готовы определить объём?', configurePromptSub: 'Проверьте активы и сформируйте сводку.', scopeButton: 'К настройке объёма ↓', estimateDisclaimer: 'Предварительная оценка. Проверки требуют письменного разрешения и согласованных правил.', knowTitle: 'Мои знания', knowMeta: 'Профиль · практика', offerTitle: 'Мои услуги', offerMeta: 'Безопасность', profileTitle: 'Профиль', introProfile: 'Специалист по наступательной безопасности. Развиваюсь через создание, тестирование и документирование процессов.', currentFocus: 'Bug bounty и развитие знаний пентеста.', totalMachines: 'Машины*', easy: 'Лёгкая', medium: 'Средняя', hardInsane: 'Сложная / Insane', machineFootnote: '*Итоги согласно статистике профиля.', skillsTitle: 'Навыки и направления', resourcesTitle: 'Заметки и материалы', cheatsheet: 'Памятка по пентесту', cheatsheetDesc: 'Команды и методика', workflow: 'Схема процесса пентеста', workflowDesc: 'Обзор этапов работ', machinesTitle: 'Решённые машины Hack The Box', machinesName: 'Название', os: 'ОС', difficulty: 'Сложность', serviceTitle: 'Практические проверки безопасности', introServices: 'Разрешённые и ограниченные по объёму проверки помогают выявить уязвимости до того, как они станут инцидентами.', serviceNetwork: 'Сети и хосты', serviceNetworkDesc: 'Проверка разрешённых IP, доменов, хостов и диапазонов.', serviceWeb: 'Веб-приложения', serviceWebDesc: 'Проверка сайтов и сложных веб-приложений.', serviceApi: 'Безопасность API', serviceApiDesc: 'REST, GraphQL, gRPC или SOAP в согласованном объёме.', serviceCode: 'Проверка репозиториев', serviceCodeDesc: 'Проверка отдельных репозиториев или согласованной организации.', serviceMobile: 'Мобильные приложения', serviceMobileDesc: 'Планирование проверок iOS и Android; пока в разработке.', serviceExposure: 'Дополнительные проверки', serviceExposureDesc: 'Identifiants et données exposés, domaines similaires.', engagementTitle: 'Форматы работы', oneTime: 'Разовый пентест', oneTimeDesc: 'Разовый аудит с отчётом для руководства, повторной проверкой и сертификатом.', subscription: 'Постоянная защита', subscriptionDesc: 'Ежемесячная защита с мониторингом и оповещениями.', authScope: 'Заранее согласуйте объём и правила проведения работ.', listedAssets: 'Проверяйте только активы из согласованного объёма.', estimateBefore: 'До начала проверьте сроки и стоимость.', supportTitle: 'Поддержать мою работу', supportText: 'Поддержите мою работу с открытым исходным кодом.', hireTitle: 'Заказать услуги', hireKicker: 'Объём · оценка · следующие шаги', hireIntro: 'Укажите разрешённый объём проверки, добавьте активы и ознакомьтесь с оценкой и правилами.', languageLabel: 'Язык', oneTimeSub: 'Глубокий аудит · 25% от скидки', subscriptionSub: 'Постоянная защита · ежемесячно · 60% от скидки', benefitsOne: ['Отчёт для руководства', 'Повторная проверка', 'Сертификат безопасности'], benefitsSub: ['Непрерывный мониторинг', 'Еженедельное сканирование', 'Оповещения онлайн'], assetsTitle: 'Определите разрешённый объём', assetsHint: 'Добавляйте только свои активы или активы с письменным разрешением.', hosts: 'Hosts', networks: 'Сети', webApps: 'Веб-приложения', apis: 'Безопасность API', mobileApps: 'Мобильные приложения · в работе', repositories: 'Репозитории кода', addHost: '+ Добавить хост', addNetwork: '+ Добавить сеть', addApp: '+ Добавить приложение', addApi: '+ Добавить API', addRepo: '+ Добавить репозиторий', remove: 'Удалить', domainIp: 'Домен / IP', ports: 'Порты (сепарированы запятой)', wildcard: 'Включить wildcard-поддомены', cidr: 'CIDR сети', url: 'URL', complexity: 'Размер приложения', basic: 'Статическое · 4 000€', dashboard: 'Панель · 7 000€', pro: 'Pro · 12 000€', apiType: 'Тип API', auth: 'Авторизация', platform: 'Platfomme', appName: 'Имя / URL de l’app', repoType: 'Пérimètre du dépôt', singleRepo: 'Singolo repo · 2 500€', orgRepos: 'Organisation · 6 000€ chacun', quantity: 'Количество репозиториев', repoName: 'Repository / organizaçao', addonsTitle: 'Дополнительные проверки', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Ваши данные', fullName: 'Полное имя', email: 'Email', company: 'Компания', project: 'Проект', estimateTitle: 'Оценка онлайн', investment: 'Оценочная стоимость', estimateEmpty: 'Добавьте активы для расчёта стоимости и сроков.', delivery: 'Срок выполнения', perMonth: 'в месяц', annualSavings: 'Оценочная годовая экономия', roeTitle: 'Правила проведения работ', roeText: 'Tests sont limités aux actifs listés dans le périmètre convenu. Vous confirmez être propriétaire de ces actifs ou disposer d’une autorisation écrite pour les tester. Tests commencent uniquement après accord sur le périmètre et le calendrier. Toute activité susceptible d’interrompre la production nécessite une approbation explicite.', acceptTerms: 'Je confirme mon autorisation et j’accepte les règles d’engagement.', emailScope: 'Отправить описание объёма', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', emailReady: 'Описание объёма скачано в scope.json.', hostUnit: 'host', networkUnit: 'net', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'day', days: 'days', weeks: 'weeks', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Keine Auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket' },
-  zh: { navProfile: '个人资料', navServices: '服务', navHire: '聘用我', navContact: '联系 ↗', eyebrow: '攻防安全', heroTitle: '专注安全。<br>系统驱动。', heroIntro: '了解我的技能与项目，以及我提供的安全服务。', configureTitle: '配置安全服务', configureDesc: '添加资产，选择一次性审计或持续安全服务，并查看估价。', configurePrompt: '准备定义测试范围了吗？', configurePromptSub: '检查资产并生成范围摘要。', scopeButton: '前往范围配置 ↓', estimateDisclaimer: '此为参考估价。测试需要书面授权并事先约定规则。邮件草稿将在邮件应用中打开，不会自动发送。', knowTitle: '我掌握的技能', knowMeta: '资料 · 实践', offerTitle: '我提供的服务', offerMeta: '安全服务', profileTitle: '个人资料', introProfile: '攻防安全实践者，通过构建、测试和记录可复用流程持续学习。', currentFocus: '目前专注漏洞赏金并提升渗透测试知识。', totalMachines: '机器*', easy: '简单', medium: '中等', hardInsane: '困难 / 极难', machineFootnote: '*数据来自个人资料统计。', skillsTitle: '技能与方向', resourcesTitle: '笔记与资源', cheatsheet: '渗透测试速查表', cheatsheetDesc: '命令与方法说明', workflow: '渗透测试流程图', workflowDesc: '测试流程概览', machinesTitle: '已完成的 Hack The Box 机器', machinesName: '名称', os: '系统', difficulty: '难度', serviceTitle: '实用安全评估', introServices: '在授权范围内开展测试，帮助及早发现并解释安全问题。', serviceNetwork: '网络与主机测试', serviceNetworkDesc: '检查已授权的 IP、域名、主机和网段。', serviceWeb: 'Web 应用测试', serviceWebDesc: '评估从简单网站到复杂仪表板的 Web 应用。', serviceApi: 'API 安全评估', serviceApiDesc: 'REST, GraphQL, gRPC 或 SOAP 在约定范围内的评估。', serviceCode: '代码仓库审查', serviceCodeDesc: '审查单个仓库或约定范围的组织仓库。', serviceMobile: '移动应用测试', serviceMobileDesc: '规划 iOS 和 Android 评估，目前仍在开发中。', serviceExposure: '暴露面附加服务', serviceExposureDesc: '检查泄露凭据、个人数据暴露及仿冒域名。', engagementTitle: '服务方式', oneTime: '一次性渗透测试', oneTimeDesc: '单次深度审计，包含管理层报告、漏洞复测和安全证书。', subscription: '持续安全服务', subscriptionDesc: '按月提供持续监控、每周扫描和实时告警。', authScope: '请先确认授权范围与测试规则。', listedAssets: '仅测试约定范围内的资产。', estimateBefore: '开始前请确认预计工作量和费用。', supportTitle: '支持我的工作', supportText: '如果您认可开源工作，欢迎支持。', hireTitle: '聘用我的服务', hireKicker: '范围 · 估价 · 后续步骤', hireIntro: '创建经授权的测试范围，添加目标资产，选择一次性审计或持续安全服务，并查看估价与规则。', languageLabel: '语言', oneTimeSub: '深度单次审计 · 25% 折', subscriptionSub: '持续安全 · 按月 · 60% 折', benefitsOne: ['管理层报告', '漏洞复测', '安全证书'], benefitsSub: ['持续监控', '每周自动扫描', '实时告警'], assetsTitle: '定义已授权的测试范围', assetsHint: '仅添加您拥有或已获得书面授权的资产。', hosts: 'Hosts', networks: 'Netzwerke', webApps: 'Webanwendungen', apis: 'API-Sicherheit', mobileApps: 'Mobile Apps · in Arbeit', repositories: 'Repository di codice', addHost: '+ Adicionar host', addNetwork: '+ Adicionar rede', addApp: '+ Adicionar aplicação', addApi: '+ Adicionar API', addRepo: '+ Adicionar repository', remove: 'Remover', domainIp: 'Domain / IP', ports: 'Ports (separados por vírgulas)', wildcard: 'Incluir subdomínios wildcard', cidr: 'CIDR de rede', url: 'URL', complexity: 'Tamanho da aplicação', basic: 'Estática · 4 000€', dashboard: 'Painel · 7 000€', pro: 'Pro · 12 000€', apiType: 'Tipo de API', auth: 'Autenticação', platform: 'Platfomme', appName: 'Nome / URL de l’app', repoType: 'Périmètre du dépôt', singleRepo: 'Singolo repo · 2 500€', orgRepos: 'Organisation · 6 000€ chacun', quantity: 'Número de repositórios', repoName: 'Repository / organizaçao', addonsTitle: 'Dopplementos de exposición', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Vos informations', fullName: 'Nom complet', email: 'Email', company: 'Société', project: 'Projet', estimateTitle: 'Estimativa em tempo real', investment: 'Investimento estimado', estimateEmpty: 'Adicione ativos para consultar a estimativa e o prazo.', delivery: 'Consegna estimada', perMonth: 'por mês', annualSavings: 'Poupança anual estimada', roeTitle: 'Regolas di ingaggio', roeText: 'I test sono limitati agli asset elencati nel perimetro concordato. Confermi la proprietà o l’autorizzazione scritta. I test iniziano solo dopo che l’ambito e i tempi sono concordati. Le attività che interrompono la produzione richiedono approvazione esplicita.', acceptTerms: 'Confermo l’autorizzazione e accetto le regole di ingaggio.', emailScope: 'Enviar resumo do âmbito por e-mail', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', emailReady: 'O rascunho está pronto na sua aplicação de e-mail. Reveja-o e envie-o a partir daí.', hostUnit: 'host', networkUnit: 'net', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'dia', days: 'dias', weeks: 'semanas', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Keine Auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket' }
-};
-
-languages.it = {
-  navProfile: 'Profilo', navServices: 'Servizi', navHire: 'Assumimi', navContact: 'Contatti ↗', eyebrow: 'Sicurezza offensiva', heroTitle: 'Sicurezza orientata.<br>Guidato dai sistemi.', heroIntro: 'Una panoramica di ciò che so e ho costruito, insieme al lavoro di sicurezza che offro.', configureTitle: 'Configura un engagement', configureDesc: 'Scegli reti, host, app web, API, app mobili e repository; seleziona un test una tantum o mensile; quindi rivedi la tua stima.', configurePrompt: 'Pronto a definire un ambito?', configurePromptSub: 'Rivedi i tuoi asset e genera un riepilogo dell\'ambito.', scopeButton: 'Vai al costruttore dell\'ambito ↓', estimateDisclaimer: 'La stima è indicativa. I test richiedono autorizzazione scritta e regole di ingaggio concordate. Il draft dell\'email si apre nella tua applicazione di correio e non viene inviato automaticamente.', knowTitle: 'Cosa so', knowMeta: 'Profilo · pratica', offerTitle: 'Cosa faccio', offerMeta: 'Lavoro di sicurezza', profileTitle: 'Profilo', introProfile: 'Praticante di sicurezza offensiva. Imparo costruendo, testando, documentando e perfezionando flussi di lavoro ripetibili.', currentFocus: 'Attualmente faccio bug bounty e amplio la conoscenza del pentest.', totalMachines: 'Macchine*', easy: 'Facile', medium: 'Médio', hardInsane: 'Difficile / Insano', machineFootnote: '*I totali delle macchine riflettono le statistiche del profilo.', skillsTitle: 'Competenze e aree di focus', resourcesTitle: 'Note e riferimenti', cheatsheet: 'Scheda di riferimento per il pentesting', cheatsheetDesc: 'Comandi e note metodologiche', workflow: 'Diagramma del flusso di pentesting', workflowDesc: 'Panoramica del flusso di lavoro', machinesTitle: 'Macchine Hack The Box risolte', machinesName: 'Nome', os: 'SO', difficulty: 'Difficoltà', serviceTitle: 'Valutazioni pratiche di sicurezza', introServices: 'Test autorizzati e mirati per aiutare a identificare e spiegare le debolezze di sicurezza prima che diventino incidenti.', serviceNetwork: 'Test di rete e host', serviceNetworkDesc: 'Revisione di IP, domini, host e intervalli di rete approvati.', serviceWeb: 'Test di applicazioni web', serviceWebDesc: 'Valutazione mirata di applicazioni web, da siti semplici a dashboard complesse.', serviceApi: 'Revisione della sicurezza API', serviceApiDesc: 'Valutazioni REST, GraphQL, gRPC, SOAP o miste con ambito di autenticazione concordato.', serviceCode: 'Revisione del repository', serviceCodeDesc: 'Revisione della sicurezza di singoli repository o ambito di organizzazione concordato.', serviceMobile: 'Test di applicazioni mobili', serviceMobileDesc: 'Pianificazione della valutazione di iOS e Android; attualmente in fase di sviluppo.', serviceExposure: 'Add-on di esposizione', serviceExposureDesc: 'Controlli di esposizione delle credenziali, controlli dei dati personali e monitoraggio del typosquatting.', engagementTitle: 'Opzioni di ingaggio', oneTime: 'Pentest one-time', oneTimeDesc: 'Audit profondo e personalizzato, con rapporto esecutivo, ripetizione dei test per verificare le vulnerabilità corrette e certificato di sicurezza.', subscription: 'Sicurezza continua', subscriptionDesc: 'Opzione mensile con monitoraggio continuo, scansioni automatiche settimanali e avvisi in tempo reale.', authScope: 'Convenez du périmètre autorisé et des règles avant tout test.', listedAssets: 'Teste uniquement les actifs du périmètre convenu.', estimateBefore: 'Consulte l’effort et l’investissement avant de continuer.', supportTitle: 'Supporta il mio lavoro', supportText: 'Se ti piace il lavoro open source, puoi supportarlo con un contributo.', hireTitle: 'Assumimi', hireKicker: 'Ambito · stima · prossimi passi', hireIntro: 'Costruisci un ambito di test autorizzato qui sotto. Aggiungi gli asset, scegli un audit pontual o un\'opzione di sicurezza continua, e rivedi la stima e le regole di ingaggio.', languageLabel: 'Lingua', oneTimeSub: 'Audit profondo · 25 % di sconto', subscriptionSub: 'Sicurezza continua · mensile · 60 % di sconto', benefitsOne: ['Rapporto esecutivo', 'Ritest delle vulnerabilità', 'Certificato di sicurezza'], benefitsSub: ['Monitoraggio continuo', 'Scansioni automatiche settimanali', 'Alerts in tempo reale'], assetsTitle: 'Definisci il tuo ambito autorizzato', assetsHint: 'Aggiungi solo asset di tua proprietà o per cui hai ricevuto permesso scritto.', hosts: 'Hosts', networks: 'Reti', webApps: 'Aplicações web', apis: 'Segurança de APIs', mobileApps: 'App mobili · em desenvolvimento', repositories: 'Repository di codice', addHost: '+ Aggiungi host', addNetwork: '+ Aggiungi rete', addApp: '+ Aggiungi app', addApi: '+ Aggiungi API', addRepo: '+ Aggiungi repository', remove: 'Rimuovi', domainIp: 'Domínio / IP', ports: 'Porti (separati da virgole)', wildcard: 'Includi sottodomini wildcard', cidr: 'CIDR di rete', url: 'URL', complexity: 'Dimensione dell\'applicazione', basic: 'Statico · 4 000€', dashboard: 'Painel · 7 000€', pro: 'Pro · 12 000€', apiType: 'Tipo di API', auth: 'Autentificazione', platform: 'Platfomme', appName: 'Nome / URL de l’app', repoType: 'Ambito del repository', singleRepo: 'Singolo repo · 2 500€', orgRepos: 'Organisation · 6 000€ chacun', quantity: 'Conteggio dei repository', repoName: 'Repository / organizaçao', addonsTitle: 'Dopplementos de exposición', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Vos informations', fullName: 'Nom complet', email: 'Email', company: 'Société', project: 'Progetto', estimateTitle: 'Estimativa em tempo real', investment: 'Investimento estimado', estimateEmpty: 'Adicione ativos para consultar a estimativa e o prazo.', delivery: 'Consegna estimada', perMonth: 'por mês', annualSavings: 'Poupança anual estimada', roeTitle: 'Regolas di ingaggio', roeText: 'I test sono limitati agli asset elencati nel perimetro concordato. Confermi la proprietà o l’autorizzazione scritta. I test iniziano solo dopo che l’ambito e i tempi sono concordati. Le attività che interrompono la produzione richiedono approvazione esplicita.', acceptTerms: 'Confermo l’autorizzazione e accetto le regole di ingaggio.', emailScope: 'Enviar resumo do âmbito por e-mail', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', emailReady: 'O rascunho está pronto na sua aplicação de e-mail. Reveja-o e envie-o a partir daí.', hostUnit: 'host', networkUnit: 'réseau', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'dia', days: 'dias', weeks: 'semanas', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Sans auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket', follow: 'Segui', bitcoinNetwork: 'Rete Bitcoin', ethereumNetwork: 'Rete Ethereum', solanaNetwork: 'Rete Solana', xrpNetwork: 'XRP Ledger (Ripple)'
-};
-const mergeLocale = (language, entries) => {
-  languages[language] = { ...(languages[language] ?? {}), ...entries };
-};
-const registerLocales = (locales) => Object.entries(locales).forEach(([language, entries]) => mergeLocale(language, entries));
-
-registerLocales({ it: {
-  navProfile: 'Profilo', navServices: 'Servizi', navHire: 'Assumimi', navContact: 'Contatto ↗', eyebrow: 'Sicurezza offensiva', heroTitle: 'Sicurezza orientata.<br>Guidato dai sistemi.', heroIntro: 'Una panoramica di ciò che so e ho costruito, insieme al lavoro di sicurezza che offro.',
-  configureTitle: 'Configura un ingaggio', configureDesc: 'Scegli reti, host, app web, API, app mobili e repository; seleziona un test una tantum o mensile; quindi rivedi la tua stima.', configurePrompt: 'Pronto a definire un ambito?', configurePromptSub: 'Rivedi i tuoi asset e genera un riepilogo dell\'ambito.', scopeButton: 'Vai al costruttore dell\'ambito ↓', estimateDisclaimer: 'La stima è indicativa. I test richiedono autorizzazione scritta e regole di ingaggio concordate. Il draft dell\'email si apre nella tua applicazione di correio e non viene inviato automaticamente.',
-  knowTitle: 'Cosa so', knowMeta: 'Profilo · pratica', offerTitle: 'Cosa faccio', offerMeta: 'Lavoro di sicurezza', profileTitle: 'Profilo', introProfile: 'Praticante di sicurezza offensiva. Imparo costruendo, testando, documentando e perfezionando flussi di lavoro ripetibili.', currentFocus: 'Attualmente faccio bug bounty e amplio la conoscenza del pentest.', totalMachines: 'Macchine*', easy: 'Facile', medium: 'Médio', hardInsane: 'Difficile / Insano', machineFootnote: '*I totali delle macchine riflettono le statistiche del profilo.', skillsTitle: 'Competenze e aree di focus', resourcesTitle: 'Note e riferimenti', cheatsheet: 'Scheda di riferimento per il pentesting', cheatsheetDesc: 'Comandi e note metodologiche', workflow: 'Diagramma del flusso di pentesting', workflowDesc: 'Panoramica del flusso di lavoro', machinesTitle: 'Macchine Hack The Box risolte', machinesName: 'Nome', os: 'SO', difficulty: 'Difficoltà', serviceTitle: 'Valutazioni pratiche di sicurezza', introServices: 'Test autorizzati e mirati per aiutare a identificare e spiegare le debolezze di sicurezza prima che diventino incidenti.', serviceNetwork: 'Test di rete e host', serviceNetworkDesc: 'Revisione di IP, domini, host e intervalli di rete approvati.', serviceWeb: 'Test di applicazioni web', serviceWebDesc: 'Valutazione mirata di applicazioni web, da siti semplici a dashboard complesse.', serviceApi: 'Revisione della sicurezza API', serviceApiDesc: 'Valutazioni REST, GraphQL, gRPC, SOAP o miste con ambito di autenticazione concordato.', serviceCode: 'Revisione del repository', serviceCodeDesc: 'Revisione della sicurezza di singoli repository o ambito di organizzazione concordato.', serviceMobile: 'Test di applicazioni mobili', serviceMobileDesc: 'Pianificazione della valutazione di iOS e Android; attualmente in fase di sviluppo.', serviceExposure: 'Add-on di esposizione', serviceExposureDesc: 'Controlli di esposizione delle credenziali, controlli dei dati personali e monitoraggio del typosquatting.', engagementTitle: 'Opzioni di ingaggio', oneTime: 'Pentest one-time', oneTimeDesc: 'Audit profondo e personalizzato, con rapporto esecutivo, ripetizione dei test per verificare le vulnerabilità corrette e certificato di sicurezza.', subscription: 'Sicurezza continua', subscriptionDesc: 'Opzione mensile con monitoraggio continuo, scansioni automatiche settimanali e avvisi in tempo reale.', authScope: 'Convenez du périmètre autorisé et des règles avant tout test.', listedAssets: 'Teste uniquement les actifs du périmètre convenu.', estimateBefore: 'Consulte l’effort et l’investissement avant de continuer.', supportTitle: 'Supporta il mio lavoro', supportText: 'Se ti piace il lavoro open source, puoi supportarlo con un contributo.', hireTitle: 'Assumimi', hireKicker: 'Ambito · stima · prossimi passi', hireIntro: 'Costruisci un ambito di test autorizzato qui sotto. Aggiungi gli asset, scegli un audit pontual o un\'opzione di sicurezza continua, e rivedi la stima e le regole di ingaggio.', languageLabel: 'Lingua', oneTimeSub: 'Audit profondo · 25 % di sconto', subscriptionSub: 'Sicurezza continua · mensile · 60 % di sconto', benefitsOne: ['Rapporto esecutivo', 'Ritest delle vulnerabilità', 'Certificato di sicurezza'], benefitsSub: ['Monitoraggio continuo', 'Scansioni automatiche settimanali', 'Alerts in tempo reale'], assetsTitle: 'Definisci il tuo ambito autorizzato', assetsHint: 'Aggiungi solo asset di tua proprietà o per cui hai ricevuto permesso scritto.', hosts: 'Hosts', networks: 'Reti', webApps: 'Aplicações web', apis: 'Segurança de APIs', mobileApps: 'App mobili · em desenvolvimento', repositories: 'Repository di codice', addHost: '+ Aggiungi host', addNetwork: '+ Aggiungi rete', addApp: '+ Aggiungi app', addApi: '+ Aggiungi API', addRepo: '+ Aggiungi repository', remove: 'Rimuovi', domainIp: 'Domínio / IP', ports: 'Porti (separati da virgole)', wildcard: 'Includi sottodomini wildcard', cidr: 'CIDR di rete', url: 'URL', complexity: 'Dimensione dell\'applicazione', basic: 'Statico · 4 000€', dashboard: 'Painel · 7 000€', pro: 'Pro · 12 000€', apiType: 'Tipo di API', auth: 'Autentificazione', platform: 'Platfomme', appName: 'Nome / URL de l’app', repoType: 'Ambito del repository', singleRepo: 'Singolo repo · 2 500€', orgRepos: 'Organisation · 6 000€ chacun', quantity: 'Conteggio dei repository', repoName: 'Repository / organizaçao', addonsTitle: 'Dopplementos de exposición', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Vos informations', fullName: 'Nom complet', email: 'Email', company: 'Société', project: 'Progetto', estimateTitle: 'Estimativa em tempo real', investment: 'Investimento estimado', estimateEmpty: 'Adicione ativos para consultar a estimativa e o prazo.', delivery: 'Consegna estimada', perMonth: 'por mês', annualSavings: 'Poupança anual estimada', roeTitle: 'Regolas di ingaggio', roeText: 'I test sono limitati agli asset elencati nel perimetro concordato. Confermi la proprietà o l’autorizzazione scritta. I test iniziano solo dopo che l’ambito e i tempi sono concordati. Le attività che interrompono la produzione richiedono approvazione esplicita.', acceptTerms: 'Confermo l’autorizzazione e accetto le regole di ingaggio.', emailScope: 'Enviar resumo do âmbito por e-mail', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', emailReady: 'O rascunho está pronto na sua aplicação de e-mail. Reveja-o e envie-o a partir daí.', hostUnit: 'host', networkUnit: 'réseau', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'dia', days: 'dias', weeks: 'semanas', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Sans auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket', follow: 'Segui', bitcoinNetwork: 'Rete Bitcoin', ethereumNetwork: 'Rete Ethereum', solanaNetwork: 'Rete Solana', xrpNetwork: 'XRP Ledger (Ripple)'
-} });
-
-registerLocales({
-  pt: {
-    navProfile: 'Perfil', navServices: 'Serviços', navHire: 'Contratar', navContact: 'Contacto ↗', eyebrow: 'Segurança ofensiva', heroTitle: 'Segurança em mente.<br>Sistemas em foco.', heroIntro: 'Um resumo do que sei e construí, além dos serviços de segurança que ofereço.',
-    configureTitle: 'Configurar um serviço', configureDesc: 'Escolha redes, hosts, aplicações web, APIs, aplicações móveis e repositórios; selecione uma análise pontual ou mensal e consulte a estimativa.', configurePrompt: 'Pronto para definir o âmbito?', configurePromptSub: 'Reveja os ativos e crie um resumo do âmbito.', scopeButton: 'Ir para o configurador ↓', estimateDisclaimer: 'Estimativa indicativa. Os testes exigem autorização por escrito e regras de execução acordadas. O rascunho de e-mail abre na sua aplicação de correio e não é enviado automaticamente.', knowTitle: 'Experiência', knowMeta: 'Profilo · Prática', offerTitle: 'Serviços', offerMeta: 'Segurança', profileTitle: 'Profilo', currentFocus: 'Atualmente participo em programas de recompensas por bugs e aprofundo os meus conhecimentos de testes de intrusão.', totalMachines: 'Máquinas*', easy: 'Facil', medium: 'Médio', hardInsane: 'Difícil / Insane', machineFootnote: '*Totais de acordo com as estatísticas do perfil.', skillsTitle: 'Competências e áreas de foco', resourcesTitle: 'Notas e referências', cheatsheet: 'Guia de testes de intrusão', cheatsheetDesc: 'Comandos e notas metodológicas', workflow: 'Diagrama do processo de testes', workflowDesc: 'Visão geral do processo de trabalho', machinesTitle: 'Servidores', machinesName: 'Nome', os: 'Sistema operativo', difficulty: 'Dificuldade', serviceTitle: 'Avaliações práticas de segurança',
-    serviceNetwork: 'Testes de redes e hosts', serviceNetworkDesc: 'Análise de IPs, domínios, hosts e intervalos de rede autorizados.', serviceWeb: 'Testes de aplicações web', serviceWebDesc: 'Avaliação focada de aplicações web, desde sites simples a painéis complexos.', serviceApi: 'Análise de segurança de APIs', serviceApiDesc: 'Avaliação de APIs REST, GraphQL, gRPC ou SOAP dentro do âmbito acordado.', serviceCode: 'Análise de repositórios', serviceCodeDesc: 'Análise de segurança de repositórios individuais ou de um âmbito organizacional acordado.', serviceMobile: 'Testes de aplicações móveis', serviceMobileDesc: 'Planeamento de avaliações para iOS e Android; em desenvolvimento.', serviceExposure: 'Serviços adicionais de exposição', serviceExposureDesc: 'Verificação de credenciais expostas, dados pessoais expostos e monitorização de domínios semelhantes.', engagementTitle: 'Opções de serviço', oneTime: 'Teste de intrusão pontual', oneTimeDesc: 'Auditoria aprofundada e personalizada, com relatório executivo, repetição dos testes às vulnerabilidades corretas e certificado de segurança.', subscription: 'Segurança contínua', subscriptionDesc: 'Opção mensal com monitorização contínua, análises automatizadas semanais e alertas em tempo real.', authScope: 'Defina primeiro o âmbito autorizado e as regras de execução.', listedAssets: 'Teste apenas os ativos incluídos explicitamente nesse âmbito.', estimateBefore: 'Consulte a estimativa de esforço e investimento antes de avançar.', supportTitle: 'Apoie o meu trabalho', supportText: 'Se aprecia o trabalho de código aberto, pode apoiá-lo com uma contribuição.',
-    hireTitle: 'Contratar serviços', hireKicker: 'Âmbito · estimativa · próximos passos', hireIntro: 'Definisez un alcance de pruebas autorizado. Añada los actifs, elija un audit pontual o un\'opzione di sicurezza continua, e rivedi la stima e le regole di ingaggio.', languageLabel: 'Idioma', oneTimeSub: 'Auditoria aprofundada · 25 % de desconto', subscriptionSub: 'Segurança contínua · mensal · 60 % de desconto', benefitsOne: ['Relatório executivo', 'Repetição dos testes', 'Certificado de segurança'], benefitsSub: ['Monitorização contínua', 'Scans automatizadas semanais', 'Alertas em tempo real'], assetsTitle: 'Definir o âmbito autorizado', assetsHint: 'Adicione apenas ativos que possui ou que tem autorização escrita para testar.', hosts: 'Hosts', networks: 'Redes', webApps: 'Aplicações web', apis: 'Segurança de APIs', mobileApps: 'App mobili · em desenvolvimento', repositories: 'Repository di codice', addHost: '+ Adicionar host', addNetwork: '+ Adicionar rede', addApp: '+ Adicionar aplicação', addApi: '+ Adicionar API', addRepo: '+ Adicionar repository', remove: 'Remover',
-    domainIp: 'Domínio / IP', ports: 'Porti (separados por vírgulas)', wildcard: 'Incluir subdomínios wildcard', cidr: 'CIDR de rede', url: 'URL', complexity: 'Dimensione dell\'applicazione', basic: 'Estática · 4 000€', dashboard: 'Painel · 7 000€', pro: 'Pro · 12 000€', apiType: 'Tipo de API', auth: 'Autenticação', platform: 'Platfomme', appName: 'Nome / URL de l’app', repoType: 'Ambito del repository', singleRepo: 'Singolo repo · 2 500€', orgRepos: 'Organisation · 6 000€ chacun', quantity: 'Conteggio dei repository', repoName: 'Repository / organizaçao', addonsTitle: 'Dopplementos de exposición', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Vos informations', fullName: 'Nom complet', email: 'Email', company: 'Société', project: 'Projet', estimateTitle: 'Estimativa em tempo real', investment: 'Investimento estimado', estimateEmpty: 'Adicione ativos para consultar a estimativa e o prazo.', delivery: 'Consegna estimada', perMonth: 'por mês', annualSavings: 'Poupança anual estimada', roeTitle: 'Regolas di ingaggio', roeText: 'I test sono limitati agli asset elencati nel perimetro concordato. Confermi la proprietà o l’autorizzazione scritta. I test iniziano solo dopo che l’ambito e i tempi sono concordati. Le attività che interrompono la produzione richiedono approvazione esplicita.', acceptTerms: 'Confermo l’autorizzazione e accetto le regole di ingaggio.', emailScope: 'Enviar resumo do âmbito por e-mail', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', emailReady: 'O rascunho está pronto na sua aplicação de e-mail. Reveja-o e envie-o a partir daí.', hostUnit: 'host', networkUnit: 'réseau', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'dia', days: 'dias', weeks: 'semanas', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Sans auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket',
-    serviceWebApi: 'Aplicações web e análise de segurança de APIs', serviceWebApiDesc: 'Testes focados de aplicações web e APIs REST, GraphQL, gRPC ou SOAP dentro do âmbito acordado.', serviceActiveDirectory: 'Avaliação do Active Directory', serviceActiveDirectoryDesc: 'Análise autorizada da configuração do Active Directory, da segurança de identidades e de vetores de ataque comuns.',
-    serviceExposure: 'OSINT, fugas de dados e exposição de informação pessoal', serviceExposureDesc: 'Investigação OSINT, verificação de credenciais expostas, análise de dados pessoais expostos e monitorização de domínios semelhantes.'
-  },
-  ar: {
-    navProfile: 'الملف الشخصي', navServices: 'الخدمات', navHire: 'اطلب خدمة', navContact: 'اتصل ↗', eyebrow: 'الأمن الهجومي', heroTitle: 'وعي أمني.<br>أنظمة مدروسة.', heroIntro: 'لمحة عن خبراتي وما أنجزته، إلى جانب خدمات الأمن التي أقدمها.',
-    configureTitle: 'إعداد مهمة أمنية', configureDesc: 'اختر الشبكات والأجهزة والتطبيقات والواجهات البرمجية وتطبيقات الهاتف والمستودعات؛ ثم اختر اختباراً لمرة واحدة أو شهريًّا وراجع التقدير.', configurePrompt: 'هل أنت مستعد لتحديد النطاق؟', configurePromptSub: 'راجع الأصول وأنشئ ملخصاً للنطاق.', scopeButton: 'انتقل إلى إعداد النطاق ↓', estimateDisclaimer: 'هذا تقدير مبدئي. تتطلب الاختبارات إذناً كتابياً وقواعد عمل متفقاً عليها. ستُفتح مسودة البريد في تطبيق البريد ولن تُرسل تلقائياً.', knowTitle: 'الخبرة', knowMeta: 'الملف · الممارسة', offerTitle: 'الخدمات', offerMeta: 'الأمن السيبراني', profileTitle: 'الملف الشخصي', currentFocus: 'أشارك حالياً في برامج مكافآت اكتشاف الثغرات وأطوّر خبرتي في اختبار الاختراق.', totalMachines: 'أجهزة*', easy: 'سهل', medium: 'متوسط', hardInsane: 'صعب / بالغ الصعوبة', machineFootnote: '*تعكس الأعداد إحصاءات الملف الشخصي المعروضة.', skillsTitle: 'المهارات ومجالات التركيز', resourcesTitle: 'ملاحظات ومراجع', cheatsheet: 'دليل اختبار الاختراق', cheatsheetDesc: 'أوامر وملاحظات منهجية', workflow: 'مخطط سير اختبار الاختراق', workflowDesc: 'نظرة عامة على خطوات العمل', machinesTitle: 'الخوادم', machinesName: 'الاسم', os: 'نظام التشغيل', difficulty: 'مستوى الصعوبة', serviceTitle: 'تقييمات أمنية عملية',
-    serviceNetwork: 'اختبار الشبكات والأجهزة', serviceNetworkDesc: 'مراجعة عناوين IP والنطاقات والأجهزة ونطاقات الشبكة المصرح بها.', serviceWeb: 'اختبار تطبيقات الويب', serviceWebDesc: 'تقييم مركز لتطبيقات الويب، من المواقع البسيطة إلى لوحات التحكم المعقدة.', serviceApi: 'مراجعة أمن واجهات API', serviceApiDesc: 'تقييم واجهات REST, GraphQL, gRPC, SOAP أو الواجهات المختلطة ضمن نطاق المصادقة المتفق عليه.', serviceCode: 'مراجعة المستودعات البرمجية', serviceCodeDesc: 'مراجعة أمنية لمستودع منفرد أو لنطاق مؤسسي متفق عليه.', serviceMobile: 'اختبار تطبيقات الهاتف', serviceMobileDesc: 'التخطيط لتقييم تطبيقات iOS وAndroid؛ الخدمة قيد التطوير.', serviceExposure: 'إضافات لفحص الانكشاف', serviceExposureDesc: 'فحص بيانات الدخول المسربة والبيانات الشخصية المكشوفة ومراقبة النطاقات المشابهة.', engagementTitle: 'خيارات التعاقد', oneTime: 'اختبار اختراق لمرة واحدة', oneTimeDesc: 'تدقيق معمق بنطاق مخصص، يتضمن تقريراً تنفيذيًا، وإعادة اختبار الثغرات وشهادة أمنية.', subscription: 'أمن مستمر', subscriptionDesc: 'Opção mensal com monitorização contínua, análises automatizadas semanais e alertas em tempo real.', authScope: 'Defina primeiro o âmbito autorizado e as regras de execução.', listedAssets: 'Teste apenas os ativos incluídos explicitamente nesse âmbito.', estimateBefore: 'Consulte a estimativa de esforço e investimento antes de avançar.', supportTitle: 'Apoie o meu trabalho', supportText: 'Se aprecia o trabalho de código aberto, pode apoiá-lo com uma contribuição.',
-    hireTitle: 'اطلب خدماتي', hireKicker: 'النطاق · التقدير · الخطوات التالية', hireIntro: 'أنشئ أدناه نطاق اختبار مصرحاً به. أضف الأصول واختر تدقيقاً لمرة واحدة أو خدمة أمن مستمرة، ثم راجع التقدير وقواعد التنفيذ.', languageLabel: 'اللغة', oneTimeSub: 'تدقيق معمق لمرة واحدة · 25% من الخصم', subscriptionSub: 'أمن مستمر · شهري · 60% من الخصم', benefitsOne: ['تقرير تنفيذي', 'إعادة اختبار الثغرات', 'شهادة أمنية'], benefitsSub: ['مراقبة مستمرة', 'Scans automatizadas semanais', 'Alerts in tempo real'], assetsTitle: 'Definir o âmbito autorizado', assetsHint: 'Adicione apenas ativos que possui ou que tem autorização escrita para testar.', hosts: 'Hosts', networks: 'Redes', webApps: 'Aplicações web', apis: 'Segurança de APIs', mobileApps: 'App mobili · em desenvolvimento', repositories: 'Repository di codice', addHost: '+ Adicionar host', addNetwork: '+ Adicionar rede', addApp: '+ Adicionar aplicação', addApi: '+ Adicionar API', addRepo: '+ Adicionar repository', remove: 'Remover',
-    domainIp: 'النطاق / عنوان IP', ports: 'المنافذ (مفصولة بفواصل)', wildcard: 'تضمين النطاقات الفرعية الشاملة', cidr: 'شبكة CIDR', url: 'URL', complexity: 'حجم التطبيق', basic: 'ثابت · 4,000€', dashboard: 'لوحة تحكم · 7,000€', pro: 'احترافي · 12,000€', apiType: 'نوع API', auth: 'المصادقة', platform: 'Platfomme', appName: 'اسم التطبيق / URL', repoType: 'Âmbito do repositório', singleRepo: 'Singolo repo · 2,500€', orgRepos: 'Organisation · 6,000€ chacun', quantity: 'عدد المستودعات', repoName: 'Repository / organizaçao', addonsTitle: 'Dopplementos de exposición', leakedCredentials: 'Identifiants divulgués', doxxingCheck: 'Exposition de données personnelles', typosquatMonitor: 'Surveillance du typosquatting', contactTitle: 'Os seus dados', fullName: 'Nome completo', email: 'Email', company: 'Empresa', project: 'Projet', estimateTitle: 'Estimativa em tempo real', investment: 'Investimento estimado', estimateEmpty: 'Adicione ativos para consultar a estimativa e o prazo.', delivery: 'Consegna estimada', perMonth: 'por mês', annualSavings: 'Poupança anual estimada', roeTitle: 'Regolas di ingaggio', roeText: 'I test sono limitati agli asset elencati nel perimetro concordato. Confermi la proprietà o l’autorizzazione scritta. I test iniziano solo dopo che l’ambito e i tempi sono concordati. Le attività che interrompono la produzione richiedono approvazione esplicita.', acceptTerms: 'Confermo l’autorizzazione e accetto le regole di ingaggio.', emailScope: 'Enviar resumo do âmbito por e-mail', emptyAssets: 'Aucun actif ajouté.', emailError: 'Saisissez un e-mail valide avant le téléchargement.', termsError: 'Confirmez l’autorisation et ajoutez un actif.', emailReady: 'O rascunho está pronto na sua aplicação de e-mail. Reveja-o e envie-o a partir daí.', hostUnit: 'host', networkUnit: 'réseau', webUnit: 'app web', apiUnit: 'API', mobileUnit: 'app mobile', repoUnit: 'repository', day: 'dia', days: 'dias', weeks: 'semanas', apiRest: 'REST · 4 000€', apiGraphql: 'GraphQL · 5 500€', apiGrpc: 'gRPC · 5 000€', apiSoap: 'SOAP · 4 500€', apiMixed: 'Mixte · 7 000€', authNone: 'Sans auth', authBearer: 'Bearer-Token', authApiKey: 'API-Schlüssel', authOauth: 'OAuth2', authCustom: 'Benutzerdefiniert', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket',
-    serviceWebApi: 'Aplicações web e análise de segurança de APIs', serviceWebApiDesc: 'Testes focados de aplicações web e APIs REST, GraphQL, gRPC ou SOAP dentro do âmbito acordado.', serviceActiveDirectory: 'Avaliação do Active Directory', serviceActiveDirectoryDesc: 'Análise autorizada da configuração do Active Directory, da segurança de identidades e de vetores de ataque comuns.',
-    serviceExposure: 'OSINT, fugas de dados e exposição de informação pessoal', serviceExposureDesc: 'Investigação OSINT, verificação de credenciais expostas, análise de dados pessoais expostos e monitorização de domínios semelhantes.'
-  },
-  ko: {
-    navProfile: '프로필', navServices: '서비스', navHire: '서비스 의뢰', navContact: '문의 ↗', eyebrow: '오펜시브 보안', heroTitle: '보안을 생각하고.<br>시스템으로 해결합니다.', heroIntro: '제가 알고 만들었던 것과 제공하는 보안 서비스를 소개합니다.',
-    configureTitle: '보안 테스트 구성', configureDesc: '네트워크, 호스트, 웹 앱, API, 모바일 앱, 저장소를 선택하고 일회성 또는 월간 테스트를 지정한 뒤 예상 비용을 확인하세요.', configurePrompt: '범위를 정할 준비가 되셨나요?', configurePromptSub: '대상 자산을 검토하고 범위 요약을 만드세요.', scopeButton: '범위 구성으로 이동 ↓', estimateDisclaimer: '예상 견적입니다. 테스트에는 서면 승인과 합의된 수행 규칙이 필요합니다. 이메일 초안은 메일 앱에서 열리며 자동 전송되지 않습니다.', knowTitle: '경험', knowMeta: '프로필 · 실습', offerTitle: '서비스', offerMeta: '보안 업무', profileTitle: '프로필', currentFocus: '현재 버그 바운티에 참여하며 침투 테스트 지식을 넓히고 있습니다.', totalMachines: '머신*', easy: '쉬움', medium: '보통', hardInsane: '어려움 / 최상', machineFootnote: '*표시된 프로필 통계를 기준으로 합니다.', skillsTitle: '기술 및 주요 분야', resourcesTitle: '노트 및 참고 자료', cheatsheet: '침투 테스트 치트시트', cheatsheetDesc: '명령어 및 방법론 노트', workflow: '침투 테스트 워크플로 다이어그램', workflowDesc: '작업 흐름 개요', machinesTitle: '서버', machinesName: '이름', os: '운영체제', difficulty: '난이도', serviceTitle: '실무형 보안 평가',
-    serviceNetwork: '네트워크 및 호스트 테스트', serviceNetworkDesc: '승인된 IP, 도메인, 호스트 및 네트워크 대역을 점검합니다.', serviceWeb: '웹 애플리케이션 테스트', serviceWebDesc: '단순한 사이트부터 복잡한 대시보드까지 웹 애플리케이션을 집중 평가합니다.', serviceApi: 'API 보안 검토', serviceApiDesc: '합의된 인증 범위에 따라 REST, GraphQL, gRPC, SOAP 또는 혼합 API를 평가합니다.', serviceCode: '저장소 보안 검토', serviceCodeDesc: '개별 저장소 또는 합의된 조직 범위의 보안을 검토합니다.', serviceMobile: '모바일 애플리케이션 테스트', serviceMobileDesc: 'iOS 및 Android 평가를 계획합니다. 현재 준비 중입니다.', serviceExposure: '노출 점검 추가 서비스', serviceExposureDesc: '유출된 자격 증명과 개인정보 노출을 확인하고 유사 도메인을 모니터링합니다.', engagementTitle: '서비스 옵션', oneTime: '일회성 침투 테스트', oneTimeDesc: '경영진 보고서, 취약점 재검증, 보안 인증서가 포함된 심층 맞춤 감사입니다.', subscription: '지속 보안 관리', subscriptionDesc: '지속 모니터링, 주간 자동 스캔, 실시간 알림을 제공하는 월간 옵션입니다.', authScope: '먼저 승인된 범위와 수행 규칙을 합의하세요.', listedAssets: '합의된 범위에 명시된 자산만 테스트합니다.', estimateBefore: '진행 전에 예상 작업량과 비용을 확인하세요.', supportTitle: '프로젝트 후원하기', supportText: '오픈 소스 작업이 마음에 드신다면 후원으로 지원하실 수 있습니다.',
-    hireTitle: '서비스 의뢰', hireKicker: '범위 · 견적 · 다음 단계', hireIntro: '아래에서 승인된 테스트 범위를 구성하세요. 자산을 추가하고 일회성 감사 또는 지속 보안을 선택한 뒤 견적과 수행 규칙을 확인하세요.', languageLabel: '언어', oneTimeSub: '심층 맞춤 감사 · 25% 할인', subscriptionSub: '지속 보안 · 월간 · 60% 할인', benefitsOne: ['경영진 보고서', '취약점 재검증', '보안 인증서'], benefitsSub: ['지속 모니터링', '주간 자동 스캔', '실시간 알림'], assetsTitle: '승인된 테스트 범위 정의', assetsHint: '소유하거나 서면 테스트 허가를 받은 자산만 추가하세요.', hosts: 'Hosts', networks: 'Redes', webApps: 'Aplicações web', apis: 'API 보안', mobileApps: 'App mobili · em desenvolvimento', repositories: 'Repository di codice', addHost: '+ Adicionar host', addNetwork: '+ Adicionar rede', addApp: '+ Adicionar aplicação', addApi: '+ Adicionar API', addRepo: '+ Adicionar repository', remove: 'Remover',
-    domainIp: '도메인 / IP', ports: '포트 (쉼표로 구분)', wildcard: '와일드카드 하위 도메인 포함', cidr: '네트워크 CIDR', url: 'URL', complexity: '애플리케이션 규모', basic: '정적 · 4,000€', dashboard: '대시보드 · 7,000€', pro: '프로 · 12,000€', apiType: 'API 유형', auth: '인증', platform: 'Platfomme', appName: '앱 이름 / URL', repoType: '리포지トリ 범위', singleRepo: '단일 리포지トリ · 2,500€', orgRepos: '조직 · 6,000€ ciascuno', quantity: '리포지トリ 수', repoName: 'Repository / organizaçao', addonsTitle: '노출 점검 및 OSINT', leakedCredentials: '유출된 자격 증명', doxxingCheck: '개인정보 노출 점검', typosquatMonitor: '유사 도메인 모니터링', contactTitle: '고객 정보', fullName: '성명', email: 'Email', company: '회사', project: '프로젝트', estimateTitle: '실시간 견적', investment: '예상 비용', estimateEmpty: '자산을 추가하면 예상 비용과 기간이 표시됩니다.', delivery: '예상 소요 기간', perMonth: '월', annualSavings: '예상 연간 절감액', roeTitle: '테스트 수행 규칙', roeText: '테스트는 합의된 범위에 명시된 자산으로 제한됩니다. 자산의 소유자이거나 서면 승인을 받았음을 확인합니다. 범위와 일정에 합의한 뒤에만 테스트를 시작합니다. 본산 환경에 영향을 줄 수 있는 활동은 별도의 명시적 승인이 필요합니다.', acceptTerms: '테스트 권한이 있음을 확인하고 수행 규칙에 동의합니다.', emailScope: '범위 요약 이메일 작성', emptyAssets: '아직 추가된 자산이 없습니다.', emailError: '이메일 초안을 만들려면 올바른 이메일 주소를 입력하세요.', termsError: '계속하려면 권한을 확인하고 자산을 하나 이상 추가하세요.', emailReady: '메일 앱에 초안이 준비되었습니다. 내용을 검토한 뒤 직접 보내세요.', hostUnit: '호스트', networkUnit: '네트워크', webUnit: '웹 앱', apiUnit: 'API', mobileUnit: '모바일 앱', repoUnit: '저장소', day: '일', days: '일', weeks: '주',
-    apiRest: 'REST · 4,000€', apiGraphql: 'GraphQL · 5,500€', apiGrpc: 'gRPC · 5,000€', apiSoap: 'SOAP · 4,500€', apiMixed: '혼합 · 7,000€', authNone: '인증 없음', authBearer: 'Bearer-Token', authApiKey: 'API key', authOauth: 'OAuth2', authCustom: 'Personalizada', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket',
-    serviceWebApi: '웹 애플리케이션 및 API 보안 검토', serviceWebApiDesc: '합의된 범위 내에서 웹 애플리케이션 및 REST, GraphQL, gRPC, SOAP API를 집중 테스트합니다.', serviceActiveDirectory: 'Active Directory 평가', serviceActiveDirectoryDesc: 'Active Directory의 설정, ID 보안, 일반적인 공격 경로를 허용된 범위 내에서 확인합니다.', serviceExposure: 'OSINT, 데이터 유출 및 개인정보 노출 점검', serviceExposureDesc: 'OSINT 조사, 유출된 자격 증명 확인, 개인정보 노출 검토 및 유사 도메인 모니터링을 제공합니다.'
-  },
-  ja: {
-    navProfile: 'プロフィール', navServices: 'サービス', navHire: '依頼する', navContact: 'お問い合わせ ↗', eyebrow: 'オフェンシブセキュリティ', heroTitle: 'セキュリティを重視。<br>システムで解決。', heroIntro: 'これまでの知識や制作物と、提供しているセキュリティサービスをご紹介します。',
-    configureTitle: 'セキュリティ診断を設定', configureDesc: 'ネットワーク、ホスト、Webアプリ、API、モバイルアプリ、リポジトリを選択し、単発または月次の診断を指定して見積もりをご確認ください。', configurePrompt: '診断範囲を決めましょう', configurePromptSub: '対象資産を確認して、範囲の概要を作成します。', scopeButton: '診断範囲の設定へ ↓', estimateDisclaimer: '表示額は概算です。診断には書面による許可と合意済みの実施規則が必要です。メールの下書きはメールアプリで開き、自動送信されません。', knowTitle: '実績', knowMeta: 'プロフィール · 実践', offerTitle: 'サービス', offerMeta: 'セキュリティ業務', profileTitle: 'プロフィール', currentFocus: '現在、バグバウンティに取り組みながらカイドテストの知識を深めています。', totalMachines: 'マシン*', easy: '初級', medium: '中級', hardInsane: '上級 / 最難関', machineFootnote: '*プロフィールに掲載されている統計に基づく件数です。', skillsTitle: 'スキルと注力分野', resourcesTitle: 'ノートと参考資料', cheatsheet: 'ペネトレーションテスト チートシート', cheatsheetDesc: 'コマンドと手法のメモ', workflow: 'ペネトレーションテストのワークフロー図', workflowDesc: '作業の流れ', machinesTitle: 'サーバー', machinesName: '名前', os: 'OS', difficulty: '難易度', serviceTitle: '実践的なセキュリティ評価',
-    serviceNetwork: 'ネットワーク・ホスト診断', serviceNetworkDesc: '許可されたIP、ドメイン、ホスト、ネットワーク範囲を確認します。', serviceWeb: 'Webアプリケーション診断', serviceWebDesc: '単純なサイトから複雑なダッシュボードまで、Webアプリを重点的に評価します。', serviceApi: 'APIセキュリティレビュー', serviceApiDesc: '合意した認証範囲に基づき、REST、GraphQL、gRPC、SOAPまたは混合APIを評価します。', serviceCode: 'リポジトリレビュー', serviceCodeDesc: '個別のリポジトリまたは合意した組織範囲のセキュリティを確認します。', serviceMobile: 'モバイルアプリ診断', serviceMobileDesc: 'iOSおよびAndroidの評価を計画します。現在準備中です。', serviceExposure: '外部露出チェックの追加サービス', serviceExposureDesc: '漏えいした認証情報や個人情報の確認、類似ドメインの監視を行います。', engagementTitle: 'ご依頼方法', oneTime: '単発ペネトレーションテスト', oneTimeDesc: 'エグゼクティブレポート、脆弱性の再テスト、セキュリティ証明書が含まれる、個別に範囲を定めた詳細な監査です。', subscription: '継続的なセキュリティ', subscriptionDesc: '継続モニタリング、週次の自動スキャン、リアルタイム通知を含む月額プランです。', authScope: 'まず、許可された診断範囲と実施規則を合意します。', listedAssets: '合意した範囲に明記された資産のみを診断します。', estimateBefore: '開始前に作業量と費用の見積もりをご確認いただけます。', supportTitle: '活動を支援する', supportText: 'オープンソースの活動が好きなら、ご支援いただけると嬉しいです。', hireTitle: 'サービスを依頼', hireKicker: '範囲 · 見積もり · 次のステップ', hireIntro: '以下で許可済みの診断範囲を作成します。対象資産を追加し、単発監査または継続的なセキュリティを選択して、見積もりと実施規則をご確認ください。', languageLabel: '言語', oneTimeSub: '詳細な個別監査 · 25%割引', subscriptionSub: '継続的なセキュリティ · 月額 · 60%割引', benefitsOne: ['エグゼクティブレポート', '脆弱性の再テスト', 'セキュリティ証明書'], benefitsSub: ['継続モニタリング', '週次の自動スキャン', 'リアルタイム通知'], assetsTitle: '許可された診断範囲を指定', assetsHint: 'ご自身が所有する資産、または書面による診断許可を得た資産のみ追加してください。', hosts: 'ホスト', networks: 'ネットワーク', webApps: 'Webアプリ', apis: 'APIセキュリティ', mobileApps: 'モバイルアプリ · 準備中', repositories: 'Repository di codice', addHost: '+ ホストを追加', addNetwork: '+ ネットワークを追加', addApp: '+ アプリを追加', addApi: '+ APIを追加', addRepo: '+ リポジトリを追加', remove: '削除',
-    domainIp: 'ドメイン / IP', ports: 'ポート（カンマ区切り）', wildcard: 'ワイルドカードのサブドメインを含める', cidr: 'ネットワーク CIDR', url: 'URL', complexity: 'アプリケーション規模', basic: '静的 · 4,000€', dashboard: 'ダッシュボード · 7,000€', pro: 'プロ · 12,000€', apiType: 'APIの種類', auth: '認証方式', platform: 'Platfomme', appName: 'アプリ名 / URL', repoType: 'リポジトリの範囲', singleRepo: '単一リポジトリ · 2,500€', orgRepos: '組織 · 6,000€ ciascuno', quantity: 'リポジトリ数', repoName: 'Repository / organizaçao', addonsTitle: 'ノ출チェック・OSINT', leakedCredentials: '漏えいした認証情報', doxxingCheck: '個人情報の露出チェック', typosquatMonitor: 'ユーモラドメインの監視', contactTitle: 'お客様情報', fullName: '氏名', email: 'Email', company: '会社名', project: 'プロジェクト名', estimateTitle: '実時間見積もり', investment: '予想コスト', estimateEmpty: '資産を追加すると、予想コストと所要期間が表示されます。', delivery: '想定納期', perMonth: '月額', annualSavings: '年間の予想節約額', roeTitle: 'テスト実施規則', roeText: 'テストは合意した範囲に記載された資産に限られます。資産の所有者または書面による許可を得ていることを確認します。範囲と日程に合意した後でテストを開始します。本番環境に影響を与える可能性のある活動は、明示的な承認が必要です。', acceptTerms: 'テストの許可があることを確認し、実施規則に同意します。', emailScope: '範囲の概要をメールで作成', emptyAssets: 'まだ追加されていません。', emailError: 'メールの下書きを作成するには、有効なメールアドレスを入力してください。', termsError: '続行するには、許可を確認し、資産を1件以上追加してください。', emailReady: 'メールアプリに下書きが準備ができています。内容を確認して送信してください。', hostUnit: 'ホスト', networkUnit: 'ネットワーク', webUnit: 'Webアプリ', apiUnit: 'API', mobileUnit: 'モバイルアプリ', repoUnit: 'リポジトリ', day: '日', days: '日', weeks: '週間',
-    apiRest: 'REST · 4,000€', apiGraphql: 'GraphQL · 5,500€', apiGrpc: 'gRPC · 5,000€', apiSoap: 'SOAP · 4,500€', apiMixed: 'Mixte · 7,000€', authNone: 'Sans auth', authBearer: 'Bearer-Token', authApiKey: 'API key', authOauth: 'OAuth2', authCustom: 'Personalizada', ios: 'iOS', android: 'Android', github: 'GitHub', gitlab: 'GitLab', bitbucket: 'Bitbucket',
-    serviceWebApi: 'Webアプリケーション・APIセキュリティレビュー', serviceWebApiDesc: '合意した範囲内で、WebアプリケーションおよびREST、GraphQL、gRPC、SOAP APIを重点的に診断します。', serviceActiveDirectory: 'Active Directory評価', serviceActiveDirectoryDesc: 'Active Directoryの設定、IDセキュリティ、一般的な攻撃経路を許可された範囲内で確認します。', serviceExposure: 'OSINT, データ漏えい・個人情報の露出チェック', serviceExposureDesc: 'OSINT調査、漏えいした認証情報の確認、個人情報の露出の調査、類似ドメインの監視を行います。'
-  }
-});
-
-[
-  ['pt', { totalMachines: 'Servidores comprometidos*', follow: 'Seguir', bitcoinNetwork: 'Rede Bitcoin', ethereumNetwork: 'Rede Ethereum', solanaNetwork: 'Rede Solana', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['ar', { totalMachines: 'الخوادم المخترقة*', follow: 'تابع', bitcoinNetwork: 'شبكة Bitcoin', ethereumNetwork: 'شبكة Ethereum', solanaNetwork: 'شبكة Solana', xrpNetwork: 'دفتر XRP (Ripple)' }],
-  ['ko', { totalMachines: '해킹된 서버*', follow: '팔로우', bitcoinNetwork: 'Bitcoin 네트워크', ethereumNetwork: 'Ethereum 네트워크', solanaNetwork: 'Solana 네트워크', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['ja', { totalMachines: '侵害されたサーバー*', follow: 'フォロー', bitcoinNetwork: 'Bitcoinネットワーク', ethereumNetwork: 'Ethereumネットワーク', solanaNetwork: 'Solanaネットワーク', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['en', { follow: 'Follow', bitcoinNetwork: 'Bitcoin network', ethereumNetwork: 'Ethereum network', solanaNetwork: 'Solana network', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['en', { totalMachines: 'Pwned servers*', follow: 'Follow', bitcoinNetwork: 'Bitcoin network', ethereumNetwork: 'Ethereum network', solanaNetwork: 'Solana network', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['es', { totalMachines: 'Servidores comprometidos*', follow: 'Seguir', bitcoinNetwork: 'Red Bitcoin', ethereumNetwork: 'Red Ethereum', solanaNetwork: 'Red Solana', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['fr', { totalMachines: 'Serveurs compromis*', follow: 'Suivre', bitcoinNetwork: 'Réseau Bitcoin', ethereumNetwork: 'Réseau Ethereum', solanaNetwork: 'Réseau Solana', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['de', { totalMachines: 'Kompromittierte Server*', follow: 'Folgen', bitcoinNetwork: 'Bitcoin-Netzwerk', ethereumNetwork: 'Ethereum-Netzwerk', solanaNetwork: 'Solana-Netzwerk', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['ru', { totalMachines: 'Скомпрометированные серверы*', follow: 'Подписаться', bitcoinNetwork: 'Сеть Bitcoin', ethereumNetwork: 'Сеть Ethereum', solanaNetwork: 'Сеть Solana', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['zh', { totalMachines: '被攻陷的服务器*', follow: '关注', bitcoinNetwork: '比特币网络', ethereumNetwork: '以太坊网络', solanaNetwork: 'Solana网络', xrpNetwork: 'XRP Ledger (Ripple)' }],
-  ['it', { totalMachines: 'Server compromessi*', follow: 'Segui', bitcoinNetwork: 'Rete Bitcoin', ethereumNetwork: 'Rete Ethereum', solanaNetwork: 'Rete Solana', xrpNetwork: 'XRP Ledger (Ripple)' }]
-].forEach(([language, values]) => mergeLocale(language, values));
-
-const localizedEmail = {
-  subject: 'Security engagement scope',
-  greeting: 'Hello,',
-  intro: 'I would like to discuss this authorized security engagement.',
-  contact: 'Contact email',
-  name: 'Name',
-  company: 'Company',
-  project: 'Project',
-  scope: 'Scope and estimate',
-  authorization: 'I confirm that I own these assets or have written authorization to test them.'
-};
-
-registerLocales({
-  en: {
+    navProfile: 'Profile',
+    navServices: 'Services',
+    navHire: 'Hire me',
+    navContact: 'Contact ↗',
+    eyebrow: 'Offensive security',
+    heroTitle: 'Security-minded.<br>Systems-driven.',
+    heroIntro: 'A snapshot of what I know and have built, alongside the security work I offer.',
+    configureTitle: 'Configure an engagement',
+    configureDesc: 'Choose networks, hosts, web apps, APIs, mobile apps, and repositories; select one-time or monthly testing; then review your live estimate.',
+    configurePrompt: 'Ready to define a scope?',
+    configurePromptSub: 'Review your assets and generate a scope summary.',
+    scopeButton: 'Jump to scope builder ↓',
+    estimateDisclaimer: 'The estimate is indicative only. Testing requires written authorization and agreed rules of engagement. The email draft opens in your email app and is not sent automatically.',
+    knowTitle: 'What I know',
+    knowMeta: 'Profile · practice',
+    offerTitle: 'What I do',
+    offerMeta: 'Security work',
+    profileTitle: 'Profile',
+    introProfile: 'Offensive security practitioner. I learn by building, testing, documenting, and refining repeatable workflows.',
+    currentFocus: 'Currently bug bounty hunting and expanding my pentesting knowledge.',
+    totalMachines: 'Machines*',
+    easy: 'Easy',
+    medium: 'Medium',
+    hardInsane: 'Hard / Insane',
+    machineFootnote: '*Machine totals reflect the listed profile stats.',
+    skillsTitle: 'Skills & focus areas',
+    resourcesTitle: 'Field notes & references',
+    cheatsheet: 'Pentesting Cheatsheet',
+    cheatsheetDesc: 'Commands and methodology notes',
+    workflow: 'Pentesting Workflow Diagram',
+    workflowDesc: 'Engagement workflow overview',
+    machinesTitle: 'Solved Hack The Box machines',
+    machinesName: 'Name',
+    os: 'OS',
+    difficulty: 'Difficulty',
+    serviceTitle: 'Practical security assessments',
+    introServices: 'Scoped, authorized testing to help identify and explain security weaknesses before they become incidents.',
+    serviceNetwork: 'Network & host testing',
+    serviceNetworkDesc: 'Review of approved IPs, domains, hosts, and network ranges.',
+    serviceWeb: 'Web application testing',
+    serviceWebDesc: 'Focused assessment of web applications, from simple sites to complex dashboards.',
+    serviceApi: 'API security review',
+    serviceApiDesc: 'REST, GraphQL, gRPC, SOAP, or mixed API assessments with agreed authentication scope.',
+    serviceCode: 'Repository review',
+    serviceCodeDesc: 'Security review of individual repositories or agreed organization scope.',
+    serviceMobile: 'Mobile application testing',
+    serviceMobileDesc: 'iOS and Android assessment planning; currently a work in progress.',
+    serviceExposure: 'Exposure add-ons',
+    serviceExposureDesc: 'Credential exposure checks, personal-data checks, and typosquatting monitoring.',
+    engagementTitle: 'Engagement options',
+    oneTime: 'One-time pentest',
+    oneTimeDesc: 'Deep, individually scoped audit with an executive report, vulnerability retesting, and security certificate.',
+    subscription: 'Continuous security',
+    subscriptionDesc: 'Monthly option with continuous monitoring, weekly automated scans, and real-time alerting.',
+    authScope: 'Agree the authorized scope and rules of engagement first.',
+    listedAssets: 'Test only assets explicitly included in that scope.',
+    estimateBefore: 'Review effort and investment before proceeding.',
+    supportTitle: 'Support my work',
+    supportText: 'If you enjoy the open-source work, you can support it with a contribution.',
+    hireTitle: 'Hire my services',
+    hireKicker: 'Scope · estimate · next steps',
+    hireIntro: 'Build an authorized testing scope below. Add assets, choose a one-time audit or continuous-security option, and review the estimate and rules of engagement.',
+    languageLabel: 'Language',
+    oneTimeSub: 'Deep individual audit · 25% off',
+    subscriptionSub: 'Continuous security · monthly · 60% off',
+    benefitsOne: ['Executive report', 'Vulnerability retest', 'Security certificate'],
+    benefitsSub: ['Continuous monitoring', 'Weekly automated scans', 'Real-time alerts'],
+    assetsTitle: 'Define your authorized scope',
+    assetsHint: 'Add only assets you own or have written permission to test.',
+    hosts: 'Hosts',
+    networks: 'Networks',
+    webApps: 'Web apps',
+    apis: 'API security',
+    mobileApps: 'Mobile apps · WIP',
+    repositories: 'Code repositories',
+    addHost: '+ Add host',
+    addNetwork: '+ Add network',
+    addApp: '+ Add app',
+    addApi: '+ Add API',
+    addRepo: '+ Add repository',
+    remove: 'Remove',
+    domainIp: 'Domain / IP',
+    ports: 'Ports (comma-separated)',
+    wildcard: 'Include wildcard subdomains',
+    cidr: 'Network CIDR',
+    url: 'URL',
+    complexity: 'Application size',
+    basic: 'Static · 4,000€',
+    dashboard: 'Dashboard · 7,000€',
+    pro: 'Pro · 12,000€',
+    apiType: 'API type',
+    auth: 'Authentication',
+    platform: 'Platform',
+    appName: 'App name / URL',
+    repoType: 'Repository scope',
+    singleRepo: 'Single repo · 2,500€',
+    orgRepos: 'Organization · 6,000€ each',
+    quantity: 'Repository count',
+    repoName: 'Repository / organization',
+    addonsTitle: 'Optional exposure add-ons',
+    leakedCredentials: 'Leaked credentials',
+    doxxingCheck: 'Personal-data exposure check',
+    typosquatMonitor: 'Typosquatting monitor',
+    contactTitle: 'Your details',
+    fullName: 'Full name',
+    email: 'Email',
+    company: 'Company',
+    project: 'Project',
+    estimateTitle: 'Live estimate',
+    investment: 'Estimated investment',
+    estimateEmpty: 'Add assets to see an estimate and delivery time.',
+    delivery: 'Estimated delivery',
+    perMonth: 'per month',
+    annualSavings: 'Estimated annual savings',
+    roeTitle: 'Rules of engagement',
+    roeText: 'Testing is limited to assets listed in the agreed scope. You confirm ownership or written authorization. Testing begins only after scope and timing are agreed. Production-disruptive activity requires explicit approval.',
+    acceptTerms: 'I confirm authorization and accept the rules of engagement.',
+    emailScope: 'Email scope summary',
+    emptyAssets: 'No assets added yet.',
+    emailError: 'Enter a valid email address before creating the email draft.',
+    termsError: 'Confirm authorization and add at least one asset to continue.',
+    emailReady: 'Your email draft is ready in your email app. Review it and send it there.',
+    nameRequired: 'Enter your full name.',
+    companyRequired: 'Enter your company name.',
+    hostUnit: 'host',
+    networkUnit: 'network',
+    webUnit: 'web app',
+    apiUnit: 'API',
+    mobileUnit: 'mobile app',
+    repoUnit: 'repository',
+    day: 'day',
+    days: 'days',
+    weeks: 'weeks',
+    apiRest: 'REST · 4,000€',
+    apiGraphql: 'GraphQL · 5,500€',
+    apiGrpc: 'gRPC · 5,000€',
+    apiSoap: 'SOAP · 4,500€',
+    apiMixed: 'Mixed · 7,000€',
+    authNone: 'No auth',
+    authBearer: 'Bearer token',
+    authApiKey: 'API key',
+    authOauth: 'OAuth2',
+    authCustom: 'Custom',
+    ios: 'iOS',
+    android: 'Android',
+    github: 'GitHub',
+    gitlab: 'GitLab',
+    bitbucket: 'Bitbucket',
+    btc: 'BTC',
+    eth: 'ETH',
+    sol: 'SOL',
+    xrp: 'XRP',
+    bitcoinNetwork: 'Bitcoin network',
+    ethereumNetwork: 'Ethereum network',
+    solanaNetwork: 'Solana network',
+    xrpNetwork: 'XRP Ledger (Ripple)',
+    cpts: 'CPTS · Certified Penetration Testing Specialist',
+    heroQuote: '“And if there\'s no wind, we\'ll have to row.”',
+    linux: 'Linux',
+    windows: 'Windows',
+    follow: 'Follow',
+    bugBountyTitle: 'BUG BOUNTY',
+    bugBountyIntro: 'I do not charge for unsolicited vulnerability reports.',
+    bugBountyText1: 'If I find a simple issue and the company wants to thank me, I’m happy to receive a contribution based on the value of the finding.',
     serviceWebApi: 'Web applications & API security review',
     serviceWebApiDesc: 'Focused testing of web applications and REST, GraphQL, gRPC, or SOAP APIs within an agreed scope.',
     serviceActiveDirectory: 'Active Directory assessment',
     serviceActiveDirectoryDesc: 'Authorized review of Active Directory configuration, identity security, and common attack paths.',
-    serviceExposure: 'OSINT, data leaks & doxxing checks',
-    serviceExposureDesc: 'OSINT research, leaked-credential checks, personal-data exposure reviews, and typosquatting monitoring.',
-    addonsTitle: 'Exposure checks & OSINT'
-  },
-  es: {
-    serviceWebApi: 'Aplicaciones web y revisión de seguridad API',
-    serviceWebApiDesc: 'Pruebas específicas de aplicaciones web y APIs REST, GraphQL, gRPC o SOAP dentro del alcance acordado.',
-    serviceActiveDirectory: 'Evaluación de Active Directory',
-    serviceActiveDirectoryDesc: 'Revisión autorizada de la configuración de Active Directory, la seguridad de identidades y rutas de ataque habituales.',
-    serviceExposure: 'OSINT, filtraciones y exposición de datos personales',
-    serviceExposureDesc: 'Investigación OSINT, comprobación de credenciales filtradas, revisión de datos personales expuestos y vigilancia de dominios similares.',
-    addonsTitle: 'Exposición y OSINT',
-    configureTitle: 'Solicitud de servicio',
-    currentFocus: 'Actualmente busco vulnerabilidades y amplío mis conocimientos sobre pruebas de penetración.',
-    oneTimeDesc: 'Auditoría profunda y personalizada con informe ejecutivo, repetición de pruebas para verificar vulnerabilidades corregidas y certificado de seguridad.',
-    oneTimeSub: 'Auditoría profunda · 25 % de descuento'
-  },
-  fr: {
-    machineFootnote: '*Le nombre de machines correspond aux statistiques du profil.',
-    serviceMobileDesc: 'Planification des évaluations iOS et Android ; service actuellement en développement.',
-    oneTimeDesc: 'Audit approfondi et personnalisé comprenant un rapport exécutif, le retest des vulnérabilités corrigées et un certificat de sécurité.',
-    subscriptionDesc: 'Formule mensuelle avec surveillance continue, analyses automatisées hebdomadaires et alertes en temps réel.',
-    authScope: 'Convenez d’abord du périmètre autorisé et des règles d’engagement.',
-    listedAssets: 'Ne testez que les actifs explicitement inclus dans ce périmètre.',
-    estimateBefore: 'Consultez l’effort et le coût estimés avant de poursuivre.',
-    hireTitle: 'Engager mes services', hireKicker: 'Périmètre · estimation · prochaines étapes',
-    oneTimeSub: 'Audit approfondi · réduction de 25 %', subscriptionSub: 'Sécurité continue · mensuelle · réduction de 60 %',
-    webApps: 'Applications web', mobileApps: 'Applications mobiles · en développement',
-    typosquatMonitor: 'Surveillance des domaines similaires', apiMixed: 'Mixte · 7 000€',
-    authNone: 'Aucune authentification', authBearer: 'Jeton Bearer',
-    day: 'jour', days: 'jours', weeks: 'semaines',
-    machineFootnote: '*Le nombre de machines correspond aux statistiques du profil.',
-    serviceMobileDesc: 'Planification des évaluations iOS et Android ; service actuellement en développement.',
-    oneTimeDesc: 'Audit approfondi et personnalisé comprenant un rapport exécutif, le retest des vulnérabilités corrigées et un certificat de sécurité.',
-    subscriptionDesc: 'Formule mensuelle avec surveillance continue, analyses automatisées hebdomadaires et alertes en temps réel.',
-    authScope: 'Convenez d’abord du périmètre autorisé et des règles d’engagement.',
-    listedAssets: 'Ne testez que les actifs explicitement inclus dans ce périmètre.',
-    estimateBefore: 'Consultez l’effort et le coût estimés avant de poursuivre.',
-    hireTitle: 'Engager mes services', hireKicker: 'Périmètre · estimation · prochaines étapes',
-    oneTimeSub: 'Audit approfondi · 25 % de réduction', subscriptionSub: 'Sécurité continue · mensuelle · 60 % de réduction',
-    webApps: 'Applications web', mobileApps: 'Applications mobiles · en développement',
-    typosquatMonitor: 'Surveillance des domaines similaires',
-    apiMixed: 'Mixte · 7 000€', authNone: 'Aucune authentification', authBearer: 'Jeton Bearer',
-    day: 'jour', days: 'jours', weeks: 'semaines',
-    serviceWebApi: 'Applications web et sécurité des API',
-    serviceWebApiDesc: 'Tests ciblés d’applications web et d’API REST, GraphQL, gRPC ou SOAP dans un périmètre convenu.',
-    serviceActiveDirectory: 'Évaluation Active Directory',
-    serviceActiveDirectoryDesc: 'Examen autorisé de la configuration Active Directory, de la sécurité des identités et des chemins d’attaque courants.',
-    serviceExposure: 'OSINT, fuites de données et exposition de données personnelles',
-    serviceExposureDesc: 'Recherche OSINT, vérification d’identifiants divulgués, examen de données personnelles exposées et surveillance de domaines similaires.',
-    addonsTitle: 'Exposition et OSINT'
-  },
-  de: {
-    subscriptionDesc: 'Monatliche Option mit kontinuierlicher Überwachung, wöchentlichen automatisierten Scans und Echtzeitwarnungen.',
-    listedAssets: 'Testen Sie ausschließlich Assets, die ausdrücklich im vereinbarten Umfang aufgeführt sind.',
-    estimateBefore: 'Prüfen Sie Aufwand und Kosten, bevor Sie fortfahren.',
-    hireKicker: 'Prüfumfang · Kostenschätzung · nächste Schritte',
-    repositories: 'Code-Repositories', addHost: '+ Host hinzufügen', addApp: '+ Anwendung hinzufügen', addApi: '+ API hinzufügen', remove: 'Entfernen',
-    domainIp: 'Domain / IP', ports: 'Ports (durch Kommas getrennt)', wildcard: 'Wildcard-Subdomains einschließen',
-    complexity: 'Größe der Anwendung', dashboard: 'Dashboard · 7.000€', apiType: 'API-Typ',
-    appName: 'Name / URL der Anwendung', repoType: 'Umfang des Repository-Tests', repoName: 'Repository / Organisation',
-    typosquatMonitor: 'Überwachung ähnlicher Domains',
-    estimateTitle: 'Live-Kostenschätzung', investment: 'Geschätzte Investition', estimateEmpty: 'Fügen Sie Assets hinzu, um Kosten und Lieferzeit zu sehen.',
-    delivery: 'Voraussichtliche Dauer', perMonth: 'pro Monat', annualSavings: 'Geschätzte jährliche Ersparnis',
-    apiMixed: 'Gemischt · 7.000€', authNone: 'Keine Authentifizierung', authBearer: 'Bearer-Token',
-    day: 'Tag', days: 'Tage', weeks: 'Wochen',
-    serviceWebApi: 'Webanwendungen & API-Sicherheitsprüfung',
-    serviceWebApiDesc: 'Gezielte Tests von Webanwendungen und REST-, GraphQL-, gRPC- oder SOAP-APIs im vereinbarten Umfang.',
-    serviceActiveDirectory: 'Active-Directory-Prüfung',
-    serviceActiveDirectoryDesc: 'Autorisierte Prüfung der Active-Directory-Konfiguration, Identitätssicherheit und gängiger Angriffspfade.',
-    serviceExposure: 'OSINT, Datenlecks & Offenlegung persönlicher Daten',
-    serviceExposureDesc: 'OSINT-Recherche, Prüfung geleakter Zugangsdaten und offengelegter persönlicher Daten sowie Überwachung ähnlicher Domains.',
-    addonsTitle: 'Exposure-Prüfungen & OSINT'
-  },
-  ru: {
-    hardInsane: 'Сложная / экстремальная', insane: 'Экстремальная',
-    oneTimeSub: 'Углублённый аудит · скидка 25%', subscriptionSub: 'Постоянная защита · ежемесячно · скидка 60%',
-    hosts: 'Хосты', appName: 'Название / URL приложения', auth: 'Аутентификация',
-    hostUnit: 'хост', networkUnit: 'сеть', webUnit: 'веб-приложение',
-    day: 'день', days: 'дней', weeks: 'недель',
-    authNone: 'Без аутентификации', authBearer: 'Bearer-токен', authApiKey: 'Ключ API', authCustom: 'Другой способ',
-    hardInsane: 'Сложная / экстремальная', insane: 'Экстремальная',
-    oneTimeSub: 'Углублённый аудит · скидка 25%', subscriptionSub: 'Постоянная защита · ежемесячно · скидка 60%',
-    hosts: 'Хосты', appName: 'Название / URL приложения', auth: 'Аутентификация',
-    hostUnit: 'хост', networkUnit: 'сеть', webUnit: 'веб-приложение',
-    day: 'день', days: 'дней', weeks: 'недель',
-    authNone: 'Без аутентификации', authBearer: 'Bearer-токен', authApiKey: 'Ключ API', authCustom: 'Другой способ',
-    serviceWebApi: 'Веб-приложения и безопасность API',
-    serviceWebApiDesc: 'Проверка веб-приложений и REST, GraphQL, gRPC или SOAP API в согласованном объёме.',
-    serviceActiveDirectory: 'Проверка Active Directory',
-    serviceActiveDirectoryDesc: 'Разрешённая проверка конфигурации Active Directory, безопасности учётных записей и типичных путей атаки.',
-    serviceExposure: 'OSINT, утечки и раскрытие личных данных',
-    serviceExposureDesc: 'OSINT-исследование, проверка утёкших учётных данных и раскрытых личных данных, мониторинг похожих доменов.',
-    addonsTitle: 'Проверка открытых данных и OSINT'
-  },
-  zh: {
-    serviceWebApi: 'Web 应用与 API 安全评估',
-    serviceWebApiDesc: '在约定范围内测试 Web 应用及 REST、GraphQL、gRPC 或 SOAP API。',
-    serviceActiveDirectory: 'Active Directory 安全评估',
-    serviceActiveDirectoryDesc: '经授权检查 Active Directory 配置、身份安全及常见攻击路径。',
-    serviceExposure: 'OSINT、数据泄露与个人信息暴露检查',
-    serviceExposureDesc: 'OSINT 调查、泄露凭据检查、个人信息暴露审查及仿冒域名监控。',
-    addonsTitle: '暴露面检查与 OSINT'
-  }
-});
-
-const localeExtras = {
-  pt: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · Especialista certificado em testes de intrusão', hard: 'Difícil', insane: 'Insane', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · Segurança ofensiva', footerSafety: 'Pratique com ética. Teste apenas com autorização.', heroQuote: '“E se não houver vento, teremos de remar.”', machinesTitle: 'Servidores comprometidos', companiesTitle: 'Empresas comprometidas', cookieTitle: 'Aviso de privacidade', cookieMessage: 'Este site não utiliza cookies de rastreamento. Guarda apenas o idioma escolhido no seu navegador.', cookieClose: 'Entendido', skillTags: ['Reconhecimento', 'OSINT', 'Ataques web', 'Injeção SQL', 'Shells e payloads', 'Pivoting e túneis', 'Active Directory', 'Escalada de privilégios', 'Ataques a palavras-passe', 'Transferência de ficheiros'], oneTime: 'Pentest pontual', subscription: 'Segurança contínua', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: 'Não cobro relatórios não solicitados de vulnerabilidades.', bugBountyText1: 'Se encontrar um problema simples e a empresa quiser agradecer, fico contente com uma recompensa económica.', bugsFound: 'Falhas encontradas' },
-  it: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · Specialista certificato in penetration testing', hard: 'Difficile', insane: 'Insane', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · Sicurezza offensiva', footerSafety: 'Agisci in modo etico. Testa solo con autorizzazione.', heroQuote: '“E se non c’è vento, dovremo remare.”', machinesTitle: 'Server compromessi', companiesTitle: 'Aziende compromesse', cookieTitle: 'Note sulla privacy', cookieMessage: 'Questo sito non utilizza cookie di tracciamento. Memorizza solo la lingua scelta nel browser.', cookieClose: 'Capito', skillTags: ['Reconnaissance', 'OSINT', 'Attacchi web', 'SQL injection', 'Shells e payloads', 'Pivoting & tunneling', 'Active Directory', 'Privilege escalation', 'Password attacks', 'File transfers'], oneTime: 'Pentest one-time', subscription: 'Sicurezza continua', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: 'Non addebito report non richiesti di vulnerabilità.', bugBountyText1: 'Se trovo un problema semplice e l\'azienda vuole ringraziarmi, sono felice di ricevere una recompensa economica.', bugsFound: 'Bug trovati' },
-  ar: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · أخصائي معتمد في اختبار الاختراق', hard: 'صعب', insane: 'بالغ الصعوبة', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · الأمن الهجومي', footerSafety: 'التزم بالأخلاقيات. لا تختبر إلا بإذن.', heroQuote: '«وإن لم تهب الرياح، فعلينا أن نجدّف.»', machinesTitle: 'الخوادم المخترقة', companiesTitle: 'الشركات المخترقة', cookieTitle: 'إشعار الخصوصية', cookieMessage: 'لا يستخدم هذا الموقع ملفات تعريف ارتباط للتتبع. يُحفظ في متصفحك اختيار اللغة فقط.', cookieClose: 'حسناً', skillTags: ['الاستطلاع', 'OSINT', 'هجمات الويب', 'حقن SQL', 'Shell وPayload', 'التحرك الجانبي والأنفاق', 'Active Directory', 'تصعيد الصلاحيات', 'هجمات كلمات المرور', 'نقل الملفات'], oneTime: 'اختبار اختراق لمرة واحدة', subscription: 'أمن مستمر', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: 'لا أطلب رسومًا عن تقارير الثغرات غير الم Solicited.', bugBountyText1: 'إذا وجدت مشكلة بسيطة ورغبت الشركة في شكرني، فأنا سعيد بتلقي مكافأة مالية.', bugsFound: 'ثغرات مكتشفة' },
-  ko: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · 공인 침투 테스트 전문가', hard: '어려움', insane: '최상', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · 오펜시브 보안', footerSafety: '윤리적으로 행동하고 승인된 범위에서만 테스트하세요.', heroQuote: '“바람이 없으면 노를 저어야지.”', machinesTitle: '해킹된 서버', companiesTitle: '해킹된 기업', cookieTitle: '개인정보 안내', cookieMessage: '이 사이트는 추적 쿠키를 사용하지 않습니다. 브라우저에는 선택한 언어만 저장됩니다.', cookieClose: '확인', skillTags: ['정찰', 'OSINT', '웹 공격', 'SQL 인젝션', 'Shell과 Payload', '피벗 및 터널링', 'Active Directory', '권한 상승', '비밀번호 공격', '파일 전송'], oneTime: '일회성 침투 테스트', subscription: '지속 보안 관리', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: '무단 보안 취약점 보고에 대해 비용을 받지 않습니다.', bugBountyText1: '간단한 문제를 발견하고 회사가 감사의 뜻으로 보답하고 싶다면, 금전적 보상을 환영합니다.', bugsFound: '발견된 버그' },
-  ja: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · 認定ペネトレーションテスト専門家', hard: '上級', insane: '最難関', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · オフェンシブセキュリティ', footerSafety: '倫理を守り、許可された範囲のみを診断してください。', heroQuote: '「風がなければ、漕ぎ出そう。」', machinesTitle: '侵害されたサーバー', companiesTitle: '侵害された企業', cookieTitle: 'プライバシーに関するお知らせ', cookieMessage: 'このサイトではトラッキングCookieを使用しません。選択した言語のみブラウザーに保存します。', cookieClose: '閉じる', skillTags: ['偵察', 'OSINT', 'Web攻撃', 'SQLインジェクション', 'ShellとPayload', 'ピボットとトンネリング', 'Active Directory', '権限昇格', 'パスワード攻撃', 'ファイル転送'], oneTime: '単発ペネトレーションテスト', subscription: '継続的なセキュリティ', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: ' unsolicited な脆弱性報告に対して費用を請求しません。', bugBountyText1: '簡単な問題を見つけ、会社が感謝したいと考えた場合、金銭的な報酬を受け取ることがあります。', bugsFound: '発見されたバグ' },
-  en: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · Certified Penetration Testing Specialist', hard: 'Hard', insane: 'Insane', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · Offensive security', footerSafety: 'Practice ethically. Test only with authorization.', heroQuote: '“And if there’s no wind, we’ll have to row.”', machinesTitle: 'Pwned servers', companiesTitle: 'Pwned companies', cookieTitle: 'Privacy notice', cookieMessage: 'This site does not use tracking cookies. It only stores your language preference in your browser.', cookieClose: 'Got it', skillTags: ['Reconnaissance', 'OSINT', 'Web attacks', 'SQL injection', 'Shells & payloads', 'Pivoting & tunneling', 'Active Directory', 'Privilege escalation', 'Password attacks', 'File transfers'], bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: 'I do not charge for unsolicited vulnerability reports.', bugBountyText1: 'If I find a simple issue and the company wants to thank me, I’m happy to receive a monetary reward.', bugsFound: 'Bugs found' },
-  es: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · Especialista certificado en pruebas de penetración', hard: 'Difícil', insane: 'Insano', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · Seguridad ofensiva', footerSafety: 'Actúa éticamente. Prueba solo con autorización.', heroQuote: '“Y si no hay viento, habrá que remar.”', machinesTitle: 'Servidores comprometidos', companiesTitle: 'Empresas comprometidas', cookieTitle: 'Aviso de cookies', cookieMessage: 'Este sitio no utiliza cookies de seguimiento. Solo guarda en tu navegador el idioma que seleccionas.', cookieClose: 'Entendido', skillTags: ['Reconocimiento', 'OSINT', 'Ataques web', 'Inyección SQL', 'Shells y payloads', 'Pivoting y túneles', 'Active Directory', 'Escalada de privilegios', 'Ataques de contraseña', 'Transferencia de archivos'], oneTime: 'Pentest pontual', subscription: 'Seguridad continua', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: 'No cobro por informes no solicitados de vulnerabilidades.', bugBountyText1: 'Si encuentro un problema simple y la empresa quiere agradecerme, estoy encantado de recibir una recompensa económica.', bugsFound: 'Fallos encontrados' },
-  fr: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · Spécialiste certifié en tests d’intrusion', hard: 'Difficile', insane: 'Insane', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · Sécurité offensive', footerSafety: 'Agissez avec éthique. Tests autorisés uniquement.', heroQuote: '« Et s’il n’y a pas de vent, il faudra ramer. »', machinesTitle: 'Serveurs compromis', companiesTitle: 'Entreprises compromises', cookieTitle: 'Confidentialité', cookieMessage: 'Ce site n’utilise pas de cookies de suivi. Il mémorise uniquement la langue choisie dans votre navigateur.', cookieClose: 'Compris', skillTags: ['Reconnaissance', 'OSINT', 'Attaques web', 'Injection SQL', 'Shells et payloads', 'Pivotage et tunnels', 'Active Directory', 'Élévation de privilèges', 'Attaques par mot de passe', 'Transfert de fichiers'], oneTime: 'Pentest ponctuel', subscription: 'Sécurité continue', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: 'Je ne facture pas les rapports non sollicités de vulnérabilité.', bugBountyText1: 'Si je trouve un problème simple et que l\'entreprise souhaite me remercier, je suis heureux de recevoir une récompense financière.', bugsFound: 'Failles trouvées' },
-  de: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · Zertifizierter Penetrationstester', hard: 'Schwer', insane: 'Insane', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · Offensive Sicherheit', footerSafety: 'Ethisch handeln. Nur mit Genehmigung testen.', heroQuote: '„Und wenn kein Wind weht, müssen wir rudern.“', machinesTitle: 'Kompromittierte Server', companiesTitle: 'Kompromittierte Unternehmen', cookieTitle: 'Datenschutzhinweis', cookieMessage: 'Diese Website verwendet keine Tracking-Cookies. Sie speichert lediglich die gewählte Sprache in Ihrem Browser.', cookieClose: 'Verstanden', skillTags: ['Aufklärung', 'OSINT', 'Webangriffe', 'SQL-Injection', 'Shells & Payloads', 'Pivoting & Tunneling', 'Active Directory', 'Rechteausweitung', 'Passwortangriffe', 'Dateiübertragung'], oneTime: 'Einmaliger Pentest', subscription: 'Laufende Sicherheit', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: 'Ich verlange keine Bezahlung für unaufgeforderte Schwachstellenberichte.', bugBountyText1: 'Wenn ich einen einfachen Fehler finde und das Unternehmen mich bedanken möchte, freue ich mich über eine finanzielle Belohnung.', bugsFound: 'Gefundene Bugs' },
-  ru: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · Сертифицированный специалист по пентесту', hard: 'Сложная', insane: 'Insane', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · Наступательная безопасность', footerSafety: 'Соблюдайте этику. Тестируйте только с разрешения.', heroQuote: '«А если ветра нет, придётся грести.»', machinesTitle: 'Скомпрометированные серверы', companiesTitle: 'Скомпрометированные компании', cookieTitle: 'Конфиденциальность', cookieMessage: 'Сайт не использует отслеживающие файлы cookie. В браузере сохраняется только выбранный язык.', cookieClose: 'Понятно', skillTags: ['Разведка', 'OSINT', 'Веб-атаки', 'SQL-инъекции', 'Shell и payload', 'Пивотинг и туннелирование', 'Active Directory', 'Повышение привилегий', 'Атаки на пароли', 'Передача файлов'], oneTime: 'Разовый пентест', subscription: 'Постоянная защита', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: 'Я не беру оплату за несанкционированные отчёты об уязвимостях.', bugBountyText1: 'Если я нахожу простую проблему, и компания хочет поблагодарить меня, я рад получить денежное вознаграждение.', bugsFound: 'Найденные баги' },
-  zh: { linux: 'Linux', windows: 'Windows', cpts: 'CPTS · 认证渗透测试专家', hard: '困难', insane: '极难', btc: 'BTC', eth: 'ETH', sol: 'SOL', xrp: 'XRP', footerBrand: 'Remiotore · 攻防安全', footerSafety: '遵守道德规范，仅在授权范围内测试。', heroQuote: '“如果没有风，那就划船前行。”', machinesTitle: '被攻陷的服务器', companiesTitle: '被攻陷的企业', cookieTitle: '隐私提示', cookieMessage: '本网站不使用跟踪 Cookie，仅在浏览器中保存您选择的语言。', cookieClose: '知道了', skillTags: ['侦察', 'OSINT', 'Web 攻击', 'SQL 注入', 'Shell 与 Payload', '内网穿透', 'Active Directory', '权限提升', '密码攻击', '文件传输'], oneTime: '一次性渗透测试', subscription: '持续安全服务', bugBountyTitle: 'BUG BOUNTY', bugBountyIntro: '我不会为未经邀请的漏洞报告收费。', bugBountyText1: '如果我发现一个简单问题，而公司希望感谢我，我很乐意接受金钱奖励。', bugsFound: '发现的漏洞' },
+    footerBrand: 'Remiotore · Offensive security',
+    footerSafety: 'Practice ethically. Test only with authorization.',
+    cookieTitle: 'Privacy notice',
+    cookieMessage: 'This site does not use tracking cookies. It only stores your language preference in your browser.',
+    cookieClose: 'Got it'
 };
-Object.values(localeExtras).forEach(({ skillTags }) => {
-  const osintIndex = skillTags.findIndex((skill) => skill.toLowerCase() === 'osint');
-  const osint = skillTags.splice(osintIndex, 1)[0];
-  const reconnaissance = skillTags.shift();
-  const sqlIndex = skillTags.findIndex((skill) => /sql/i.test(skill));
-  if (sqlIndex !== -1) skillTags.splice(sqlIndex, 1);
-  skillTags.unshift(osint, reconnaissance);
-});
-Object.keys(languages).forEach((language) => {
-  mergeLocale(language, { ...en, ...languages[language], ...localeExtras[language] });
-});
-
-const emailUiTranslations = {
-  pt: ['Enviar resumo do âmbito por e-mail', 'Introduza um endereço de e-mail válido antes de criar o rascunho.', 'O rascunho está pronto na sua aplicação de e-mail. Reveja-o e envie-o a partir daí.', 'Estimativa indicativa. Os testes exigem autorização por escrito e regras de execução acordadas. O rascunho abre na sua aplicação de e-mail e não é enviado automaticamente.'],
-  it: ['Invia riepilogo via email', 'Inserisci un indirizzo email valido prima di creare la bozza.', 'La tua bozza email è pronta nell’app di posta. Controllala e inviala da lì.', 'La stima è indicativa. I test richiedono autorizzazione scritta e regole concordate. La bozza email si apre nell’app di posta e non viene inviata automaticamente.'],
-  ar: ['إرسال ملخص النطاق بالبريد', 'أدخل عنوان بريد إلكتروني صالحاً لإنشاء المسودة.', 'المسودة جاهزة في تطبيق البريد. راجعها وأرسلها من هناك.', 'هذا تقدير مبدئي. تتطلب الاختبارات إذناً كتابياً وقواعد عمل متفقاً عليها. ستُفتح مسودة البريد في تطبيق البريد ولن تُرسل تلقائياً.'],
-  ko: ['범위 요약 이메일 작성', '이메일 초안을 만들려면 올바른 이메일 주소를 입력하세요.', '메일 앱에 초안이 준비되었습니다. 내용을 검토한 뒤 직접 보내세요.', '예상 견적입니다. 테스트에는 서면 승인과 합의된 수행 규칙이 필요합니다. 이메일 초안은 메일 앱에서 열리며 자동 전송되지 않습니다.'],
-  ja: ['診断範囲の概要をメールで作成', 'メールの下書きを作成するには、有効なメールアドレスを入力してください。', 'メールアプリに下書きを作成しました。内容を確認して送信してください。', '表示額は概算です。診断には書面による許可と合意済みの実施規則が必要です。メールの下書きはメールアプリで開き、自動送信されません。'],
-  en: ['Email scope summary', 'Enter a valid email address before creating the email draft.', 'Your email draft is ready in your email app. Review it and send it there.', 'The estimate is indicative only. Testing requires written authorization and agreed rules of engagement. The email draft opens in your email app and is not sent automatically.'],
-  es: ['Enviar resumen por correo', 'Introduce un correo electrónico válido antes de crear el borrador.', 'El borrador está listo en tu aplicación de correo. Revísalo y envíalo desde allí.', 'El presupuesto es orientativo. Las pruebas requieren autorización escrita y reglas acordadas. El borrador se abre en tu aplicación de correo y no se envía automáticamente.'],
-  fr: ['Envoyer le périmètre par e-mail', 'Saisissez une adresse e-mail valide avant de créer le brouillon.', 'Le brouillon est ouvert dans votre application e-mail. Vérifiez-le puis envoyez-le.', 'Estimation indicative. Les tests nécessitent une autorisation écrite et des règles convenues. Le brouillon s’ouvre dans votre application e-mail et n’est pas envoyé automatiquement.'],
-  de: ['Umfang per E-Mail senden', 'Geben Sie eine gültige E-Mail-Adresse ein, um den Entwurf zu erstellen.', 'Der Entwurf ist in Ihrem E-Mail-Programm bereit. Prüfen und senden Sie ihn dort.', 'Unverbindliche Schätzung. Tests erfordern eine schriftliche Genehmigung und abgestimmte Regeln. Der E-Mail-Entwurf wird geöffnet, aber nicht automatisch versendet.'],
-  ru: ['Отправить объём по почте', 'Введите действительный адрес электронной почты, чтобы создать черновик.', 'Черновик открыт в почтовом приложении. Проверьте его и отправьте вручную.', 'Предварительная оценка. Проверки требуют письменного разрешения и согласованных правил. Черновик откроется в почтовом приложении, но не будет отправлен автоматически.'],
-  zh: ['通过邮件发送范围摘要', '请输入有效的电子邮箱地址以创建邮件草稿。', '邮件草稿已在邮件应用中打开，请检查后手动发送。', '此为参考估价。测试需要书面授权并事先约定规则。邮件草稿将在邮件应用中打开，不会自动发送。']
-};
-Object.entries(emailUiTranslations).forEach(([language, [emailScope, emailError, emailReady, estimateDisclaimer]]) => {
-  mergeLocale(language, { emailScope, emailError, emailReady, estimateDisclaimer });
-  delete languages[language].downloadScope;
-  delete languages[language].downloadReady;
-});
-
-mergeLocale('fr', {
-  hostUnit: 'réseau',
-  networkUnit: 'réseau',
-  webUnit: 'application web',
-  apiUnit: 'API',
-  mobileUnit: 'application mobile',
-  repoUnit: 'dépôt',
-  day: 'jour',
-  days: 'jours',
-  weeks: 'semaines',
-  roeTitle: 'Règles d’engagement',
-  roeText: 'Les tests sont limités aux actifs listés dans le périmètre convenu. Vous confirmez être propriétaire de ces actifs ou disposer d’une autorisation écrite pour les tester. Les tests commencent uniquement après accord sur le périmètre et le calendrier. Toute activité susceptible d’interrompre la production nécessite une approbation explicite.',
-  acceptTerms: 'Je confirme mon autorisation et j’accepte les règles d’engagement.',
-  emailScope: 'Envoyer le résumé du périmètre par e-mail'
-});
-
-mergeLocale('de', {
-  hostUnit: 'Host',
-  networkUnit: 'Netzwerk',
-  webUnit: 'Web-App',
-  apiUnit: 'API',
-  mobileUnit: 'Mobile App',
-  repoUnit: 'Repository',
-  day: 'Tag',
-  days: 'Tage',
-  weeks: 'Wochen',
-  roeTitle: 'Prüfungsregeln',
-  roeText: 'Tests sind auf die im vereinbarten Umfang aufgeführten Assets beschränkt. Sie bestätigen, Eigentümer dieser Assets zu sein oder eine schriftliche Genehmigung zu besitzen. Tests beginnen erst nach Abstimmung von Umfang und Zeitplan. Aktivitäten, die den Betrieb stören könnten, bedürfen einer ausdrücklichen Freigabe.',
-  acceptTerms: 'Ich bestätige die Berechtigung und akzeptiere die Prüfungsregeln.',
-  emailScope: 'Umfang per E-Mail senden'
-});
-
-const sectionHeadingTranslations = {
-  pt: { knowTitle: 'Experiência', offerTitle: 'Serviços' },
-  it: { knowTitle: 'Cosa so', offerTitle: 'Servizi' },
-  ar: { knowTitle: 'الخبرة', offerTitle: 'الخدمات' },
-  ko: { knowTitle: '경험', offerTitle: '서비스' },
-  ja: { knowTitle: '実績', offerTitle: 'サービス' },
-  en: { knowTitle: 'Experience', offerTitle: 'Services' },
-  es: { knowTitle: 'Experiencia', offerTitle: 'Servicios' },
-  fr: { knowTitle: 'Expérience', offerTitle: 'Services' },
-  de: { knowTitle: 'Erfahrung', offerTitle: 'Leistungen' },
-  ru: { knowTitle: 'Опыт', offerTitle: 'Услуги' },
-  zh: { knowTitle: '经验', offerTitle: '服务' }
-};
-Object.entries(sectionHeadingTranslations).forEach(([language, headings]) => {
-  mergeLocale(language, headings);
-});
-
-const contactValidationTranslations = {
-  pt: { nameRequired: 'Introduza o seu nome completo.', companyRequired: 'Introduza o nome da sua empresa.' },
-  it: { nameRequired: 'Inserisci il tuo nome completo.', companyRequired: 'Inserisci il nome della tua azienda.' },
-  ar: { nameRequired: 'أدخل اسمك الكامل.', companyRequired: 'أدخل اسم شركتك.' },
-  ko: { nameRequired: '성명을 입력하세요.', companyRequired: '회사명을 입력하세요.' },
-  ja: { nameRequired: '氏名を入力してください。', companyRequired: '会社名を入力してください。' },
-  en: { nameRequired: 'Enter your full name.', companyRequired: 'Enter your company name.' },
-  es: { nameRequired: 'Introduce tu nombre completo.', companyRequired: 'Introduce el nombre de tu empresa.' },
-  fr: { nameRequired: 'Saisissez votre nom complet.', companyRequired: 'Saisissez le nom de votre entreprise.' },
-  de: { nameRequired: 'Geben Sie Ihren vollständigen Namen ein.', companyRequired: 'Geben Sie Ihren Firmennamen ein.' },
-  ru: { nameRequired: 'Укажите ваше полное имя.', companyRequired: 'Укажите название вашей компании.' },
-  zh: { nameRequired: '请输入您的姓名。', companyRequired: '请输入公司名称。' }
-};
-Object.entries(contactValidationTranslations).forEach(([language, messages]) => {
-  mergeLocale(language, messages);
-});
-
-mergeLocale('pt', {
-  delivery: 'Prazo estimado',
-  annualSavings: 'Poupança anual estimada',
-  roeTitle: 'Regras de engajamento',
-  roeText: 'Os testes são limitados aos ativos incluídos no âmbito acordado. Confirma que é proprietário desses ativos ou que possui autorização por escrito para os testar. Os testes só começam após o acordo sobre o âmbito e o calendário. Atividades que possam interromper a produção exigem aprovação explícita.',
-  acceptTerms: 'Confirmo que tenho autorização e aceito as regras de engajamento.',
-  emailScope: 'Enviar resumo do âmbito por e-mail',
-  contactTitle: 'Os seus dados',
-  fullName: 'Nome completo',
-  company: 'Empresa',
-  hostUnit: 'host',
-  networkUnit: 'rede',
-  mobileUnit: 'aplicação móvel',
-  repoUnit: 'repositório'
-});
-
-registerLocales({
-  pt: {
-    knowMeta: 'Perfil · prática', profileTitle: 'Perfil',
-    hireIntro: 'Defina um âmbito de testes autorizado. Adicione os ativos, escolha uma auditoria pontual ou uma opção de segurança contínua e reveja a estimativa e as regras de execução.',
-    benefitsSub: ['Monitorização contínua', 'Análises automatizadas semanais', 'Alertas em tempo real'],
-    mobileApps: 'Aplicações móveis · em desenvolvimento', repositories: 'Repositórios de código', addRepo: '+ Adicionar repositório',
-    ports: 'Portas (separadas por vírgulas)', complexity: 'Dimensão da aplicação', platform: 'Plataforma', repoType: 'Âmbito do repositório',
-    singleRepo: 'Repositório único · 2 500€', orgRepos: 'Organização · 6 000€ cada', quantity: 'Número de repositórios', repoName: 'Repositório / organização',
-    addonsTitle: 'Verificações de exposição e OSINT', leakedCredentials: 'Credenciais expostas', doxxingCheck: 'Verificação de exposição de dados pessoais',
-    project: 'Projeto', appName: 'Nome / URL da aplicação', apiMixed: 'Mista · 7 000€', authApiKey: 'Chave de API', authCustom: 'Personalizada',
-    emptyAssets: 'Ainda não foram adicionados ativos.', termsError: 'Confirme a autorização e adicione pelo menos um ativo para continuar.',
-    oneTimeDesc: 'Auditoria aprofundada e personalizada, com relatório executivo, reteste das vulnerabilidades corrigidas e certificado de segurança.',
-    easy: 'Fácil'
-  },
-  it: {
-    medium: 'Medio',
-    estimateDisclaimer: 'La stima è indicativa. I test richiedono un’autorizzazione scritta e regole d’ingaggio concordate. La bozza dell’e-mail si apre nell’app di posta e non viene inviata automaticamente.',
-    hireIntro: 'Definisci un perimetro di test autorizzato. Aggiungi gli asset, scegli un audit una tantum o un’opzione di sicurezza continua e consulta la stima e le regole d’ingaggio.',
-    hardInsane: 'Difficile / Estrema', insane: 'Estrema',
-    oneTime: 'Pentest una tantum',
-    oneTimeDesc: 'Audit approfondito e personalizzato con rapporto esecutivo, nuovo test delle vulnerabilità corrette e certificato di sicurezza.',
-    authScope: 'Concorda prima il perimetro autorizzato e le regole d’ingaggio.',
-    listedAssets: 'Testa solo gli asset inclusi esplicitamente nel perimetro concordato.',
-    estimateBefore: 'Verifica impegno e investimento prima di procedere.',
-    benefitsSub: ['Monitoraggio continuo', 'Scansioni automatizzate settimanali', 'Avvisi in tempo reale'],
-    mobileApps: 'App mobili · in fase di sviluppo', addonsTitle: 'Controlli di esposizione e OSINT',
-    delivery: 'Consegna stimata', roeTitle: 'Regole d’ingaggio',
-    roeText: 'I test sono limitati agli asset elencati nel perimetro concordato. Conferma di essere proprietario degli asset o di disporre di un’autorizzazione scritta per testarli. I test iniziano solo dopo aver concordato perimetro e tempi. Le attività che possono interrompere la produzione richiedono un’approvazione esplicita.',
-    leakedCredentials: 'Credenziali esposte', doxxingCheck: 'Verifica dell’esposizione di dati personali',
-    emptyAssets: 'Nessun asset aggiunto.', termsError: 'Conferma l’autorizzazione e aggiungi almeno un asset per continuare.',
-    hosts: 'Host', webApps: 'Applicazioni web', apis: 'Sicurezza delle API',
-    domainIp: 'Dominio / IP', ports: 'Porte (separate da virgole)', dashboard: 'Dashboard · 7.000€',
-    auth: 'Autenticazione', platform: 'Piattaforma', appName: 'Nome / URL dell’applicazione',
-    orgRepos: 'Organizzazione · 6.000€ ciascuno', repoName: 'Repository / organizzazione',
-    typosquatMonitor: 'Monitoraggio dei domini simili',
-    contactTitle: 'I tuoi dati', fullName: 'Nome completo', company: 'Azienda',
-    estimateTitle: 'Stima in tempo reale', investment: 'Investimento stimato',
-    estimateEmpty: 'Aggiungi asset per visualizzare la stima e i tempi di consegna.',
-    perMonth: 'al mese', annualSavings: 'Risparmio annuale stimato',
-    networkUnit: 'rete', mobileUnit: 'app mobile', repoUnit: 'repository',
-    day: 'giorno', days: 'giorni', weeks: 'settimane',
-    apiMixed: 'Mista · 7.000€', authNone: 'Nessuna autenticazione', authBearer: 'Token Bearer', authApiKey: 'Chiave API', authCustom: 'Personalizzata', addRepo: '+ Aggiungi repository',
-    bugBountyText1: 'Se trovo un problema semplice e l’azienda vuole ringraziarmi, sono felice di ricevere una ricompensa in denaro.'
-  },
-  es: {
-    profileTitle: 'Perfil', easy: 'Fácil', medium: 'Medio', hardInsane: 'Difícil / Muy difícil',
-    machineFootnote: '*El total de máquinas corresponde a las estadísticas del perfil.',
-    skillsTitle: 'Habilidades y áreas de especialización', resourcesTitle: 'Notas y referencias',
-    cheatsheet: 'Guía de pentesting', cheatsheetDesc: 'Comandos y notas metodológicas',
-    workflow: 'Diagrama del proceso de pentesting', workflowDesc: 'Resumen del flujo de trabajo',
-    machinesName: 'Nombre', difficulty: 'Dificultad', serviceTitle: 'Evaluaciones prácticas de seguridad',
-    serviceNetwork: 'Redes y hosts', serviceNetworkDesc: 'Revisión de IP, dominios, hosts y rangos de red autorizados.',
-    serviceWeb: 'Pruebas de aplicaciones web', serviceWebDesc: 'Evaluación específica de aplicaciones web, desde sitios sencillos hasta paneles complejos.',
-    serviceApi: 'Revisión de seguridad de API', serviceApiDesc: 'Evaluación de API REST, GraphQL, gRPC o SOAP dentro del alcance de autenticación acordado.',
-    serviceCode: 'Revisión de repositorios', serviceMobile: 'Pruebas de aplicaciones móviles',
-    serviceMobileDesc: 'Planificación de evaluaciones para iOS y Android; actualmente en desarrollo.',
-    serviceCodeDesc: 'Revisión de seguridad de repositorios individuales o de un ámbito organizativo acordado.',
-    addNetwork: '+ Añadir red', ports: 'Puertos (separados por comas)', complexity: 'Tamaño de la aplicación', repoType: 'Alcance del repositorio',
-    orgRepos: 'Organización · 6.000€ cada uno', leakedCredentials: 'Credenciales filtradas', doxxingCheck: 'Comprobación de exposición de datos personales', project: 'Proyecto',
-    hireKicker: 'Alcance · estimación · próximos pasos', subscriptionSub: 'Seguridad continua · mensual · 60 % de descuento',
-    benefitsOne: ['Informe ejecutivo', 'Repetición de pruebas', 'Certificado de seguridad'],
-    benefitsSub: ['Monitorización continua', 'Análisis automatizados semanales', 'Alertas en tiempo real'],
-    assetsTitle: 'Define el alcance autorizado', assetsHint: 'Añade únicamente activos que sean tuyos o que tengas autorización escrita para probar.',
-    hosts: 'Hosts', networks: 'Redes', webApps: 'Aplicaciones web', apis: 'Seguridad de API', mobileApps: 'Aplicaciones móviles · en desarrollo', repositories: 'Repositorios de código',
-    addHost: '+ Añadir host', addApp: '+ Añadir aplicación', addApi: '+ Añadir API', addRepo: '+ Añadir repositorio', remove: 'Eliminar',
-    domainIp: 'Dominio / IP', wildcard: 'Incluir subdominios comodín', cidr: 'CIDR de red', basic: 'Estática · 4.000€', dashboard: 'Panel · 7.000€', pro: 'Avanzada · 12.000€',
-    apiType: 'Tipo de API', auth: 'Autenticación', appName: 'Nombre / URL de la aplicación', singleRepo: 'Repositorio único · 2.500€',
-    quantity: 'Número de repositorios', repoName: 'Repositorio / organización', typosquatMonitor: 'Supervisión de dominios similares',
-    contactTitle: 'Tus datos', fullName: 'Nombre completo', company: 'Empresa', estimateTitle: 'Estimación en tiempo real', investment: 'Inversión estimada',
-    estimateEmpty: 'Añade activos para consultar la estimación y el plazo.', delivery: 'Plazo estimado', perMonth: 'al mes', annualSavings: 'Ahorro anual estimado',
-    roeTitle: 'Reglas de actuación', roeText: 'Las pruebas se limitan a los activos incluidos en el alcance acordado. Confirmas que eres propietario de esos activos o que tienes autorización por escrito para probarlos. Las pruebas solo comienzan después de acordar el alcance y el calendario. Las actividades que puedan interrumpir la producción requieren aprobación explícita.',
-    termsError: 'Confirma la autorización y añade al menos un activo para continuar.', emptyAssets: 'Aún no se han añadido activos.',
-    oneTime: 'Pentest puntual', hireIntro: 'Define un alcance de pruebas autorizado, añade los activos, elige una auditoría puntual o una opción de seguridad continua y consulta la estimación y las reglas de actuación.',
-    platform: 'Plataforma', apiMixed: 'Mixta · 7.000€', authApiKey: 'Clave de API', authCustom: 'Personalizada',
-    acceptTerms: 'Confirmo que tengo autorización y acepto las reglas de actuación.',
-    networkUnit: 'red', mobileUnit: 'aplicación móvil', repoUnit: 'repositorio', day: 'día', days: 'días', weeks: 'semanas',
-    authNone: 'Sin autenticación', authBearer: 'Token Bearer', authOauth: 'OAuth2',
-    authScope: 'Acordad primero el alcance autorizado y las reglas de actuación.',
-    listedAssets: 'Prueba únicamente los activos incluidos explícitamente en ese alcance.',
+const es = {
+    navProfile: 'Perfil',
+    navServices: 'Servicios',
+    navHire: 'Contrátame',
+    navContact: 'Contacto ↗',
+    eyebrow: 'Seguridad ofensiva',
+    heroTitle: 'Con mentalidad de seguridad.<br>Dirigido por sistemas.',
+    heroIntro: 'Un vistazo de lo que sé y he construido, junto con el trabajo de seguridad que ofrezco.',
+    configureTitle: 'Configura un compromiso',
+    configureDesc: 'Elige redes, hosts, aplicaciones web, APIs, apps móviles y repositorios; selecciona pruebas puntuales o mensuales; y revisa tu presupuesto en vivo.',
+    configurePrompt: '¿Listo para definir un alcance?',
+    configurePromptSub: 'Revisa tus activos y genera un resumen del alcance.',
+    scopeButton: 'Ir al generador de alcance ↓',
+    estimateDisclaimer: 'La estimación es orientativa. Las pruebas requieren autorización escrita y reglas de participación acordadas. El borrador del correo se abre en tu cliente de correo y no se envía automáticamente.',
+    knowTitle: 'Lo que sé',
+    knowMeta: 'Perfil · práctica',
+    offerTitle: 'Lo que hago',
+    offerMeta: 'Trabajo de seguridad',
+    profileTitle: 'Perfil',
+    introProfile: 'Especialista en seguridad ofensiva. Aprendo construyendo, probando, documentando y refinando flujos de trabajo repetibles.',
+    currentFocus: 'Actualmente cazando bugs y ampliando mis conocimientos de pentesting.',
+    totalMachines: 'Máquinas*',
+    easy: 'Fácil',
+    medium: 'Media',
+    hardInsane: 'Difícil / imposible',
+    machineFootnote: '*Los totales reflejan las estadísticas del perfil listado.',
+    skillsTitle: 'Habilidades y áreas de enfoque',
+    resourcesTitle: 'Apuntes y referencias',
+    cheatsheet: 'Hoja de trucos de pentesting',
+    cheatsheetDesc: 'Comandos y notas de metodología',
+    workflow: 'Diagrama del flujo de trabajo de pentesting',
+    workflowDesc: 'Resumen del flujo de trabajo del compromiso',
+    machinesTitle: 'Máquinas resueltas en Hack The Box',
+    machinesName: 'Nombre',
+    os: 'SO',
+    difficulty: 'Dificultad',
+    serviceTitle: 'Evaluaciones prácticas de seguridad',
+    introServices: 'Pruebas con alcance y autorización para identificar y explicar debilidades antes de que se conviertan en incidentes.',
+    serviceNetwork: 'Pruebas de red y hosts',
+    serviceNetworkDesc: 'Revisión de IPs, dominios, hosts y rangos de red aprobados.',
+    serviceWeb: 'Pruebas de aplicaciones web',
+    serviceWebDesc: 'Evaluación enfocada en aplicaciones web, desde sitios simples hasta paneles complejos.',
+    serviceApi: 'Revisión de seguridad de APIs',
+    serviceApiDesc: 'Evaluaciones de REST, GraphQL, gRPC, SOAP o APIs mixtas con alcance de autenticación acordado.',
+    serviceCode: 'Revisión de repositorios',
+    serviceCodeDesc: 'Revisión de seguridad de repositorios individuales o del alcance de una organización.',
+    serviceMobile: 'Pruebas de aplicaciones móviles',
+    serviceMobileDesc: 'Planificación de evaluaciones para iOS y Android; actualmente en progreso.',
+    serviceExposure: 'Complementos de exposición',
+    serviceExposureDesc: 'Comprobaciones de exposición de credenciales, datos personales y monitoreo de typosquatting.',
+    engagementTitle: 'Opciones de compromiso',
+    oneTime: 'Pentest puntual',
+    oneTimeDesc: 'Auditoría profunda y con alcance individual, con informe ejecutivo, retesting de vulnerabilidades y certificado de seguridad.',
+    subscription: 'Seguridad continua',
+    subscriptionDesc: 'Opción mensual con monitoreo continuo, escaneos semanales automatizados y alertas en tiempo real.',
+    authScope: 'Primero acuerda el alcance autorizado y las reglas de participación.',
+    listedAssets: 'Prueba solo los activos incluidos explícitamente en ese alcance.',
     estimateBefore: 'Revisa el esfuerzo y la inversión antes de continuar.',
-    supportTitle: 'Apoya mi trabajo', supportText: 'Si te gusta el trabajo de código abierto, puedes apoyarlo con una contribución.',
-    engagementTitle: 'Opciones de servicio',
-    subscriptionDesc: 'Opción mensual con monitorización continua, análisis automatizados semanales y alertas en tiempo real.',
-    dashboard: 'Panel · 7.000€', basic: 'Estática · 4.000€', pro: 'Avanzada · 12.000€',
-    appName: 'Nombre / URL de la aplicación', doxxingCheck: 'Comprobación de exposición de datos personales',
-    contactTitle: 'Tus datos', fullName: 'Nombre completo', company: 'Empresa', estimateTitle: 'Estimación en tiempo real', investment: 'Inversión estimada',
-    estimateEmpty: 'Añade activos para consultar la estimación y el plazo.', delivery: 'Plazo estimado', perMonth: 'al mes', annualSavings: 'Ahorro anual estimado',
-    acceptTerms: 'Confirmo que tengo autorización y acepto las reglas de actuación.',
-    domainIp: 'Dominio / IP', singleRepo: 'Repositorio único · 2.500€', apiMixed: 'Mixta · 7.000€',
-    authNone: 'Sin autenticación', authBearer: 'Token Bearer', authOauth: 'OAuth2',
-    hostUnit: 'host', webUnit: 'aplicación web', apiUnit: 'API', day: 'día', days: 'días', weeks: 'semanas'
-  },
-  fr: {
-    hireIntro: 'Définissez un périmètre de test autorisé, ajoutez les actifs, choisissez un audit ponctuel ou une option de sécurité continue, puis consultez l’estimation et les règles d’engagement.',
-    serviceCodeDesc: 'Examen de sécurité de dépôts individuels ou d’un périmètre organisationnel convenu.',
-    platform: 'Plateforme', hostUnit: 'hôte', authApiKey: 'Clé API', authCustom: 'Personnalisée'
-  },
-  de: {
-    hireIntro: 'Legen Sie einen autorisierten Prüfumfang fest, fügen Sie die Assets hinzu, wählen Sie einen einmaligen Audit oder eine kontinuierliche Sicherheitsoption und prüfen Sie Aufwand, Kosten und Prüfungsregeln.',
-    subscriptionDesc: 'Monatliche Option mit kontinuierlicher Überwachung, wöchentlichen automatisierten Scans und Echtzeitwarnungen.',
-    listedAssets: 'Testen Sie ausschließlich Assets, die ausdrücklich im vereinbarten Umfang aufgeführt sind.',
-    estimateBefore: 'Prüfen Sie Aufwand und Kosten, bevor Sie fortfahren.', hireKicker: 'Prüfumfang · Kostenschätzung · nächste Schritte',
-    hosts: 'Hosts', networks: 'Netzwerke', webApps: 'Webanwendungen', apis: 'API-Sicherheit', mobileApps: 'Mobile Apps · in Arbeit',
-    repositories: 'Code-Repositories', addHost: '+ Host hinzufügen', addNetwork: '+ Netzwerk hinzufügen', addApp: '+ Anwendung hinzufügen', addApi: '+ API hinzufügen', addRepo: '+ Repository hinzufügen', remove: 'Entfernen',
-    domainIp: 'Domain / IP', ports: 'Ports (durch Kommas getrennt)', wildcard: 'Wildcard-Subdomains einschließen', cidr: 'Netzwerk-CIDR',
-    complexity: 'Größe der Anwendung', basic: 'Statisch · 4.000€', dashboard: 'Dashboard · 7.000€', pro: 'Pro · 12.000€', apiType: 'API-Typ',
-    appName: 'Name / URL der Anwendung', repoType: 'Umfang des Repository-Tests', singleRepo: 'Einzelnes Repository · 2.500€', orgRepos: 'Organisation · jeweils 6.000€', quantity: 'Anzahl der Repositories', repoName: 'Repository / Organisation',
-    typosquatMonitor: 'Überwachung ähnlicher Domains', contactTitle: 'Ihre Angaben', fullName: 'Vollständiger Name', email: 'E-Mail', company: 'Unternehmen', project: 'Projekt',
-    estimateTitle: 'Live-Kostenschätzung', investment: 'Geschätzte Investition', estimateEmpty: 'Fügen Sie Assets hinzu, um Kosten und Lieferzeit zu sehen.', delivery: 'Voraussichtliche Dauer', perMonth: 'pro Monat', annualSavings: 'Geschätzte jährliche Ersparnis',
-    emptyAssets: 'Noch keine Assets hinzugefügt.', termsError: 'Bestätigen Sie die Berechtigung und fügen Sie mindestens ein Asset hinzu, um fortzufahren.',
-    addNetwork: '+ Netzwerk hinzufügen', platform: 'Plattform',
-    leakedCredentials: 'Offengelegte Zugangsdaten', doxxingCheck: 'Prüfung offengelegter persönlicher Daten',
-    apiMixed: 'Gemischt · 7.000€', authNone: 'Keine Authentifizierung', authBearer: 'Bearer-Token',
-    day: 'Tag', days: 'Tage', weeks: 'Wochen'
-  },
-  ru: {
-    platform: 'Платформа', repoType: 'Объём проверки репозитория', singleRepo: 'Один репозиторий · 2 500€',
-    orgRepos: 'Организация · 6 000€ за каждый', repoName: 'Репозиторий / организация',
-    leakedCredentials: 'Утёкшие учётные данные', doxxingCheck: 'Проверка раскрытия персональных данных',
-    typosquatMonitor: 'Мониторинг доменов-двойников', emptyAssets: 'Активы ещё не добавлены.',
-    termsError: 'Подтвердите наличие разрешения и добавьте хотя бы один актив, чтобы продолжить.',
-    roeText: 'Проверяются только активы, указанные в согласованном объёме работ. Вы подтверждаете, что владеете этими активами или имеете письменное разрешение на их проверку. Проверка начинается только после согласования объёма и сроков. Действия, способные нарушить работу систем, требуют явного одобрения.',
-    acceptTerms: 'Я подтверждаю наличие разрешения и принимаю правила проведения работ.',
-    apiMixed: 'Смешанный тип · 7 000€', mobileUnit: 'мобильное приложение', repoUnit: 'репозиторий',
-    ports: 'Порты (через запятую)'
-  },
-  zh: {
-    oneTimeSub: '深度单次审计 · 25% 折扣', subscriptionSub: '持续安全服务 · 按月 · 60% 折扣',
-    hosts: '主机', networks: '网络', webApps: 'Web 应用', mobileApps: '移动应用 · 开发中',
-    addHost: '+ 添加主机', addNetwork: '+ 添加网络', addApp: '+ 添加应用', addApi: '+ 添加 API', addRepo: '+ 添加仓库', remove: '移除',
-    domainIp: '域名 / IP', wildcard: '包含通配符子域名', cidr: '网络 CIDR', apiType: 'API 类型', auth: '身份验证',
-    basic: '静态网站 · 4,000€', dashboard: '管理面板 · 7,000€', pro: '专业应用 · 12,000€',
-    appName: '应用名称 / URL', quantity: '仓库数量', typosquatMonitor: '仿冒域名监控',
-    contactTitle: '联系信息', fullName: '姓名', email: '电子邮箱', company: '公司',
-    hostUnit: '主机', networkUnit: '网络', webUnit: 'Web 应用', apiUnit: 'API',
-    day: '天', days: '天', weeks: '周', authNone: '无需身份验证', authBearer: 'Bearer 令牌',
-    repositories: '代码仓库', delivery: '预计交付时间', roeTitle: '测试规则',
-    roeText: '测试仅限于双方约定范围内列出的资产。您确认自己拥有这些资产，或已获得书面测试授权。双方确认测试范围和时间安排后才会开始测试。可能影响生产环境的活动必须事先获得明确批准。',
-    acceptTerms: '我确认已获得授权并同意测试规则。', investment: '预计费用',
-    annualSavings: '预计年度节省', repoType: '仓库范围', singleRepo: '单个仓库 · 2,500€',
-    orgRepos: '组织 · 每个 6,000€', repoName: '仓库 / 组织',
-    leakedCredentials: '泄露的凭据', doxxingCheck: '个人信息暴露检查', emptyAssets: '尚未添加资产。',
-    termsError: '请确认已获得授权并至少添加一项资产，然后继续。', platform: '平台', apiMixed: '混合 · 7,000€',
-    authApiKey: 'API 密钥', authCustom: '自定义', mobileUnit: '移动应用', repoUnit: '仓库'
-  },
-  ar: {
-    subscriptionDesc: 'خيار شهري يشمل المراقبة المستمرة والفحوص الآلية الأسبوعية والتنبيهات الفورية.',
-    authScope: 'اتفق أولاً على النطاق المصرح به وقواعد الاختبار.', listedAssets: 'اختبر الأصول المدرجة صراحةً ضمن ذلك النطاق فقط.',
-    estimateBefore: 'راجع الجهد والتكلفة التقديريين قبل المتابعة.', supportTitle: 'ادعم عملي', supportText: 'إذا أعجبك العمل مفتوح المصدر، يمكنك دعمه بمساهمة.',
-    oneTimeSub: 'تدقيق معمق لمرة واحدة · خصم 25٪', subscriptionSub: 'أمن مستمر · شهرياً · خصم 60٪',
-    apis: 'أمن واجهات API', email: 'البريد الإلكتروني', perMonth: 'شهرياً',
-    day: 'يوم', days: 'أيام', weeks: 'أسابيع', webUnit: 'تطبيق ويب',
-    apiMixed: 'مختلط · 7,000€', authNone: 'دون مصادقة', authBearer: 'رمز Bearer',
-    authApiKey: 'مفتاح API', authCustom: 'مخصص',
-    serviceExposure: 'OSINT وتسريبات البيانات وانكشاف المعلومات الشخصية',
-    serviceExposureDesc: 'بحث OSINT، وفحص بيانات الاعتماد المسرّبة، ومراجعة انكشاف البيانات الشخصية، ومراقبة النطاقات المشابهة.',
+    supportTitle: 'Apoya mi trabajo',
+    supportText: 'Si te gusta el trabajo de código abierto, puedes apoyarlo con una contribución.',
+    hireTitle: 'Contrata mis servicios',
+    hireKicker: 'Alcance · presupuesto · próximos pasos',
+    hireIntro: 'Construye un alcance autorizado a continuación. Añade activos, elige una auditoría puntual o una opción de seguridad continua y revisa el presupuesto y las reglas de participación.',
+    languageLabel: 'Idioma',
+    oneTimeSub: 'Auditoría individual profunda · 25% de descuento',
+    subscriptionSub: 'Seguridad continua · mensual · 60% de descuento',
+    benefitsOne: ['Informe ejecutivo', 'Retesting de vulnerabilidades', 'Certificado de seguridad'],
+    benefitsSub: ['Monitoreo continuo', 'Escaneos automáticos semanales', 'Alertas en tiempo real'],
+    assetsTitle: 'Define el alcance autorizado',
+    assetsHint: 'Añade solo activos que poseas o para los que tengas permiso escrito para probar.',
+    hosts: 'Servidores',
+    networks: 'Redes',
+    webApps: 'Apps web',
+    apis: 'Seguridad API',
+    mobileApps: 'Apps móviles · WIP',
+    repositories: 'Repositorios de código',
+    addHost: '+ Añadir host',
+    addNetwork: '+ Añadir red',
+    addApp: '+ Añadir app',
+    addApi: '+ Añadir API',
+    addRepo: '+ Añadir repositorio',
+    remove: 'Eliminar',
+    domainIp: 'Dominio / IP',
+    ports: 'Puertos (separados por comas)',
+    wildcard: 'Incluir subdominios comodín',
+    cidr: 'CIDR de red',
+    url: 'URL',
+    complexity: 'Tamaño de la app',
+    basic: 'Estática · 4.000€',
+    dashboard: 'Panel · 7.000€',
+    pro: 'Pro · 12.000€',
+    apiType: 'Tipo de API',
+    auth: 'Autenticación',
+    platform: 'Plataforma',
+    appName: 'Nombre de la app / URL',
+    repoType: 'Alcance del repositorio',
+    singleRepo: 'Repositorio único · 2.500€',
+    orgRepos: 'Organización · 6.000€ cada una',
+    quantity: 'Número de repositorios',
+    repoName: 'Repositorio / organización',
+    addonsTitle: 'Complementos opcionales de exposición',
+    leakedCredentials: 'Credenciales filtradas',
+    doxxingCheck: 'Comprobación de exposición de datos personales',
+    typosquatMonitor: 'Monitoreo de typosquatting',
+    contactTitle: 'Tus datos',
+    fullName: 'Nombre completo',
+    email: 'Correo electrónico',
+    company: 'Empresa',
+    project: 'Proyecto',
+    estimateTitle: 'Presupuesto en vivo',
+    investment: 'Inversión estimada',
+    estimateEmpty: 'Añade activos para ver una estimación y el tiempo de entrega.',
+    delivery: 'Entrega estimada',
+    perMonth: 'al mes',
+    annualSavings: 'Ahorro anual estimado',
+    roeTitle: 'Reglas de participación',
+    roeText: 'Las pruebas se limitan a los activos listados en el alcance acordado. Confirmas la propiedad o la autorización escrita. Las pruebas comienzan solo cuando el alcance y el tiempo quedan acordados. La actividad que afecte a producción requiere aprobación explícita.',
+    acceptTerms: 'Confirmo la autorización y acepto las reglas de participación.',
+    emailScope: 'Resumen de alcance por correo',
+    emptyAssets: 'Todavía no hay activos añadidos.',
+    emailError: 'Introduce una dirección de correo válida antes de crear el borrador.',
+    termsError: 'Confirma la autorización y añade al menos un activo para continuar.',
+    emailReady: 'Tu borrador de correo está listo en tu cliente de correo. Revísalo y envíalo allí.',
+    nameRequired: 'Introduce tu nombre completo.',
+    companyRequired: 'Introduce el nombre de tu empresa.',
+    hostUnit: 'servidor',
+    networkUnit: 'red',
+    webUnit: 'app web',
+    apiUnit: 'API',
+    mobileUnit: 'app móvil',
+    repoUnit: 'repositorio',
+    day: 'día',
+    days: 'días',
+    weeks: 'semanas',
+    apiRest: 'REST · 4.000€',
+    apiGraphql: 'GraphQL · 5.500€',
+    apiGrpc: 'gRPC · 5.000€',
+    apiSoap: 'SOAP · 4.500€',
+    apiMixed: 'Mixto · 7.000€',
+    authNone: 'Sin auth',
+    authBearer: 'Token Bearer',
+    authApiKey: 'API key',
+    authOauth: 'OAuth2',
+    authCustom: 'Personalizado',
+    ios: 'iOS',
+    android: 'Android',
+    github: 'GitHub',
+    gitlab: 'GitLab',
+    bitbucket: 'Bitbucket',
+    cpts: 'CPTS · Especialista certificado en pruebas de penetración',
+    heroQuote: '“Y si no hay viento, tendremos que remar.”',
+    hard: 'Difícil',
+    insane: 'Extremo',
+    linux: 'Linux',
+    windows: 'Windows',
+    follow: 'Seguir',
+    bitcoinNetwork: 'Red Bitcoin',
+    ethereumNetwork: 'Red Ethereum',
+    solanaNetwork: 'Red Solana',
+    xrpNetwork: 'XRP Ledger (Ripple)',
+    companiesTitle: 'Empresas comprometidas',
+    bugBountyTitle: 'RECOMPENSAS POR ERRORES',
+    bugBountyIntro: 'No cobro por informes no solicitados de vulnerabilidades.',
+    bugBountyText1: 'Si encuentro un problema simple y la empresa quiere agradecerme, estoy encantado de recibir una recompensa económica.',
+    bugsFound: 'Bugs encontrados',
+    footerBrand: 'Remiotore · Seguridad ofensiva',
+    footerSafety: 'Practica de forma ética. Prueba solo con autorización.',
+    serviceWebApi: 'Revisión de seguridad de aplicaciones web y APIs',
+    serviceWebApiDesc: 'Pruebas centradas en aplicaciones web y APIs REST, GraphQL, gRPC o SOAP dentro de un alcance acordado.',
+    serviceActiveDirectory: 'Evaluación de Active Directory',
+    serviceActiveDirectoryDesc: 'Revisión autorizada de la configuración de Active Directory, seguridad de identidad y rutas de ataque comunes.',
+    serviceExposure: 'Complementos de exposición',
+    serviceExposureDesc: 'Comprobaciones de exposición de credenciales, datos personales y monitoreo de typosquatting.',
+    btc: 'BTC',
+    eth: 'ETH',
+    sol: 'SOL',
+    xrp: 'XRP',
+    cookieTitle: 'Aviso de privacidad',
+    cookieMessage: 'Este sitio no utiliza cookies de seguimiento. Solo guarda tu preferencia de idioma en el navegador.',
+    cookieClose: 'Entendido'
+};
+const fr = { ...en,
+    navProfile: 'Profil',
+    navServices: 'Services',
+    navHire: 'Engagez-moi',
+    navContact: 'Contact ↗',
+    eyebrow: 'Sécurité offensive',
+    heroTitle: 'Focalisé sur la sécurité.<br>Guidé par les systèmes.',
+    knowTitle: 'Ce que je sais',
+    knowMeta: 'Profil · pratique',
+    offerTitle: 'Ce que je fais',
+    offerMeta: 'Travail de sécurité',
+    profileTitle: 'Profil',
+    currentFocus: 'Je chasse actuellement les bugs et j’étends mes connaissances en pentesting.',
+    skillsTitle: 'Compétences et axes de travail',
+    machinesTitle: 'Machines résolues sur Hack The Box',
+    machinesName: 'Nom',
+    os: 'OS',
+    difficulty: 'Difficulté',
+    serviceTitle: 'Évaluations de sécurité concrètes',
+    engagementTitle: 'Options d’engagement',
+    oneTime: 'Pentest ponctuel',
+    oneTimeDesc: 'Audit profond et ciblé avec rapport exécutif, retest des vulnérabilités et certificat de sécurité.',
+    subscription: 'Sécurité continue',
+    subscriptionDesc: 'Option mensuelle avec surveillance continue, analyses automatiques hebdomadaires et alertes en temps réel.',
+    authScope: 'Acceptez d’abord le périmètre autorisé et les règles d’engagement.',
+    listedAssets: 'Testez uniquement les actifs explicitement inclus dans ce périmètre.',
+    estimateBefore: 'Vérifiez l’effort et l’investissement avant de continuer.',
+    supportTitle: 'Soutenez mon travail',
+    languageLabel: 'Langue',
+    oneTimeSub: 'Audit individuel approfondi · 25 % de réduction',
+    subscriptionSub: 'Sécurité continue · mensuel · 60 % de réduction',
+    assetsTitle: 'Définissez votre périmètre autorisé',
+    assetsHint: 'Ajoutez uniquement les actifs que vous possédez ou pour lesquels vous disposez d’une autorisation écrite pour tester.',
+    hosts: 'Hôtes',
+    networks: 'Réseaux',
+    webApps: 'Applications web',
+    apis: 'Sécurité API',
+    mobileApps: 'Applications mobiles · WIP',
+    repositories: 'Dépôts de code',
+    addHost: '+ Ajouter un hôte',
+    addNetwork: '+ Ajouter un réseau',
+    addApp: '+ Ajouter une app',
+    addApi: '+ Ajouter une API',
+    addRepo: '+ Ajouter un dépôt',
+    remove: 'Supprimer',
+    addonsTitle: 'Modules complémentaires optionnels',
+    leakedCredentials: 'Identifiants divulgués',
+    doxxingCheck: 'Vérification d’exposition de données personnelles',
+    typosquatMonitor: 'Surveillance du typosquatting',
+    contactTitle: 'Vos informations',
+    fullName: 'Nom complet',
+    email: 'E-mail',
+    company: 'Entreprise',
+    project: 'Projet',
+    estimateTitle: 'Estimation en direct',
+    investment: 'Investissement estimé',
+    estimateEmpty: 'Ajoutez des actifs pour voir une estimation et le délai de livraison.',
+    delivery: 'Livraison estimée',
+    perMonth: 'par mois',
+    annualSavings: 'Économie annuelle estimée',
+    roeTitle: 'Règles d’engagement',
+    roeText: 'Les tests sont limités aux actifs listés dans le périmètre convenu. Vous confirmez la propriété ou une autorisation écrite. Les tests ne commencent qu’une fois le périmètre et le calendrier acceptés. Toute activité perturbatrice pour la production nécessite une approbation explicite.',
+    acceptTerms: 'Je confirme l’autorisation et j’accepte les règles d’engagement.',
+    emailScope: 'Résumé du périmètre par e-mail',
+    emptyAssets: 'Aucun actif ajouté pour le moment.',
+    emailError: 'Saisissez une adresse e-mail valide avant de créer le brouillon.',
+    termsError: 'Confirmez l’autorisation et ajoutez au moins un actif pour continuer.',
+    emailReady: 'Votre brouillon est prêt dans votre client de messagerie. Vérifiez-le puis envoyez-le.',
+    nameRequired: 'Saisissez votre nom complet.',
+    companyRequired: 'Saisissez le nom de votre entreprise.',
+    hostUnit: 'hôte',
+    networkUnit: 'réseau',
+    webUnit: 'app web',
+    apiUnit: 'API',
+    mobileUnit: 'app mobile',
+    repoUnit: 'dépôt',
+    day: 'jour',
+    days: 'jours',
+    weeks: 'semaines',
+    footerBrand: 'Remiotore · Sécurité offensive',
+    footerSafety: 'Travaillez de manière éthique. Testez uniquement avec autorisation.',
+    configureTitle: 'Préparer une mission',
+    configureDesc: 'Choisissez des réseaux, hôtes, applications web, API, applications mobiles et dépôts ; sélectionnez un test ponctuel ou mensuel, puis consultez votre estimation en direct.',
+    configurePrompt: 'Prêt à définir un périmètre ?',
+    configurePromptSub: 'Examinez vos actifs et générez un résumé du périmètre.',
+    estimateDisclaimer: 'Cette estimation est indicative. Les tests nécessitent une autorisation écrite et des règles d’engagement convenues. Le brouillon s’ouvre dans votre messagerie et n’est pas envoyé automatiquement.',
+    hireTitle: 'Faire appel à mes services',
+    hireKicker: 'Périmètre · estimation · prochaines étapes',
+    hireIntro: 'Définissez ci-dessous un périmètre de test autorisé. Ajoutez les actifs, choisissez un audit ponctuel ou une option de sécurité continue, puis consultez l’estimation et les règles d’engagement.',
+    scopeButton: 'Accéder au générateur de périmètre ↓',
+    serviceCode: 'Audit de dépôt de code',
+    serviceCodeDesc: 'Audit de sécurité de dépôts individuels ou d’un périmètre organisationnel convenu.',
+    serviceExposure: 'Options de surveillance de l’exposition',
+    serviceExposureDesc: 'Vérification de l’exposition d’identifiants et de données personnelles, et surveillance du typosquattage.',
+    serviceMobile: 'Tests d’applications mobiles',
+    serviceMobileDesc: 'Planification d’évaluations iOS et Android ; fonctionnalité actuellement en cours de développement.',
+    serviceNetwork: 'Tests réseau et hôtes',
+    serviceNetworkDesc: 'Examen des adresses IP, domaines, hôtes et plages réseau autorisés.',
+    totalMachines: 'Machines*',
+    bitcoinNetwork: 'Réseau Bitcoin',
+    btc: 'BTC',
+    bugBountyTitle: 'PROGRAMME DE RÉCOMPENSES',
+    bugBountyIntro: 'Je ne facture pas les signalements de vulnérabilités non sollicités.',
+    bugBountyText1: 'Si je découvre un problème simple et que l’entreprise souhaite me remercier, je suis heureux d’accepter une récompense adaptée à la valeur de la découverte.',
+    cookieTitle: 'Avis de confidentialité',
+    cookieMessage: 'Ce site n’utilise pas de cookies de suivi. Il enregistre uniquement votre préférence linguistique dans votre navigateur.',
+    cookieClose: 'Compris',
+    cpts: 'CPTS · Spécialiste certifié en tests d’intrusion',
+    eth: 'ETH',
+    ethereumNetwork: 'Réseau Ethereum',
+    follow: 'Suivre',
+    heroQuote: '« S’il n’y a pas de vent, il faudra ramer. »',
+    linux: 'Linux',
+    serviceActiveDirectory: 'Évaluation d’Active Directory',
+    serviceActiveDirectoryDesc: 'Examen autorisé de la configuration Active Directory, de la sécurité des identités et des chemins d’attaque courants.',
+    serviceWebApi: 'Audit de sécurité des applications web et des API',
+    serviceWebApiDesc: 'Tests ciblés des applications web et des API REST, GraphQL, gRPC ou SOAP dans un périmètre convenu.',
+    sol: 'SOL',
+    solanaNetwork: 'Réseau Solana',
+    windows: 'Windows',
+    xrp: 'XRP',
+    xrpNetwork: 'XRP Ledger (Ripple)',
+    footerBrand: 'Remiotore · Sécurité offensive',
+    heroIntro: 'Un aperçu de mes connaissances et de mes réalisations, ainsi que des services de sécurité que je propose.',
+    easy: 'Facile',
+    medium: 'Moyen',
+    hardInsane: 'Difficile / extrême',
+    machineFootnote: '*Les totaux correspondent aux statistiques de profil indiquées.',
+    resourcesTitle: 'Notes de terrain et références',
+    cheatsheet: 'Aide-mémoire de pentest',
+    cheatsheetDesc: 'Commandes et notes méthodologiques',
+    workflow: 'Diagramme du processus de pentest',
+    workflowDesc: 'Vue d’ensemble du déroulement d’une mission',
+    serviceWeb: 'Tests d’applications web',
+    serviceWebDesc: 'Évaluation ciblée d’applications web, des sites simples aux tableaux de bord complexes.',
+    serviceApi: 'Audit de sécurité des API',
+    serviceApiDesc: 'Évaluation d’API REST, GraphQL, gRPC, SOAP ou mixtes avec un périmètre d’authentification convenu.',
+    supportText: 'Si vous appréciez le travail open source, vous pouvez le soutenir par une contribution.',
+    benefitsOne: ['Rapport exécutif', 'Nouveau test des vulnérabilités', 'Certificat de sécurité'],
+    benefitsSub: ['Surveillance continue', 'Analyses automatisées hebdomadaires', 'Alertes en temps réel'],
+    domainIp: 'Domaine / adresse IP',
+    ports: 'Ports (séparés par des virgules)',
+    wildcard: 'Inclure les sous-domaines génériques',
+    cidr: 'Bloc réseau CIDR',
+    url: 'Adresse URL',
+    complexity: 'Taille de l’application',
+    basic: 'Statique · 4 000 €',
+    dashboard: 'Tableau de bord · 7 000 €',
+    pro: 'Pro · 12 000 €',
+    apiType: 'Type d’API',
+    auth: 'Authentification',
+    platform: 'Plateforme',
+    appName: 'Nom de l’application / URL',
+    repoType: 'Périmètre du dépôt',
+    singleRepo: 'Dépôt unique · 2 500 €',
+    orgRepos: 'Organisation · 6 000 € chacun',
+    quantity: 'Nombre de dépôts',
+    repoName: 'Dépôt / organisation',
+    apiRest: 'REST · 4 000 €',
+    apiGraphql: 'GraphQL · 5 500 €',
+    apiGrpc: 'gRPC · 5 000 €',
+    apiSoap: 'SOAP · 4 500 €',
+    apiMixed: 'Mixte · 7 000 €',
+    authNone: 'Aucune',
+    authBearer: 'Jeton Bearer',
+    authApiKey: 'Clé API',
+    authOauth: 'OAuth2',
+    authCustom: 'Personnalisée',
+    ios: 'iOS',
+    android: 'Android',
+    github: 'GitHub',
+    gitlab: 'GitLab',
+    bitbucket: 'Bitbucket'
+};
+const ru = { ...en,
+    navProfile: 'Профиль',
+    navServices: 'Услуги',
+    navHire: 'Связаться',
+    navContact: 'Контакты ↗',
+    eyebrow: 'Офensive security',
+    heroTitle: 'С ориентацией на безопасность.<br>Системный подход.',
+    knowTitle: 'Что я знаю',
+    knowMeta: 'Профиль · практика',
+    offerTitle: 'Что я делаю',
+    offerMeta: 'Работа по безопасности',
+    profileTitle: 'Профиль',
+    currentFocus: 'Сейчас занимаюсь bounty и расширяю знания в pentesting.',
+    skillsTitle: 'Навыки и области работы',
+    machinesTitle: 'Решённые машины Hack The Box',
+    machinesName: 'Имя',
+    os: 'ОС',
+    difficulty: 'Сложность',
+    serviceTitle: 'Практические оценки безопасности',
+    engagementTitle: 'Варианты engagement',
+    oneTime: 'Разовый pentest',
+    oneTimeDesc: 'Глубокий аудит с индивидуальным scope, executive report, повторной проверкой и сертификатом.',
+    subscription: 'Непрерывная безопасность',
+    subscriptionDesc: 'Ежемесячный вариант с постоянным мониторингом, еженедельными автоматическими сканами и оповещениями в реальном времени.',
+    authScope: 'Сначала согласуйте допустимый scope и правила engagement.',
+    listedAssets: 'Проверяйте только активы, явно включённые в этот scope.',
+    estimateBefore: 'Проверьте объём работ и инвестиции перед продолжением.',
+    supportTitle: 'Поддержите мою работу',
+    languageLabel: 'Язык',
+    oneTimeSub: 'Глубокий индивидуальный аудит · 25% скидка',
+    subscriptionSub: 'Непрерывная безопасность · ежемесячно · 60% скидка',
+    assetsTitle: 'Определите допустимый scope',
+    assetsHint: 'Добавляйте только активы, которыми вы владеете или имеете письменное разрешение на тестирование.',
+    hosts: 'Хосты',
+    networks: 'Сети',
+    webApps: 'Веб-приложения',
+    apis: 'Безопасность API',
+    mobileApps: 'Мобильные приложения · WIP',
+    repositories: 'Кодовые репозитории',
+    addHost: '+ Добавить хост',
+    addNetwork: '+ Добавить сеть',
+    addApp: '+ Добавить app',
+    addApi: '+ Добавить API',
+    addRepo: '+ Добавить репозиторий',
+    remove: 'Удалить',
+    addonsTitle: 'Дополнительные опции экспозиции',
+    leakedCredentials: 'Утекшие учетные данные',
+    doxxingCheck: 'Проверка утечки персональных данных',
+    typosquatMonitor: 'Мониторинг typosquatting',
+    contactTitle: 'Ваши данные',
+    fullName: 'Полное имя',
+    email: 'Электронная почта',
+    company: 'Компания',
+    project: 'Проект',
+    estimateTitle: 'Прямая оценка',
+    investment: 'Оценочная стоимость',
+    estimateEmpty: 'Добавьте активы, чтобы увидеть оценку и срок поставки.',
+    delivery: 'Ожидаемая доставка',
+    perMonth: 'в месяц',
+    annualSavings: 'Ожидаемая годовая экономия',
+    roeTitle: 'Правила engagement',
+    roeText: 'Тестирование ограничено активами, перечисленными в согласованном scope. Вы подтверждаете владение или письменное разрешение. Тестирование начинается только после согласования scope и тайминга. Любая деятельность, нарушающая production, требует явного одобрения.',
+    acceptTerms: 'Подтверждаю авторизацию и принимаю правила engagement.',
+    emailScope: 'Сводка scope по электронной почте',
+    emptyAssets: 'Пока нет добавленных активов.',
+    emailError: 'Введите корректный адрес электронной почты перед созданием черновика.',
+    termsError: 'Подтвердите авторизацию и добавьте хотя бы один актив, чтобы продолжить.',
+    emailReady: 'Ваш черновик готов в почтовом клиенте. Проверьте его и отправьте.',
+    nameRequired: 'Введите своё полное имя.',
+    companyRequired: 'Введите название компании.',
+    hostUnit: 'хост',
+    networkUnit: 'сеть',
+    webUnit: 'веб-приложение',
+    apiUnit: 'API',
+    mobileUnit: 'мобильное приложение',
+    repoUnit: 'репозиторий',
+    day: 'день',
+    days: 'дней',
+    weeks: 'недель',
+    footerBrand: 'Remiotore · Офensive security',
+    footerSafety: 'Практикуйте этику. Тестируйте только с авторизацией.',
+    configureTitle: 'Настройте проверку безопасности',
+    configureDesc: 'Выберите сети, хосты, веб-приложения, API, мобильные приложения и репозитории; укажите разовое или ежемесячное тестирование и просмотрите предварительную оценку.',
+    configurePrompt: 'Готовы определить scope?',
+    configurePromptSub: 'Проверьте активы и сформируйте сводку scope.',
+    estimateDisclaimer: 'Оценка является предварительной. Для тестирования нужны письменное разрешение и согласованные правила. Черновик откроется в почтовом приложении и не будет отправлен автоматически.',
+    hireTitle: 'Заказать услуги',
+    hireKicker: 'Scope · оценка · следующие шаги',
+    hireIntro: 'Определите ниже разрешённый scope тестирования. Добавьте активы, выберите разовый аудит или постоянную защиту и ознакомьтесь с оценкой и правилами проведения работ.',
+    scopeButton: 'Перейти к настройке scope ↓',
+    serviceCode: 'Аудит репозитория',
+    serviceCodeDesc: 'Проверка безопасности отдельных репозиториев или согласованного объёма организации.',
+    serviceExposure: 'Дополнительный мониторинг утечек',
+    serviceExposureDesc: 'Проверка утечек учётных данных и персональных данных, а также мониторинг тайпсквоттинга.',
+    serviceMobile: 'Тестирование мобильных приложений',
+    serviceMobileDesc: 'Планирование проверок iOS и Android; сейчас направление в разработке.',
+    serviceNetwork: 'Тестирование сетей и хостов',
+    serviceNetworkDesc: 'Проверка разрешённых IP-адресов, доменов, хостов и сетевых диапазонов.',
+    totalMachines: 'Машины*',
+    bitcoinNetwork: 'Сеть Bitcoin',
+    btc: 'BTC',
+    bugBountyTitle: 'ВОЗНАГРАЖДЕНИЕ ЗА УЯЗВИМОСТИ',
+    bugBountyIntro: 'Я не беру плату за unsolicited-отчёты об уязвимостях.',
+    bugBountyText1: 'Если я обнаружу простую проблему и компания захочет поблагодарить меня, я буду рад вознаграждению, соответствующему ценности находки.',
+    cookieTitle: 'Уведомление о конфиденциальности',
+    cookieMessage: 'Сайт не использует отслеживающие cookie. В браузере сохраняется только выбранный язык.',
+    cookieClose: 'Понятно',
+    cpts: 'CPTS · Сертифицированный специалист по тестированию на проникновение',
+    eth: 'ETH',
+    ethereumNetwork: 'Сеть Ethereum',
+    follow: 'Подписаться',
+    heroQuote: '«Если нет ветра, придётся грести».',
+    linux: 'Linux',
+    serviceActiveDirectory: 'Оценка безопасности Active Directory',
+    serviceActiveDirectoryDesc: 'Разрешённая проверка конфигурации Active Directory, защиты учётных записей и распространённых путей атаки.',
+    serviceWebApi: 'Проверка безопасности веб-приложений и API',
+    serviceWebApiDesc: 'Целевое тестирование веб-приложений и API REST, GraphQL, gRPC или SOAP в согласованных границах.',
+    sol: 'SOL',
+    solanaNetwork: 'Сеть Solana',
+    windows: 'Windows',
+    xrp: 'XRP',
+    xrpNetwork: 'XRP Ledger (Ripple)',
+    footerBrand: 'Remiotore · Наступательная безопасность',
+    heroIntro: 'Краткий обзор моих знаний и проектов, а также предлагаемых мной услуг в сфере безопасности.',
+    easy: 'Лёгкая',
+    medium: 'Средняя',
+    hardInsane: 'Сложная / экстремальная',
+    machineFootnote: '*Количество соответствует указанной статистике профиля.',
+    resourcesTitle: 'Практические заметки и материалы',
+    cheatsheet: 'Шпаргалка по пентесту',
+    cheatsheetDesc: 'Команды и заметки по методологии',
+    workflow: 'Схема процесса пентеста',
+    workflowDesc: 'Обзор этапов проведения проверки',
+    serviceWeb: 'Тестирование веб-приложений',
+    serviceWebDesc: 'Целевая проверка веб-приложений — от простых сайтов до сложных панелей управления.',
+    serviceApi: 'Аудит безопасности API',
+    serviceApiDesc: 'Проверка REST, GraphQL, gRPC, SOAP или смешанных API с согласованным объёмом проверки аутентификации.',
+    supportText: 'Если вам нравится моя работа с открытым исходным кодом, вы можете поддержать её пожертвованием.',
+    benefitsOne: ['Итоговый отчёт для руководства', 'Повторная проверка уязвимостей', 'Сертификат безопасности'],
+    benefitsSub: ['Непрерывный мониторинг', 'Еженедельное автоматическое сканирование', 'Оповещения в реальном времени'],
+    domainIp: 'Домен / IP-адрес',
+    ports: 'Порты (через запятую)',
+    wildcard: 'Включить поддомены по маске',
+    cidr: 'Сеть в формате CIDR',
+    url: 'URL-адрес',
+    complexity: 'Размер приложения',
+    basic: 'Статическое · 4 000 €',
+    dashboard: 'Панель управления · 7 000 €',
+    pro: 'Профессиональное · 12 000 €',
+    apiType: 'Тип API',
+    auth: 'Аутентификация',
+    platform: 'Платформа',
+    appName: 'Название приложения / URL',
+    repoType: 'Объём репозитория',
+    singleRepo: 'Один репозиторий · 2 500 €',
+    orgRepos: 'Организация · 6 000 € за каждый',
+    quantity: 'Количество репозиториев',
+    repoName: 'Репозиторий / организация',
+    apiRest: 'REST · 4 000 €',
+    apiGraphql: 'GraphQL · 5 500 €',
+    apiGrpc: 'gRPC · 5 000 €',
+    apiSoap: 'SOAP · 4 500 €',
+    apiMixed: 'Смешанный · 7 000 €',
+    authNone: 'Без авторизации',
+    authBearer: 'Токен Bearer',
+    authApiKey: 'Ключ API',
+    authOauth: 'OAuth2',
+    authCustom: 'Пользовательская',
+    ios: 'iOS',
+    android: 'Android',
+    github: 'GitHub',
+    gitlab: 'GitLab',
+    bitbucket: 'Bitbucket'
+};
+const zh = { ...en,
+    navProfile: '个人资料',
+    navServices: '服务',
+    navHire: '雇用我',
+    navContact: '联系 ↗',
+    eyebrow: '进攻性安全',
+    heroTitle: '以安全为核心。<br>以系统为驱动。',
+    knowTitle: '我所了解的',
+    knowMeta: '简介 · 实践',
+    offerTitle: '我所做的',
+    offerMeta: '安全工作',
+    profileTitle: '简介',
+    currentFocus: '目前正在做漏洞赏金并扩展我的渗透测试知识。',
+    skillsTitle: '技能与重点领域',
+    machinesTitle: '已解决的 Hack The Box 机器',
+    machinesName: '名称',
+    os: '操作系统',
+    difficulty: '难度',
+    serviceTitle: '实用安全评估',
+    engagementTitle: '合作方式',
+    oneTime: '一次性渗透测试',
+    oneTimeDesc: '深入、单独限定范围的审计，包括执行报告、漏洞重测和安全证书。',
+    subscription: '持续安全',
+    subscriptionDesc: '月度方案，包含持续监控、每周自动扫描和实时告警。',
+    authScope: '先确认授权范围和规则。',
+    listedAssets: '仅测试明确包含在该范围内的资产。',
+    estimateBefore: '在继续前确认工作量和投入。',
+    supportTitle: '支持我的工作',
+    languageLabel: '语言',
+    oneTimeSub: '深度个人审计 · 25% 折扣',
+    subscriptionSub: '持续安全 · 每月 · 60% 折扣',
+    assetsTitle: '定义授权范围',
+    assetsHint: '仅添加您拥有或已获得书面授权测试的资产。',
+    hosts: '主机',
+    networks: '网络',
+    webApps: 'Web 应用',
+    apis: 'API 安全',
+    mobileApps: '移动应用 · WIP',
+    repositories: '代码仓库',
+    addHost: '+ 添加主机',
+    addNetwork: '+ 添加网络',
+    addApp: '+ 添加应用',
+    addApi: '+ 添加 API',
+    addRepo: '+ 添加仓库',
+    remove: '移除',
+    addonsTitle: '可选曝光附加项',
+    leakedCredentials: '已泄露凭据',
+    doxxingCheck: '个人数据暴露检查',
+    typosquatMonitor: '仿冒域名监控',
+    contactTitle: '您的信息',
+    fullName: '全名',
+    email: '电子邮件',
+    company: '公司',
+    project: '项目',
+    estimateTitle: '实时估算',
+    investment: '预计投入',
+    estimateEmpty: '添加资产以查看估算和交付时间。',
+    delivery: '预计交付',
+    perMonth: '每月',
+    annualSavings: '预计年度节省',
+    roeTitle: '合作规则',
+    roeText: '测试仅限于已商定范围内列出的资产。您确认拥有这些资产或持有书面授权。只有在范围和时间安排一致后才开始测试。任何会影响生产的活动都需要明确批准。',
+    acceptTerms: '我确认已授权并接受合作规则。',
+    emailScope: '通过电子邮件发送范围摘要',
+    emptyAssets: '尚未添加任何资产。',
+    emailError: '在创建草稿前请输入有效电子邮件地址。',
+    termsError: '确认授权并至少添加一个资产后再继续。',
+    emailReady: '您的邮件草稿已在邮箱应用中准备好。请检查并发送。',
+    nameRequired: '请输入您的姓名。',
+    companyRequired: '请输入公司名称。',
+    hostUnit: '主机',
+    networkUnit: '网络',
+    webUnit: 'Web 应用',
+    apiUnit: 'API',
+    mobileUnit: '移动应用',
+    repoUnit: '仓库',
+    day: '天',
+    days: '天',
+    weeks: '周',
+    footerBrand: 'Remiotore · 进攻性安全',
+    footerSafety: '遵守道德规范。仅在获得授权时进行测试。',
+    configureTitle: '配置安全测试项目',
+    configureDesc: '选择网络、主机、Web 应用、API、移动应用和代码仓库；选择单次或月度测试，并查看实时估算。',
+    configurePrompt: '准备好定义测试范围了吗？',
+    configurePromptSub: '检查您的资产并生成范围摘要。',
+    estimateDisclaimer: '此估算仅供参考。测试需要书面授权并事先约定规则。邮件草稿会在您的邮件应用中打开，不会自动发送。',
+    hireTitle: '聘请我的服务',
+    hireKicker: '范围 · 估算 · 后续步骤',
+    hireIntro: '在下方定义已获授权的测试范围。添加资产，选择单次审计或持续安全服务，然后查看估算和合作规则。',
+    scopeButton: '前往范围配置器 ↓',
+    serviceCode: '代码仓库审查',
+    serviceCodeDesc: '对单个代码仓库或经双方确认的组织范围进行安全审查。',
+    serviceExposure: '暴露风险附加服务',
+    serviceExposureDesc: '检查凭据和个人数据泄露，并监控仿冒域名。',
+    serviceMobile: '移动应用测试',
+    serviceMobileDesc: '规划 iOS 和 Android 评估；此服务目前仍在开发中。',
+    serviceNetwork: '网络与主机测试',
+    serviceNetworkDesc: '审查已获批准的 IP、域名、主机和网络范围。',
+    totalMachines: '已完成机器*',
+    bitcoinNetwork: 'Bitcoin 网络',
+    btc: 'BTC',
+    bugBountyTitle: '漏洞赏金',
+    bugBountyIntro: '我不会对未经请求的漏洞报告收费。',
+    bugBountyText1: '如果我发现一个简单问题，而公司希望表达感谢，我很乐意根据发现的价值接受奖励。',
+    cookieTitle: '隐私提示',
+    cookieMessage: '本站不使用跟踪 Cookie，只会在您的浏览器中保存语言偏好。',
+    cookieClose: '知道了',
+    cpts: 'CPTS · 认证渗透测试专家',
+    eth: 'ETH',
+    ethereumNetwork: 'Ethereum 网络',
+    follow: '关注',
+    heroQuote: '“如果没有风，我们就划船前进。”',
+    linux: 'Linux',
+    serviceActiveDirectory: 'Active Directory 安全评估',
+    serviceActiveDirectoryDesc: '经授权审查 Active Directory 配置、身份安全和常见攻击路径。',
+    serviceWebApi: 'Web 应用与 API 安全审查',
+    serviceWebApiDesc: '在约定范围内，对 Web 应用以及 REST、GraphQL、gRPC 或 SOAP API 进行专项测试。',
+    sol: 'SOL',
+    solanaNetwork: 'Solana 网络',
+    windows: 'Windows',
+    xrp: 'XRP',
+    xrpNetwork: 'XRP Ledger（Ripple）',
+    footerBrand: 'Remiotore · 进攻性安全',
+    heroIntro: '了解我的知识与实践成果，以及我所提供的安全服务。',
+    easy: '简单',
+    medium: '中等',
+    hardInsane: '困难 / 极难',
+    machineFootnote: '*机器数量与所列个人资料统计一致。',
+    resourcesTitle: '实战笔记与参考资料',
+    cheatsheet: '渗透测试速查表',
+    cheatsheetDesc: '命令与方法说明',
+    workflow: '渗透测试流程图',
+    workflowDesc: '测试项目流程概览',
+    serviceWeb: 'Web 应用测试',
+    serviceWebDesc: '针对 Web 应用进行评估，范围从简单网站到复杂控制台。',
+    serviceApi: 'API 安全审查',
+    serviceApiDesc: '根据约定的认证范围评估 REST、GraphQL、gRPC、SOAP 或混合 API。',
+    supportText: '如果您喜欢我的开源项目，可以通过捐助支持这项工作。',
+    benefitsOne: ['管理层报告', '漏洞复测', '安全证书'],
+    benefitsSub: ['持续监控', '每周自动扫描', '实时告警'],
+    domainIp: '域名 / IP 地址',
+    ports: '端口（以逗号分隔）',
+    wildcard: '包含通配符子域名',
+    cidr: 'CIDR 网络',
+    url: '网址',
+    complexity: '应用规模',
+    basic: '静态网站 · 4,000€',
+    dashboard: '控制台 · 7,000€',
+    pro: '专业版 · 12,000€',
+    apiType: 'API 类型',
+    auth: '身份验证',
+    platform: '平台',
+    appName: '应用名称 / 网址',
+    repoType: '代码仓库范围',
+    singleRepo: '单个仓库 · 2,500€',
+    orgRepos: '组织 · 每个 6,000€',
+    quantity: '仓库数量',
+    repoName: '仓库 / 组织',
+    apiRest: 'REST · 4,000€',
+    apiGraphql: 'GraphQL · 5,500€',
+    apiGrpc: 'gRPC · 5,000€',
+    apiSoap: 'SOAP · 4,500€',
+    apiMixed: '混合 · 7,000€',
+    authNone: '无身份验证',
+    authBearer: 'Bearer 令牌',
+    authApiKey: 'API 密钥',
+    authOauth: 'OAuth2',
+    authCustom: '自定义',
+    ios: 'iOS',
+    android: 'Android',
+    github: 'GitHub',
+    gitlab: 'GitLab',
+    bitbucket: 'Bitbucket'
+};
+const ar = { ...en,
+    navProfile: 'الملف الشخصي',
+    navServices: 'الخدمات',
+    navHire: 'وظفني',
+    navContact: 'تواصل ↗',
+    eyebrow: 'الأمن الهجومي',
+    heroTitle: 'موجه نحو الأمان.<br>مدفوع بالنظم.',
+    knowTitle: 'ماذا أعرف',
+    knowMeta: 'الملف الشخصي · الممارسة',
+    offerTitle: 'ماذا أفعل',
+    offerMeta: 'أعمال الأمان',
+    profileTitle: 'الملف الشخصي',
+    currentFocus: 'أقوم حاليًا بالصيد عن الثغرات وتوسيع معرفتي بالاختبارات الأمنية.',
+    skillsTitle: 'المهارات ومجالات التركيز',
+    machinesTitle: 'الآلات المحلولة في Hack The Box',
+    machinesName: 'الاسم',
+    os: 'نظام التشغيل',
+    difficulty: 'الصعوبة',
+    serviceTitle: 'تقييمات الأمان العملية',
+    engagementTitle: 'خيارات التعاقد',
+    oneTime: 'اختبار اختراق لمرة واحدة',
+    oneTimeDesc: 'تدقيق عميق ومحدد بشكل فردي مع تقرير تنفيذي، إعادة اختبار ثغرات وشهادة أمنية.',
+    subscription: 'الأمان المستمر',
+    subscriptionDesc: 'خيار شهري مع مراقبة مستمرة، مسح آلي أسبوعي وتنبيهات فورية.',
+    authScope: 'اتفق أولاً على النطاق المصرح به وقواعد التعاقد.',
+    listedAssets: 'اختبر فقط الأصول المدرجة صراحةً في هذا النطاق.',
+    estimateBefore: 'راجع الجهد والاستثمار قبل المتابعة.',
+    supportTitle: 'ادعم عملي',
+    languageLabel: 'اللغة',
+    oneTimeSub: 'تدقيق فردي عميق · خصم 25%',
+    subscriptionSub: 'أمان مستمر · شهري · خصم 60%',
+    assetsTitle: 'حدّد النطاق المصرح به',
+    assetsHint: 'أضف فقط الأصول التي تمتلكها أو لديك إذن كتابي لاختبارها.',
+    hosts: 'الخوادم',
+    networks: 'الشبكات',
+    webApps: 'تطبيقات الويب',
+    apis: 'أمان واجهات برمجة التطبيقات',
+    mobileApps: 'التطبيقات المحمولة · WIP',
+    repositories: 'مستودعات التعليمات البرمجية',
+    addHost: '+ إضافة خادم',
+    addNetwork: '+ إضافة شبكة',
+    addApp: '+ إضافة تطبيق',
+    addApi: '+ إضافة API',
+    addRepo: '+ إضافة مستودع',
+    remove: 'إزالة',
+    addonsTitle: 'إضافات التعرض الاختيارية',
+    leakedCredentials: 'بيانات اعتماد مسربة',
+    doxxingCheck: 'فحص تعرض البيانات الشخصية',
+    typosquatMonitor: 'مراقبة الاسم المزيف',
+    contactTitle: 'معلوماتك',
+    fullName: 'الاسم الكامل',
+    email: 'البريد الإلكتروني',
+    company: 'الشركة',
+    project: 'المشروع',
+    estimateTitle: 'تقدير مباشر',
+    investment: 'الاستثمار المقدر',
+    estimateEmpty: 'أضف الأصول لرؤية التقدير ووقت التسليم.',
+    delivery: 'التسليم المقدر',
+    perMonth: 'شهريًا',
+    annualSavings: 'التوفير السنوي المقدر',
+    roeTitle: 'قواعد التعاقد',
+    roeText: 'يقتصر الاختبار على الأصول المدرجة في النطاق المتفق عليه. أنت تؤكد ملكيتك أو الحصول على إذن كتابي. لا يبدأ الاختبار إلا بعد اتفاق النطاق والجدول الزمني. تتطلب أي أنشطة تؤثر على الإنتاج موافقة صريحة.',
+    acceptTerms: 'أؤكد التفويض وأوافق على قواعد التعاقد.',
+    emailScope: 'ملخص النطاق عبر البريد الإلكتروني',
+    emptyAssets: 'لا توجد أصول مضافة بعد.',
+    emailError: 'أدخل عنوان بريد إلكتروني صحيح قبل إنشاء المسودة.',
+    termsError: 'أكد التفويض وأضف أصلًا واحدًا على الأقل للمتابعة.',
+    emailReady: 'مسودة البريد جاهزة في تطبيق البريد الخاص بك. راجعها ثم أرسلها.',
+    nameRequired: 'أدخل اسمك الكامل.',
+    companyRequired: 'أدخل اسم الشركة.',
+    hostUnit: 'خادم',
+    networkUnit: 'شبكة',
+    webUnit: 'تطبيق ويب',
+    apiUnit: 'واجهة برمجة',
+    mobileUnit: 'تطبيق محمول',
+    repoUnit: 'مستودع',
+    day: 'يوم',
+    days: 'أيام',
+    weeks: 'أسابيع',
+    footerBrand: 'Remiotore · الأمن الهجومي',
+    footerSafety: 'مارس الأمور بشكل أخلاقي. اختبر فقط بعد الحصول على إذن.',
+    configureTitle: 'إعداد مهمة اختبار أمني',
+    configureDesc: 'اختر الشبكات والخوادم وتطبيقات الويب وواجهات API وتطبيقات الهاتف والمستودعات؛ وحدد اختبارًا لمرة واحدة أو شهريًا، ثم راجع التقدير المباشر.',
+    configurePrompt: 'هل أنت مستعد لتحديد النطاق؟',
+    configurePromptSub: 'راجع الأصول وأنشئ ملخصًا للنطاق.',
+    estimateDisclaimer: 'هذا التقدير إرشادي فقط. يتطلب الاختبار إذنًا كتابيًا وقواعد عمل متفقًا عليها. تُفتح مسودة البريد في تطبيق البريد ولا تُرسل تلقائيًا.',
+    hireTitle: 'اطلب خدماتي',
+    hireKicker: 'النطاق · التقدير · الخطوات التالية',
+    hireIntro: 'حدّد أدناه نطاق اختبار مصرحًا به. أضف الأصول واختر تدقيقًا لمرة واحدة أو خدمة أمان مستمرة، ثم راجع التقدير وقواعد العمل.',
+    scopeButton: 'انتقل إلى إعداد النطاق ↓',
+    serviceCode: 'مراجعة المستودعات البرمجية',
+    serviceCodeDesc: 'مراجعة أمنية لمستودعات فردية أو لنطاق مؤسسة متفق عليه.',
+    serviceExposure: 'إضافات مراقبة الانكشاف',
+    serviceExposureDesc: 'فحص انكشاف بيانات الاعتماد والبيانات الشخصية ومراقبة النطاقات المقلدة.',
+    serviceMobile: 'اختبار تطبيقات الهاتف',
+    serviceMobileDesc: 'تخطيط تقييمات iOS وAndroid؛ هذه الخدمة قيد التطوير حاليًا.',
+    serviceNetwork: 'اختبار الشبكات والخوادم',
+    serviceNetworkDesc: 'مراجعة عناوين IP والنطاقات والخوادم ونطاقات الشبكة المعتمدة.',
+    totalMachines: 'الأجهزة المختبرة*',
+    bitcoinNetwork: 'شبكة Bitcoin',
+    btc: 'BTC',
+    bugBountyTitle: 'مكافآت اكتشاف الثغرات',
+    bugBountyIntro: 'لا أتقاضى رسومًا مقابل بلاغات الثغرات غير المطلوبة.',
+    bugBountyText1: 'إذا وجدت مشكلة بسيطة وأرادت الشركة شكري، فسيسعدني تلقي مكافأة تتناسب مع قيمة الاكتشاف.',
+    cookieTitle: 'إشعار الخصوصية',
+    cookieMessage: 'لا يستخدم هذا الموقع ملفات تعريف ارتباط للتتبع. يحفظ فقط تفضيل اللغة في متصفحك.',
+    cookieClose: 'حسنًا',
+    cpts: 'CPTS · أخصائي معتمد في اختبار الاختراق',
+    eth: 'ETH',
+    ethereumNetwork: 'شبكة Ethereum',
+    follow: 'تابع',
+    heroQuote: '«إن لم تهب الرياح، فعلينا أن نجدّف.»',
+    linux: 'Linux',
+    serviceActiveDirectory: 'تقييم Active Directory',
+    serviceActiveDirectoryDesc: 'مراجعة مصرح بها لإعداد Active Directory وأمن الهوية ومسارات الهجوم الشائعة.',
+    serviceWebApi: 'مراجعة أمن تطبيقات الويب وواجهات API',
+    serviceWebApiDesc: 'اختبارات مركزة لتطبيقات الويب وواجهات REST وGraphQL وgRPC وSOAP ضمن نطاق متفق عليه.',
+    sol: 'SOL',
+    solanaNetwork: 'شبكة Solana',
+    windows: 'Windows',
+    xrp: 'XRP',
+    xrpNetwork: 'دفتر XRP (Ripple)',
+    footerBrand: 'Remiotore · الأمن الهجومي',
+    heroIntro: 'لمحة عن معارفي وما أنجزته، إلى جانب خدمات الأمن التي أقدمها.',
+    easy: 'سهل',
+    medium: 'متوسط',
+    hardInsane: 'صعب / بالغ الصعوبة',
+    machineFootnote: '*تعكس الأعداد إحصاءات الملف الشخصي المذكورة.',
+    resourcesTitle: 'ملاحظات ومراجع ميدانية',
+    cheatsheet: 'ملخص اختبار الاختراق',
+    cheatsheetDesc: 'أوامر وملاحظات حول المنهجية',
+    workflow: 'مخطط سير اختبار الاختراق',
+    workflowDesc: 'نظرة عامة على مراحل المهمة',
+    serviceWeb: 'اختبار تطبيقات الويب',
+    serviceWebDesc: 'تقييم موجه لتطبيقات الويب، من المواقع البسيطة إلى لوحات التحكم المعقدة.',
+    serviceApi: 'مراجعة أمان واجهات API',
+    serviceApiDesc: 'تقييم واجهات REST أو GraphQL أو gRPC أو SOAP أو الواجهات المختلطة ضمن نطاق مصادقة متفق عليه.',
+    supportText: 'إذا أعجبك عملي مفتوح المصدر، يمكنك دعمه بمساهمة.',
+    benefitsOne: ['تقرير تنفيذي', 'إعادة اختبار الثغرات', 'شهادة أمنية'],
     benefitsSub: ['مراقبة مستمرة', 'فحوص آلية أسبوعية', 'تنبيهات فورية'],
-    assetsTitle: 'حدّد نطاق الاختبار المصرح به', assetsHint: 'أضف الأصول التي تملكها أو لديك إذن كتابي لاختبارها فقط.',
-    hosts: 'الأجهزة المضيفة', networks: 'الشبكات', webApps: 'تطبيقات الويب', mobileApps: 'تطبيقات الهاتف · قيد التطوير',
-    repositories: 'مستودعات الشيفرة', addHost: '+ إضافة جهاز', addNetwork: '+ إضافة شبكة', addApp: '+ إضافة تطبيق', addApi: '+ إضافة API', addRepo: '+ إضافة مستودع', remove: 'إزالة',
-    repoType: 'نطاق المستودع', singleRepo: 'مستودع واحد · 2,500€', orgRepos: 'مؤسسة · 6,000€ لكل مستودع', repoName: 'المستودع / المؤسسة',
-    addonsTitle: 'فحوصات الانكشاف وOSINT', leakedCredentials: 'بيانات اعتماد مسرّبة', doxxingCheck: 'فحص انكشاف البيانات الشخصية', typosquatMonitor: 'مراقبة النطاقات المنتحلة',
-    contactTitle: 'بياناتك', fullName: 'الاسم الكامل', company: 'الشركة', project: 'المشروع', estimateTitle: 'التقدير المباشر',
-    investment: 'التكلفة التقديرية', estimateEmpty: 'أضف أصولاً لعرض التكلفة والمدة التقديريتين.', delivery: 'المدة التقديرية', annualSavings: 'التوفير السنوي التقديري',
-    roeTitle: 'قواعد الاختبار', roeText: 'تقتصر الاختبارات على الأصول المدرجة في النطاق المتفق عليه. تؤكد أنك تملك هذه الأصول أو لديك إذن كتابي لاختبارها. لا يبدأ الاختبار إلا بعد الاتفاق على النطاق والجدول الزمني. تتطلب الأنشطة التي قد تعطل بيئة الإنتاج موافقة صريحة.',
-    acceptTerms: 'أؤكد حصولي على الإذن وأوافق على قواعد الاختبار.', emailScope: 'إنشاء ملخص النطاق عبر البريد الإلكتروني',
-    emptyAssets: 'لم تتم إضافة أصول بعد.', emailError: 'أدخل عنوان بريد إلكتروني صالحاً قبل إنشاء المسودة.',
-    termsError: 'أكد حصولك على الإذن وأضف أصلاً واحداً على الأقل للمتابعة.',
-    emailReady: 'المسودة جاهزة في تطبيق البريد. راجعها وأرسلها من هناك.', hostUnit: 'جهاز', networkUnit: 'شبكة',
-    mobileUnit: 'تطبيق هاتف', repoUnit: 'مستودع', platform: 'المنصة',
-    bugBountyIntro: 'لا أتقاضى أجراً مقابل تقارير الثغرات التي لم أطلبها.'
-  },
-  ko: {
-    hosts: '호스트', networks: '네트워크', webApps: '웹 앱', mobileApps: '모바일 앱 · 준비 중', repositories: '코드 저장소',
-    addHost: '+ 호스트 추가', addNetwork: '+ 네트워크 추가', addApp: '+ 앱 추가', addApi: '+ API 추가', addRepo: '+ 저장소 추가', remove: '삭제',
-    platform: '플랫폼', repoType: '저장소 범위', singleRepo: '단일 저장소 · 2,500€', orgRepos: '조직 · 저장소당 6,000€', repoName: '저장소 / 조직',
-    authCustom: '사용자 지정 인증', quantity: '저장소 수',
-    roeText: '테스트는 합의된 범위에 명시된 자산으로 제한됩니다. 해당 자산을 소유하거나 서면 테스트 승인을 받았음을 확인합니다. 범위와 일정에 합의한 후에만 테스트를 시작합니다. 운영 환경에 영향을 줄 수 있는 활동은 명시적인 승인이 필요합니다.'
-  },
-  ja: {
-    hosts: 'ホスト', networks: 'ネットワーク', webApps: 'Webアプリ', mobileApps: 'モバイルアプリ · 準備中', repositories: 'コードリポジトリ',
-    addHost: '+ ホストを追加', addNetwork: '+ ネットワークを追加', addApp: '+ アプリを追加', addApi: '+ APIを追加', addRepo: '+ リポジトリを追加', remove: '削除',
-    platform: 'プラットフォーム', email: 'メールアドレス', authApiKey: 'APIキー', orgRepos: '組織 · 1件あたり6,000€', repoName: 'リポジトリ / 組織',
-    addonsTitle: '情報露出チェック・OSINT', typosquatMonitor: '類似ドメインの監視', apiMixed: '混合 · 7,000€',
-    authNone: '認証なし', authCustom: 'カスタム認証',
-    bugBountyIntro: '依頼されていない脆弱性報告に対して料金を請求しません。',
-    currentFocus: '現在、バグバウンティに取り組みながらペネトレーションテストの知識を深めています。',
-    emailReady: 'メールアプリに下書きが用意されています。内容を確認して送信してください。'
-  }
-});
+    domainIp: 'النطاق / عنوان IP',
+    ports: 'المنافذ (مفصولة بفواصل)',
+    wildcard: 'تضمين النطاقات الفرعية العامة',
+    cidr: 'شبكة CIDR',
+    url: 'عنوان URL',
+    complexity: 'حجم التطبيق',
+    basic: 'ثابت · 4,000€',
+    dashboard: 'لوحة تحكم · 7,000€',
+    pro: 'احترافي · 12,000€',
+    apiType: 'نوع API',
+    auth: 'المصادقة',
+    platform: 'المنصة',
+    appName: 'اسم التطبيق / عنوان URL',
+    repoType: 'نطاق المستودع',
+    singleRepo: 'مستودع واحد · 2,500€',
+    orgRepos: 'مؤسسة · 6,000€ لكل مستودع',
+    quantity: 'عدد المستودعات',
+    repoName: 'المستودع / المؤسسة',
+    apiRest: 'REST · 4,000€',
+    apiGraphql: 'GraphQL · 5,500€',
+    apiGrpc: 'gRPC · 5,000€',
+    apiSoap: 'SOAP · 4,500€',
+    apiMixed: 'مختلط · 7,000€',
+    authNone: 'بدون مصادقة',
+    authBearer: 'رمز Bearer',
+    authApiKey: 'مفتاح API',
+    authOauth: 'OAuth2',
+    authCustom: 'مخصص',
+    ios: 'iOS',
+    android: 'Android',
+    github: 'GitHub',
+    gitlab: 'GitLab',
+    bitbucket: 'Bitbucket'
+};
+const languages = {
+    en,
+    es,
+    fr,
+    ru,
+    zh,
+    ar
+};
 
 Object.values(languages).forEach((locale) => {
-  delete locale.introProfile;
-  delete locale.introServices;
+    delete locale.introProfile;
+    delete locale.introServices;
 });
 
-const prices = { host: 1000, wildcard: 800, network: 7000, web_basic: 4000, web_mid: 7000, web_pro: 12000, mobile: 6000, repo_single: 2500, repo_org: 6000, api_rest: 4000, api_graphql: 5500, apiGrpc: 5000, apiSoap: 4500, apiMixed: 7000, leaked: 500, doxxing: 750, typosquat: 600 };
-const daysPer = { host: 1.5, wildcard: 1, network: 8, web_basic: 4, web_mid: 6, web_pro: 10, mobile: 7, repo: 1, api_rest: 4, api_graphql: 5, apiGrpc: 4.5, apiSoap: 4, apiMixed: 7 };
+const prices = {
+    host: 1000,
+    wildcard: 800,
+    network: 7000,
+    web_basic: 4000,
+    web_mid: 7000,
+    web_pro: 12000,
+    mobile: 6000,
+    repo_single: 2500,
+    repo_org: 6000,
+    api_rest: 4000,
+    api_graphql: 5500,
+    apiGrpc: 5000,
+    apiSoap: 4500,
+    apiMixed: 7000,
+    leaked: 500,
+    doxxing: 750,
+    typosquat: 600
+};
+const daysPer = {
+    host: 1.5,
+    wildcard: 1,
+    network: 8,
+    web_basic: 4,
+    web_mid: 6,
+    web_pro: 10,
+    mobile: 7,
+    repo: 1,
+    api_rest: 4,
+    api_graphql: 5,
+    apiGrpc: 4.5,
+    apiSoap: 4,
+    apiMixed: 7
+};
 const groups = ['host', 'network', 'web', 'api', 'mobile', 'repo'];
-const codes = { en: 'en-GB', es: 'es-ES', fr: 'fr-FR', de: 'de-DE', ru: 'ru-RU', zh: 'zh-CN', pt: 'pt-PT', it: 'it-IT', ar: 'ar-SA', ko: 'ko-KR', ja: 'ja-JP' };
+const codes = {
+    en: 'en-GB',
+    es: 'es-ES',
+    fr: 'fr-FR',
+    ru: 'ru-RU',
+    zh: 'zh-CN',
+    ar: 'ar-SA'
+};
 const contactEmail = 'remiotore@gmail.com';
-const state = { lang: 'en', mode: 'onetime', assets: Object.fromEntries(groups.map(k => [k, []])) };
+const state = {
+    lang: 'en',
+    mode: 'onetime',
+    assets: Object.fromEntries(groups.map(k => [k, []]))
+};
 const form = document.getElementById('scopeForm');
 const emailInput = form.elements.email;
 let emailValidationVisible = false;
 const tr = (key) => languages[state.lang][key] ?? en[key] ?? key;
-const safe = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const money = (n) => new Intl.NumberFormat(codes[state.lang], { maximumFractionDigits: 0 }).format(n) + '€';
+const languageSelect = document.getElementById('siteLanguage');
+const supportedLanguages = new Set(Object.keys(languages));
+
+try {
+    const savedLanguage = localStorage.getItem('siteLanguage');
+    if (supportedLanguages.has(savedLanguage)) state.lang = savedLanguage;
+} catch (_) {
+    // The page still works when browser storage is unavailable.
+}
+
+function applyTranslations() {
+    document.documentElement.lang = state.lang;
+    document.documentElement.dir = state.lang === 'ar' ? 'rtl' : 'ltr';
+    languageSelect.value = state.lang;
+
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+        element.textContent = tr(element.dataset.i18n);
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+        element.innerHTML = tr(element.dataset.i18nHtml);
+    });
+    document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+        element.setAttribute('aria-label', tr(element.dataset.i18nAriaLabel));
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+        element.setAttribute('placeholder', tr(element.dataset.i18nPlaceholder));
+    });
+}
+
+languageSelect.addEventListener('change', () => {
+    if (!supportedLanguages.has(languageSelect.value)) return;
+    state.lang = languageSelect.value;
+    applyTranslations();
+    renderBenefits();
+    renderAssets();
+    updateEstimate();
+    try {
+        localStorage.setItem('siteLanguage', state.lang);
+    } catch (_) {
+        // Keep the selected language for this page view if storage is unavailable.
+    }
+});
+
+const safe = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+} [c]));
+const money = (n) => new Intl.NumberFormat(codes[state.lang], {
+    maximumFractionDigits: 0
+}).format(n) + '€';
 let nextId = 0;
 
-function applyLanguage() {
-  const d = languages[state.lang]; document.documentElement.lang = state.lang; document.documentElement.dir = state.lang === 'ar' ? 'rtl' : 'ltr';
-  document.getElementById('siteLanguage').setAttribute('aria-label', d.languageLabel ?? 'Language');
-  document.querySelectorAll('[data-i18n]').forEach(e => { const value = d[e.dataset.i18n] ?? en[e.dataset.i18n]; if (value) e.textContent = value; });
-  document.querySelectorAll('[data-i18n-html]').forEach(e => { const value = d[e.dataset.i18nHtml] ?? en[e.dataset.i18nHtml]; if (value) e.innerHTML = value; });
-  document.querySelector('[data-skill-tags]').innerHTML = d.skillTags.map(label => `<span class="tag">${safe(label)}</span>`).join('');
-  document.querySelectorAll('.diff-easy').forEach(e => e.textContent = d.easy);
-  document.querySelectorAll('.diff-medium').forEach(e => e.textContent = d.medium);
-  document.querySelectorAll('.diff-hard').forEach(e => e.textContent = d.hard);
-  document.querySelectorAll('.diff-insane').forEach(e => e.textContent = d.insane);
-  document.getElementById('siteLanguage').value = state.lang; document.title = `${d.knowTitle} · Remiotore`;
-  document.getElementById('benefitList').innerHTML = (state.mode === 'subscription' ? d.benefitsSub : d.benefitsOne).map(x => `<span>✓ ${safe(x)}</span>`).join('');
-  renderAssets(); updateEstimate();
-}
-function inputField(group, item, field, label, value, placeholder = '', type = 'text', full = false) { return `<label class="field${full ? ' full' : ''}"><span>${safe(tr(label))}</span><input type="${type}" dir="auto" ${type === 'number' ? 'min="1"' : ''} data-group="${group}" data-id="${item.id}" data-field="${field}" value="${safe(value)}" placeholder="${safe(placeholder)}"></label>`; }
-function selectField(group, item, field, label, value, options) { return `<label class="field"><span>${safe(tr(label))}</span><select data-group="${group}" data-id="${item.id}" data-field="${field}">${options.map(([v, k]) => `<option value="${v}" ${value === v ? 'selected' : ''}>${safe(tr(k))}</option>`).join('')}</select></label>`; }
-function renderRow(g, i) {
-  const id = i.id; let fields = '';
-  if (g === 'host') fields = inputField(g, i, 'domain', 'domainIp', i.domain, 'example.com / 192.0.2.10') + inputField(g, i, 'ports', 'ports', i.ports, '80, 443, 8080') + `<label class="field check-field"><input type="checkbox" data-group="host" data-id="${id}" data-field="wildcard" ${i.wildcard ? 'checked' : ''}>${safe(tr('wildcard'))}</label>`;
-  if (g === 'network') fields = inputField(g, i, 'cidr', 'cidr', i.cidr, '192.168.0.0/24');
-  if (g === 'web') fields = inputField(g, i, 'url', 'url', i.url, 'https://example.com') + selectField(g, i, 'level', 'complexity', i.level, [['web_basic', 'basic'], ['web_mid', 'dashboard'], ['web_pro', 'pro']]);
-  if (g === 'api') fields = inputField(g, i, 'url', 'url', i.url, 'https://api.example.com') + selectField(g, i, 'level', 'apiType', i.level, [['api_rest', 'apiRest'], ['api_graphql', 'apiGraphql'], ['api_grpc', 'apiGrpc'], ['api_soap', 'apiSoap'], ['api_mixed', 'apiMixed']]) + selectField(g, i, 'auth', 'auth', i.auth, [['none', 'authNone'], ['bearer', 'authBearer'], ['apikey', 'authApiKey'], ['oauth', 'authOauth'], ['custom', 'authCustom']]);
-  if (g === 'mobile') fields = selectField(g, i, 'platform', 'platform', i.platform, [['iOS', 'ios'], ['Android', 'android']]) + inputField(g, i, 'name', 'appName', i.name, 'com.example.app');
-  if (g === 'repo') fields = selectField(g, i, 'platform', 'platform', i.platform, [['GitHub', 'github'], ['GitLab', 'gitlab'], ['Bitbucket', 'bitbucket']]) + selectField(g, i, 'level', 'repoType', i.level, [['repo_single', 'singleRepo'], ['repo_org', 'orgRepos']]) + inputField(g, i, 'quantity', 'quantity', i.quantity, '1', 'number') + inputField(g, i, 'name', 'repoName', i.name, 'user/repository');
-  return `<div class="asset-row"><div class="asset-fields">${fields}</div><button class="remove-asset" type="button" data-remove-group="${g}" data-remove-id="${id}" aria-label="${safe(tr('remove'))}">×</button></div>`;
-}
-function renderAssets() { groups.forEach(g => { document.querySelector(`[data-list="${g}"]`).innerHTML = state.assets[g].map(i => renderRow(g, i)).join(''); }); }
-function newAsset(g) { const defaults = { host: { domain: '', ports: '', wildcard: false }, network: { cidr: '' }, web: { url: '', level: 'web_basic' }, api: { url: '', level: 'api_rest', auth: 'none' }, mobile: { platform: 'iOS', name: '' }, repo: { platform: 'GitHub', level: 'repo_single', quantity: 1, name: '' } }; state.assets[g].push({ id: String(++nextId), ...defaults[g] }); renderAssets(); updateEstimate(); document.querySelector(`[data-list="${g}"] input,[data-list="${g}"] select`)?.focus(); }
-function estimate() {
-  let total = 0, effort = 0; const rows = []; const add = (g, cost, time) => { if (state.assets[g].length) { total += cost; effort += time; rows.push([g, state.assets[g].length, cost]); } };
-  const hosts = state.assets.host; add('host', hosts.reduce((s, x) => s + prices.host + (x.wildcard ? prices.wildcard : 0), 0), hosts.reduce((s, x) => s + daysPer.host + (x.wildcard ? daysPer.wildcard : 0), 0));
-  add('network', state.assets.network.length * prices.network, state.assets.network.length * daysPer.network);
-  for (const g of ['web', 'api']) add(g, state.assets[g].reduce((s, x) => s + prices[x.level], 0), state.assets[g].reduce((s, x) => s + daysPer[x.level], 0));
-  add('mobile', state.assets.mobile.length * prices.mobile, state.assets.mobile.length * daysPer.mobile);
-  const repos = state.assets.repo; add('repo', repos.reduce((s, x) => s + prices[x.level] * (x.level === 'repo_org' ? Math.max(1, +x.quantity || 1) : 1), 0), repos.reduce((s, x) => s + daysPer.repo * (x.level === 'repo_org' ? Math.max(1, +x.quantity || 1) : 1), 0));
-  const addonNames = { leaked: 'leakedCredentials', doxxing: 'doxxingCheck', typosquat: 'typosquatMonitor' }; document.querySelectorAll('[data-addon]:checked').forEach(e => { total += prices[e.dataset.addon]; rows.push([addonNames[e.dataset.addon], 1, prices[e.dataset.addon]]); }); return { total, effort: Math.ceil(effort), rows };
-}
-function updateEstimate() {
-  const x = estimate(), discount = state.mode === 'subscription' ? .6 : .25, final = Math.round(x.total * (1 - discount)); const unit = { host: 'hostUnit', network: 'networkUnit', web: 'webUnit', api: 'apiUnit', mobile: 'mobileUnit', repo: 'repoUnit' };
-  document.getElementById('estimateRows').innerHTML = x.rows.length ? x.rows.map(([g, n, c]) => `<div class="estimate-row"><span>${n} × ${safe(tr(unit[g] ?? g))}</span><strong>${money(c)}</strong></div>`).join('') : `<span>${safe(tr('emptyAssets'))}</span>`;
-  document.getElementById('basePrice').textContent = money(x.total); document.getElementById('finalPrice').textContent = money(final) + (state.mode === 'subscription' && x.total ? ` ${tr('perMonth')}` : '');
-  const meta = document.getElementById('estimateMeta'); if (!x.total) meta.textContent = tr('estimateEmpty'); else if (state.mode === 'subscription') meta.textContent = `${tr('annualSavings')}: ${money(Math.round((x.total - final) * 12))}`; else { const u = x.effort === 1 ? tr('day') : x.effort > 7 ? tr('weeks') : tr('days'); meta.textContent = `${tr('delivery')}: ${x.effort > 7 ? (x.effort / 5).toFixed(1) + ' ' + u : x.effort + ' ' + u}`; }
-  document.getElementById('emailScope').disabled = !document.getElementById('acceptTerms').checked || !x.total;
-}
-function updateEmailValidation() {
-  const invalid = emailValidationVisible && !emailInput.checkValidity();
-  emailInput.classList.toggle('is-invalid', invalid);
-  emailInput.closest('.field')?.classList.toggle('field-invalid', invalid);
-  emailInput.setAttribute('aria-invalid', String(invalid));
-}
-function urlState() { try { const d = { mode: state.mode, assets: state.assets, addons: [...document.querySelectorAll('[data-addon]:checked')].map(e => e.dataset.addon) }; const p = new URLSearchParams(location.search); p.set('d', btoa(unescape(encodeURIComponent(JSON.stringify(d))))); history.replaceState(null, '', `${location.pathname}?${p}${location.hash}`); } catch { } }
-function restore() { try { const v = new URLSearchParams(location.search).get('d'); if (!v) return; const d = JSON.parse(decodeURIComponent(escape(atob(v)))); if (['onetime', 'subscription'].includes(d.mode)) state.mode = d.mode; groups.forEach(g => { if (Array.isArray(d.assets?.[g])) state.assets[g] = d.assets[g].map(x => ({ ...x, id: String(x.id ?? ++nextId) })); }); (d.addons || []).forEach(a => { const e = document.querySelector(`[data-addon="${a}"]`); if (e) e.checked = true; }); } catch { } }
-function submit(event) {
-  event.preventDefault(); emailValidationVisible = true; updateEmailValidation(); const msg = document.getElementById('formMessage'), name = form.elements.name.value.trim(), email = emailInput.value.trim(), company = form.elements.company.value.trim();
-  if (!name) { msg.textContent = tr('nameRequired'); form.elements.name.focus(); return; }
-  if (!emailInput.checkValidity()) { msg.textContent = tr('emailError'); emailInput.focus(); return; }
-  if (!company) { msg.textContent = tr('companyRequired'); form.elements.company.focus(); return; }
-  const x = estimate(); if (!x.total || !document.getElementById('acceptTerms').checked) { msg.textContent = tr('termsError'); return; }
-  const data = { version: 1, generated_at: new Date().toISOString(), language: state.lang, modality: state.mode, client: { name: form.elements.name.value.trim(), email, company: form.elements.company.value.trim(), project: form.elements.project.value.trim() }, scope: { hosts: state.assets.host.map(h => ({ domain: h.domain, ports: h.ports.split(',').map(p => p.trim()).filter(Boolean), wildcard: h.wildcard })), networks: state.assets.network.map(n => ({ cidr: n.cidr })), web_apps: state.assets.web.map(a => ({ url: a.url, complexity: a.level })), apis: state.assets.api.map(a => ({ url: a.url, type: a.level, auth: a.auth })), mobile_apps: state.assets.mobile.map(a => ({ platform: a.platform, name: a.name })), repositories: state.assets.repo.map(a => ({ platform: a.platform, type: a.level, quantity: +a.quantity || 1, name: a.name })), addons: Object.fromEntries([...document.querySelectorAll('[data-addon]')].map(a => [a.dataset.addon, a.checked])) }, estimate: { currency: 'EUR', base_total: x.total, discount: state.mode === 'subscription' ? .6 : .25, final_total: Math.round(x.total * (state.mode === 'subscription' ? .4 : .75)), billing: state.mode === 'subscription' ? 'monthly' : 'one-time', estimated_days: x.effort } };
-  const mail = localizedEmail;
-  const subject = `${mail.subject} — ${data.client.project || data.client.company || data.client.name || email}`;
-  const body = `${mail.greeting}\n\n${mail.intro}\n\n${mail.contact}: ${email}\n${mail.name}: ${data.client.name || '—'}\n${mail.company}: ${data.client.company || '—'}\n${mail.project}: ${data.client.project || '—'}\n\n${mail.scope}:\n${JSON.stringify(data, null, 2)}\n\n${mail.authorization}\n`;
-  window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; msg.textContent = tr('emailReady');
+function renderBenefits() {
+    const benefits = state.mode === 'subscription' ? tr('benefitsSub') : tr('benefitsOne');
+    document.getElementById('benefitList').innerHTML = benefits
+        .map((benefit) => `<span>✓ ${safe(benefit)}</span>`)
+        .join('');
 }
 
-document.getElementById('siteLanguage').addEventListener('change', e => { state.lang = e.target.value; try { localStorage.setItem('remiotore-language', state.lang); } catch { } applyLanguage(); });
-emailInput.addEventListener('input', () => { emailValidationVisible = true; updateEmailValidation(); });
-emailInput.addEventListener('blur', () => { emailValidationVisible = true; updateEmailValidation(); });
-document.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', () => newAsset(b.dataset.add)));
-document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => { state.mode = b.dataset.mode; document.querySelectorAll('[data-mode]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); applyLanguage(); }));
-form.addEventListener('input', e => { const d = e.target.dataset; if (d.group && d.field) { const item = state.assets[d.group].find(x => x.id === d.id); if (item) item[d.field] = e.target.type === 'checkbox' ? e.target.checked : e.target.value; } updateEstimate(); });
-form.addEventListener('change', e => { const d = e.target.dataset; if (d.group && d.field) { const item = state.assets[d.group].find(x => x.id === d.id); if (item) item[d.field] = e.target.type === 'checkbox' ? e.target.checked : e.target.value; } updateEstimate(); urlState(); });
-form.addEventListener('click', e => { const b = e.target.closest('[data-remove-group]'); if (!b) return; state.assets[b.dataset.removeGroup] = state.assets[b.dataset.removeGroup].filter(x => x.id !== b.dataset.removeId); renderAssets(); updateEstimate(); urlState(); });
-form.addEventListener('submit', submit);
-document.getElementById('dismissCookieNotice').addEventListener('click', () => {
-  document.getElementById('cookieNotice').hidden = true;
-  try { localStorage.setItem('remiotore-cookie-notice-dismissed', 'yes'); } catch { }
+function inputField(group, item, field, label, value, placeholder = '', type = 'text', full = false) {
+    return `<label class="field${full ? ' full' : ''}"><span>${safe(tr(label))}</span>` +
+        `<input type="${type}" dir="auto" ${type === 'number' ? 'min="1" step="1"' : ''} ` +
+        `data-group="${group}" data-id="${item.id}" data-field="${field}" ` +
+        `value="${safe(value)}" placeholder="${safe(placeholder)}"></label>`;
+}
+
+function selectField(group, item, field, label, value, options) {
+    const optionMarkup = options.map(([optionValue, key]) =>
+        `<option value="${optionValue}"${value === optionValue ? ' selected' : ''}>${safe(tr(key))}</option>`
+    ).join('');
+    return `<label class="field"><span>${safe(tr(label))}</span>` +
+        `<select data-group="${group}" data-id="${item.id}" data-field="${field}">${optionMarkup}</select></label>`;
+}
+
+function renderRow(group, item) {
+    const id = safe(item.id);
+    let fields = '';
+
+    if (group === 'host') {
+        fields = inputField(group, item, 'domain', 'domainIp', item.domain, 'example.com / 192.0.2.10') +
+            inputField(group, item, 'ports', 'ports', item.ports, '80, 443, 8080') +
+            `<label class="field check-field"><input type="checkbox" data-group="host" data-id="${id}" ` +
+            `data-field="wildcard"${item.wildcard ? ' checked' : ''}><span>${safe(tr('wildcard'))}</span></label>`;
+    } else if (group === 'network') {
+        fields = inputField(group, item, 'cidr', 'cidr', item.cidr, '192.168.0.0/24');
+    } else if (group === 'web') {
+        fields = inputField(group, item, 'url', 'url', item.url, 'https://example.com') +
+            selectField(group, item, 'level', 'complexity', item.level, [
+                ['web_basic', 'basic'], ['web_mid', 'dashboard'], ['web_pro', 'pro']
+            ]);
+    } else if (group === 'api') {
+        fields = inputField(group, item, 'url', 'url', item.url, 'https://api.example.com') +
+            selectField(group, item, 'level', 'apiType', item.level, [
+                ['api_rest', 'apiRest'], ['api_graphql', 'apiGraphql'], ['apiGrpc', 'apiGrpc'],
+                ['apiSoap', 'apiSoap'], ['apiMixed', 'apiMixed']
+            ]) +
+            selectField(group, item, 'auth', 'auth', item.auth, [
+                ['none', 'authNone'], ['bearer', 'authBearer'], ['apikey', 'authApiKey'],
+                ['oauth', 'authOauth'], ['custom', 'authCustom']
+            ]);
+    } else if (group === 'mobile') {
+        fields = selectField(group, item, 'platform', 'platform', item.platform, [
+            ['iOS', 'ios'], ['Android', 'android']
+        ]) + inputField(group, item, 'name', 'appName', item.name, 'com.example.app');
+    } else if (group === 'repo') {
+        fields = selectField(group, item, 'platform', 'platform', item.platform, [
+            ['GitHub', 'github'], ['GitLab', 'gitlab'], ['Bitbucket', 'bitbucket']
+        ]) + selectField(group, item, 'level', 'repoType', item.level, [
+            ['repo_single', 'singleRepo'], ['repo_org', 'orgRepos']
+        ]) + inputField(group, item, 'quantity', 'quantity', item.quantity, '1', 'number') +
+            inputField(group, item, 'name', 'repoName', item.name, 'owner/repository');
+    }
+
+    return `<div class="asset-row"><div class="asset-fields">${fields}</div>` +
+        `<button class="remove-asset" type="button" data-remove-group="${group}" data-remove-id="${id}" ` +
+        `aria-label="${safe(tr('remove'))}" title="${safe(tr('remove'))}">×</button></div>`;
+}
+
+function renderAssets() {
+    groups.forEach((group) => {
+        const list = document.querySelector(`[data-list="${group}"]`);
+        list.innerHTML = state.assets[group].map((item) => renderRow(group, item)).join('');
+    });
+}
+
+function newAsset(group) {
+    const defaults = {
+        host: { domain: '', ports: '', wildcard: false },
+        network: { cidr: '' },
+        web: { url: '', level: 'web_basic' },
+        api: { url: '', level: 'api_rest', auth: 'none' },
+        mobile: { platform: 'iOS', name: '' },
+        repo: { platform: 'GitHub', level: 'repo_single', quantity: 1, name: '' }
+    };
+    state.assets[group].push({ id: String(++nextId), ...defaults[group] });
+    renderAssets();
+    updateEstimate();
+    document.querySelector(`[data-list="${group}"] input, [data-list="${group}"] select`)?.focus();
+}
+
+function populatedAssets() {
+    return {
+        host: state.assets.host.filter((item) => item.domain.trim()),
+        network: state.assets.network.filter((item) => item.cidr.trim()),
+        web: state.assets.web.filter((item) => item.url.trim()),
+        api: state.assets.api.filter((item) => item.url.trim()),
+        mobile: state.assets.mobile.filter((item) => item.name.trim()),
+        repo: state.assets.repo.filter((item) => item.name.trim())
+    };
+}
+
+function estimate() {
+    const assets = state.assets;
+    const completedAssets = populatedAssets();
+    const rows = [];
+    let total = 0;
+    let effort = 0;
+    let assetCount = 0;
+    const addRow = (key, items, completedItems, cost, days) => {
+        if (!items.length) return;
+        total += cost;
+        effort += days;
+        assetCount += completedItems.length;
+        rows.push([key, items.length, cost]);
+    };
+
+    const hostCost = assets.host.reduce((sum, item) => sum + prices.host + (item.wildcard ? prices.wildcard : 0), 0);
+    const hostDays = assets.host.reduce((sum, item) => sum + daysPer.host + (item.wildcard ? daysPer.wildcard : 0), 0);
+    addRow('hostUnit', assets.host, completedAssets.host, hostCost, hostDays);
+
+    addRow('networkUnit', assets.network, completedAssets.network,
+        assets.network.length * prices.network, assets.network.length * daysPer.network);
+
+    ['web', 'api'].forEach((group) => {
+        const items = assets[group];
+        const cost = items.reduce((sum, item) => sum + (prices[item.level] || 0), 0);
+        const days = items.reduce((sum, item) => sum + (daysPer[item.level] || 0), 0);
+        addRow(group === 'web' ? 'webUnit' : 'apiUnit', items, completedAssets[group], cost, days);
+    });
+
+    addRow('mobileUnit', assets.mobile, completedAssets.mobile,
+        assets.mobile.length * prices.mobile, assets.mobile.length * daysPer.mobile);
+
+    const repoCost = assets.repo.reduce((sum, item) => {
+        const quantity = item.level === 'repo_org' ? Math.max(1, parseInt(item.quantity, 10) || 1) : 1;
+        return sum + (prices[item.level] || 0) * quantity;
+    }, 0);
+    const repoDays = assets.repo.reduce((sum, item) => {
+        const quantity = item.level === 'repo_org' ? Math.max(1, parseInt(item.quantity, 10) || 1) : 1;
+        return sum + daysPer.repo * quantity;
+    }, 0);
+    addRow('repoUnit', assets.repo, completedAssets.repo, repoCost, repoDays);
+
+    const addonLabels = {
+        leaked: 'leakedCredentials',
+        doxxing: 'doxxingCheck',
+        typosquat: 'typosquatMonitor'
+    };
+    document.querySelectorAll('[data-addon]:checked').forEach((checkbox) => {
+        const price = prices[checkbox.dataset.addon];
+        total += price;
+        rows.push([addonLabels[checkbox.dataset.addon], 1, price]);
+    });
+
+    const totalRows = groups.reduce((sum, group) => sum + assets[group].length, 0);
+    return {
+        total,
+        effort: Math.ceil(effort),
+        rows,
+        assetCount,
+        incompleteCount: totalRows - assetCount
+    };
+}
+
+function updateEstimate() {
+    const result = estimate();
+    const discount = state.mode === 'subscription' ? 0.6 : 0.25;
+    const finalTotal = Math.round(result.total * (1 - discount));
+    const rows = document.getElementById('estimateRows');
+    const key = (name) => name;
+
+    rows.innerHTML = result.rows.length
+        ? result.rows.map(([label, count, cost]) =>
+            `<div class="estimate-row"><span>${count} × ${safe(tr(key(label)))}</span><strong>${money(cost)}</strong></div>`
+        ).join('')
+        : `<span>${safe(tr('emptyAssets'))}</span>`;
+
+    document.getElementById('basePrice').textContent = money(result.total);
+    document.getElementById('finalPrice').textContent = money(finalTotal) +
+        (state.mode === 'subscription' && result.total ? ` ${tr('perMonth')}` : '');
+
+    const meta = document.getElementById('estimateMeta');
+    if (!result.total) {
+        meta.textContent = tr('estimateEmpty');
+    } else if (state.mode === 'subscription') {
+        meta.textContent = `${tr('annualSavings')}: ${money((result.total - finalTotal) * 12)}`;
+    } else if (result.effort) {
+        const unit = result.effort === 1 ? tr('day') : result.effort > 7 ? tr('weeks') : tr('days');
+        const duration = result.effort > 7 ? `${(result.effort / 5).toFixed(1)} ${unit}` : `${result.effort} ${unit}`;
+        meta.textContent = `${tr('delivery')}: ${duration}`;
+    } else {
+        meta.textContent = tr('estimateEmpty');
+    }
+
+    document.getElementById('emailScope').disabled =
+        !document.getElementById('acceptTerms').checked || !result.assetCount || result.incompleteCount > 0;
+}
+
+function updateAssetField(target) {
+    const { group, id, field } = target.dataset;
+    if (!group || !field || !state.assets[group]) return;
+    const item = state.assets[group].find((asset) => asset.id === id);
+    if (item) item[field] = target.type === 'checkbox' ? target.checked : target.value;
+}
+
+function submitScope(event) {
+    event.preventDefault();
+    const message = document.getElementById('formMessage');
+    const name = form.elements.name.value.trim();
+    const email = emailInput.value.trim();
+    const company = form.elements.company.value.trim();
+    const assets = populatedAssets();
+    const result = estimate();
+
+    if (!name) {
+        message.textContent = tr('nameRequired');
+        form.elements.name.focus();
+        return;
+    }
+    if (!email || !emailInput.checkValidity()) {
+        message.textContent = tr('emailError');
+        emailValidationVisible = true;
+        emailInput.classList.add('is-invalid');
+        emailInput.closest('.field')?.classList.add('field-invalid');
+        emailInput.focus();
+        return;
+    }
+    if (!company) {
+        message.textContent = tr('companyRequired');
+        form.elements.company.focus();
+        return;
+    }
+    if (!result.assetCount || !document.getElementById('acceptTerms').checked) {
+        message.textContent = tr('termsError');
+        return;
+    }
+
+    const details = {
+        mode: state.mode,
+        contact: { name, email, company, project: form.elements.project.value.trim() },
+        scope: {
+            hosts: assets.host,
+            networks: assets.network,
+            webApplications: assets.web,
+            apis: assets.api,
+            mobileApplications: assets.mobile,
+            repositories: assets.repo,
+            addOns: [...document.querySelectorAll('[data-addon]:checked')].map((input) => input.dataset.addon)
+        },
+        estimate: {
+            currency: 'EUR',
+            base: result.total,
+            discount: state.mode === 'subscription' ? 0.6 : 0.25,
+            total: Math.round(result.total * (state.mode === 'subscription' ? 0.4 : 0.75)),
+            billing: state.mode === 'subscription' ? 'monthly' : 'one-time',
+            estimatedDays: result.effort
+        }
+    };
+    const subject = `${tr('emailScope')} — ${details.contact.project || company}`;
+    const body = `${tr('emailScope')}\n\n${JSON.stringify(details, null, 2)}\n\n${tr('roeText')}`;
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    message.textContent = tr('emailReady');
+}
+
+form.addEventListener('click', (event) => {
+    const button = event.target.closest('button');
+    if (!button) return;
+
+    if (button.matches('[data-add]')) {
+        newAsset(button.dataset.add);
+    } else if (button.matches('[data-remove-group]')) {
+        const group = button.dataset.removeGroup;
+        state.assets[group] = state.assets[group].filter((item) => item.id !== button.dataset.removeId);
+        renderAssets();
+        updateEstimate();
+    } else if (button.matches('[data-mode]')) {
+        state.mode = button.dataset.mode;
+        document.querySelectorAll('[data-mode]').forEach((modeButton) => {
+            modeButton.setAttribute('aria-pressed', String(modeButton === button));
+        });
+        renderBenefits();
+        updateEstimate();
+    }
 });
-try { const saved = localStorage.getItem('remiotore-language'); if (languages[saved]) state.lang = saved; } catch { }
-restore(); document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode))); applyLanguage();
-try { if (localStorage.getItem('remiotore-cookie-notice-dismissed') !== 'yes') document.getElementById('cookieNotice').hidden = false; } catch { document.getElementById('cookieNotice').hidden = false; }
+
+form.addEventListener('input', (event) => {
+    updateAssetField(event.target);
+    if (event.target === emailInput && emailValidationVisible) {
+        const invalid = !emailInput.checkValidity();
+        emailInput.classList.toggle('is-invalid', invalid);
+        emailInput.closest('.field')?.classList.toggle('field-invalid', invalid);
+    }
+    document.getElementById('formMessage').textContent = '';
+    updateEstimate();
+});
+
+form.addEventListener('change', (event) => {
+    updateAssetField(event.target);
+    document.getElementById('formMessage').textContent = '';
+    updateEstimate();
+});
+
+emailInput.addEventListener('blur', () => {
+    if (!emailValidationVisible) return;
+    const invalid = !emailInput.checkValidity();
+    emailInput.classList.toggle('is-invalid', invalid);
+    emailInput.closest('.field')?.classList.toggle('field-invalid', invalid);
+});
+
+form.addEventListener('submit', submitScope);
+
+document.getElementById('dismissCookieNotice').addEventListener('click', () => {
+    document.getElementById('cookieNotice').hidden = true;
+    try {
+        localStorage.setItem('cookieNoticeDismissed', 'yes');
+    } catch (_) {
+        // Dismiss for the current page view if storage is unavailable.
+    }
+});
+
+renderBenefits();
+applyTranslations();
+renderAssets();
+updateEstimate();
+try {
+    if (localStorage.getItem('cookieNoticeDismissed') !== 'yes') {
+        document.getElementById('cookieNotice').hidden = false;
+    }
+} catch (_) {
+    document.getElementById('cookieNotice').hidden = false;
+}
