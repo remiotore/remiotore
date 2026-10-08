@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Cap",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Fireflow",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Logging",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "TwoMillion",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Support",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "VariaType",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "CCTV",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Pterodactyl",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Facts",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "AirTouch",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "MonitorsFour",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Eighteen",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Conversor",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Signed",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Breach",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Job",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Imagery",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Baby",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Expressway",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "HackNet",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Delegate",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Soulmate",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Media",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Race",
+    "os": "linux",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Previous",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Lock",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "CodePartTwo",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Editor",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Era",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Redelegate",
+    "os": "windows",
+    "difficulty": "hard"
+  },
+  {
+    "name": "VulnEscape",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "VulnCicada",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Outbound",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Voleur",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Artificial",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "TombWatcher",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Fluffy",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Puppy",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "EscapeTwo",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "UnderPass",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Administrator",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Certified",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Cicada",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "BoardLight",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "SolarLab",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Pov",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Devvortex",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Hospital",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Authority",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Sau",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Snoopy",
+    "os": "linux",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Escape",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Precious",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Vessel",
+    "os": "linux",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Trick",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Scrambled",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "StreamIO",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Timelapse",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "GoodGames",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "SteamCloud",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Epsilon",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Undetected",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Paper",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Nunchucks",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Return",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Driver",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Gobox",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "BountyHunter",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Unobtainium",
+    "os": "linux",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Bucket",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Worker",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Magic",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Remote",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Sauna",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Monteverde",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Postman",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Forest",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Craft",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Writeup",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Active",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Jerry",
+    "os": "windows",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Jeeves",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Popcorn",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Silentium",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "DarkZeroReturns",
+    "os": "windows",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Bedside",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Paperwork",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "MakeSense",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Enigma",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Nimbus",
+    "os": "linux",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Checkpoint",
+    "os": "windows",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Connected",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "DevHub",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Reactor",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "SmartHire",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Helix",
+    "os": "linux",
+    "difficulty": "medium"
+  },
+  {
+    "name": "PingPong",
+    "os": "windows",
+    "difficulty": "insane"
+  },
+  {
+    "name": "Garfield",
+    "os": "windows",
+    "difficulty": "hard"
+  },
+  {
+    "name": "DanglingTree",
+    "os": "linux",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Layover",
+    "os": "linux",
+    "difficulty": "easy"
+  }
+]

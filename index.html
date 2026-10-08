@@ -160,6 +160,9 @@
     .tool-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .tool-head strong { font-size: 13px; }
     .tool .stat { margin-top: 10px; }
+    .tool-shots { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; margin: 10px 0 0; }
+    .tool-shot img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 8px; }
+    .tool-shot:hover img { border-color: var(--green); }
     .wallets { display: grid; grid-template-columns: 55px minmax(0,1fr); gap: 8px 12px; font: 11px var(--mono); }
     .wallets strong { color: var(--green); }
     .wallet-detail { display: grid; gap: 3px; min-width: 0; }
@@ -215,13 +218,14 @@
           <p class="status" data-i18n="currentFocus">Currently bug bounty hunting and expanding my pentesting knowledge.</p>
           <div class="stats" aria-label="Hack The Box progress">
             <div class="stat cert"><strong data-i18n="cpts">CPTS</strong><span>Certified Penetration Testing Specialist</span></div>
-            <div class="stat"><strong>98</strong><span data-i18n="totalMachines">Servers</span>
+            <div class="stat"><strong id="mach-total">—</strong><span data-i18n="totalMachines">Servers</span>
               <div class="stat-sub">
-                <div class="stat-sub-item"><strong>54</strong><span data-i18n="linux">Linux</span></div>
-                <div class="stat-sub-item"><strong>44</strong><span data-i18n="windows">Windows</span></div>
+                <div class="stat-sub-item"><strong id="mach-linux">—</strong><span data-i18n="linux">Linux</span></div>
+                <div class="stat-sub-item"><strong id="mach-windows">—</strong><span data-i18n="windows">Windows</span></div>
               </div>
             </div>
           </div>
+          <p class="fine-print" data-i18n="machineFootnote">*Machine totals reflect the listed profile stats.</p>
         </article>
 
         <article class="card">
@@ -246,18 +250,7 @@
           <div class="table-wrap machine-table">
             <table>
               <thead><tr><th data-i18n="machinesName">Name</th><th data-i18n="os">OS</th><th data-i18n="difficulty">Difficulty</th></tr></thead>
-              <tbody>
-                <tr><td>Cap</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Fireflow</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Logging</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>TwoMillion</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Support</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>VariaType</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>CCTV</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Pterodactyl</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Facts</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>AirTouch</td><td>Linux</td><td class="diff-medium">Medium</td></tr>
-                <tr><td>MonitorsFour</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Eighteen</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Conversor</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Signed</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Breach</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Job</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Imagery</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Baby</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Expressway</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>HackNet</td><td>Linux</td><td class="diff-medium">Medium</td></tr>
-                <tr><td>Delegate</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Soulmate</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Media</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Race</td><td>Linux</td><td class="diff-hard">Hard</td></tr><tr><td>Previous</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Lock</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>CodePartTwo</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Editor</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Era</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Redelegate</td><td>Windows</td><td class="diff-hard">Hard</td></tr>
-                <tr><td>VulnEscape</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>VulnCicada</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Outbound</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Voleur</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Artificial</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>TombWatcher</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Fluffy</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Puppy</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>EscapeTwo</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>UnderPass</td><td>Linux</td><td class="diff-easy">Easy</td></tr>
-                <tr><td>Administrator</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Certified</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Cicada</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>BoardLight</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>SolarLab</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Pov</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Devvortex</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Hospital</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Authority</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Sau</td><td>Linux</td><td class="diff-easy">Easy</td></tr>
-                <tr><td>Snoopy</td><td>Linux</td><td class="diff-hard">Hard</td></tr><tr><td>Escape</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Precious</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Vessel</td><td>Linux</td><td class="diff-hard">Hard</td></tr><tr><td>Trick</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Scrambled</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>StreamIO</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Timelapse</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>GoodGames</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>SteamCloud</td><td>Linux</td><td class="diff-easy">Easy</td></tr>
-                <tr><td>Epsilon</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Undetected</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Paper</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Nunchucks</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Return</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Driver</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Gobox</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>BountyHunter</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Unobtainium</td><td>Linux</td><td class="diff-hard">Hard</td></tr><tr><td>Bucket</td><td>Linux</td><td class="diff-medium">Medium</td></tr>
-                <tr><td>Worker</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Magic</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Remote</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Sauna</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Monteverde</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Postman</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Forest</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Craft</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Writeup</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Active</td><td>Windows</td><td class="diff-easy">Easy</td></tr>
-                <tr><td>Jerry</td><td>Windows</td><td class="diff-easy">Easy</td></tr><tr><td>Jeeves</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Popcorn</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Silentium</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>DarkZeroReturns</td><td>Windows</td><td class="diff-hard">Hard</td></tr><tr><td>Bedside</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Paperwork</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>MakeSense</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Enigma</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Nimbus</td><td>Linux</td><td class="diff-hard">Hard</td></tr>
-                <tr><td>Checkpoint</td><td>Windows</td><td class="diff-medium">Medium</td></tr><tr><td>Connected</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>DevHub</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Reactor</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>SmartHire</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>Helix</td><td>Linux</td><td class="diff-medium">Medium</td></tr><tr><td>PingPong</td><td>Windows</td><td class="diff-insane">Insane</td></tr><tr><td>Garfield</td><td>Windows</td><td class="diff-hard">Hard</td></tr><tr><td>DanglingTree</td><td>Linux</td><td class="diff-easy">Easy</td></tr><tr><td>Layover</td><td>Linux</td><td class="diff-easy">Easy</td></tr>
-              </tbody>
+              <tbody id="machineRows"></tbody>
             </table>
           </div>
         </article>
@@ -360,6 +353,10 @@
         <div class="tool">
           <div class="tool-head"><strong>Threadline · OSINT workspace</strong><a class="pill-link" href="https://remiotore.github.io/OSINT-Workspace/" target="_blank" rel="noreferrer" data-i18n="toolLive">Live demo ↗</a><a class="pill-link" href="https://github.com/remiotore/OSINT-Workspace" target="_blank" rel="noreferrer" data-i18n="toolDownload">Download ↗</a></div>
           <p data-i18n="toolDesc">Graph workspace to add entities, link them with relationships and save investigation cases.</p>
+          <div class="tool-shots">
+            <a class="tool-shot" href="assets/screens/osint-workspace-01.png" target="_blank" rel="noreferrer"><img src="assets/screens/osint-workspace-01-sm.png" alt="Threadline network view" loading="lazy" decoding="async" data-i18n-alt="shotNetwork"></a>
+            <a class="tool-shot" href="assets/screens/osint-workspace-02.png" target="_blank" rel="noreferrer"><img src="assets/screens/osint-workspace-02-sm.png" alt="Threadline map view" loading="lazy" decoding="async" data-i18n-alt="shotMap"></a>
+          </div>
         </div>
       </div>
       <div class="wallets">

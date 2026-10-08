@@ -23,6 +23,8 @@ const en = {
     easy: 'Easy',
     medium: 'Medium',
     hardInsane: 'Hard / Insane',
+    hard: 'Hard',
+    insane: 'Insane',
     machineFootnote: '*Machine totals reflect the listed profile stats.',
     skillsTitle: 'Skills & focus areas',
     resourcesTitle: 'Field notes & references',
@@ -61,6 +63,8 @@ const en = {
     toolLive: 'Live demo ↗',
     toolDownload: 'Download ↗',
     toolDesc: 'Graph workspace to add entities, link them with relationships and save investigation cases.',
+    shotNetwork: 'Threadline network view',
+    shotMap: 'Threadline map view',
     hireTitle: 'Hire my services',
     hireKicker: 'Scope · estimate · next steps',
     hireIntro: 'Build an authorized testing scope below. Add assets, choose a one-time audit or continuous-security option, and review the estimate and rules of engagement.',
@@ -239,6 +243,8 @@ const es = {
     toolLive: 'Demo en vivo ↗',
     toolDownload: 'Descargar ↗',
     toolDesc: 'Espacio de trabajo en grafo para añadir entidades, enlazarlas con relaciones y guardar casos de investigación.',
+    shotNetwork: 'Vista de red de Threadline',
+    shotMap: 'Vista de mapa de Threadline',
     hireTitle: 'Contrata mis servicios',
     hireKicker: 'Alcance · presupuesto · próximos pasos',
     hireIntro: 'Construye un alcance autorizado a continuación. Añade activos, elige una auditoría puntual o una opción de seguridad continua y revisa el presupuesto y las reglas de participación.',
@@ -487,6 +493,8 @@ const fr = { ...en,
     easy: 'Facile',
     medium: 'Moyen',
     hardInsane: 'Difficile / extrême',
+    hard: 'Difficile',
+    insane: 'Extrême',
     machineFootnote: '*Les totaux correspondent aux statistiques de profil indiquées.',
     resourcesTitle: 'Notes de terrain et références',
     cheatsheet: 'Aide-mémoire de pentest',
@@ -501,6 +509,8 @@ const fr = { ...en,
     toolLive: 'Démo en ligne ↗',
     toolDownload: 'Télécharger ↗',
     toolDesc: 'Espace de travail en graphe pour ajouter des entités, les relier par des relations et enregistrer des cas d’enquête.',
+    shotNetwork: 'Vue réseau de Threadline',
+    shotMap: 'Vue carte de Threadline',
     benefitsOne: ['Rapport exécutif', 'Nouveau test des vulnérabilités', 'Certificat de sécurité'],
     benefitsSub: ['Surveillance continue', 'Analyses automatisées hebdomadaires', 'Alertes en temps réel'],
     domainIp: 'Domaine / adresse IP',
@@ -664,6 +674,8 @@ const ru = { ...en,
     easy: 'Лёгкая',
     medium: 'Средняя',
     hardInsane: 'Сложная / экстремальная',
+    hard: 'Сложная',
+    insane: 'Экстремальная',
     machineFootnote: '*Количество соответствует указанной статистике профиля.',
     resourcesTitle: 'Практические заметки и материалы',
     cheatsheet: 'Шпаргалка по пентесту',
@@ -678,6 +690,8 @@ const ru = { ...en,
     toolLive: 'Онлайн-демо ↗',
     toolDownload: 'Скачать ↗',
     toolDesc: 'Графовое рабочее пространство: добавление сущностей, связывание их отношениями и сохранение случаев.',
+    shotNetwork: 'Сетевой вид Threadline',
+    shotMap: 'Вид карты Threadline',
     benefitsOne: ['Итоговый отчёт для руководства', 'Повторная проверка уязвимостей', 'Сертификат безопасности'],
     benefitsSub: ['Непрерывный мониторинг', 'Еженедельное автоматическое сканирование', 'Оповещения в реальном времени'],
     domainIp: 'Домен / IP-адрес',
@@ -841,6 +855,8 @@ const zh = { ...en,
     easy: '简单',
     medium: '中等',
     hardInsane: '困难 / 极难',
+    hard: '困难',
+    insane: '极难',
     machineFootnote: '*机器数量与所列个人资料统计一致。',
     resourcesTitle: '实战笔记与参考资料',
     cheatsheet: '渗透测试速查表',
@@ -855,6 +871,8 @@ const zh = { ...en,
     toolLive: '在线演示 ↗',
     toolDownload: '下载 ↗',
     toolDesc: '图谱式工作区：添加实体、建立关系并保存调查案例。',
+    shotNetwork: 'Threadline 网络视图',
+    shotMap: 'Threadline 地图视图',
     benefitsOne: ['管理层报告', '漏洞复测', '安全证书'],
     benefitsSub: ['持续监控', '每周自动扫描', '实时告警'],
     domainIp: '域名 / IP 地址',
@@ -1018,6 +1036,8 @@ const ar = { ...en,
     easy: 'سهل',
     medium: 'متوسط',
     hardInsane: 'صعب / بالغ الصعوبة',
+    hard: 'صعب',
+    insane: 'بالغ الصعوبة',
     machineFootnote: '*تعكس الأعداد إحصاءات الملف الشخصي المذكورة.',
     resourcesTitle: 'ملاحظات ومراجع ميدانية',
     cheatsheet: 'ملخص اختبار الاختراق',
@@ -1032,6 +1052,8 @@ const ar = { ...en,
     toolLive: 'عرض مباشر ↗',
     toolDownload: 'تنزيل ↗',
     toolDesc: 'مساحة عمل بيانية لإضافة الكيانات وربطها بالعلاقات وحفظ ملفات التحقيق.',
+    shotNetwork: 'عرض شبكة Threadline',
+    shotMap: 'عرض خريطة Threadline',
     benefitsOne: ['تقرير تنفيذي', 'إعادة اختبار الثغرات', 'شهادة أمنية'],
     benefitsSub: ['مراقبة مستمرة', 'فحوص آلية أسبوعية', 'تنبيهات فورية'],
     domainIp: 'النطاق / عنوان IP',
@@ -1162,7 +1184,32 @@ function applyTranslations() {
     document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
         element.setAttribute('placeholder', tr(element.dataset.i18nPlaceholder));
     });
+    document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
+        element.setAttribute('alt', tr(element.dataset.i18nAlt));
+    });
 }
+
+let machines = [];
+
+function renderMachines() {
+    const counts = machines.reduce((all, machine) => ({ ...all, [machine.os]: (all[machine.os] || 0) + 1 }), {});
+    const totals = { total: machines.length, linux: counts.linux || 0, windows: counts.windows || 0 };
+    Object.entries(totals).forEach(([key, value]) => {
+        document.getElementById('mach-' + key).textContent = value;
+    });
+    document.getElementById('machineRows').innerHTML = machines
+        .map((machine) => `<tr><td>${safe(machine.name)}</td><td>${safe(tr(machine.os))}</td>` +
+            `<td class="diff-${safe(machine.difficulty)}">${safe(tr(machine.difficulty))}</td></tr>`)
+        .join('');
+}
+
+fetch('assets/content/machines.json')
+    .then((response) => response.json())
+    .then((loaded) => {
+        machines = loaded;
+        renderMachines();
+    })
+    .catch(() => {});
 
 languageSelect.addEventListener('change', () => {
     if (!supportedLanguages.has(languageSelect.value)) return;
@@ -1170,6 +1217,7 @@ languageSelect.addEventListener('change', () => {
     applyTranslations();
     renderBenefits();
     renderAssets();
+    renderMachines();
     updateEstimate();
     try {
         localStorage.setItem('siteLanguage', state.lang);
