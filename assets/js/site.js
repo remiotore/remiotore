@@ -27,6 +27,7 @@ const en = {
     insane: 'Insane',
     machineFootnote: '*Machine totals reflect the listed profile stats.',
     skillsTitle: 'Skills & focus areas',
+    skills: ['Web application testing', 'API security', 'Network & infrastructure', 'Active Directory', 'Privilege escalation', 'Pivoting & lateral movement', 'Cloud & containers', 'Mobile applications', 'Reverse engineering', 'OSINT & reconnaissance', 'Vulnerability research', 'Report writing & retesting', ],
     resourcesTitle: 'Field notes & references',
     cheatsheet: 'Pentesting Cheatsheet',
     cheatsheetDesc: 'Commands and methodology notes',
@@ -48,7 +49,7 @@ const en = {
     serviceCodeDesc: 'Security review of individual repositories or agreed organization scope.',
     serviceMobile: 'Mobile application testing',
     serviceMobileDesc: 'iOS and Android assessment planning; currently a work in progress.',
-    serviceExposure: 'Exposure add-ons',
+    serviceExposure: 'Leaks & OSINT',
     serviceExposureDesc: 'Credential exposure checks, personal-data checks, and typosquatting monitoring.',
     engagementTitle: 'Engagement options',
     oneTime: 'One-time pentest',
@@ -207,6 +208,7 @@ const es = {
     hardInsane: 'Difícil / imposible',
     machineFootnote: '*Los totales reflejan las estadísticas del perfil listado.',
     skillsTitle: 'Habilidades y áreas de enfoque',
+    skills: ['Aplicaciones web', 'Seguridad de APIs', 'Redes e infraestructura', 'Active Directory', 'Escalada de privilegios', 'Pivoting y movimiento lateral', 'Nube y contenedores', 'Aplicaciones móviles', 'Ingeniería inversa', 'OSINT y reconocimiento', 'Investigación de vulnerabilidades', 'Informes y verificación', ],
     resourcesTitle: 'Apuntes y referencias',
     cheatsheet: 'Hoja de trucos de pentesting',
     cheatsheetDesc: 'Comandos y notas de metodología',
@@ -228,7 +230,7 @@ const es = {
     serviceCodeDesc: 'Revisión de seguridad de repositorios individuales o del alcance de una organización.',
     serviceMobile: 'Pruebas de aplicaciones móviles',
     serviceMobileDesc: 'Planificación de evaluaciones para iOS y Android; actualmente en progreso.',
-    serviceExposure: 'Complementos de exposición',
+    serviceExposure: 'Filtraciones y OSINT',
     serviceExposureDesc: 'Comprobaciones de exposición de credenciales, datos personales y monitoreo de typosquatting.',
     engagementTitle: 'Opciones de compromiso',
     oneTime: 'Pentest puntual',
@@ -356,7 +358,7 @@ const es = {
     serviceWebApiDesc: 'Pruebas centradas en aplicaciones web y APIs REST, GraphQL, gRPC o SOAP dentro de un alcance acordado.',
     serviceActiveDirectory: 'Evaluación de Active Directory',
     serviceActiveDirectoryDesc: 'Revisión autorizada de la configuración de Active Directory, seguridad de identidad y rutas de ataque comunes.',
-    serviceExposure: 'Complementos de exposición',
+    serviceExposure: 'Fuites de données et OSINT',
     serviceExposureDesc: 'Comprobaciones de exposición de credenciales, datos personales y monitoreo de typosquatting.',
     btc: 'BTC',
     eth: 'ETH',
@@ -380,6 +382,7 @@ const fr = { ...en,
     profileTitle: 'Profil',
     currentFocus: 'Je chasse actuellement les bugs et j’étends mes connaissances en pentesting.',
     skillsTitle: 'Compétences et axes de travail',
+    skills: ['Applications web', 'Sécurité des API', 'Réseaux et infrastructure', 'Active Directory', 'Élévation de privilèges', 'Pivoting et mouvement latéral', 'Cloud et conteneurs', 'Applications mobiles', 'Ingénierie inverse', 'OSINT et reconnaissance', 'Recherche de vulnérabilités', 'Rapports et retest', ],
     machinesTitle: 'Machines résolues sur Hack The Box',
     machinesName: 'Nom',
     os: 'OS',
@@ -458,7 +461,7 @@ const fr = { ...en,
     scopeButton: 'Accéder au générateur de périmètre ↓',
     serviceCode: 'Audit de dépôt de code',
     serviceCodeDesc: 'Audit de sécurité de dépôts individuels ou d’un périmètre organisationnel convenu.',
-    serviceExposure: 'Options de surveillance de l’exposition',
+    serviceExposure: 'Fuites de données et OSINT',
     serviceExposureDesc: 'Vérification de l’exposition d’identifiants et de données personnelles, et surveillance du typosquattage.',
     serviceMobile: 'Tests d’applications mobiles',
     serviceMobileDesc: 'Planification d’évaluations iOS et Android ; fonctionnalité actuellement en cours de développement.',
@@ -561,6 +564,7 @@ const ru = { ...en,
     profileTitle: 'Профиль',
     currentFocus: 'Сейчас занимаюсь bounty и расширяю знания в pentesting.',
     skillsTitle: 'Навыки и области работы',
+    skills: ['Веб-приложения', 'Безопасность API', 'Сети и инфраструктура', 'Active Directory', 'Повышение привилегий', 'Пивоты и боковое перемещение', 'Облако и контейнеры', 'Мобильные приложения', 'Реверс-инжиниринг', 'OSINT и разведка', 'Исследование уязвимостей', 'Отчёты и повторные проверки', ],
     machinesTitle: 'Решённые машины Hack The Box',
     machinesName: 'Имя',
     os: 'ОС',
@@ -639,7 +643,7 @@ const ru = { ...en,
     scopeButton: 'Перейти к настройке scope ↓',
     serviceCode: 'Аудит репозитория',
     serviceCodeDesc: 'Проверка безопасности отдельных репозиториев или согласованного объёма организации.',
-    serviceExposure: 'Дополнительный мониторинг утечек',
+    serviceExposure: 'Утечки и OSINT',
     serviceExposureDesc: 'Проверка утечек учётных данных и персональных данных, а также мониторинг тайпсквоттинга.',
     serviceMobile: 'Тестирование мобильных приложений',
     serviceMobileDesc: 'Планирование проверок iOS и Android; сейчас направление в разработке.',
@@ -742,6 +746,7 @@ const zh = { ...en,
     profileTitle: '简介',
     currentFocus: '目前正在做漏洞赏金并扩展我的渗透测试知识。',
     skillsTitle: '技能与重点领域',
+    skills: ['Web 应用安全', 'API 安全', '网络与基础设施', 'Active Directory', '权限提升', '枢轴与横向移动', '云与容器安全', '移动应用', '逆向工程', 'OSINT 与侦察', '漏洞研究', '报告编写与复测', ],
     machinesTitle: '已解决的 Hack The Box 机器',
     machinesName: '名称',
     os: '操作系统',
@@ -820,7 +825,7 @@ const zh = { ...en,
     scopeButton: '前往范围配置器 ↓',
     serviceCode: '代码仓库审查',
     serviceCodeDesc: '对单个代码仓库或经双方确认的组织范围进行安全审查。',
-    serviceExposure: '暴露风险附加服务',
+    serviceExposure: '数据泄露与 OSINT',
     serviceExposureDesc: '检查凭据和个人数据泄露，并监控仿冒域名。',
     serviceMobile: '移动应用测试',
     serviceMobileDesc: '规划 iOS 和 Android 评估；此服务目前仍在开发中。',
@@ -923,6 +928,7 @@ const ar = { ...en,
     profileTitle: 'الملف الشخصي',
     currentFocus: 'أقوم حاليًا بالصيد عن الثغرات وتوسيع معرفتي بالاختبارات الأمنية.',
     skillsTitle: 'المهارات ومجالات التركيز',
+    skills: ['تطبيقات الويب', 'أمان واجهات البرمجة', 'الشبكات والبنية التحتية', 'Active Directory', 'تصعيد الصلاحيات', 'التنقل الجانبي', 'السحابة والحاويات', 'تطبيقات الجوال', 'الهندسة العكسية', 'استخبارات مفتوحة المصدر (OSINT)', 'أبحاث الثغرات', 'كتابة التقارير وإعادة الفحص', ],
     machinesTitle: 'الآلات المحلولة في Hack The Box',
     machinesName: 'الاسم',
     os: 'نظام التشغيل',
@@ -1001,7 +1007,7 @@ const ar = { ...en,
     scopeButton: 'انتقل إلى إعداد النطاق ↓',
     serviceCode: 'مراجعة المستودعات البرمجية',
     serviceCodeDesc: 'مراجعة أمنية لمستودعات فردية أو لنطاق مؤسسة متفق عليه.',
-    serviceExposure: 'إضافات مراقبة الانكشاف',
+    serviceExposure: 'التسريبات و OSINT',
     serviceExposureDesc: 'فحص انكشاف بيانات الاعتماد والبيانات الشخصية ومراقبة النطاقات المقلدة.',
     serviceMobile: 'اختبار تطبيقات الهاتف',
     serviceMobileDesc: 'تخطيط تقييمات iOS وAndroid؛ هذه الخدمة قيد التطوير حاليًا.',
@@ -1216,6 +1222,7 @@ languageSelect.addEventListener('change', () => {
     state.lang = languageSelect.value;
     applyTranslations();
     renderBenefits();
+    renderSkills();
     renderAssets();
     renderMachines();
     updateEstimate();
@@ -1242,6 +1249,12 @@ function renderBenefits() {
     const benefits = state.mode === 'subscription' ? tr('benefitsSub') : tr('benefitsOne');
     document.getElementById('benefitList').innerHTML = benefits
         .map((benefit) => `<span>✓ ${safe(benefit)}</span>`)
+        .join('');
+}
+
+function renderSkills() {
+    document.querySelector('[data-skill-tags]').innerHTML = tr('skills')
+        .map((skill) => `<span class="tag">${safe(skill)}</span>`)
         .join('');
 }
 
@@ -1556,6 +1569,7 @@ document.getElementById('dismissCookieNotice').addEventListener('click', () => {
     }
 });
 
+renderSkills();
 renderBenefits();
 applyTranslations();
 renderAssets();
