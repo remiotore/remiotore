@@ -155,6 +155,11 @@
     .cookie-notice button { flex: 0 0 auto; padding: 7px 10px; border: 1px solid #526d34; border-radius: 8px; background: #172410; color: var(--green); font: 600 11px var(--sans); cursor: pointer; }
     .cookie-notice button:hover { border-color: var(--green); }
     .fine-print { font-size: 11px !important; }
+    .tools { display: grid; gap: 10px; margin: 14px 0; }
+    .tool { padding: 13px; border: 1px solid var(--line); border-radius: 12px; background: #0b1218; }
+    .tool-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .tool-head strong { font-size: 13px; }
+    .tool .stat { margin-top: 10px; }
     .wallets { display: grid; grid-template-columns: 55px minmax(0,1fr); gap: 8px 12px; font: 11px var(--mono); }
     .wallets strong { color: var(--green); }
     .wallet-detail { display: grid; gap: 3px; min-width: 0; }
@@ -350,6 +355,13 @@
     </article>
     <article class="card">
       <h3 data-i18n="supportTitle">Support my work</h3>
+      <p data-i18n="supportText">If you enjoy the open-source work, you can support it with a contribution.</p>
+      <div class="tools">
+        <div class="tool">
+          <div class="tool-head"><strong>Threadline · OSINT workspace</strong><a class="pill-link" href="https://remiotore.github.io/OSINT-Workspace/" target="_blank" rel="noreferrer" data-i18n="toolLive">Live demo ↗</a><a class="pill-link" href="https://github.com/remiotore/OSINT-Workspace" target="_blank" rel="noreferrer" data-i18n="toolDownload">Download ↗</a></div>
+          <p data-i18n="toolDesc">Graph workspace to add entities, link them with relationships and save investigation cases.</p>
+        </div>
+      </div>
       <div class="wallets">
         <strong data-i18n="btc">BTC</strong><div class="wallet-detail"><span class="wallet-network" data-i18n="bitcoinNetwork">Bitcoin network</span><code>33C1LBYty9dx4H3ScShD91pAS6Gm15CZNB</code></div>
         <strong data-i18n="eth">ETH</strong><div class="wallet-detail"><span class="wallet-network" data-i18n="ethereumNetwork">Ethereum network</span><code>0x06d46296a5eba0e2d9a2dffd9e3977fb3cc6030d</code></div>
