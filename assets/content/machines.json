@@ -501,7 +501,7 @@
   },
   {
     "name": "Touch",
-    "os": "linux",
+    "os": "windows",
     "difficulty": "easy"
   }
 ]
