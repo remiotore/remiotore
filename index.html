@@ -161,7 +161,7 @@
     .tool-head strong { font-size: 13px; }
     .tool .stat { margin-top: 10px; }
     .tool-shots { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; margin: 10px 0 0; }
-    .tool-shot img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 8px; }
+    .tool-shot img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border: 1px solid var(--line); border-radius: 8px; }
     .tool-shot:hover img { border-color: var(--green); }
     .wallets { display: grid; grid-template-columns: 55px minmax(0,1fr); gap: 8px 12px; font: 11px var(--mono); }
     .wallets strong { color: var(--green); }
@@ -355,6 +355,14 @@
           <div class="tool-shots">
             <a class="tool-shot" href="assets/screens/osint-workspace-01.png" target="_blank" rel="noreferrer"><img src="assets/screens/osint-workspace-01-sm.png" alt="Threadline network view" loading="lazy" decoding="async" data-i18n-alt="shotNetwork"></a>
             <a class="tool-shot" href="assets/screens/osint-workspace-02.png" target="_blank" rel="noreferrer"><img src="assets/screens/osint-workspace-02-sm.png" alt="Threadline map view" loading="lazy" decoding="async" data-i18n-alt="shotMap"></a>
+          </div>
+        </div>
+        <div class="tool">
+          <div class="tool-head"><strong>Wazuh Postmortem · log analysis</strong><a class="pill-link" href="https://remiotore.github.io/Wazuh-Postmortem/" target="_blank" rel="noreferrer" data-i18n="toolLive">Live demo ↗</a><a class="pill-link" href="https://github.com/remiotore/Wazuh-Postmortem" target="_blank" rel="noreferrer" data-i18n="toolDownload">Download ↗</a></div>
+          <p data-i18n="wazuhDesc">Client-side analyzer for Wazuh logs: drop log files, apply built-in decoders and rules, group alerts and extract indicators of compromise.</p>
+          <div class="tool-shots">
+            <a class="tool-shot" href="assets/screens/wazuh-postmortem-01.png" target="_blank" rel="noreferrer"><img src="assets/screens/wazuh-postmortem-01-sm.png" alt="Wazuh Postmortem log analysis" loading="lazy" decoding="async" data-i18n-alt="shotWazuh"></a>
+            <a class="tool-shot" href="assets/screens/wazuh-postmortem-02.png" target="_blank" rel="noreferrer"><img src="assets/screens/wazuh-postmortem-02-sm.png" alt="Wazuh Postmortem indicators of compromise" loading="lazy" decoding="async" data-i18n-alt="shotWazuh2"></a>
           </div>
         </div>
       </div>
