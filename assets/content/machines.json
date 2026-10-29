@@ -503,5 +503,10 @@
     "name": "Touch",
     "os": "windows",
     "difficulty": "easy"
+  },
+  {
+    "name": "Stream",
+    "os": "Linux",
+    "difficulty": "medium"
   }
 ]
